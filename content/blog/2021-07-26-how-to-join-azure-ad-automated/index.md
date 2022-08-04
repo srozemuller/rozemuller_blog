@@ -194,7 +194,7 @@ While installing the native module with the AADJoin parameter you will get a mes
 
 After digging into the deployment I found the correct AVD desired state config artifact URL.
 
-{{< avd-dcs-url >}}
+{{< avd-dsc-url >}}
 
 When using PowerShell use the commands below. I used the Az.Avd PowerShell module and the Az.Compute.
 
@@ -205,7 +205,7 @@ $token = Update-AvdRegistrationToken -HostpoolName $hostpoolName -ResourceGroupN
 
 
 # AVD Azure AD Join domain extension
-$moduleLocation = "{{< avd-dcs-url >}}"
+$moduleLocation = "{{< avd-dsc-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"
@@ -233,7 +233,7 @@ $resourceGroupName = "rg-avd-demo"
 $date = (Get-Date).AddHours(4).ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK")
 
 $token = az desktopvirtualization hostpool update --name $hostpoolName --resourcegroup $resourceGroupName --registration-token-operation="Update" --registration-info expiration-time=$date
-$moduleLocation = "{{< avd-dcs-url >}}"
+$moduleLocation = "{{< avd-dsc-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"

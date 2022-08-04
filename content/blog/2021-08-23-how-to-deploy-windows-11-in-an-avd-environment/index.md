@@ -116,7 +116,7 @@ After the domain join is finished make sure your VM is available under Devices i
 
 Next is installing the AVD extension. I tested a lot with the “old” not AzureAD join DSC configuration. After all those tests I didn’t get it working fine. So I choose the new Azure AD join DCS configuration with no AAD join.
 
-To get the AzureAD join configuration use the artifact URL below. *{{< avd-dcs-url >}}*
+To get the AzureAD join configuration use the artifact URL below. *{{< avd-dsc-url >}}*
 
 For updating the AVD registration token, with Update-AvdRegistrationToken , I used the [Az.Avd PowerShell module](https://www.powershellgallery.com/packages/Az.avd).
 
@@ -126,7 +126,7 @@ $avdHostpool = 'AVD-Hostpool-US'
 $avdResourceGroupName = 'rg-demo-avd-01'
 
 $registrationToken = (Update-AvdRegistrationToken -HostpoolName $avdHostpool $avdResourceGroupName).Properties.registrationInfo.token
-$avdModuleLocation = "{{< avd-dcs-url >}}"
+$avdModuleLocation = "{{< avd-dsc-url >}}"
 
        $avdDscSettings = @{
         Name               = "Microsoft.PowerShell.DSC"
@@ -198,7 +198,7 @@ I also tried to disable auto update but for some reason it is still updating or 
 
 To get the working DSC configuration package use the URL below.
 
-{{< avd-dcs-url >}}
+{{< avd-dsc-url >}}
 
 Make sure in the PowerShell you also provide the AADJoin parameter. Because of a hybrid join, I set the parameter to false.
 
