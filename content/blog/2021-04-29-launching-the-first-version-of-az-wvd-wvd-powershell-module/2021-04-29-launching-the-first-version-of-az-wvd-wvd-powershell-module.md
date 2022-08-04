@@ -5,7 +5,7 @@ date: '2021-04-29T13:21:30+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1306'
-permalink: /launching-the-first-version-of-az-wvd-wvd-powershell-module/
+url: launching-the-first-version-of-az-wvd-wvd-powershell-module/
 wp_last_modified_info:
     - '20 July 2022 @ 7:55 am'
 wplmi_shortcode:

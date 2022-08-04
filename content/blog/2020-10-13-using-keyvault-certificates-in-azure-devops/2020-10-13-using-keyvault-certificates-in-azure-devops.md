@@ -5,7 +5,7 @@ date: '2020-10-13T10:07:16+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=554'
-permalink: /using-keyvault-certificates-in-azure-devops/
+url: using-keyvault-certificates-in-azure-devops/
 spay_email:
     - ''
 newszone_post_views_count:

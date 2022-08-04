@@ -5,7 +5,7 @@ date: '2020-11-17T05:37:00+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=566'
-permalink: /disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/
+url: disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/
 newszone_post_views_count:
     - '51'
 ekit_post_views_count:

@@ -5,7 +5,7 @@ date: '2021-04-19T13:18:21+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1593'
-permalink: /delete-assigned-user-from-a-personal-wvd-session-host-automated/
+url: delete-assigned-user-from-a-personal-wvd-session-host-automated/
 wp_last_modified_info:
     - '19 July 2022 @ 8:20 pm'
 wplmi_shortcode:

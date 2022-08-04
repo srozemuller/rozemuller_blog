@@ -5,7 +5,7 @@ date: '2021-01-17T13:03:05+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1073'
-permalink: /session-available-dutch-windows-virtual-desktop-user-group/
+url: session-available-dutch-windows-virtual-desktop-user-group/
 newszone_post_views_count:
     - '20'
 ekit_post_views_count:

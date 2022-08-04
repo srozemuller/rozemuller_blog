@@ -2,7 +2,7 @@
 title: 'Using VM templates for AVD sessionhost automation'
 date: '2021-09-21T12:01:00+02:00'
 author: 'Sander Rozemuller'
-permalink: /using-vm-templates-for-avd-sessionhost-automation/
+url: using-vm-templates-for-avd-sessionhost-automation/
 image: old-hardware.png
 categories:
     - Automation

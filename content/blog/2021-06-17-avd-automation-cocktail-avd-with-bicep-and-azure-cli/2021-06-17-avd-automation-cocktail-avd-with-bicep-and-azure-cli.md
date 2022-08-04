@@ -5,7 +5,7 @@ date: '2021-06-17T13:00:00+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1737'
-permalink: /avd-automation-cocktail-avd-with-bicep-and-azure-cli/
+url: avd-automation-cocktail-avd-with-bicep-and-azure-cli/
 wp_last_modified_info:
     - '9 December 2021 @ 9:32 am'
 wplmi_shortcode:

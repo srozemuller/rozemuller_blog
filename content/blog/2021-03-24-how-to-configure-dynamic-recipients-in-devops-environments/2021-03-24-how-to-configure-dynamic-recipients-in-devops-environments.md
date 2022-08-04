@@ -5,7 +5,7 @@ date: '2021-03-24T15:33:57+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1413'
-permalink: /how-to-configure-dynamic-recipients-in-devops-environments/
+url: how-to-configure-dynamic-recipients-in-devops-environments/
 wp_last_modified_info:
     - '22 April 2021 @ 9:47 pm'
 wplmi_shortcode:

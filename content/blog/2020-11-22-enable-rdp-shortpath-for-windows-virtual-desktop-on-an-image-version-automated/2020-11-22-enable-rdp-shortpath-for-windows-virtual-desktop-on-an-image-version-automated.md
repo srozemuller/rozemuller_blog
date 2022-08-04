@@ -5,7 +5,7 @@ date: '2020-11-22T12:15:01+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=879'
-permalink: /enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated/
+url: enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated/
 newszone_post_views_count:
     - '97'
 ekit_post_views_count:

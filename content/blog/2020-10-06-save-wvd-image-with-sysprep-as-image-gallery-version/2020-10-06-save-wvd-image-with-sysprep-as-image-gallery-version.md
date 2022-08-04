@@ -5,7 +5,7 @@ date: '2020-10-06T19:57:10+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=473'
-permalink: /save-wvd-image-with-sysprep-as-image-gallery-version/
+url: save-wvd-image-with-sysprep-as-image-gallery-version/
 wp_last_modified_info:
     - '20 July 2022 @ 7:55 am'
 wplmi_shortcode:

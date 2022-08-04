@@ -5,7 +5,7 @@ date: '2020-10-28T13:05:59+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=655'
-permalink: /windows-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/
+url: windows-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/
 newszone_post_views_count:
     - '31'
 ekit_post_views_count:

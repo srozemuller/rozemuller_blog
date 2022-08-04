@@ -5,7 +5,7 @@ date: '2020-09-29T11:55:44+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=384'
-permalink: /monitor-active-m365-servicehealth-services-only-with-powershell/
+url: monitor-active-m365-servicehealth-services-only-with-powershell/
 newszone_post_views_count:
     - '17'
 ekit_post_views_count:

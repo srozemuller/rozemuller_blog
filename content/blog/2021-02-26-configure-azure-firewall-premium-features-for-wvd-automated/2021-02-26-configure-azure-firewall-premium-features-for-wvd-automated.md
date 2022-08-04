@@ -5,7 +5,7 @@ date: '2021-02-26T17:02:43+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1295'
-permalink: /configure-azure-firewall-premium-features-for-wvd-automated/
+url: configure-azure-firewall-premium-features-for-wvd-automated/
 newszone_post_views_count:
     - '61'
 ekit_post_views_count:

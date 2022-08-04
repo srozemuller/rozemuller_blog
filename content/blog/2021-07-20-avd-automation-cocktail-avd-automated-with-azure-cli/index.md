@@ -1,19 +1,8 @@
 ---
-id: 2210
 title: 'AVD Automation Cocktail – AVD automated with Azure CLI'
 date: '2021-07-20T14:59:39+02:00'
 author: 'Sander Rozemuller'
-layout: post
-guid: 'https://rozemuller.com/?p=2210'
-permalink: /avd-automation-cocktail-avd-automated-with-azure-cli/
-wp_last_modified_info:
-    - '26 July 2021 @ 3:06 pm'
-wplmi_shortcode:
-    - '[lmt-post-modified-info]'
-newszone_post_views_count:
-    - '54'
-ekit_post_views_count:
-    - '55'
+url: avd-automation-cocktail-avd-automated-with-azure-cli
 image: /wp-content/uploads/2021/06/cocktail-orange-sunset.png
 categories:
     - 'AVD Cocktail'
@@ -31,40 +20,7 @@ tags:
 
 Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI. Great new feature in this cocktail is the Azure AAD Join feature.
 
-## Table of contents
-
-- [Recipe](#recipe)
-    - [Before to drink](#beforetodrink)
-    - [List of Azure CLI ingredients](#list)
-    - [Aftertaste](#Aftertaste)
-- [Deploy AVD automated with Azure CLI](#deploy-avd-automated)
-    - [Resource Group](#resourcegroup)
-    - [Networking](#networking)
-    - [Shared Image Gallery](#shared-image-gallery)
-    - [Initial Image Version](#image-version)
-        - [Create a virtual machine](#create-vm)
-        - [SysPrep](#sysprep)
-        - [Generalize VM](#generalize)
-        - [Create image version](#create-image-version)
-- [Azure Virtual Desktop](#avd)
-    - [AVD Azure AD join Automated](#aad-join)
-    - [Hostpool](#hostpool)
-    - [Application group](#app-group)
-    - [Workspace](#workspace)
-    
-    
-    - [Monitoring](#monitoring)
-- [AVD Session hosts](#avd-sessionhosts)
-    - [Azure Key vault](#keyvault)
-    - [Azure AAD Join Settings](#aad-join-settings)
-        - [AAD Join extension](#avd-extension)
-        - [System identity](#system-identity)
-    
-    
-    - [Create session host](#create-avd-hosts)
-        - [Public IP and NSG](#pip-nsg)
-- [Conclusion](#conclusion)
-- [Thank you!](#thankyou)
+{{< toc >}}
 
 ## Recipe
 
@@ -114,7 +70,8 @@ az login
 az group create --name $resourceGroupName --location $location
 ```
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-47.png)</figure>### Networking
+![image-47](image-47.png)
+### Networking
 
 The base of every environment is networking. In this step the idea is to deploy a new virtual network. The VNET has two subnets, a default subnet and an AVD-orange-subnet. The deployment code looks like the following:
 
@@ -123,7 +80,9 @@ The base of every environment is networking. In this step the idea is to deploy 
 $deployNsg = az network nsg create --name nsg-roz-orangesunset --resource-group $resourceGroupName
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-48-1024x273.png)</figure><figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-50-1024x269.png)</figure>Next, when the network is deployed, the subnets are created.
+![image-48](image-48.png)
+![image-50](image-50.png)
+Next, when the network is deployed, the subnets are created.
 
 ```powershell
 $deployVnet = az network vnet create --name vnet-roz-orangesunset --resource-group $resourceGroupName --address-prefixes 10.4.0.0/22 --network-security-group $nsg.NewNSG.name
@@ -133,9 +92,11 @@ $deployAvdSubnet = az network vnet subnet create --name AVD-Orange-Subnet --addr
 
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-49-1024x147.png)</figure>### Shared Image Gallery
+![image-49](image-49.png)
 
-First we need the Shared Image Gallery itself. Because I want to reuse parameters as much as possible, I stored the deployment output in a variable. After deployment I convert the deployment output from JSON to PowerShell objects
+### Shared Image Gallery
+
+First, we need the Shared Image Gallery itself. Because I want to reuse parameters as much as possible, I stored the deployment output in a variable. After deployment, I convert the deployment output from JSON to PowerShell objects
 
 ```powershell
 $gallery = $deploySig | ConvertFrom-Json
@@ -146,7 +107,9 @@ $deploySigDefinition = az sig image-definition create --gallery-image-definition
 
 While the deployment is running you will notice the “Running” state in the terminal.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-52-1024x58.png)</figure><figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-53-1024x186.png)</figure>Finally the deployment is successful.
+![image-52](image-52.png)
+![image-53](image-53.png)
+Finally the deployment is successful.
 
 ### Initial Image Version
 
@@ -161,10 +124,9 @@ $initialImage = az vm image list --publisher MicrosoftWindowsDesktop --sku 21h1-
 $lastImage = ($initialImage | ConvertFrom-Json)[-1]
 ```
 
-I use the –image option with the urn output.
+I use the ```–image``` option with the urn output.
 
-```
-<pre class="wp-block-code">```json
+```json
 [
   {
     "offer": "Windows-10",
@@ -183,7 +145,7 @@ I use the –image option with the urn output.
 ]
 ```
 
-Now we have all the information we are able to create the initial virtual machine.
+Now we have all the information we can create the initial virtual machine.
 
 ```powershell
 $subnet = $deployAvdSubnet | ConvertFrom-Json
@@ -193,7 +155,9 @@ $deployVm = az vm create --name orange-vm --resource-group $resourceGroupName --
 
 The az vm create command creates all the needed components like an OS disk and a network card.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-54-1024x101.png)</figure>#### SysPrep
+![image-54](image-54.png)
+
+#### SysPrep
 
 First the VM must be and sysprepped and generalized. There are several options for running a script on a VM. This is like the Custom Script Extension or an Invoke-AzRunCommand in PowerShell. In this case I’m using the Azure CLI.
 
@@ -207,7 +171,8 @@ az vm run-command invoke  --command-id RunPowerShellScript --name $vm.id.Split("
 Using the az vm run-command CLI comand gives me the option to skip creating an separate script first. In the –scripts part of the command is able to create a PowerShell on-the-fly. In the –parameters part I will send these parameters.   
 When running the command, the VM will create a PowerShell file on the local machine. The provided –scripts content is stored in that local file.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/06/image-14-1024x154.png)</figure>#### Generalize VM
+![image-14](image-14.png)
+#### Generalize VM
 
 Next step before creating an image version is generalize and capture the virtual machine. To achieve that goal we are using the CLI again.
 
@@ -217,7 +182,7 @@ az vm generalize --name $vm --resource-group $resourceGroupName
 
 #### Create image version
 
-Finally it is time to create a new image version. In the first place I’m converting the outputs from the gallery and definition deployment. Because I want to create an image from a VM, I use the source as input for the image creation. I also referring to the gallery- and definition-deployment.
+Finally, it is time to create a new image version. In the first place I’m converting the outputs from the gallery and definition deployment. Because I want to create an image from a VM, I use the source as input for the image creation. I also refer to the gallery- and definition-deployment.
 
 ```powershell
 $gallery = $deploySig | ConvertFrom-Json
@@ -228,22 +193,26 @@ $deployImageVersion = az sig image-version create --resource-group $resourceGrou
 --gallery-image-definition $imageDef.name --gallery-name $gallery.name --managed-image $vm.id
 ```
 
-After executing the CLI command it could take a while before the image is ready. While the task is running the shell shows the running state. In the meantime I take a look in the Azure Portal. You see the image has the creating status.
+After executing the CLI command it could take a while before the image is ready. While the task is running the shell shows the running state. In the meantime, I take a look in the Azure Portal. You see the image has the creating status.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-56-1024x43.png)</figure><figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-55-1024x203.png)</figure>## Azure Virtual Desktop
+![image-56](image-56.png)
+![image-55](image-55.png)
+## Azure Virtual Desktop
 
 Now every needed component is in place it is time to deploy the the Azure Virtual Desktop environment with Azure CLI. In this deployment we are going to deploy a host pool. The next step is the application group. The last step is a workspace.
 
 Before using the desktop virtualization commands, we need to install the Azure CLI desktopvirtualization extension. When executing a ‘desktopvirtualization’-command the extension will automatically install.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-57.png)</figure>### AVD Azure AD join Automated
+![image-57](image-57.png)
+### AVD Azure AD join Automated
 
 We all heard the news that Azure AD join is now in public preview. Because of that I decided to use that new feature. To make this feature work you’ll need to walk through some steps. I will explain these steps in short.
 
-First is adding an extra RDP property to the host pool, **<span style="text-decoration: underline;">targetisaadjoined:i:1</span>**. The host pool also needs the validation environment set.
+First is adding an extra RDP property to the host pool, **<span style="text-decoration: underline;">```targetisaadjoined:i:1```</span>**. The host pool also needs the validation environment set.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-69.png)</figure>Second we need assign a Virtual Machine User Login or Virtual Machine Administrator Login role. This role can be assigned at VM, resource group or at subscription level. I choose the resource group scope. I use the All Users AD group for example.   
-To realize that a few command are needed. In the first place we need to get the All Users objectId
+![image-69](image-69.png)
+Second we need assign a Virtual Machine User Login or Virtual Machine Administrator Login role. This role can be assigned at VM, resource group or at subscription level. I choose the resource group scope. I use the All Users AD group for example.   
+To realize that a few command are needed. At first we need to get the All Users objectId
 
 ```powershell
 $objectId = az ad group show --group "All Users" --query "objectId"
@@ -256,13 +225,15 @@ $role = az role definition list --name "Virtual Machine User Login" --query "nam
 $roleName = $role | Convertfrom-json
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-70.png)</figure>Now we have the correct Id’s it is time to assign the role to the resource group for All Users
+![](image-70.png)
+Now we have the correct Id’s it is time to assign the role to the resource group for All Users
 
 ```powershell
 az role assignment create --assignee $objectId --role $roleName.name --resource-group $resourceGroupName
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-71-1024x75.png)</figure>At last we need to install the correct VM extension. I will discus that point later in the session host deployment.
+![image-71](image-71.png)
+At last we need to install the correct VM extension. I will disqus that point later in the session host deployment.
 
 More info about Azure AD Join: <https://docs.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-ad-joined-vm>
 
@@ -277,9 +248,13 @@ $deployAvdHostpool = az desktopvirtualization hostpool create --location $locati
 --max-session-limit 10 --personal-desktop-assignment-type "Automatic" --registration-info expiration-time=$date registration-token-operation="Update" --custom-rdp-property "targetisaadjoined:i:1" --validation-environment $true
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-58.png)</figure>Second, the AVD host pool is deployed with the Azure AD needed RDP properties.
+![image-58](image-58.png)
+Second, the AVD host pool is deployed with the Azure AD needed RDP properties.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-59-1024x229.png)</figure><figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-65.png)</figure>## Application group
+![image-59](image-59.png)
+![image-65](image-65.png)
+
+## Application group
 
 I used the code below to deploy the application group. The application group is the place where to assign users/groups to the AVD environment.
 
@@ -289,9 +264,10 @@ $deployAvdApplicationGroup = az desktopvirtualization applicationgroup create --
 --description "Application group with oranges" --application-group-type "RemoteApp" --friendly-name "The Sweet Orange Sunset group" --host-pool-arm-path $hostpool.id 
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-60-1024x190.png)</figure>### Workspace
+![](image-60-1024x190.png)
+### Workspace
 
-In front of AVD we have the workspace. This is the place where people subscribing at. I’m also referring to the application output. Based on that output I created a workspace name.
+In front of AVD we have the workspace. This is the place where people subscribe to. I’m also referring to the application output. Based on that output I created a workspace name.
 
 ```powershell
 $applicationGroup = $deployAvdApplicationGroup | ConvertFrom-Json
@@ -299,7 +275,8 @@ $deployAvdWorkspace = az desktopvirtualization workspace create --location $loca
 --description "A Sweet Workspace" --friendly-name "Sweet Workplace" --application-group-references $applicationGroup.id
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-61-1024x212.png)</figure>### Monitoring
+![image-61](image-61.png)
+### Monitoring
 
 As every environment we also like to monitor this environment. To monitor this environment we are going to use Log Analytics.
 
@@ -310,7 +287,8 @@ For the WorkspaceId I referenced the output of the LogAnalytics Workspace resour
 $deployLogAnalytics = az monitor log-analytics workspace create --resource-group $resourceGroupName --workspace-name Orange-LA-Workspace
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-62-1024x198.png)</figure>Next we need to configure the diagnostic settings for the AVD host pool. In the command below I configure the checkpoint and error logs. The logs are send to the just created Log Analytics Workspace.
+![image-62](image-62.png)
+Next we need to configure the diagnostic settings for the AVD host pool. In the command below I configure the checkpoint and error logs. The logs are send to the just created Log Analytics Workspace.
 
 ```powershell
 $workspace = $deployLogAnalytics | ConvertFrom-Json
@@ -318,11 +296,12 @@ $logs = '[{""category"": ""Checkpoint"", ""categoryGroup"": null, ""enabled"": t
 $deployDiagnostics = az monitor diagnostic-settings create --name avd-diag-settings --resource $hostpool.id --workspace $workspace.id --logs $logs
 ```
 
-To explain the context I used one line with JSON formatted text. Finally you should use a JSON formatted file. In that case use ‘@{file}’ to load from a file.
+To explain the context I used one line with JSON formatted text. Finally, you should use a JSON formatted file. In that case use ‘@{file}’ to load from a file.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-63-1024x310.png)</figure>## AVD Session hosts
+![image-63](image-63.png)
+## AVD Session hosts
 
-Last is deploying the session hosts into the AVD hostpool. Before deploying a session host I decided to deploy an Azure Key Vault first. Into the key vault I will store the administrator password for the domain join. In the later steps I will reference to this key vault secret in the template.
+Last is deploying the session hosts into the AVD hostpool. Before deploying a session host I decided to deploy an Azure Key Vault first. Into the key vault, I will store the administrator password for the domain join. In the later steps I will reference to this key vault secret in the template.
 
 ### Azure Key vault
 
@@ -335,11 +314,12 @@ $keyvault = $deployKeyVault | ConvertFrom-Json
 $deploySecretPass = az keyvault secret set --name vmjoinerPassword --vault-name $keyvault.name --value 'veryS3cretP@ssw0rd!'
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-64-1024x132.png)</figure>Info: Because I deploy a key vault from my own account I allready have access to the key vault. In case of deploying a key vault from DevOps for example the context may be different. Make sure you set the correct permissions for users.
+![image-64](image-64.png)
+Info: Because I deploy a key vault from my own account I allready have access to the key vault. In case of deploying a key vault from DevOps for example the context may be different. Make sure you set the correct permissions for users.
 
 ### Azure AAD Join Settings
 
-To join an AVD session host to Azure AD you need some different settings relating to the default settings (native AD). First thing to remember is the Desired State Config extension. Second thing which is different is the VM identity. A not AAD joined VM has no system assigned identity in the Azure AD.
+To join an AVD session host to Azure AD you need some different settings relating to the default settings (native AD). First, thing to remember is the Desired State Config extension. Second thing which is different is the VM identity. A not AAD joined VM has no system assigned identity in the Azure AD.
 
 ### AVD Extension
 
@@ -352,24 +332,24 @@ If you install the native module with the AADJoin parameter you will get a messa
 
 After digging into the deployment I found the correct artifact URL.
 
-*https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration\_6-1-2021.zip*
+{{< avd-dsc-url >}}
 
 To deploy the AVD DSC extension with Azure CLI I used the code below. Make a notice about the aadJoin parameter in the settings.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-68.png)</figure>```powershell
-$moduleLocation = "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_6-1-2021.zip"
+![image-68](image-68.png)
+```powershell
+$moduleLocation = "{{< avd-dsc-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"
 $avdExtensionSetting = '{""modulesUrl"": ""'+$moduleLocation+'"",""ConfigurationFunction"":""Configuration.ps1\\AddSessionHost"",""Properties"": {""hostPoolName"": ""'+ $($hostpool.name) + '"",""registrationInfoToken"": ""'+ $($hostpool.registrationInfo.token) + '"", ""aadJoin"": "'+ $true + '"}}'
-
 ```
 
 ### System identity
 
 The next difference between a native domain joined VM is the resource identity.   
   
-From Microsoft: **System-assigned** Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity an identity is created in Azure AD that is tied to the lifecycle of that service instance. So when the resource is deleted, Azure automatically deletes the identity for you. By design, only that Azure resource can use this identity to request tokens from Azure AD.
+From Microsoft: **System-assigned** Some Azure services allow you to enable a managed identity directly on a service instance. When you enable a system-assigned managed identity, the identity is created in Azure AD that is tied to the lifecycle of that service instance. So when the resource is deleted, Azure automatically deletes the identity for you. By design, only that Azure resource can use this identity to request tokens from Azure AD.
 
 Use the Azure CLI command below for assigning the system identity.
 
@@ -397,7 +377,10 @@ $adminpassword = az KeyVault secret show --vault-name $keyvault.name --n
 
 When deploying a virtual machine with Azure CLI, a Public IP address and a NSG is configured as default. Because I don’t want public ip’s assigned to my session hosts we need to avoid that. Because the VNET has a NSG allready, I also don’t want a NSG created. The way to avoid creating a public IP and a NSG is adding a null value in the parameters.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-72.png)</figure><figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-66.png)</figure>```powershell
+![image-72](image-72.png)
+![image-66](image-66.png)
+
+```powershell
 --public-ip-address '""' --nsg '""'
 ```
 
@@ -418,7 +401,7 @@ $domainJoinVersion   = "1.0"
 $domainJoinSettings  = '{""mdmId"": ""0000000a-0000-0000-c000-000000000000""}'
 
 
-$moduleLocation = "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_6-1-2021.zip"
+$moduleLocation = "{{< avd-dsc-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"
@@ -438,12 +421,13 @@ Do {
 while ($sessionHostCount -ne 0) {
     Write-Verbose "Session hosts are created"
 }
-
 ```
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-67-1024x221.png)</figure>Finally, at the end, we have Azure AD Join session hosts.
+![image-67](image-67.png)
+Finally, at the end, we have Azure AD Join session hosts.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-73-1024x103.png)</figure>I have the automated assignment of users to application group under investigation.   
+![image-73](image-73.png)
+I have the automated assignment of users to application group under investigation.   
 For now everything is in place you only have to assign a usergroup to the application group and that’s it.
 
 ## Conclusion
@@ -459,4 +443,4 @@ An another point is that you don’t have to remember use a lot different comman
 
 I hope you liked the Sweet Orange [🍊](https://emojipedia.org/tangerine/) Sunset [☀️](https://emojipedia.org/sun/) you are a bit inspired. Now you know deploy AVD automated with Azure CLI is one of the options. If you like an another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
 
-Enjoy your day and happy automating 👋
+{{< bye >}}

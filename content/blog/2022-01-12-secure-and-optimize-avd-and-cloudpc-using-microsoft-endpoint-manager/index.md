@@ -5,7 +5,7 @@ date: '2022-01-12T12:39:42+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=3101'
-permalink: /secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/
+url: secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/
 wp_last_modified_info:
     - '12 January 2022 @ 12:39 pm'
 wplmi_shortcode:

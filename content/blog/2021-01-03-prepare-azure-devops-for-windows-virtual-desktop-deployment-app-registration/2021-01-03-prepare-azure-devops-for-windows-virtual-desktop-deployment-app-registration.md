@@ -5,7 +5,7 @@ date: '2021-01-03T10:40:04+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1003'
-permalink: /prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/
+url: prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/
 newszone_post_views_count:
     - '35'
 ekit_post_views_count:

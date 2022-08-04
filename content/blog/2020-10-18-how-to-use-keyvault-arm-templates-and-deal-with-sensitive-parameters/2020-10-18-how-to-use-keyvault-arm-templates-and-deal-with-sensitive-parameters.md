@@ -5,7 +5,7 @@ date: '2020-10-18T18:19:13+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=615'
-permalink: /how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/
+url: how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/
 newszone_post_views_count:
     - '47'
 ekit_post_views_count:

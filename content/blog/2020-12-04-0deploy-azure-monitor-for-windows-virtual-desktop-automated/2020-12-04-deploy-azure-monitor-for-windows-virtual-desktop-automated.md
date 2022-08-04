@@ -5,7 +5,7 @@ date: '2020-12-04T14:32:19+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=927'
-permalink: /deploy-azure-monitor-for-windows-virtual-desktop-automated/
+url: deploy-azure-monitor-for-windows-virtual-desktop-automated/
 wp_last_modified_info:
     - '20 July 2022 @ 7:55 am'
 wplmi_shortcode:

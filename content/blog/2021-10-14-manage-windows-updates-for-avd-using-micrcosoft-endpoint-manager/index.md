@@ -5,7 +5,7 @@ date: '2021-10-14T22:44:52+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=2365'
-permalink: /manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/
+url: manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/
 wp_last_modified_info:
     - '20 July 2022 @ 7:55 am'
 wplmi_shortcode:

@@ -5,7 +5,7 @@ date: '2021-06-10T20:21:49+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1755'
-permalink: /avd-automation-cocktail-the-menu/
+url: avd-automation-cocktail-the-menu/
 wp_last_modified_info:
     - '25 December 2021 @ 8:55 am'
 wplmi_shortcode:

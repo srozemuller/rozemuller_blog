@@ -5,7 +5,7 @@ date: '2020-09-28T19:45:17+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=386'
-permalink: /create-avd-image-version-based-on-existing-config-with-powershell/
+url: create-avd-image-version-based-on-existing-config-with-powershell/
 wp_last_modified_info:
     - '19 July 2022 @ 8:21 pm'
 wplmi_shortcode:

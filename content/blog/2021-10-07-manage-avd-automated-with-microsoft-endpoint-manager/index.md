@@ -2,7 +2,7 @@
 title: 'Manage AVD automated with Microsoft Endpoint Manager'
 date: '2021-10-07T14:11:01+02:00'
 author: 'Sander Rozemuller'
-permalink: /manage-avd-automated-with-microsoft-endpoint-manager/
+url: manage-avd-automated-with-microsoft-endpoint-manager/
 image: Image-2029-e1627639004624.png
 categories:
     - 'Azure Virtual Desktop'

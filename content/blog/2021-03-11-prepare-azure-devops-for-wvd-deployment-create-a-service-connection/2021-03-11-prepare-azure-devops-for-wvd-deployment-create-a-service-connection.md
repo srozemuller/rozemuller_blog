@@ -5,7 +5,7 @@ date: '2021-03-11T11:28:00+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1175'
-permalink: /prepare-azure-devops-for-wvd-deployment-create-a-service-connection/
+url: prepare-azure-devops-for-wvd-deployment-create-a-service-connection/
 wp_last_modified_info:
     - '2 June 2021 @ 9:28 pm'
 wplmi_shortcode:

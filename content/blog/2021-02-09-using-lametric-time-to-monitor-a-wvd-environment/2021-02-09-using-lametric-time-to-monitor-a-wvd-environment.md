@@ -5,7 +5,7 @@ date: '2021-02-09T16:38:36+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1248'
-permalink: /using-lametric-time-to-monitor-a-wvd-environment/
+url: using-lametric-time-to-monitor-a-wvd-environment/
 enclosure:
     - "https://rozemuller.com/wp-content/uploads/2021/02/IMG_1662.mov\n35837053\nvideo/quicktime\n"
 newszone_post_views_count:

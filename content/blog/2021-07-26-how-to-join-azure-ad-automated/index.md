@@ -1,21 +1,8 @@
 ---
-id: 2258
 title: 'How to join Azure AD  automated'
 date: '2021-07-26T16:55:50+02:00'
 author: 'Sander Rozemuller'
-layout: post
-guid: 'https://rozemuller.com/?p=2258'
-permalink: /how-to-join-azure-ad-automated/
-wp_last_modified_info:
-    - '20 July 2022 @ 7:55 am'
-wplmi_shortcode:
-    - '[lmt-post-modified-info]'
-newszone_post_views_count:
-    - '129'
-ekit_post_views_count:
-    - '130'
-digiqole_featured_post:
-    - 'no'
+url: how-to-join-azure-ad-automated
 image: /wp-content/uploads/2021/07/cloud-identity.png
 categories:
     - Automation
@@ -32,24 +19,13 @@ tags:
 
 In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.
 
-### Table of Contents
-
-- [Azure AD Join](#aad-join)
-- [Deploy an Azure AD joined VM](#deploy-aad)
-    - [System Identity](#system-identity)
-    - [Deploy AAD VM-extension](#deploy-aad-extension)
-- [AAD join in Azure Virtual Desktop](#aad-avd)
-    - [Prepare AVD host pool](#aad-avd-hostpool)
-        - [AVD RDP property](#rdp-property)
-    - [Assign roles](#assign-roles)
-    - [AVD AAD join settings](#avd-aad-join-settings)
-        - [AVD extension](#avd-extension)
-
+{{< toc >}}
 ## Azure AD join
 
 We all heard the news that Azure AD join is now in public preview. Because of that, I decided to try that new feature in an Azure Virtual Desktop environment. While testing the feature I also want to do azure ad join automated. To make this feature work you’ll need to walk through some steps. The first thing to remember is there are also some limitations and it is still in public preview.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-75.png)</figure>In addition to the short introduction more info about Azure AD join: <https://docs.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-ad-joined-vm>
+![image-75](image-75.png)
+In addition to the short introduction more info about Azure AD join: <https://docs.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-ad-joined-vm>
 
 ## Deploy an Azure AD joined VM
 
@@ -157,9 +133,10 @@ To connect to an Azure AD joined virtual machine the client PC must meet one of 
 
 However, in an AVD situation, not every client PC has one of the conditions above. In fact, AVD is also available from the web (via https://rdweb.wvd.microsoft.com/arm/webclient/index.html). Till to the present day, a browser has no domain join :). Luckily there is a solution for accessing AVD with non-domain joined clients.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-69.png)</figure>#### AVD RDP property
+![image-69](image-69.png)
+#### AVD RDP property
 
-First is adding an extra RDP property to the host pool, **<span style="text-decoration: underline;">targetisaadjoined:i:1</span>**. The second step is configuring the host pool as a validation environment set.
+First is adding an extra RDP property to the host pool, **<span style="text-decoration: underline;">```targetisaadjoined:i:1```</span>**. The second step is configuring the host pool as a validation environment set.
 
 ```powershell
 # AVD Properties
@@ -169,7 +146,6 @@ $HostPoolName = 'avd-hostpool'
 $rdpProperties = "targetisaadjoined:i:1"
 
 New-AzWvdHostPool -ResourceGroupName -Name $HostPoolName -Location $location -HostPoolType 'Personal' -LoadBalancerType 'Persistent' -PreferredAppGroupType "Desktop" -MaxSessionLimit 5 -CustomRdpProperty $rdpProperties -ValidationEnvironment:$true
-
 ```
 
 ### Assign roles
@@ -199,7 +175,9 @@ $roleName = $role | Convertfrom-json
 az role assignment create --assignee $objectId --role $roleName.name --resource-group $resourceGroupName
 ```
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-70.png)<figcaption>Role output from Azure CLI</figcaption></figure><figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/07/image-71-1024x75.png)</figure>At last, we need to install the correct VM extension. I will discuss that point later in the session host deployment.
+<figure class="wp-block-image size-large is-resized">![](image-70.png)<figcaption>Role output from Azure CLI</figcaption>
+<figure class="wp-block-image size-large is-resized">![](image-71-1024x75.png)
+At last, we need to install the correct VM extension. I will discuss that point later in the session host deployment.
 
 ### AVD AAD join settings
 
@@ -214,9 +192,9 @@ While installing the native module with the AADJoin parameter you will get a mes
 *(ArtifactNotFound) The VM extension with publisher ‘Microsoft.Azure.ActiveDirectory’ and type ‘ActiveDirectory’ could not be found.  
 (VMExtensionProvisioningError) VM has reported a failure when processing extension ‘DSC’. Error message: “The DSC Extension received an incorrect input: A parameter cannot be found that matches parameter name ‘aadJoin’.*
 
-After digging into the deployment I found the correct artifact URL.
+After digging into the deployment I found the correct AVD desired state config artifact URL.
 
-https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration\_11-22-2021.zip
+{{< avd-dcs-url >}}
 
 When using PowerShell use the commands below. I used the Az.Avd PowerShell module and the Az.Compute.
 
@@ -227,7 +205,7 @@ $token = Update-AvdRegistrationToken -HostpoolName $hostpoolName -ResourceGroupN
 
 
 # AVD Azure AD Join domain extension
-$moduleLocation = "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_11-22-2021.zip"
+$moduleLocation = "{{< avd-dcs-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"
@@ -245,7 +223,8 @@ Set-AzVMExtension -VMName $vmName -ResourceGroupName $resourceGroupName -Locatio
 
 Use the code below to deploy the AVD DSC extension with Azure CLI. Make a notice about the aadJoin parameter in the settings. Important to realize when using Azure CLI, is the JSON input format for the extension settings.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/07/image-68.png)</figure>```powershell
+![image-68](image-68.png)
+```powershell
 $token = az desktopvirtualization hostpool update --name $hostpoolName --resource-group $resourceGroupName --registration-info expiration-time=$date registration-token-operation="Update" 
 $registrationToken = $token | ConvertFrom-Json
 
@@ -254,7 +233,7 @@ $resourceGroupName = "rg-avd-demo"
 $date = (Get-Date).AddHours(4).ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK")
 
 $token = az desktopvirtualization hostpool update --name $hostpoolName --resourcegroup $resourceGroupName --registration-token-operation="Update" --registration-info expiration-time=$date
-$moduleLocation = "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_6-1-2021.zip"
+$moduleLocation = "{{< avd-dcs-url >}}"
 $avdExtensionName = "DSC"
 $avdExtensionPublisher = "Microsoft.Powershell"
 $avdExtensionVersion = "2.73"
@@ -266,4 +245,4 @@ az vm extension set --vm-name $vmName --resource-group $resourceGroupName --name
 
 Thank you for reading this article I show how to deploy and an Azure VM to Azure AD join automated.
 
-Enjoy your day and happy automating 👋
+{{< bye >}}

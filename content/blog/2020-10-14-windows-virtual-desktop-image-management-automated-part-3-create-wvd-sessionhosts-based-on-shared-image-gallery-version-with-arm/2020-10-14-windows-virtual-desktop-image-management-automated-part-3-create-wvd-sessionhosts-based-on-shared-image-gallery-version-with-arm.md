@@ -5,7 +5,7 @@ date: '2020-10-14T12:05:45+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=513'
-permalink: /windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/
+url: windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/
 newszone_post_views_count:
     - '36'
 ekit_post_views_count:

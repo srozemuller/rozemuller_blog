@@ -5,7 +5,7 @@ date: '2021-01-22T10:42:08+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1053'
-permalink: /monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/
+url: monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/
 newszone_post_views_count:
     - '27'
 ekit_post_views_count:

@@ -5,7 +5,7 @@ date: '2021-04-01T15:46:08+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1562'
-permalink: /configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/
+url: configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/
 wp_last_modified_info:
     - '23 May 2021 @ 5:05 pm'
 wplmi_shortcode:

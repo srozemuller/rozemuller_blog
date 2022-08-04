@@ -5,7 +5,7 @@ date: '2021-05-31T11:10:58+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1675'
-permalink: /change-wvd-disk-size-based-on-a-shared-image-gallery-image-automated/
+url: change-wvd-disk-size-based-on-a-shared-image-gallery-image-automated/
 wp_last_modified_info:
     - '3 June 2021 @ 8:41 am'
 wplmi_shortcode:

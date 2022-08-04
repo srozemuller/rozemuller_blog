@@ -5,7 +5,7 @@ date: '2020-10-18T20:08:27+02:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=625'
-permalink: /windows-virtual-desktop-image-management-automated-part-4-wvd-clean-up-unused-resources/
+url: windows-virtual-desktop-image-management-automated-part-4-wvd-clean-up-unused-resources/
 newszone_post_views_count:
     - '57'
 ekit_post_views_count:

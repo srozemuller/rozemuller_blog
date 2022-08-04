@@ -5,7 +5,7 @@ date: '2020-12-21T08:04:04+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=969'
-permalink: /automatically-backup-azure-resources-to-an-azure-storage-account-in-json/
+url: automatically-backup-azure-resources-to-an-azure-storage-account-in-json/
 newszone_post_views_count:
     - '62'
 ekit_post_views_count:

@@ -8,7 +8,7 @@ categories:
     - "Security"
     - 'Azure Virtual Desktop'
 type: "regular" # available types: [featured/regular]
-url: /enroll-avd-session-host-with-trusted-launch-automated
+url: enroll-avd-session-host-with-trusted-launch-automated
 draft: false
 ---
 

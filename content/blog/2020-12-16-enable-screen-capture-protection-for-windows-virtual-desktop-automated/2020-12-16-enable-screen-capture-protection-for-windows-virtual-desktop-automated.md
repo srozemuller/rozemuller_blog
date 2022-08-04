@@ -5,7 +5,7 @@ date: '2020-12-16T13:02:03+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=946'
-permalink: /enable-screen-capture-protection-for-windows-virtual-desktop-automated/
+url: enable-screen-capture-protection-for-windows-virtual-desktop-automated/
 wp_last_modified_info:
     - '19 July 2022 @ 8:20 pm'
 wplmi_shortcode:

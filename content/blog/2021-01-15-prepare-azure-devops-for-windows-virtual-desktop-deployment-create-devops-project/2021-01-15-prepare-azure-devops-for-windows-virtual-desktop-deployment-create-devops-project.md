@@ -5,7 +5,7 @@ date: '2021-01-15T16:02:21+01:00'
 author: 'Sander Rozemuller'
 layout: post
 guid: 'https://rozemuller.com/?p=1037'
-permalink: /prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/
+url: prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/
 newszone_post_views_count:
     - '30'
 ekit_post_views_count:
