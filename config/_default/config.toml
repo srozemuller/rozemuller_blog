@@ -42,6 +42,8 @@ canonifyURLs = true
 [permalinks]
   posts = '/:year/:month/:title/'
 
+  uglyurls = true
+
 ############################# Caches ###############################
 [caches]
 [caches.images]

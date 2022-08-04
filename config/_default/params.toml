@@ -11,7 +11,7 @@ logo_text = "Boilerplate"
 # navbar fixed to top
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
-description = "This is meta description"
+description = "All about automation, Azure, M365, AVD and more."
 author = "Sander Rozemuller"
 image = "images/author.png" # this image will be used as fallback if a page has no image of its own
 # contact info
@@ -26,7 +26,7 @@ search = true
 # featured post title
 featured_post_title = ""
 recent_post_title = ""
-mainSections = ["posts"]
+mainSections = ["blog"]
 # about widget content
 about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT (Enschede) as an Architect. I love to share my knowledge about automation in Azure and M365. </br>You can find me on the links below."
 # footer content
