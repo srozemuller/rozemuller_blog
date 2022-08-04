@@ -5,15 +5,15 @@ favicon = "images/favicon.png"
 logo = "images/logo.png"
 # use `x` with logo_width, example: "100x".
 # Note: logo_width is not work with .svg file
-logo_width = "150x"
+logo_width = "300x"
 # logo text will only show when logo is missing.
 logo_text = "Boilerplate"
 # navbar fixed to top
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
 description = "This is meta description"
-author = "Themefisher"
-image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+author = "Sander Rozemuller"
+image = "images/author.png" # this image will be used as fallback if a page has no image of its own
 # contact info
 address = "9567 Turner Trace Apt. BC C3G8A4"
 mobile = "+211234565523"
@@ -24,15 +24,15 @@ contact_form_action = "#" # contact form works with https://formspree.io
 search = true
 
 # featured post title
-featured_post_title = "Featured Post"
-recent_post_title = "Recent Post"
-mainSections = ["blog"]
+featured_post_title = ""
+recent_post_title = ""
+mainSections = ["posts"]
 # about widget content
-about_widget_content = "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
+about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT (Enschede) as an Architect. I love to share my knowledge about automation in Azure and M365. </br>You can find me on the links below."
 # footer content
-footer_content = "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper."
+footer_content = "Copyright © 2022 by Sander Rozemuller. All rights reserved. No part of the information on this web site may be reproduced or posted in any form or by any means without the prior written permission of the publisher. All post are written based on my own experience with no warranties, confers no rights and is not supported by the authors. "
 # copyright
-copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+copyright = "Copyright [Rozemuller](https://rozemuller.com/)"
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= ""
@@ -61,14 +61,14 @@ link = "https://gethugothemes.com/"
 
 # cookies
 [cookies]
-enable = false
+enable = true
 expire_days = 2
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"
 
 ######################## sidebar widgets #########################
 [widgets]
-sidebar = ["about", "categories", "recent-post", "newsletter"]
+sidebar = ["az-avd","about","mvp","side-menu","categories","adsense-square"]
 # available widget : about,categories,newsletter,recent-post
 
 
@@ -81,25 +81,16 @@ mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this co
 
 
 ############################# social site ########################
-[[social]]
-title = "facebook"
-icon = "fab fa-facebook" # themify icon : https://themify.me/themify-icons
-link = "#"
 
 [[social]]
 title = "twitter"
 icon = "fab fa-twitter" # themify icon : https://themify.me/themify-icons
-link = "#"
-
-[[social]]
-title = "instagram"
-icon = "fab fa-instagram" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#"
+link = "https://www.twitter.com/sanderozemuller"
 
 [[social]]
 title = "github"
 icon = "fab fa-github" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "#"
+link = "https://www.github.com/srozemuller"
 
 [[social]]
 title = "linkedin"
