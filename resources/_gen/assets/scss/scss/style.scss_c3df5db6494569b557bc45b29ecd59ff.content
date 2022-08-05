@@ -6677,6 +6677,9 @@ img {
   max-width: 100%;
   height: auto; }
 
+.navbar-brand .img-fluid {
+  max-width: 70%; }
+
 .img-fluid {
   border-radius: 10px; }
 
