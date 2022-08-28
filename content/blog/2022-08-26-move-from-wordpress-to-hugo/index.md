@@ -11,7 +11,7 @@ url: move-from-wordpress-to-static-page-hugo
 draft: false
 ---
 
-We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough.
+We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough. Now a few years later it became more a frustration than a pleasure to keep my website up and running. In this blog, I explain why and how I changed my website into a static webpage. 
 
 {{< toc >}}
 
