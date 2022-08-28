@@ -241,10 +241,12 @@ Read this doc about how to [create a GitHub PAT token](https://docs.github.com/e
 
 You will notice there is a GitHub action created in your repository after creation.
 
-The GitHub action (or DevOps pipeline in case of a DevOps connection) takes care of rebuilding your website after a commit to the main branch. After a commit, the action starts automatically.
+The GitHub action (or DevOps pipeline in case of a DevOps connection) takes care of rebuilding your website after a commit to the main branch. 
 
 ![github-action](github-action.png)
 
+After a commit, the action starts automatically. When the action is finished the website will be rebuild again.
+![deployment-complete](deployment-complete.png)
 ## Add a custom domain to Azure static web app
 
 A Static Web App in Azure does have a unique URL by default. But it is nice to have your own domain connected. Connecting you own domain is simple. Adding your domain is the first step followed by a validation step. (CNAME or TXT)
