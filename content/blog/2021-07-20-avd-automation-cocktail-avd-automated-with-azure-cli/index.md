@@ -3,7 +3,7 @@ title: 'AVD Automation Cocktail – AVD automated with Azure CLI'
 date: '2021-07-20T14:59:39+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-azure-cli
-image: /wp-content/uploads/2021/06/cocktail-orange-sunset.png
+image: cocktail-orange-sunset.png
 categories:
     - 'AVD Cocktail'
     - Azure
