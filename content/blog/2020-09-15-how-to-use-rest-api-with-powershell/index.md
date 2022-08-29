@@ -2,7 +2,7 @@
 title: 'How to use REST API with Powershell'
 date: '2020-09-15T11:57:34+02:00'
 author: 'Sander Rozemuller'
-image: Image-1149.png
+image: image-1149.png
 categories:
     - API
     - Powershell
@@ -19,7 +19,7 @@ As the world of API is growing so the tooling for querying API’s is growing wi
 
 But what if you need API output for automation purposes, Postman isn’t the tool you need. So in my case I use Powershell.
 
-{{< toc html >}}
+{{< toc >}}
 
 ## Register an app in Azure AD
 
@@ -60,3 +60,5 @@ Invoke-RestMethod -Uri $uri -Headers $token -Method Get
 
 Some other common used methods are POST (create a new record) or PATCH (partial updating records)  
 You can find a whole explanation about REST API’s at https://docs.microsoft.com/en-us/graph/use-the-api
+
+{{< bye >}}
