@@ -13,8 +13,8 @@
         <div class="border rounded d-lg-flex p-4 mb-5">
           <!-- big featured post -->
           <div class="col-lg-6 me-lg-4 mb-5 mb-lg-0">
-            
-            {{ range first 1 site.RegularPages  }}
+
+            {{ range first 1 site.RegularPages }}
             {{ .Render "post" }}
             {{ end }}
           </div>
@@ -22,16 +22,16 @@
           <div class="col-lg-6 pe-4 blog-card-list scroll-list">
             <!-- {{ $data := where site.RegularPages "Type" "regular" | first 4}} -->
             <!-- select first 4 to skip the first. that makes first 3 after the first post-->
-            {{ $data := site.RegularPages  | first 3}}
+            {{ $data := site.RegularPages | first 3}}
             {{ range after 1 $data }}
             <div class="card rounded-0">
               <div class="d-sm-flex">
                 <!-- image path -->
                 {{ $imagePath:= .Params.image }}
                 {{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
-              
+
                 {{ if $imagePath }}
-                
+
                 <!-- image CDN -->
                 {{ if hasPrefix $imagePath "http" }}
                 <img loading="lazy" decoding="async" src="{{ $imagePath | safeURL }}" alt="{{ .Title }}"
@@ -39,7 +39,7 @@
                 {{ else }}
                 <!-- /image cdn -->
 
-                <!-- image processing for single device -->     
+                <!-- image processing for single device -->
                 {{ with $image }}
                 {{ $imageFallback:= $image.Fill "105x85" }}
                 {{ $imageWebp:= $image.Fill "105x85 webp" }}
@@ -47,7 +47,7 @@
                   height="85" class="img-fluid rounded-4 align-self-start"
                   onerror="this.onerror='null';this.src='{{$imageFallback.RelPermalink}}'">
                 {{ end }}
-                
+
                 <!-- /image processing for single device -->
                 {{ end }}
                 {{ end }}
@@ -69,17 +69,20 @@
           </div>
         </div>
 
-        <!-- advertisement -->
-        {{ with site.Params.advertisement }}
-        <div class="mb-5">
-          <a href="{{.link | absLangURL}}">
-            {{ $image:= resources.Get .image }}
-            <img class="img-fluid w-100" width="858" height="123" src="{{ $image.RelPermalink }}" alt="image">
-          </a>
-        </div>
-        {{ end }}
-        <!-- /advertisement -->
+        <div class="border rounded d-lg-flex p-4 mb-5">
+          <!-- featured content -->
+          {{ range site.Params.featured }}
+          <div class="img-fluid w-100 rounded-4">
 
+            <h4 class="h5 title-border" style="text-align:center;">{{ .category }}</h4>
+            <a href="{{.link | absLangURL}}">
+              {{ $image:= resources.Get .image }}
+              <img width="379" height="252" src="{{ $image.RelPermalink }}" alt="image">
+            </a>
+          </div>  
+          {{ end }}
+          <!-- /advertisement -->
+        </div>
         {{with site.Params.recent_post_title}}
         <div class="section-title">
           <h2 class="h4 title-border">{{ . | markdownify}}</h2>
@@ -91,7 +94,7 @@
             {{ $paginator:= .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections | after 3 ) }}
             {{ range $paginator.Pages }}
             <div class="col-sm-6 mb-4">
-               {{ .Render "post" }}
+              {{ .Render "post" }}
             </div>
             {{ end }}
           </div>
