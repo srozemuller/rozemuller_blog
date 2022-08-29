@@ -165,6 +165,16 @@ After starting the Hugo website with ```Hugo server -D``` then go to [https://lo
 
 ![local-hugo-server](local-hugo-serer.png)
 
+Hugo runs on a MAC almost natively. If you use a Windows client make sure you read this post.
+https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/installing-on-windows/ 
+
+In the post they refer to a Hugo for Windows package. Make sure you download the extended version. Otherwise some features won't work. https://github.com/gohugoio/hugo/releases
+ 
+I found a solution in this post: https://discourse.gohugo.io/t/resize-image-this-feature-is-not-available-in-your-current-hugo-version/34682
+
+I tried with succes. 
+
+
 ### Configure your website
 
 After your website is running locally it is time for configuration. Hugo depends on a configuration file. This file can be stored in the website's root or in the /config folder under the name config.toml (or .yaml / .json)
