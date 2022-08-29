@@ -2,13 +2,11 @@
 title: 'Manage AVD automated with Microsoft Endpoint Manager'
 date: '2021-10-07T14:11:01+02:00'
 author: 'Sander Rozemuller'
-url: manage-avd-automated-with-microsoft-endpoint-manager/
-image: Image-2029-e1627639004624.png
+url: manage-avd-automated-with-microsoft-endpoint-manager
+image: Image-2029.png
 categories:
     - 'Azure Virtual Desktop'
-    - 'Microsoft 365'
     - 'Microsoft Endpoint Manager'
-    - 'North Star'
 tags:
     - AVD
     - 'azure virtual desktop'
@@ -43,32 +41,7 @@ Because of overlapping subjects, I have chosen to use this article to explain th
 
 Microsoft has released a framework for Microsoft Endpoint Management called ‘North Star’. This framework is designed to deploy and secure Windows Devices in the cloud. Also, task to optimize and manage them. Because of all these settings, the framework is categorized into main blocks. To clarify more, these main blocks have four sub-blocks. In this blog series, I use the North Star framework to manage Azure Virtual Desktop after it is deployed.
 
-[thumbnail image 1 of blog post titled 
-	
-	
-	 
-	
-	
-	
-				
-		
-			
-				
-						
-							A framework for Windows endpoint management transformation
-							
-						
-					
-			
-		
-	
-			
-	
-	
-	
-	
-	
-](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/289704i7B8110F372C81D4A/image-size/large?v=v2&px=999)
+[thumbnail](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/289704i7B8110F372C81D4A/image-size/large?v=v2&px=999)
 In addition to the introduction, more information is available via the link below.
 
 <https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684>

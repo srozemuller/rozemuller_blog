@@ -2,7 +2,7 @@
 title: 'How to enable AVD scaling plans automated'
 date: '2021-10-20T17:58:45+02:00'
 author: 'Sander Rozemuller'
-image: /wp-content/uploads/2021/08/avd-scaling-startup.png
+image: avd-scaling-startup.png
 categories:
     - Automation
     - Azure

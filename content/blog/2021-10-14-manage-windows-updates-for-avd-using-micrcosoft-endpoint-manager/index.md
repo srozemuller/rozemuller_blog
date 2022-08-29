@@ -1,22 +1,8 @@
 ---
-id: 2365
 title: 'Manage Windows Updates for AVD using Microsoft Endpoint Manager'
 date: '2021-10-14T22:44:52+02:00'
-author: 'Sander Rozemuller'
-layout: post
-guid: 'https://rozemuller.com/?p=2365'
-url: manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/
-wp_last_modified_info:
-    - '20 July 2022 @ 7:55 am'
-wplmi_shortcode:
-    - '[lmt-post-modified-info]'
-newszone_post_views_count:
-    - '67'
-ekit_post_views_count:
-    - '68'
-digiqole_featured_post:
-    - 'no'
-image: /wp-content/uploads/2021/06/shutterstock_1647339571.png
+url: manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager
+image: update-progress.png
 categories:
     - Automation
     - 'Azure Virtual Desktop'
@@ -49,8 +35,8 @@ For more information about this series please my blog about the North Star frame
 
 In the picture below the red circles are in the scope of this part of the series. To get started I recommend start reading the kick-off blog about Operation North-Star.
 
-[](https://rozemuller.com/wp-content/uploads/2021/10/operation-northstar-updates-1.png)
-<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>## Device configuration
+[operation-northstar-updates](operation-northstar-updates.png)
+## Device configuration
 
 To manage Windows Updates on the AVD session host automated, we need to create and assign an Update Ring policy. But there is more. Updating machines is only one part of all. After the update, we also need to check the device’s health. And what about update delivery. You don’t want your network down because of Windows Updates. All these aspects are managed with device configuration in Microsoft Endpoint Manager (MEM).
 
@@ -65,7 +51,7 @@ So, how is it possible to create different policies with the same REST API URL?
 Well, that’s the moment where the @odata.type value is popping up. I requested all the policies and selected the display name and the @odata.type. As you can see the types are different. Based on these types you are able to configure the correct policy.   
 In case of creating an Update Ring policy automated, we need the **\#microsoft.graph.windowsUpdateForBusinessConfiguration** type.
 
-![image-4](image-4.png)<figcaption>*I requested all the device configuration policies with the Graph API and selected the display name and @odata.type* </figcaption>
+![image-4](image-4.png)
 Now we know the correct data type we can look closer into policies. Also there we have to deal with different data types. In the basics, they all look the same with different settings. However, policies do have conditional settings. This means some settings are only available if you select a specific option. Knowing these differences helps you a lot in configuring them the automated way.
 
 ### @odata examples
@@ -76,7 +62,7 @@ First, I created an update ring policy configured with automatic installation of
 
 ![image-11](image-11.png)
 ![image-10](image-10.png)
-<meta charset="utf-8"></meta>Second, I created an update ring policy configured with auto-install at maintenance time. I configured this time between 8 AM and 5 PM.
+Second, I created an update ring policy configured with auto-install at maintenance time. I configured this time between 8 AM and 5 PM.
 
 ![image-9](image-9.png)
 ![image-12](image-12.png)
@@ -105,7 +91,7 @@ $script:token = GetAuthToken -resource 'https://graph.microsoft.com'
 $script:deviceConfigurl = "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations"$script:token = GetAuthToken -resource 'https://graph.microsoft.com'
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>### Windows Update policy
+### Windows Update policy
 
 These kinds of policies had a lot of options. It comes very precisely from the way how you create a policy automated. I have chosen to follow Microsoft’s default settings. Also within these policies, we have to deal with odata.types I stored all these settings in the configuration below.
 
@@ -269,7 +255,7 @@ In the body below it is an object which accepts two different types. These types
 Dynamic groups depend on membership rules. If configured group types the body needs the memberShipRule. Otherwise, you will get an error like below.
 
 ```
-<pre class="wp-block-preformatted has-vivid-red-color has-text-color">{"error":{"code":"Request_BadRequest","message":"A value is required for property 'membershipRule'.","innerError":{"date":"2021-09-10T11:12:05","request-id":"cc8c3d81-686b-453a-9ad0-61e98ae8daf0","client-request-id":"cc8c3d81-686b-453a-9ad0-61e98ae8daf0"}}}
+{"error":{"code":"Request_BadRequest","message":"A value is required for property 'membershipRule'.","innerError":{"date":"2021-09-10T11:12:05","request-id":"cc8c3d81-686b-453a-9ad0-61e98ae8daf0","client-request-id":"cc8c3d81-686b-453a-9ad0-61e98ae8daf0"}}}
 ```
 
 This is the point where I also need the Azure background. I’m still logged with the just created application (with Reader permissions on the subscription).   

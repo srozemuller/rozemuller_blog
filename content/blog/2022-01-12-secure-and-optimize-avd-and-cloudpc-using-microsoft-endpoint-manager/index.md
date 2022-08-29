@@ -1,20 +1,9 @@
 ---
-id: 3101
 title: 'Secure and optimize AVD and CloudPC using Microsoft Endpoint Manager'
 date: '2022-01-12T12:39:42+01:00'
 author: 'Sander Rozemuller'
-layout: post
-guid: 'https://rozemuller.com/?p=3101'
-url: secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/
-wp_last_modified_info:
-    - '12 January 2022 @ 12:39 pm'
-wplmi_shortcode:
-    - '[lmt-post-modified-info]'
-newszone_post_views_count:
-    - '47'
-ekit_post_views_count:
-    - '48'
-image: /wp-content/uploads/2022/01/standards.jpg
+url: secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager
+image: standards.jpg
 categories:
     - Azure
     - 'Azure Virtual Desktop'
@@ -54,7 +43,8 @@ The first part of secure and optimize AVD and CloudPC is creating a security bas
 
 In my situation, I choose the Windows 365 Security Baseline (Preview) profile. I have chosen this one because it fits the most to Azure Virtual Desktop and CloudPC. Antivirus exclusions for FSLogix are preconfigured and WiFi are stripped from this settings policy.
 
-![Security-baseline-w365-profile](Security-baseline-w365-profile.png)</figure>At this place, I mentioned the word settings a few times already. This is because a Security Baseline profile consists of settings. Just like a configuration profile under device management. Actually, under the hood Security Baselines are a part of the device management REST API. However, a lot more is happening underwater. For that reason, I decided to write another blog post about Security Profiles under de hood. How it fits in Endpoint Manager and how to use the REST API for automation. (keep attention on my website or follow me via [Twitter](https://twitter.com/SandeRozemuller)) For now, I continue with standardizing AVD using Microsoft Endpoint Manager automated.
+![Security-baseline-w365-profile](Security-baseline-w365-profile.png)
+At this place, I mentioned the word settings a few times already. This is because a Security Baseline profile consists of settings. Just like a configuration profile under device management. Actually, under the hood Security Baselines are a part of the device management REST API. However, a lot more is happening underwater. For that reason, I decided to write another blog post about Security Profiles under de hood. How it fits in Endpoint Manager and how to use the REST API for automation. (keep attention on my website or follow me via [Twitter](https://twitter.com/SandeRozemuller)) For now, I continue with standardizing AVD using Microsoft Endpoint Manager automated.
 
 ### Create a security baseline profile automated
 
@@ -65,9 +55,11 @@ $script:templatesUrl = "https://graph.microsoft.com/beta/deviceManagement/templa
 $templateId = (Invoke-RestMethod -Uri $script:templatesUrl -Method GET -Headers $script:token).value.id
 ```
 
-![cloud-pc-template](cloud-pc-template.png)</figure>In the next step, I create a profile within the Windows 365 Security Baseline and all the needed settings. In this post, I keep the default template settings. The steps below describe how to create a new security baseline profile automated with the template settings.
+![cloud-pc-template](cloud-pc-template.png)
+In the next step, I create a profile within the Windows 365 Security Baseline and all the needed settings. In this post, I keep the default template settings. The steps below describe how to create a new security baseline profile automated with the template settings.
 
-![create-profile](create-profile.png)<figcaption>Create Windows 365 Security Baseline profile</figcaption></figure>In the code above we found the correct template Windows 365 Security Baseline. In the next steps, we need ID representing this baseline. At first we grab all the settings from the template and store it into the **$securityBsaelineSettings** variable.
+![create-profile](create-profile.png)
+In the code above we found the correct template Windows 365 Security Baseline. In the next steps, we need ID representing this baseline. At first we grab all the settings from the template and store it into the **$securityBsaelineSettings** variable.
 
 Make a note about the **`$expand=settings**. However the [docs](https://docs.microsoft.com/en-us/graph/api/intune-deviceintent-devicemanagementsettinginstance-list?view=graph-rest-beta#http-request) says to use /settings at the end of the URL it looks like there is a bug or the documentation isn’t right yet. When requesting the URL you will get an error like below.
 
@@ -191,7 +183,8 @@ It is a great help and I’m using it while creating Azure Virtual Desktop image
   
 From that point, I go a step further and show how to deploy AVD optimization settings in MEM all automated.
 
-![settings](settings.png)</figure>For more information about the settings catalog, check the URL: <https://docs.microsoft.com/en-us/mem/intune/configuration/settings-catalog>
+![settings](settings.png)
+For more information about the settings catalog, check the URL: <https://docs.microsoft.com/en-us/mem/intune/configuration/settings-catalog>
 
 ### Deploy configuration profile automated
 

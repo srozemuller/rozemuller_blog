@@ -3,7 +3,7 @@ title: 'How to join Azure AD  automated'
 date: '2021-07-26T16:55:50+02:00'
 author: 'Sander Rozemuller'
 url: how-to-join-azure-ad-automated
-image: /wp-content/uploads/2021/07/cloud-identity.png
+image: cloud-identity.png
 categories:
     - Automation
     - Identity
