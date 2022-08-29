@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="" lang=en-us>
+<head>
+    <!--WCP cookie consent-->
+    <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="en-us">
+    
+    <meta name="msvalidate.01" content="C98C595B993007CFA628CD7820905B35" />
+    
+    <meta content="Sander Rozemuller" property="og:title" />
+    <meta content="https://mvp.microsoft.com/Content/Images/mvp-banner-fb.jpg" property="og:image" />
+    <meta name="Title" content="Sander Rozemuller">
+    <meta name="Description">
+    <meta name="keywords">
+    
+
+    <link rel="shortcut icon" href="//www.microsoft.com/favicon.ico?v2">
+    <link href="/Content/Styles/site.css" rel="stylesheet" />
+    <title>Sander Rozemuller</title>
+
+    
+    
+    <link rel="alternate" hreflang="en-us" href="/en-us/" />
+    <link rel="alternate" hreflang="zh-cn" href="/zh-cn/" />
+    <link rel="alternate" hreflang="zh-tw" href="/zh-tw/" />
+    <link rel="alternate" hreflang="it-it" href="/it-it/" />
+    <link rel="alternate" hreflang="de-de" href="/de-de/" />
+    <link rel="alternate" hreflang="de-de" href="/de-de/" />
+    <link rel="alternate" hreflang="ja-jp" href="/ja-jp/" />
+    <link rel="alternate" hreflang="ko-kr" href="/ko-kr/" />
+    <link rel="alternate" hreflang="es-es" href="/es-es/" />
+    <link rel="alternate" hreflang="pt-br" href="/pt-br/" />
+    <link rel="alternate" hreflang="ru-ru" href="/ru-ru/" />
+
+    <script type="text/javascript">
+        (function () {
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style"); msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")); document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        })();</script>
+
+    <link href="https://kendo.cdn.telerik.com/2015.2.624/styles/kendo.common.min.css" rel="stylesheet"/>
+
+    <link href="https://kendo.cdn.telerik.com/2015.2.624/styles/kendo.bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="/Content/css?v=9utRyLq1sNwdTCdxpQ43Mq8NNekGyAcHqNTCnNWGNvw1" rel="stylesheet"/>
+
+    <link href="/Content/Styles/css?v=dDTTS1WapqqRrZxfIAQGMe_jnrYf_drKczD81EUrGac1" rel="stylesheet"/>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/redmond/jquery-ui.css" rel="stylesheet"/>
+
+    <link href="/Content/Styles/jquery-ui-mvp?v=_DzMp4z6rCNoFBaf8Jy37m-PTA_oe13EFogrTwnuN2A1" rel="stylesheet"/>
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.2/jquery-ui.min.js"></script>
+
+    <script src="/bundles/toastr?v=nU7i1d5lsXeim4T9MB2Gdegj9fc8yXl1nK6hEZMOAm81"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+
+    <script src="https://kendo.cdn.telerik.com/2015.3.930/js/kendo.all.min.js"></script>
+
+    <script src="/bundles/scripts?v=oP8SkP8hLDEQ0caM2xpfU9kGMeSMsNKo2PUf2MQzOXk1"></script>
+
+
+
+    
+    <script type="text/javascript" src="/Content/Scripts/Common.js"></script>
+
+    <script src="/Content/Scripts/accessibility.js"></script>
+    <style type="text/css">
+        body {
+            color: #000;
+        }
+
+        body, input {
+            font-size: 13px;
+        }
+
+        body, select {
+            font-family: Segoe UI,Arial,Verdana,Tahoma,sans-serif;
+        }
+
+        .png-img span {
+            left: -9999px;
+        }
+
+        div.stage {
+            width: 916px;
+            padding-top: 0px;
+            padding-right: 40px;
+            padding-bottom: 0px;
+            padding-left: 40px;
+        }
+
+        div.stage-content {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        div.form-bottom-inner {
+            background-color: #ececec;
+            left: 0;
+        }
+
+        div.stage-bg-top {
+            background-color: #fff;
+            left: 0;
+        }
+
+        div.stage-bg-mid {
+            background-color: #fff;
+            left: 0;
+        }
+
+        div.stage-bg-bot {
+            background-color: #fff;
+            left: 0;
+        }
+
+        div.main-brand div {
+            float: left;
+        }
+
+            div.main-brand div.brandLogoText {
+                color: #4f4f4f;
+                font-size: 188%;
+            }
+
+            div.main-brand div.brandTagLineText {
+                color: #4f4f4f;
+                font-size: 80%;
+            }
+
+        .mst-floatLeft {
+            float: left;
+        }
+
+        .mst-floatRight {
+            float: right;
+        }
+
+        /*<!-- [if !IE 7] > .png-img div {
+                left: 0;
+            }
+
+            <![endif] -->*/
+    </style>
+
+    <!--
+    To collect end-user usage analytics about your application,
+    insert the following script into each page you want to track.
+    Place this code immediately before the closing </head> tag,
+    and before any other scripts. Your first data will appear
+    automatically in just a few seconds.
+    -->
+    <script type="text/javascript">
+
+        var appInsights = window.appInsights || function (config)
+        {
+            function i(config) {
+                t[config] = function ()
+                { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) }
+            } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({ instrumentationKey: "25957bc2-bdf1-4ea2-8419-2a3fdcb57d18" });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();</script>
+
+    
+<link href="/Content/Styles/Activities.css" rel="stylesheet" />
+<link rel="Stylesheet" type="text/css" href="/Content/Styles/ProfileViewer.css" />
+
+
+</head>
+
+<body>
+    <!--WCP decides whether to show cookie banner or not -->
+    <div id="cookie-banner"></div>
+    <!-- Microsoft.Support.Mvp.PrivatePortal.AddAntiForgeryToken({}) uses this form -->
+    <form method="POST" id="__AjaxAntiForgeryForm" role="form" aria-label="form"><input name="__RequestVerificationToken" type="hidden" value="rpWHKEpRXz0V6URA7So_DJKgRxPc7Fj5NrCLUZeWbUpJuIcOZ4ZWz9BpUzyeJ_Nv6D7E8xZjbpoHzezuTJG3lllzAluc2RVWfMP0Q_mBpdU1" /></form>
+
+    
+<div id="skiplinkholder">
+    <p><a id="skiplink" role="button" href="#kwmain">Skip to Main Content</a></p>
+    <p><a id="skipfooterlink" role="button" href="#footercontent">Skip to Footer Content</a></p>
+</div>
+
+
+<header class="mscom_header" role="banner">
+    <div class="row-fluid mscom-header-row-2">
+        <div class="span bp1-col-2-1 bp3-col-2-1 bp2-col-2-1 bp0-col-2-1 header-mslogo-column">
+            <a class="mscom-link mscom-siteLogo mscom-siteLogo-large" title="Microsoft" name="Microsoft" href="https://www.microsoft.com">
+                
+                <img src="https://c.s-microsoft.com/en-us/CMSImages/mslogo.png?version=856673f8-e6be-0476-6669-d5bf2300391d" alt="Microsoft - Official Home Page" title="Microsoft - Official Home Page" class="mscom-left mscom-siteLogo-large-image" />
+                
+            </a>
+        </div>
+        <div style="float:right">
+            <div class="span  bp1-col-2-1 bp3-col-2-1 bp2-col-2-1 bp0-col-2-0 mscom-header-search-section mscom-fullwidth-view-1">
+                
+                <div class="mscom-link mscom-account-text mscom-account-link">
+                    <div class="mvpLogin">
+        
+            <a href="/en-us/Account/SignIn" name="Sign In">Sign In</a>
+        
+
+</div>
+
+<script type="text/javascript">
+    function nameDropSlideToggle() {
+        if ($('#nameDrop').css('display') == "none") {
+            $('#nameTrigger').attr('aria-expanded', 'true');
+        } else {
+            $('#nameTrigger').attr('aria-expanded', 'false');
+        }
+        $('#nameDrop').slideToggle('500');
+    }
+
+    $(document).ready(function () {
+        if ($('#nameTrigger')) {
+            $('#nameTrigger').click(function (event) {
+                event.stopPropagation();
+                nameDropSlideToggle();
+            });
+            $('#nameDrop').on('mouseleave', function () {
+                nameDropSlideToggle();
+            });
+
+            $('#nameDrop > a:first-child').keydown(function (event) {
+                if (event.which == 9 && event.shiftKey) { // Tab is keycode 9
+                    nameDropSlideToggle();
+                    event.preventDefault();
+                }
+            });
+
+            $('#nameDrop > a:last-child').keydown(function (event) {
+                if (event.which == 9 && !event.shiftKey) {
+                    nameDropSlideToggle();
+                    event.preventDefault();
+                }
+            });
+        }
+    });
+</script>
+
+                    
+<link href="/Content/Styles/toastr.css" rel="stylesheet" />
+<script type="text/javascript" src="/Content/Scripts/toastr.js"></script>
+
+<div class="notificationBanner">
+    <input id="RedirectTo" name="RedirectTo" type="hidden" value="/en-us/MyProfile/EditQuestions" />
+</div>
+
+                </div>
+            </div>
+            <div class="span  bp3-col-2-0 bp2-col-2-0 bp1-col-2-0 bp0-col-2-1 rightMenuL0">
+                <div class="mscom-right mscom-header-section-2-2">
+    
+    
+    <a target="_self" class="mscom-link mscom-header-searchtogglelink" href="#" role="button" aria-label="Search button image" tabindex="-1">
+        <span class="icon-search"></span><span class="screen-reader-text">Search</span>
+    </a>
+
+    <a target="_self" class="mscom-link mscom-header-navtogglelink nav-selected" href="#" bi:track="false" role="button">
+        <span class="mobile-menu">
+            <img src="https://c.s-microsoft.com/en-us/CMSImages/icon_menu_new.png?version=2e17c0b9-dc99-1d59-c64d-0be30696e854" alt="Menu" title="Menu" class="mobile-menu-default-image" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" viewBox="0 0 24 17" focusable="false" x="0px" y="0px" width="24px" height="17px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1" baseProfile="tiny">
+            <g>
+            <path fill="#747474" fill-rule="evenodd" d="M 0 0 v 3 h 24 V 0 H 0 Z M 0 10 h 24 V 7 H 0 V 10 Z M 0 17 h 24 v -3 H 0 V 17 Z"></path>
+                        </g>
+                    </svg>
+        </span><span class="screen-reader-text">Menu</span>
+    </a>
+</div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <h1 class="siteIdentity">
+            <a href="/en-us/" title="Most Valuable Professional" alt="Most Valuable Professional">Most Valuable Professional</a>
+        </h1>
+
+    </div>
+</header>
+    
+    <div class="mscom_navigation">
+        <div class="navWrap">
+    <div class="socialMedia">
+        
+        <ul style="text-align: right;">
+            <li class="socialIconFacebook">
+                <a target="_blank" href=https://www.facebook.com/MVPAwardProgram aria-label="Follow us on Facebook 1 of 3">
+                    <img src="/Content/Images/fb_icon.png" alt="Follow us on Facebook" title="Follow us on Facebook">
+                </a>
+            </li>
+            <li class="socialIconTwitter">
+                <a target="_blank" href=https://twitter.com/MVPAward aria-label="follow us on twitter 2 of 3">
+                    <img src="/Content/Images/twitter_icon.png" alt="Follow us on Twitter" title="Follow us on Twitter">
+                </a>
+            </li>
+            <li class="socialIconEmail">
+                <a target="_self" href=mailto:mvpga@microsoft.com aria-label="Email MVP Award 3 of 3">
+                    <img src="/Content/Images/mail_icon.png" alt="Email MVP Award" title="Email MVP Award">
+                </a>
+            </li>
+        </ul>
+    </div>
+                <div style="clear:both"></div>
+<div>
+    
+<style>
+    #menu > li {
+        cursor: pointer;
+    }
+</style>
+
+
+<nav>
+    <ul id="menu" >
+                        <li tabindex="0" class="item" data-linkto="/en-us" aria-label="Home link"><a tabindex="-1" href="/en-us">Home</a></li>
+                        <li aria-expanded="false" aria-label="Explore dropdown link" aria-haspopup='true' class="item hasSubmenu columns-">
+                            <button role="combobox" aria-expanded="false" aria-haspopup='true' aria-label="Explore dropdown link"
+                                    style="background:none;color:#333;font-size:100%;vertical-align:baseline;font:inherit;">Explore</button>
+                            <span class="menu-link-icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_menu_2" viewBox="0 0 8.5 4.9" focusable="false" x="0px" y="0px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1" baseProfile="tiny">
+                                <polyline fill="#747474" fill-rule="evenodd" points="8.5,0.6 7.9,0 4.3,3.6 0.6,0 0,0.6 4.3,4.9"></polyline>
+                        </svg>
+                            </span>
+                            <div class="overlay"></div>
+                            
+<ul class="submenu menu-hidden ancestors-2">
+                <li tabindex="0" aria-label="Overview" class="item0 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Overview" role="menuitem">Overview</a>
+                </li>
+                <li tabindex="0" aria-label="MVP Award Technology Structure" class="item1 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/mvp-award-update" role="menuitem">MVP Award Technology Structure</a>
+                </li>
+                <li tabindex="0" aria-label="MVP Code of Conduct" class="item2 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/mvp-code-of-conduct" role="menuitem">MVP Code of Conduct</a>
+                </li>
+                <li tabindex="0" aria-label="What it takes to be an MVP" class="item3 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/what-it-takes-to-be-an-mvp" role="menuitem">What it takes to be an MVP</a>
+                </li>
+                <li tabindex="0" aria-label="Nominate an MVP" class="item4 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Nomination/nominate-an-mvp" role="menuitem">Nominate an MVP</a>
+                </li>
+                <li tabindex="0" aria-label="Meet the MVP Award Team" class="item5 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/meet-the-mvp-award-team" role="menuitem">Meet the MVP Award Team</a>
+                </li>
+                <li tabindex="0" aria-label="Blog" class="item6 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="_blank" href="https://aka.ms/mvpblog/" role="menuitem">Blog</a>
+                </li>
+                <li tabindex="0" aria-label="Video" class="item7 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="_blank" href="https://channel9.msdn.com/" role="menuitem">Video</a>
+                </li>
+                <li tabindex="0" aria-label="Microsoft Docs - Latest Articles" class="item8 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/DocsFeed" role="menuitem">Microsoft Docs - Latest Articles</a>
+                </li>
+
+</ul>
+
+                        </li>
+                        <li tabindex="0" class="item" data-linkto="/en-us/MvpSearch" aria-label="Find an MVP link"><a tabindex="-1" href="/en-us/MvpSearch">Find an MVP</a></li>
+                        <li aria-expanded="false" aria-label="MVP Reconnect dropdown link" aria-haspopup='true' class="item hasSubmenu columns-">
+                            <button role="combobox" aria-expanded="false" aria-haspopup='true' aria-label="MVP Reconnect dropdown link"
+                                    style="background:none;color:#333;font-size:100%;vertical-align:baseline;font:inherit;">MVP Reconnect</button>
+                            <span class="menu-link-icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_menu_4" viewBox="0 0 8.5 4.9" focusable="false" x="0px" y="0px" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1" baseProfile="tiny">
+                                <polyline fill="#747474" fill-rule="evenodd" points="8.5,0.6 7.9,0 4.3,3.6 0.6,0 0,0.6 4.3,4.9"></polyline>
+                        </svg>
+                            </span>
+                            <div class="overlay"></div>
+                            
+<ul class="submenu menu-hidden ancestors-2">
+                <li tabindex="0" aria-label="What is MVP Reconnect" class="item0 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/reconnect-whatis" role="menuitem">What is MVP Reconnect</a>
+                </li>
+                <li tabindex="0" aria-label="FAQ" class="item1 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/reconnect-faq" role="menuitem">FAQ</a>
+                </li>
+                <li tabindex="0" aria-label="Join MVP Reconnect" class="item2 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/Pages/reconnect-requestform" role="menuitem">Join MVP Reconnect</a>
+                </li>
+                <li tabindex="0" aria-label="Find an MVP Reconnect member" class="item3 ancestors-2 " role="none">
+                    
+                    <a tabindex="-1" target="" href="/en-us/MVPReconnectSearch" role="menuitem">Find an MVP Reconnect member</a>
+                </li>
+
+</ul>
+
+                        </li>
+
+    </ul>
+</nav>
+
+</div>
+
+                <div style="text-align: right; position: relative;" class="headerUtil">
+                    
+
+<form action="/en-us/MvpSearch" class="searchBar" method="get" name="searchForm" role="search">    <div id="ctl11_ctl05_SearchBox" class="mstSrc_Border" style="display:flex">
+        <div class="mstSrc_FloatDir" style="overflow:hidden">
+            <input  name="kw" type="text" id="ctl11_ctl05_SearchTextBox"
+                   placeholder="Find an MVP"
+                   title="Find an MVP"
+                   class="mstSrc_TextBox" autocomplete="off">
+            <label for="ctl11_ctl05_SearchTextBox" style="opacity:0;position:absolute;display:none">search an mvp</label>
+            <input type="submit"  value="" title="Find an MVP" style="display: none;">
+            
+            <img class="mstSrc_Button" tabindex="0" style="display:none" id="deleteImageGlass" title="Delete" role="button" alt="Clean Button" aria-label="Clean button" src="../../Content/Images/delete.png" />
+            <input type="image" class="mstSrc_Button" id="searchImageGlass"
+                   
+                   title="Search" role="button" alt="Search" aria-label="Search button" src="../../Content/Images/search_mag_glass.png">
+        </div>
+    </div>
+</form>
+                    <div style="clear: both"></div>
+                </div>
+                <div style="clear:both"></div>
+        </div>
+    </div>
+
+
+    <!-- Message Drawer: starts out hidden -->
+    <div id="messageDrawer">
+        <div id="messageDrawerMessages">
+        </div>
+        <div id="closeButtonContainer">
+            <a href="" id="messageDrawerClose">&#10006;</a>
+        </div>
+    </div>
+    
+    <div id="kwmain" class="mscom-content" style="min-height:200px;" role="main">
+        
+
+<style>
+.backLink {
+    visibility: visible
+}
+
+</style>
+<div class="content">
+    <div>
+        
+<style>
+    .pagger .horizontallist .pagingNav a {
+        padding: 0 !important;
+        display: inline !important;
+        margin: 0 !important;
+    }
+
+    .profile div h1,
+    .profile .primaryLang {
+        display: inline;
+        color: #000000;
+        font-family: 'Segoe UI Light';
+        font-size: 38px;
+        font-weight: inherit;
+        line-height: 1.25;
+        vertical-align: baseline;
+    }
+</style>
+
+
+
+<div class="ly whiteBoard">
+    <div class="ly leftPanel">
+        <div class="ly photoPanel" id="imageContainer" style="">
+            <div class="backLink">
+                <a href="#" onclick=" window.history.go(-1); return false; ">
+                    
+                    <img src="/Content/Images/arrow_icon_back.png" style="display: inline-block;height: 25px;width: 25px;position: relative;top: 5px;" alt="" />
+                    
+                    Back to search results
+                </a>
+            </div>
+            <div class=""></div>
+            
+                <img alt="Microsoft Most Valuable Professional" src="/Content/Images/mvp-banner.png">
+                            <img alt="Sander Rozemuller photo" src="/en-us/PublicProfile/Photo/5004451" />
+
+        </div>
+        <div class="ly infoPanel ">
+            <div class="ly infoBox">
+                    <div class="ly infoRow">
+                        <div class="ly infoTitle">Award Categories</div>
+                        <div class="ly infoContent">Enterprise Mobility</div>
+                    </div>
+                <div class="ly infoRow">
+                    <div class="ly infoTitle">First year awarded:</div>
+                    <div class="ly infoContent">2021</div>
+                </div>
+                <div class="ly infoRow">
+                    <div class="ly infoTitle">Number of MVP Awards:</div>
+                    <div class="ly infoContent">2</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="ly otherPanel">
+            <div class="ly otherBox">
+                                    <div class="ly otherRow">
+                        <div class="ly otherCatalog">
+                            Language
+                        </div>
+                        <div class="ly otherContent">
+                            Dutch, English
+                        </div>
+                    </div>
+                                                            </div>
+        </div>
+    </div>
+    <div class="ly rightPanel">
+        <div class="ly rightBox">
+            <div class="ly profile">
+                
+                <div>
+<h1>Sander Rozemuller</h1>
+                </div>
+                
+                <div class="location">
+                        <div class="country">Netherlands</div>
+                                    </div>
+            </div>
+                                        <div class="ly recentActivities">
+                    
+                    <h2 class="title">Recent activities</h2>
+                    
+                    <div class="content">
+                        <div id="activitiesTable">
+                            <table class="raListTable" id="recentActivities" data-bind="template:'activities-template'" role="grid"></table>
+                        </div>
+                        <div class="pagger">
+                            <ul class="horizontallist">
+                                <li>
+                                    <a role="button" aria-label="image pre" class="previousPage" href="#" title="Previous">
+                                        <img alt="Pre" class="imgBtnPre" src="/Content/Images/previous.png" />
+                                    </a>
+                                </li>
+                                <li><span class="pagingNav"></span></li>
+                                <li>
+                                    <a role="button" class="nextPage" href="#" title="Next" aria-label="image next">
+                                        <img alt="Next" class="imgBtnNext" src="/Content/Images/next.png" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="ly clear"></div>
+</div>
+<script type="text/html" id="activities-template">
+    <colgroup>
+        <col width="4" />
+        <col width="12%" />
+        <col width="30%" />
+        <col width="12%" />
+        <col width="20%" />
+        <col />
+    </colgroup>
+    <thead>
+        
+        <td role="columnheader"></td>
+        <th role="columnheader" scope="col"><a href="#" data-sort="DateOfActivityFormatted" id="sort_by_date" role="button" aria-label="Sort by date" class="sorter" title="Date"><strong>Date</strong></a></th>
+        <th role="columnheader" scope="col"><a href="#" data-sort="TitleOfActivity" id="sort_by_activity" role="button" aria-label="Sort by activity" class="sorter" title="Activity"><strong>Activity</strong></a></th>
+        <th role="columnheader" scope="col"><a href="#" data-sort="ActivityType.EnglishName" id="sort_by_type" role="button" aria-label="Sort by type" class="sorter" title="Type"><strong>Type</strong></a></th>
+        <th role="columnheader" scope="col"><a href="#" data-sort="ApplicableTechnology.Name" id="sort_by_contributionarea" aria-label="Sort by countribution area" role="button" class="sorter" title="Primary Contribution Area"><strong>Primary Contribution Area</strong></a></th>
+        <th role="columnheader" scope="col"><a href="#" data-sort="AdditionalTechnologies" id="sort_by_additionalTechnologes" aria-label="Sort by additional contribution areas" role="button" class="sorter" title="Additional Contribution Areas"><strong>Additional Contribution Areas</strong></a></th>
+    </thead>
+    <tbody>
+        <!-- ko foreach: $data -->
+        <tr class="expander-row" role="row">
+            <td>
+                <!-- ko if: DisplayMode !== 'basic' -->
+                <a role="button" class="expander details-closed" href="#" data-bind="attr:{'data-privatesiteid': PrivateSiteId}" aria-pressed="false" onclick="handleBtnClick(event)"
+                   onKeyPress="handleBtnKeyPress(event)">
+                    <img src="/Content/Images/closed.png" alt="Show Details" title="Show Details" />
+                </a>
+                <!-- /ko -->
+            </td>
+            <td data-bind="text: DateOfActivityFormatted, attr:{title:DateOfActivityFormatted}" scope="row"></td>
+            <!-- ko if:  DisplayMode !== 'basic' -->
+            <td data-bind="text: TitleOfActivity, attr:{title: TitleOfActivity}"></td>
+            <!-- /ko -->
+            <!-- ko if: DisplayMode === 'basic' && ReferenceUrl -->
+            <td>
+                <a target="_blank" data-bind="attr:{href: ReferenceUrl, title:TitleOfActivity}, text: TitleOfActivity"></a>
+            </td>
+            <!-- /ko -->
+            <!-- ko if: DisplayMode === 'basic' && !ReferenceUrl-->
+            <td data-bind="text: TitleOfActivity, attr:{title: TitleOfActivity}"></td>
+            <!-- /ko -->
+            <td data-bind="text: ActivityType.EnglishName, attr:{title:ActivityType.EnglishName}"></td>
+            <td data-bind="text: ApplicableTechnology.Name, attr:{title: ApplicableTechnology.Name}"></td>
+            <td data-bind="text: AdditionalTechnologies, attr:{title: AdditionalTechnologies}"></td> <!--AdditionalTechnologies-->
+        </tr>
+        <!-- ko if: DisplayMode === 'generic' && parsed -->
+        <tr role="row" class="details-row" data-bind="attr:{id: 'details-' + PrivateSiteId}">
+            <td colspan="6" class="details-cell">
+                <div class="details-cell-wrapper">
+                    <div class="summary msconnect-summary" data-bind="text:PrivatePortal.FormatString(DescriptionSummaryFormat, DateOfActivityFormatted, EndDateFormatted), attr:{title:PrivatePortal.FormatString(DescriptionSummaryFormat, DateOfActivityFormatted, EndDateFormatted)}">
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="msconnect-items">
+                        <!-- ko foreach: {data: parsed.data, as: 'subtypeItem'} -->
+                        <div class="title" data-bind="text: subtypeItem.subtypeTitle, attr:{title:subtypeItem.subtypeTitle}"></div>
+                        <div>
+                            <!-- ko foreach: {data: $parent.parsed.columnHeaders, as:'header'} -->
+                            <!-- ko if: $index() > 0--> | <!-- /ko -->
+                            <span data-bind="text: header + ' ' + subtypeItem.subtypeData[$index()], attr:{title: header + ' ' + subtypeItem.subtypeData[$index()]}"></span>
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </td>
+        </tr>
+        <!-- /ko -->
+        <!-- ko if: DisplayMode === 'barchart' && parsed -->
+        <tr role="row" class="details-row" data-bind="attr:{id: 'details-' + PrivateSiteId}">
+            <td colspan="6" class="details-cell">
+                <div class="details-cell-wrapper">
+                    <div class="summary" data-bind="text:PrivatePortal.FormatString(DescriptionSummaryFormat, DateOfActivityFormatted, EndDateFormatted), attr:{title:PrivatePortal.FormatString(DescriptionSummaryFormat, DateOfActivityFormatted, EndDateFormatted)}">
+                    </div>
+                    <!-- ko if: ReferenceUrl-->
+                    <div class="profile-link">
+                        <a target="_blank" data-bind="attr:{href:ReferenceUrl}" title="Profile">Profile</a>
+                    </div>
+                    <!-- /ko -->
+                    <div style="clear:both;"></div>
+                    <!-- ko if: topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[0], true)[0] > 0 > 0 -->
+                    <div class="top-posts">
+                        <div class="title" data-bind="attr:{title:parsed.columnHeaders[$data.ChartColumnIndexes[0]]}, text:parsed.columnHeaders[$data.ChartColumnIndexes[0]]"></div>
+                        <div class="posts-chart">
+                            <img alt="posts chart" data-bind="attr:{src:'/en-us/Chart/GetChart?d='+ topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[0], true).join(','), usemap: '#the' + $data.ChartColumnIndexes[0] + 'ChartMap'+PrivateSiteId}" />
+                            <img src="/Content/Images/postsSelected.png" alt="posts" title="posts" data-bind="attr:{'id':'the' + $data.ChartColumnIndexes[0] +'Img'+PrivateSiteId}" class="cover-image" />
+                            <map data-bind="attr:{id:'the' + $data.ChartColumnIndexes[0] + 'ChartMap'+PrivateSiteId, name:'the' + $data.ChartColumnIndexes[0] + 'ChartMap'+PrivateSiteId, 'data-chartdata':topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[0], true).join(','), 'data-privatesiteid':PrivateSiteId, 'data-dataindex':$data.ChartColumnIndexes[0]}"></map>
+                            <div class="slider-wrapper">
+                            </div>
+                            <div class="forum-name-wrapper">
+                                <img src="/Content/Images/graphHandleBlue.png" alt="Handle Blue" />
+                                <span data-bind="attr:{id:'the' + $data.ChartColumnIndexes[0] +'Label'+PrivateSiteId}" class="forum-name"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if: topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[1], true)[0] > 0 -->
+                    <div class="top-answers">
+                        <div class="title" data-bind="attr:{title:parsed.columnHeaders[$data.ChartColumnIndexes[1]]}, text:parsed.columnHeaders[$data.ChartColumnIndexes[1]]"></div>
+                        <div class="answers-chart">
+                            <img alt="answer chart" data-bind="attr:{src:'/en-us/Chart/GetChart?d='+ topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[1], true).join(','), usemap: '#the' + $data.ChartColumnIndexes[1] + 'ChartMap'+PrivateSiteId}" />
+                            <img src="/Content/Images/postsSelected.png" alt="answers" title="answers" data-bind="attr:{'id':'the' + $data.ChartColumnIndexes[1] +'Img'+PrivateSiteId}" class="cover-image" />
+                            <map data-bind="attr:{id:'the' + $data.ChartColumnIndexes[1] + 'ChartMap'+PrivateSiteId, name:'the' + $data.ChartColumnIndexes[1] + 'ChartMap'+PrivateSiteId, 'data-chartdata':topNDataNumbers(parsed.data, 5, $data.ChartColumnIndexes[1], true).join(','), 'data-privatesiteid':PrivateSiteId, 'data-dataindex':$data.ChartColumnIndexes[1]}"></map>
+                            <div class="slider-wrapper">
+                            </div>
+                            <div class="forum-name-wrapper">
+                                <img src="/Content/Images/graphHandleBlue.png" alt="graph Handle Blue" />
+                                <span data-bind="attr:{id:'the' + $data.ChartColumnIndexes[1] +'Label'+PrivateSiteId}" class="forum-name"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <div style="clear:both;"></div>
+                </div>
+            </td>
+        </tr>
+        <!-- /ko -->
+        <!-- /ko -->
+    </tbody>
+
+</script>
+
+<script>
+
+    function handleBtnClick(event) {
+        toggleButton(event.target);
+    }
+
+    function handleBtnKeyPress(event) {
+        // Check to see if space or enter were pressed
+        if (event.keyCode === 32 || event.keyCode === 13) {
+            // Prevent the default action to stop scrolling when space is pressed
+            event.preventDefault();
+            toggleButton(event.target);
+        }
+    }
+
+    function toggleButton(element) {
+        // Check to see if the button is pressed
+        var pressed = (element.getAttribute("aria-pressed") === "true");
+        // Change aria-pressed to the opposite state
+        element.setAttribute("aria-pressed", !pressed);
+    }
+</script>
+
+<script type="text/html" id="highlights-template">
+    <table class="raListTable" id="mvpHighlights" role="grid">
+        <thead>
+            <tr role="row">
+                <td class="col0"></td>
+                <td><a href="#" data-sort="DateFormatted" class="sorter" title="Date">Date</a></td>
+                <td><a href="#" data-sort="Title" class="sorter" title="Content">Content</a></td>
+                <td><a href="#" data-sort="Type" class="sorter" title="Type">Type</a></td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: $data -->
+            <tr role="row">
+                <td class="col0"></td>
+                <td data-bind="text:DateFormatted, attr:{title: DateFormatted}" class="col1"></td>
+                <!-- ko if: Url -->
+                <td class="col3">
+                    <a target="_blank" data-bind="attr:{href: Url, title:Title}, text: Title"></a>
+                </td>
+                <!-- /ko -->
+                <!-- ko if: !Url -->
+                <td data-bind="text:Title, attr:{title: Title}" class="col3"></td>
+                <!-- /ko -->
+                <td data-bind="text:Type, attr:{title: Type}"></td>
+            </tr>
+            <!-- /ko-->
+        </tbody>
+    </table>
+</script>
+
+<script type="text/html" id="events-template">
+    <thead role="rowgroup">
+        <tr role="row">
+            <td class="col0"></td>
+            <td><a href="#" data-sort="DateFormatted" class="sorter" title="Date">Date</a></td>
+            <td><a href="#" data-sort="Title" class="sorter" title="Event">Event</a></td>
+        </tr>
+    </thead>
+    <tbody role="rowgroup">
+        <!-- ko foreach: $data -->
+        <tr role="row">
+            <td class="col0"></td>
+            <td data-bind="text:DateFormatted, attr:{title: DateFormatted}" class="col1"></td>
+            <!-- ko if: Url -->
+            <td class="col4">
+                <a target="_blank" data-bind="attr:{href: Url, title:Title}, text: Title"></a>
+            </td>
+            <!-- /ko -->
+            <!-- ko if: !Url -->
+            <td data-bind="text:Title, attr:{title: Title}" class="col4"></td>
+            <!-- /ko -->
+        </tr>
+        <!-- /ko-->
+    </tbody>
+</script>
+<script src="/Content/Scripts/activities.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+
+    var $$ = function (func) {
+        if (document.addEventListener) {
+            window.addEventListener("load", func, false);
+        } else if (document.attachEvent) {
+            window.attachEvent("onload", func);
+        }
+    }
+
+
+    var PrivatePortal = Microsoft.Support.Mvp.PrivatePortal,
+    contributionConfig = {"d76464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"d76464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Forum Participation (Microsoft Forums)","SystemCollectedContribution":{"AllowEdit":false,"AllowDelete":false,"Display":"barchart","ChartColumnIndexes":[1,0],"DescriptionSummary":"Top forum activity from {0} to {1}","TitleText":null,"DataTableTitle":"All forum activity","SubtitleHeader":"Forum"},"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":true,"IsAnnualReachEditable":true,"RequiredFields":["ReferenceUrl","AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Answers","SecondAnnualQuantity":"Number of Posts","AnnualReach":"Views of answers"}},"LocalizationMapping":{"Forum Participation (Microsoft Forums)":"Forum Participation (Microsoft Forums)","All forum activity":"All forum activity","Answers":"Answers","Posts":"Posts","Profile":"Profile","Views":"Views","Forum":"Forum"}},"ed6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"ed6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Product Connect Feedback","SystemCollectedContribution":{"AllowEdit":false,"AllowDelete":false,"Display":"generic","ChartColumnIndexes":[0,1],"DescriptionSummary":"Microsoft Connect activity from {0} to {1}","TitleText":null,"DataTableTitle":null,"SubtitleHeader":null},"FormConfig":null,"LocalizationMapping":{"Product Connect Feedback":"Product Connect Feedback","Bugs Fixed":"Bugs fixed:","Bugs Logged":"Bugs logged:"}},"e36464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"e36464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Article","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Articles","AnnualReach":"Number of Views"}},"LocalizationMapping":{"Article":"Article"}},"df6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"df6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Blog/Website Post","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":true,"IsAnnualReachEditable":true,"RequiredFields":["ReferenceUrl","AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Posts","SecondAnnualQuantity":"Number of Subscribers","AnnualReach":"Annual Unique Visitors"}},"LocalizationMapping":{"Blog/Website Post":"Blog/Website Post"}},"db6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"db6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Book (Author)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Books","AnnualReach":"Copies sold"}},"LocalizationMapping":{"Book (Author)":"Book (Author)"}},"dd6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"dd6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Book (Co-Author)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Books","AnnualReach":"Copies sold"}},"LocalizationMapping":{"Book (Co-Author)":"Book (Co-Author)"}},"f16464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"f16464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Conference (Staffing)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Conferences","AnnualReach":"Number of Visitors"}},"LocalizationMapping":{"Conference (Staffing)":"Conference (Staffing)"}},"ef6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"ef6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Organizer of Conference","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Conferences","AnnualReach":"Number of Attendees"}},"LocalizationMapping":{"Organizer of Conference":"Organizer of Conference"}},"f96464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"f96464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Forum Moderator","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Threads moderated"}},"LocalizationMapping":{"Forum Moderator":"Forum Moderator"}},"d96464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"d96464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Forum Participation (3rd Party forums)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":true,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity","ReferenceUrl","SecondAnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Answers","SecondAnnualQuantity":"Number of Posts","AnnualReach":"Views of answers"}},"LocalizationMapping":{"Forum Participation (3rd Party forums)":"Forum Participation (3rd Party forums)"}},"ff6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"ff6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Other","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Annual quantity","AnnualReach":"Annual reach"}},"LocalizationMapping":{"Other":"Other"}},"f36464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"f36464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Product Group Interaction (PGI)","SystemCollectedContribution":{"AllowEdit":false,"AllowDelete":false,"Display":"basic","ChartColumnIndexes":[0,1],"DescriptionSummary":null,"TitleText":null,"DataTableTitle":null,"SubtitleHeader":null},"FormConfig":null,"LocalizationMapping":{"Product Group Interaction (PGI)":"Product Group Interaction (PGI)"}},"e96464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"e96464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Sample Code/Projects/Tools","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["ReferenceUrl","AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Samples","AnnualReach":"Number of Downloads"}},"LocalizationMapping":{"Sample Code/Projects/Tools":"Sample Code/Projects/Tools"}},"d16464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"d16464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Speaking (Conference)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Talks","AnnualReach":"Attendees of Talks"}},"LocalizationMapping":{"Speaking (Conference)":"Speaking (Conference)"}},"d56464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"d56464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Speaking (User Group/Meetup/Local events)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Talks","AnnualReach":"Attendees of Talks"}},"LocalizationMapping":{"Speaking (User Group/Meetup/Local events)":"Speaking (User Group/Meetup/Local events)"}},"eb6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"eb6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Technical Social Media (Twitter, Facebook, LinkedIn...)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["ReferenceUrl","AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Talks","AnnualReach":"Number of Followers"}},"LocalizationMapping":{"Technical Social Media (Twitter, Facebook, LinkedIn...)":"Technical Social Media (Twitter, Facebook, LinkedIn...)"}},"e56464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"e56464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Video/Webcast/Podcast","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["ReferenceUrl","AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Videos","AnnualReach":"Number of Views"}},"LocalizationMapping":{"Video/Webcast/Podcast":"Video/Webcast/Podcast"}},"f76464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"f76464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Mentorship","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Mentorship Activity","Description":"Mentoring Topic","AnnualReach":"Number of Mentees"}},"LocalizationMapping":{"Mentorship":"Mentorship"}},"016564de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"016564de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Product Group Feedback (General)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":true,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Events Participated","SecondAnnualQuantity":"Number of Feedbacks Provided"}},"LocalizationMapping":{"Product Group Feedback (General)":"Product Group Feedback"}},"414bcf30-e889-e511-8110-c4346bac0abc":{"TypeId":"414bcf30-e889-e511-8110-c4346bac0abc","TypeName":"Non-Microsoft Open Source Projects","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":true,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Project(s)","SecondAnnualQuantity":"Contribution(s)"}},"LocalizationMapping":{"Non-Microsoft Open Source Projects":"Non-Microsoft Open Source Projects"}},"fb6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"fb6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Site Owner","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Sites","AnnualReach":"Number of Visitors"}},"LocalizationMapping":{"Site Owner":"Site Owner"}},"056564de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"056564de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Translation Review, Feedback and Editing","SystemCollectedContribution":{"AllowEdit":false,"AllowDelete":false,"Display":"generic","ChartColumnIndexes":[0,1],"DescriptionSummary":null,"TitleText":"Translation Editing","DataTableTitle":null,"SubtitleHeader":null},"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{}},"LocalizationMapping":{"Translation Review, Feedback and Editing":"Translation Review, Feedback and Editing","Sentences/Terms Suggested":"Sentences/Terms Suggested","Translation Editing":"Translation Editing"}},"fd6464de-179a-e411-bbc8-6c3be5a82b68":{"TypeId":"fd6464de-179a-e411-bbc8-6c3be5a82b68","TypeName":"Organizer (User Group/Meetup/Local Events)","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":true,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Meetings","AnnualReach":"Members"}},"LocalizationMapping":{"Organizer (User Group/Meetup/Local Events)":"Organizer (User Group/Meetup/Local Events)"}},"d2d96407-0304-e911-8171-3863bb2bca60":{"TypeId":"d2d96407-0304-e911-8171-3863bb2bca60","TypeName":"Microsoft Open Source Projects","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Projects"}},"LocalizationMapping":{"Microsoft Open Source Projects":"Microsoft Open Source Projects"}},"0ce0dc15-0304-e911-8171-3863bb2bca60":{"TypeId":"0ce0dc15-0304-e911-8171-3863bb2bca60","TypeName":"Docs.Microsoft.com Contribution","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Pull Requests/Issues/Submissions"}},"LocalizationMapping":{"Docs.Microsoft.com Contribution":"Docs.Microsoft.com Contribution"}},"0ee0dc15-0304-e911-8171-3863bb2bca60":{"TypeId":"0ee0dc15-0304-e911-8171-3863bb2bca60","TypeName":"Workshop/Volunteer/Proctor","SystemCollectedContribution":null,"FormConfig":{"IsAnnualQuantityEditable":true,"IsSecondAnnualQuantityEditable":false,"IsAnnualReachEditable":false,"RequiredFields":["AnnualQuantity"],"FieldLabels":{"AnnualQuantity":"Number of Events"}},"LocalizationMapping":{"Workshop/Volunteer/Proctor":"Workshop/Volunteer/Proctor"}}},
+    all_activities = [{"PrivateSiteId":1425262,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3e04f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","DateOfActivity":null,"DateOfActivityFormatted":"7/26/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Enroll AVD session host with Trusted Launch automated","ReferenceUrl":"https://rozemuller.com/enroll-avd-session-host-with-trusted-launch-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1424914,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3e04f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"7/22/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd Powershell module to version 2.3.2","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.3.2","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1422201,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Endpoint Manager","DateOfActivity":null,"DateOfActivityFormatted":"7/14/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Virtual Desktops Community News Blog Post 23rd June 2022 – 14th July 2022","ReferenceUrl":"https://virtualdesktops.community/2022/07/virtual-desktops-community-news-blog-post-23rd-june-2022-14th-july-2022/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1418203,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"7/6/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Enable Endpoint Analytics automated in Microsoft Endpoint Manager  ","ReferenceUrl":"https://rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1416188,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"ea03f4ef-066b-e511-810b-fc15b428ced0","Name":"Microsoft Graph","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Microsoft Graph","DateOfActivity":null,"DateOfActivityFormatted":"6/21/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Intune filters explained, create automated and assignment","ReferenceUrl":"https://rozemuller.com/intune-filters-explained-and-create-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1414755,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3e04f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"6/9/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd PowerShell module to v2.0.0","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.2.0","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1413098,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"2847b5ea-105d-ea11-a812-000d3a8ccba0","Name":"Cloud Infrastructure Protection","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Cloud Infrastructure Protection","DateOfActivity":null,"DateOfActivityFormatted":"5/30/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Monitor Identity Secure Score security improvement action status","ReferenceUrl":"https://rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1411817,"ActivityType":{"Id":"d56464de-179a-e411-bbc8-6c3be5a82b68","Name":"Speaking (User Group/Meetup/Local events)","EnglishName":"Speaking (User Group/Meetup/Local events)"},"ApplicableTechnology":{"Id":"84c301bb-189a-e411-93f2-9cb65495d3c4","Name":"GitHub \u0026 Azure DevOps","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"86e5e214-893d-ea11-a812-000d3a8cc191","Name":"Azure Functions","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure Functions","DateOfActivity":null,"DateOfActivityFormatted":"5/24/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Automation session at Saxion University Enschede","ReferenceUrl":"https://www.linkedin.com/posts/exite-ict_exciiiting-hbo-lezing-activity-6934840981213081601-xJfj?utm_source=linkedin_share\u0026utm_medium=member_desktop_web","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1411976,"ActivityType":{"Id":"fd6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Organizer (User Group/Meetup/Local Events)","EnglishName":"Organizer (User Group/Meetup/Local Events)"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"ac699959-fc2a-ec11-b6e6-000d3a54f950","Name":"Windows 365","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Windows 365","DateOfActivity":null,"DateOfActivityFormatted":"5/24/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Dutch Virtual Desktop User Group - Mei Meeting - Fysiek @ Pink Elephant","ReferenceUrl":"https://www.meetup.com/Dutch-Virtual-Desktop-User-Group/events/285457073/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1410787,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"84c301bb-189a-e411-93f2-9cb65495d3c4","Name":"GitHub \u0026 Azure DevOps","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"5/17/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"The DevOps Project – Clone a pipeline from a source project automated","ReferenceUrl":"https://rozemuller.com/the-devops-project-clone-a-pipeline-from-a-source-project-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1410328,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"5/13/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Virtual Desktops Community Weekly Blog Post 6th May 2022 – 12th May 2022","ReferenceUrl":"https://virtualdesktops.community/2022/05/virtual-desktops-community-weekly-blog-post-6th-may-2022-12th-may-2022/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1409645,"ActivityType":{"Id":"056564de-179a-e411-bbc8-6c3be5a82b68","Name":"Translation Review, Feedback and Editing","EnglishName":"Translation Review, Feedback and Editing"},"ApplicableTechnology":{"Id":"ac699959-fc2a-ec11-b6e6-000d3a54f950","Name":"Windows 365","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"5/10/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"MVP Global Summit 2022 Session Survey: Windows365: Monitor and troubleshoot end user experience","ReferenceUrl":null,"ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1409393,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"5/8/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd Powershell module to v2.1.5","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.1.5","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1405422,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"b6c13df4-a633-eb11-a813-000d3a8ccd71","Name":"Azure Monitor","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure Monitor","DateOfActivity":null,"DateOfActivityFormatted":"4/19/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Monitor and get alerts from Microsoft Endpoint Manager","ReferenceUrl":"https://rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1403758,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"4/7/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Participating in IntuneWin32App Microsoft Endpoint Manager Powershell module","ReferenceUrl":"https://github.com/MSEndpointMgr/IntuneWin32App/pull/25","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1403528,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"4/5/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Monitor security baselines in Endpoint Security","ReferenceUrl":"https://rozemuller.com/monitor-security-baselines-in-endpoint-security/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1398445,"ActivityType":{"Id":"eb6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Technical Social Media (Twitter, Facebook, LinkedIn...)","EnglishName":"Technical Social Media (Twitter, Facebook, LinkedIn...)"},"ApplicableTechnology":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"3/18/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Supported configuring FSLogix for AAD automated","ReferenceUrl":"https://rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/#comment-373","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":"helped a user with a script for configuring FSLogix and Azure AD joined machines.","OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1372195,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"ac699959-fc2a-ec11-b6e6-000d3a54f950","Name":"Windows 365","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Windows 365","DateOfActivity":null,"DateOfActivityFormatted":"3/17/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Virtual Desktops Community Weekly Blog Post 10th March – 17th March 2022","ReferenceUrl":"https://virtualdesktops.community/2022/03/virtual-desktops-community-weekly-blog-post-10th-march-17th-march-2022","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1398391,"ActivityType":{"Id":"eb6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Technical Social Media (Twitter, Facebook, LinkedIn...)","EnglishName":"Technical Social Media (Twitter, Facebook, LinkedIn...)"},"ApplicableTechnology":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"3/14/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Helped user with Az.Avd powershell module","ReferenceUrl":"https://github.com/srozemuller/AzAvd/issues/18","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1368703,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"3/13/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Beta version 2.1.4 Az.Avd published","ReferenceUrl":"https://github.com/srozemuller/AzAvd/releases/tag/2.1.4-7-beta","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1368698,"ActivityType":{"Id":"056564de-179a-e411-bbc8-6c3be5a82b68","Name":"Translation Review, Feedback and Editing","EnglishName":"Translation Review, Feedback and Editing"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"3/10/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Virtual Desktops Community Weekly Blog Post 3rd March – 10th March 2022","ReferenceUrl":"https://virtualdesktops.community/2022/03/virtual-desktops-community-weekly-blog-post-3rd-march-10th-march-2022/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1364340,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"3/8/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Configure subscribe to AVD in RDP Client automated","ReferenceUrl":"https://rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1363896,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"3/7/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Deploy power settings automated in Microsoft Endpoint Manager","ReferenceUrl":"https://rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1361739,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Identity and Access","DateOfActivity":null,"DateOfActivityFormatted":"3/3/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Virtual Desktops Community Weekly Blog Post 24th February – 3rd March 2022","ReferenceUrl":"https://virtualdesktops.community/2022/03/virtual-desktops-community-weekly-blog-post-24th-february-3rd-march-2022/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1358840,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"ea03f4ef-066b-e511-810b-fc15b428ced0","Name":"Microsoft Graph","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Microsoft Graph","DateOfActivity":null,"DateOfActivityFormatted":"2/23/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Microsoft Endpoint Manager security baselines explained","ReferenceUrl":"https://rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1353332,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"2/16/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd powershell module to 2.1.3","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.1.3","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1349683,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"2/9/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Azure file share usage monitoring with Logic Apps","ReferenceUrl":"https://rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1349685,"ActivityType":{"Id":"fd6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Organizer (User Group/Meetup/Local Events)","EnglishName":"Organizer (User Group/Meetup/Local Events)"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"2/8/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Dutch Virtual Desktop Usergroup February","ReferenceUrl":"https://www.meetup.com/Dutch-Virtual-Desktop-User-Group/events/283235982/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1341744,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"b203f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure Storage","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"1/22/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Monitor FSLogix file share usage on Azure Files","ReferenceUrl":"https://rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1334334,"ActivityType":{"Id":"e36464de-179a-e411-bbc8-6c3be5a82b68","Name":"Article","EnglishName":"Article"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"ea03f4ef-066b-e511-810b-fc15b428ced0","Name":"Microsoft Graph","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Microsoft Graph","DateOfActivity":null,"DateOfActivityFormatted":"1/12/2022","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Secure and optimize AVD and CloudPC using Microsoft Endpoint Manager","ReferenceUrl":"https://rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1331911,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"12/24/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Update Az.Avd PowerShell module to 2.1.1","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.1.1","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1331913,"ActivityType":{"Id":"d56464de-179a-e411-bbc8-6c3be5a82b68","Name":"Speaking (User Group/Meetup/Local events)","EnglishName":"Speaking (User Group/Meetup/Local events)"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Identity and Access","DateOfActivity":null,"DateOfActivityFormatted":"12/22/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Managing AVD the modern way","ReferenceUrl":"https://festivetechcalendar.com/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":"Check the date 12/22/2021","OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1331909,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"12/20/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd PowerShell module to version 2.0.1","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/2.0.1","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1331912,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"12/16/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd","ReferenceUrl":"https://rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1328095,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"12/14/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Configure FSLogix profile for Azure AD joined AVD session host automated","ReferenceUrl":"https://rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1328096,"ActivityType":{"Id":"fd6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Organizer (User Group/Meetup/Local Events)","EnglishName":"Organizer (User Group/Meetup/Local Events)"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"12/14/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Dutch Virtual Desktop User Group - December Meeting","ReferenceUrl":"https://www.meetup.com/Dutch-Virtual-Desktop-User-Group/events/282308864/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1328097,"ActivityType":{"Id":"d56464de-179a-e411-bbc8-6c3be5a82b68","Name":"Speaking (User Group/Meetup/Local events)","EnglishName":"Speaking (User Group/Meetup/Local events)"},"ApplicableTechnology":{"Id":"5004f4ef-066b-e511-810b-fc15b428ced0","Name":"Windows Development","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"12/14/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Build images with Winget","ReferenceUrl":null,"ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1328059,"ActivityType":{"Id":"016564de-179a-e411-bbc8-6c3be5a82b68","Name":"Product Group Feedback","EnglishName":"Product Group Feedback"},"ApplicableTechnology":{"Id":"aac13df4-a633-eb11-a813-000d3a8ccd71","Name":"Azure API Management","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Identity and Access","DateOfActivity":null,"DateOfActivityFormatted":"12/7/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Azure AD application identifierUri\u0027s URI scheme not supported","ReferenceUrl":null,"ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1325396,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"12/3/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Distribute OneDrive with Winget and OneDrive best practices automated","ReferenceUrl":"https://rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1325280,"ActivityType":{"Id":"056564de-179a-e411-bbc8-6c3be5a82b68","Name":"Translation Review, Feedback and Editing","EnglishName":"Translation Review, Feedback and Editing"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"12/2/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Wrote newletter for AVD community","ReferenceUrl":"https://virtualdesktops.community/2021/12/virtual-desktops-community-weekly-blog-post-18th-november-2nd-december/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1320769,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"11/10/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd PowerShell module to version 2.0.0","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.avd/2.0.0","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1319687,"ActivityType":{"Id":"d56464de-179a-e411-bbc8-6c3be5a82b68","Name":"Speaking (User Group/Meetup/Local events)","EnglishName":"Speaking (User Group/Meetup/Local events)"},"ApplicableTechnology":{"Id":"84c301bb-189a-e411-93f2-9cb65495d3c4","Name":"GitHub \u0026 Azure DevOps","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3e04f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","DateOfActivity":null,"DateOfActivityFormatted":"11/4/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Getting started with AVD automation and Terraform Cloud","ReferenceUrl":"https://www.meetup.com/UK-Windows-Virtual-Desktop-User-Group/events/281552196/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1319686,"ActivityType":{"Id":"fd6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Organizer (User Group/Meetup/Local Events)","EnglishName":"Organizer (User Group/Meetup/Local Events)"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":null,"AdditionalTechnology2":null,"AdditionalTechnologies":"","DateOfActivity":null,"DateOfActivityFormatted":"11/2/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Ignite Viewing Party","ReferenceUrl":null,"ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":"We organized as the Dutch AVD user group together with other Dutch user groups. ","OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1318087,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3e04f4ef-066b-e511-810b-fc15b428ced0","Name":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure SDK (Software Development Kit) and CLIs ( Az CLI, PowerShell, Terraform, Ansible)","DateOfActivity":null,"DateOfActivityFormatted":"10/28/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"AVD Automation Cocktail – Deploy AVD with Terraform Cloud","ReferenceUrl":"https://rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1318088,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"10/25/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Update Az.Avd module to 1.2.7 ","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/1.2.7","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1315706,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"10/20/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"How to enable AVD scaling plans automated","ReferenceUrl":"https://rozemuller.com/how-to-enable-avd-scaling-plans-automated/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1315707,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"10/20/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Update Az.Avd Powershell module to 1.2.6","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.avd/1.2.6","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1312893,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"d203f4ef-066b-e511-810b-fc15b428ced0","Name":"Identity and Access","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Identity and Access","DateOfActivity":null,"DateOfActivityFormatted":"10/7/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Manage AVD automated with Microsoft Endpoint Manager","ReferenceUrl":"https://rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1312895,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Endpoint Manager","DateOfActivity":null,"DateOfActivityFormatted":"10/2/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Update Az.Avd PowerShell module to 1.2.5","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/1.2.5","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1308547,"ActivityType":{"Id":"e56464de-179a-e411-bbc8-6c3be5a82b68","Name":"Video/Webcast/Podcast","EnglishName":"Video/Webcast/Podcast"},"ApplicableTechnology":{"Id":"4a04f4ef-066b-e511-810b-fc15b428ced0","Name":"Endpoint Manager","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Remote Desktop Services","DateOfActivity":null,"DateOfActivityFormatted":"9/18/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Managing AVD the modern way","ReferenceUrl":"https://youtu.be/6_LdkKsoQ98","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":"With Stefan Dingemanse","OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1308549,"ActivityType":{"Id":"e96464de-179a-e411-bbc8-6c3be5a82b68","Name":"Sample Code/Projects/Tools","EnglishName":"Sample Code/Projects/Tools"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"9/17/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Updated Az.Avd Powershell module to version 1.2.4","ReferenceUrl":"https://www.powershellgallery.com/packages/Az.Avd/1.2.4","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1308546,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"7cc301bb-189a-e411-93f2-9cb65495d3c4","Name":"PowerShell","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"PowerShell","DateOfActivity":null,"DateOfActivityFormatted":"9/10/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"How to deal with AVD session hosts version management","ReferenceUrl":"https://rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false},{"PrivateSiteId":1308550,"ActivityType":{"Id":"df6464de-179a-e411-bbc8-6c3be5a82b68","Name":"Blog/Website Post","EnglishName":"Blog/Website Post"},"ApplicableTechnology":{"Id":"3c04f4ef-066b-e511-810b-fc15b428ced0","Name":"Remote Desktop Services","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology1":{"Id":"aac13df4-a633-eb11-a813-000d3a8ccd71","Name":"Azure API Management","AwardName":null,"AwardCategory":null,"Statuscode":0,"Active":false},"AdditionalTechnology2":null,"AdditionalTechnologies":"Azure API Management","DateOfActivity":null,"DateOfActivityFormatted":"9/2/2021","EndDate":null,"EndDateFormatted":"","TitleOfActivity":"Move AVD session hosts to a new host pool with REST API","ReferenceUrl":"https://rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/","ActivityVisibility":{"Id":299600000,"Description":"Microsoft","LocalizeKey":"PublicVisibilityText"},"AnnualQuantity":null,"SecondAnnualQuantity":null,"AnnualReach":null,"Description":null,"OnlineIdentity":null,"SocialNetwork":null,"AllAnswersUrl":null,"AllPostsUrl":null,"IsSystemCollected":false,"IsBelongToLatestAwardCycle":false,"DisplayMode":"basic","ChartColumnIndexes":null,"DescriptionSummaryFormat":null,"DataTableTitle":null,"SubtitleHeader":null,"IsAllowEdit":false,"IsAllowDelete":false,"IsNotInLockoutDateRange":false,"ActivityLockOutMessage":"","IsFromBookmarklet":false,"Submitted":false,"MinActivityDateRange":null,"MaxActivityDateRange":null,"IsMVP":false}],
+    all_events = [],
+    baseMapUrl = '/en-us/Chart/GetImageMap',
+    pageSize = 10,
+    dateFormatter = PrivatePortal.GetDateFormatterByCulture('en-us');
+
+    all_activities = all_activities || [];
+
+   var i, j, k;
+    for (i = 0; i < all_activities.length; i++) {
+        var activity = all_activities[i], contributionType, i, details, detail;
+        var localizationMapping = contributionConfig[activity.ActivityType.Id].LocalizationMapping;
+        if (activity.DisplayMode != 'basic') {
+            var parsed = parseDetails(activity.Description);
+            //Handle Microsoft Connect and Forum as special cases for backward compatibility
+            //This block should be remove after CRM reformated legacy data
+            if (null === parsed) {
+                if (activity.ActivityType.EnglishName == 'Product Connect Feedback') {
+                    parsed = parserMSConnectAndForum(activity.Description, 'msconnect');
+                } else if (activity.ActivityType.EnglishName == 'Forum Participation (Microsoft Forums)') {
+                    parsed = parserMSConnectAndForum(activity.Description, 'forum');
+                }
+            }
+
+            //localize
+            if (parsed && localizationMapping) {
+                for (k = 0; k < parsed.columnHeaders.length; k++) {
+                    parsed.columnHeaders[k] = localizationMapping[parsed.columnHeaders[k]] || parsed.columnHeaders[k];
+                }
+
+                for (k = 0; k < parsed.data; k++) {
+                    parsed.data[k].subtypeTitle = localizationMapping[parsed.data[k].subtypeTitle] || parsed.data[k].subtypeTitle;
+                }
+
+                activity.DataTableTitle = localizationMapping[activity.DataTableTitle] || activity.DataTableTitle;
+                activity.SubtitleHeader = localizationMapping[activity.SubtitleHeader] || activity.SubtitleHeader;
+                activity.TitleOfActivity = localizationMapping[activity.TitleOfActivity] || activity.TitleOfActivity;
+            }
+            if (parsed) {
+                if ('' === activity.EndDateFormatted || '' === activity.DateOfActivityFormatted) {
+                    activity.DescriptionSummaryFormat = parsed.descriptionSummary;
+                } else {
+                    activity.DescriptionSummaryFormat = activity.DescriptionSummaryFormat || parsed.descriptionSummary;
+                }
+            }
+            activity.parsed = parsed;
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    //Setup pagger
+
+    var setPageNumber = function ($pageNumber, $pagingNav, currentPage, maxPage) {
+        //$pageNumber.text(PrivatePortal.FormatString($pageNumber.attr('data-format'), currentPage, maxPage));
+        var nav = "";
+        //Start Accessibility for ...
+        for (var i = 1; i <= maxPage; i++) {
+            if (i == currentPage) {
+                nav += "<a href='javascript:;' role='button' aria-label='" + i + " of " + maxPage + "'><span class='pagerOver'><span id='currentPage' class='pager_current'>" + i + "</span></span></a>";
+            }
+            else {
+                nav += "<a href='javascript:;' role='button' aria-label='" + i + " of " + maxPage + "'><span class='pagerOver'><span>" + i + "</span></span></a>";
+            }
+        }
+        $pagingNav.html(nav);
+        cutColumnCharacters();
+    };
+
+    var setupPagger = function (data, container, $paggerContainer, sortSelector) {
+        var previousButtons = $paggerContainer.find(".previousPage"),
+            nextButtons = $paggerContainer.find(".nextPage"),
+            pagingNav = $paggerContainer.find(".pagingNav"),
+            pageNumber = $paggerContainer.find(".pageNumber");
+
+        var pagger = new PrivatePortal.Pagger2(data, pageSize, nextButtons, previousButtons, pageNumber, pagingNav, function (d) { });
+
+        pagger.setRenderFunc(function (d) {
+            ko.cleanNode(container);
+            ko.applyBindings(d, container);
+            rebindSortEvent(pagger, sortSelector);
+            //$("#"+container.id + " tbody a:eq(0)").focus();
+            ReadTablePosition("#" + container.id + " tbody tr");
+            if (container.id === "activitiesTable") {
+                rebindExpandEvent();
+            }
+        });
+
+        if (pagger.getMaxPage() < 2) {
+            $paggerContainer.hide();
+        }
+
+        pagger.onPageChanged.add(setPageNumber);
+        pagger.start();
+    };
+
+    var activitiesPager = new setupPagger(all_activities, $('#activitiesTable')[0], $('#activitiesTable').next('.pagger'), '#recentActivities .sorter');
+    var eventsPager = new setupPagger(all_events, $('#eventsTable')[0], $('#eventsTable').next('.pagger'), '#mvpEvents .sorter');
+
+
+    function cutColumnCharacters() {
+        var tdWidthLimit = 0;
+        $('#recentActivities .col5').each(function () {
+            var replaceString = "";
+            $(this).html($(this).html().replace(/\,/g, '<br/>'));
+        });
+    }
+
+    $(function () {
+        ReadTablePosition("#recentActivities tbody tr");
+        ReadTablePosition("#mvpHighlights tbody tr");
+
+        var PrivatePortal = Microsoft.Support.Mvp.PrivatePortal;
+        $$(function () {
+            $("#imageContainer img").each(function (index) {
+                var jqueryImg = $(this);
+                var img = new Image();
+                if (window.ActiveXObject) {
+                    img.onreadystatechange = function () {
+                        if (img.readyState == "loaded" || img.readyState == "complete") {
+                            img.onreadystatechange = null;
+                            PrivatePortal.SetHeightAndTop(jqueryImg);
+                        }
+                    }
+                } else {
+                    img.onload = function () {
+                        img.onload = null;
+                        PrivatePortal.SetHeightAndTop(jqueryImg);
+                    }
+                }
+
+                img.src = $(this).attr('src');
+            });
+        });
+
+        cutColumnCharacters();
+    });
+    function ReadTablePosition(id) {
+        $(id).each(function (rowIndex) {
+            $(this).find("td").each(function (cellIndex) {
+                var Rnum = rowIndex + 1;
+                $(this).find("a").attr("cellNum", cellIndex);
+            })
+        })
+    }
+
+    $(function () {
+        var langArray = [{ "language": "bkhazian", "code": "a" }, { "language": "Afar", "code": "aa" }, { "language": "Afrikaans", "code": "af" }, { "language": "Akan", "code": "ak" }, { "language": "Albanian", "code": "sq" }, { "language": "Amharic", "code": "am" }, { "language": "Arabic", "code": "ar" }, { "language": "Aragonese", "code": "an" }, { "language": "Armenian", "code": "hy" }, { "language": "Assamese", "code": "as" }, { "language": "Avaric", "code": "av" }, { "language": "Avestan", "code": "ae" }, { "language": "Aymara", "code": "ay" }, { "language": "Azerbaijani", "code": "az" }, { "language": "Bambara", "code": "bm" }, { "language": "Bashkir", "code": "ba" }, { "language": "Basque", "code": "eu" }, { "language": "Belarusian", "code": "be" }, { "language": "Bengali-Bangla", "code": "bn" }, { "language": "Bihari", "code": "bh" }, { "language": "Bislama", "code": "bi" }, { "language": "Bosnian", "code": "bs" }, { "language": "Breton", "code": "br" }, { "language": "Bulgarian", "code": "bg" }, { "language": "Burmese", "code": "my" }, { "language": "Catalan", "code": "ca" }, { "language": "Chamorro", "code": "ch" }, { "language": "Chechen", "code": "ce" }, { "language": "Chichewa, Chewa, Nyanja", "code": "ny" }, { "language": "Chinese", "code": "zh" }, { "language": "Chinese-Simplified", "code": "zh-Hans" }, { "language": "Chinese-Traditional", "code": "zh-Hant" }, { "language": "Chuvash", "code": "cv" }, { "language": "Cornish", "code": "kw" }, { "language": "Corsican", "code": "co" }, { "language": "Cree", "code": "cr" }, { "language": "Croatian", "code": "hr" }, { "language": "Czech", "code": "cs" }, { "language": "Danish", "code": "da" }, { "language": "Divehi, Dhivehi, Maldivian", "code": "dv" }, { "language": "Dutch", "code": "nl" }, { "language": "Dzongkha", "code": "dz" }, { "language": "English", "code": "en" }, { "language": "Esperanto", "code": "eo" }, { "language": "Estonian", "code": "et" }, { "language": "Ewe", "code": "ee" }, { "language": "Faroese", "code": "fo" }, { "language": "Fijian", "code": "fj" }, { "language": "Finnish", "code": "fi" }, { "language": "French", "code": "fr" }, { "language": "Fula, Fulah, Pulaar, Pular", "code": "ff" }, { "language": "Galician", "code": "gl" }, { "language": "Gaelic-Scottish", "code": "gd" }, { "language": "Gaelic-Manx", "code": "gv" }, { "language": "Georgian", "code": "ka" }, { "language": "German", "code": "de" }, { "language": "Greek", "code": "el" }, { "language": "Greenlandic", "code": "kl" }, { "language": "Guarani", "code": "gn" }, { "language": "Gujarati", "code": "gu" }, { "language": "Haitian Creole", "code": "ht" }, { "language": "Hausa", "code": "ha" }, { "language": "Hebrew", "code": "he" }, { "language": "Herero", "code": "hz" }, { "language": "Hindi", "code": "hi" }, { "language": "Hiri Motu", "code": "ho" }, { "language": "Hungarian", "code": "hu" }, { "language": "Icelandic", "code": "is" }, { "language": "Ido", "code": "io" }, { "language": "Igbo", "code": "ig" }, { "language": "Indonesian", "code": "id, in" }, { "language": "Interlingua", "code": "ia" }, { "language": "Interlingue", "code": "ie" }, { "language": "Inuktitut", "code": "iu" }, { "language": "Inupiak", "code": "ik" }, { "language": "Irish", "code": "ga" }, { "language": "Italian", "code": "it" }, { "language": "Japanese", "code": "ja" }, { "language": "Javanese", "code": "jv" }, { "language": "Kalaallisut, Greenlandic", "code": "kl" }, { "language": "Kannada", "code": "kn" }, { "language": "Kanuri", "code": "kr" }, { "language": "Kashmiri", "code": "ks" }, { "language": "Kazakh", "code": "kk" }, { "language": "Khmer", "code": "km" }, { "language": "Kikuyu", "code": "ki" }, { "language": "Kinyarwanda-Rwanda", "code": "rw" }, { "language": "Kirundi", "code": "rn" }, { "language": "Kyrgyz", "code": "ky" }, { "language": "Komi", "code": "kv" }, { "language": "Kongo", "code": "kg" }, { "language": "Korean", "code": "ko" }, { "language": "Kurdish", "code": "ku" }, { "language": "Kwanyama", "code": "kj" }, { "language": "Lao", "code": "lo" }, { "language": "Latin", "code": "la" }, { "language": "Latvian-Lettish", "code": "lv" }, { "language": "Limburgish-Limburger", "code": "li" }, { "language": "Lingala", "code": "ln" }, { "language": "Lithuanian", "code": "lt" }, { "language": "Luga-Katanga", "code": "lu" }, { "language": "Luganda, Ganda", "code": "lg" }, { "language": "Luxembourgish", "code": "lb" }, { "language": "Manx", "code": "gv" }, { "language": "Macedonian", "code": "mk" }, { "language": "Malagasy", "code": "mg" }, { "language": "Malay", "code": "ms" }, { "language": "Malayalam", "code": "ml" }, { "language": "Maltese", "code": "mt" }, { "language": "Maori", "code": "mi" }, { "language": "Marathi", "code": "mr" }, { "language": "Marshallese", "code": "mh" }, { "language": "Moldavian", "code": "mo" }, { "language": "Mongolian", "code": "mn" }, { "language": "Nauru", "code": "na" }, { "language": "Navajo", "code": "nv" }, { "language": "Ndonga", "code": "ng" }, { "language": "Northern Ndebele", "code": "nd" }, { "language": "Nepali", "code": "ne" }, { "language": "Norwegian", "code": "no" }, { "language": "Norwegian bokmål", "code": "nb" }, { "language": "Norwegian nynorsk", "code": "nn" }, { "language": "Nuosu", "code": "ii" }, { "language": "Occitan", "code": "oc" }, { "language": "Ojibwe", "code": "oj" }, { "language": "Old Church Slavonic, Old Bulgarian", "code": "cu" }, { "language": "Oriya", "code": "or" }, { "language": "Oromo-Afaan Oromo", "code": "om" }, { "language": "Ossetian", "code": "os" }, { "language": "Pāli", "code": "pi" }, { "language": "Pashto, Pushto", "code": "ps" }, { "language": "Persian-Farsi", "code": "fa" }, { "language": "Polish", "code": "pl" }, { "language": "Portuguese", "code": "pt" }, { "language": "Punjabi-Eastern", "code": "pa" }, { "language": "Quechua", "code": "qu" }, { "language": "Romansh", "code": "rm" }, { "language": "Romanian", "code": "ro" }, { "language": "Russian", "code": "ru" }, { "language": "Sami", "code": "se" }, { "language": "Samoan", "code": "sm" }, { "language": "Sango", "code": "sg" }, { "language": "Sanskrit", "code": "sa" }, { "language": "Serbian", "code": "sr" }, { "language": "Serbo-Croatian", "code": "sh" }, { "language": "Sesotho", "code": "st" }, { "language": "Setswana", "code": "tn" }, { "language": "Shona", "code": "sn" }, { "language": "Sichuan Yi", "code": "ii" }, { "language": "Sindhi", "code": "sd" }, { "language": "Sinhalese", "code": "si" }, { "language": "Siswati", "code": "ss" }, { "language": "Slovak", "code": "sk" }, { "language": "Slovenian", "code": "sl" }, { "language": "Somali", "code": "so" }, { "language": "Southern Ndebele", "code": "nr" }, { "language": "Spanish", "code": "es" }, { "language": "Sundanese", "code": "su" }, { "language": "Swahili-Kiswahili", "code": "sw" }, { "language": "Swati", "code": "ss" }, { "language": "Swedish", "code": "sv" }, { "language": "Tagalog", "code": "tl" }, { "language": "Tahitian", "code": "ty" }, { "language": "Tajik", "code": "tg" }, { "language": "Tamil", "code": "ta" }, { "language": "Tatar", "code": "tt" }, { "language": "Telugu", "code": "te" }, { "language": "Thai", "code": "th" }, { "language": "Tibetan", "code": "bo" }, { "language": "Tigrinya", "code": "ti" }, { "language": "Tonga", "code": "to" }, { "language": "Tsonga", "code": "ts" }, { "language": "Turkish", "code": "tr" }, { "language": "Turkmen", "code": "tk" }, { "language": "Twi", "code": "tw" }, { "language": "Uyghur", "code": "ug" }, { "language": "Ukrainian", "code": "uk" }, { "language": "Urdu", "code": "ur" }, { "language": "Uzbek", "code": "uz" }, { "language": "Venda", "code": "ve" }, { "language": "Vietnamese", "code": "vi" }, { "language": "Volapük", "code": "vo" }, { "language": "Wallon", "code": "wa" }, { "language": "Welsh", "code": "cy" }, { "language": "Wolof", "code": "wo" }, { "language": "Western Frisian", "code": "fy" }, { "language": "Xhosa", "code": "xh" }, { "language": "Yiddish", "code": "yi, ji" }, { "language": "Yoruba", "code": "yo" }, { "language": "Zhuang, Chuang", "code": "za" }, { "language": "Zulu", "code": "zu" }];
+        var $eleText = '';
+        var country = '';
+        for (var i = 0; i < $('.otherCatalog').length; i++) {
+            if ($('.otherCatalog').eq(i).text().replace(/\s+/g, "") == "Language") {
+                $eleText = $('.otherContent').eq(i).text().replace(/\s+/g, "");
+            };
+        };
+        if ($eleText.search(',') > 0) {
+            var nativeLang = $eleText.substring(0, $eleText.search(','));
+            if (nativeLang == "English") {
+                country = "";
+            } else {
+                country = nativeLang;
+            };
+        } else if ($eleText != 'English') {
+            country = $eleText;
+        };
+        langArray.forEach(function (item) {
+            if (item.language == country) {
+                $('.profile .primaryLang').attr('lang', item.code);
+            };
+        });
+    });
+</script>
+
+    </div>
+</div>
+
+    </div>
+    <footer id="footercontent" class="CSPvNext CMSvNextComp mscom-footer" role="contentinfo">
+    <div class="mscom-footer-wrap">
+        <div class="clear">
+            <h2>Resources</h2>
+            <ul>
+                <li>
+                    <a href="https://docs.microsoft.com/en-us/learn/" target="_blank">Microsoft Learn</a>
+                </li>
+                <li>
+                    <a href="https://docs.microsoft.com/en-us" target="_blank">Microsoft Docs</a>
+                </li>
+                <li>
+                    <a href="https://startups.microsoft.com/en-us" target="_blank">Startups</a>
+                </li>
+                <li>
+                    <a href="https://studentambassadors.microsoft.com/en-us" target="_blank">Student Ambassadors</a>
+                </li>
+                <li>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mscom-footer-row-3 mscom-container-maxwidth clear">
+            <div class="mscom-footer-defaultlink">
+                <div class="row-fluid no-margin-row">
+                    <div class="mscom-left" style="margin-left:20px;">
+                        <ul>
+                            <li>
+                                <a href="/en-us/Languages" class="glyph-world">English (United States)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mscom-right" style="width:70%;">
+                        <ul>
+                            <li>
+                                <a id="manageCookiesLink" onclick="manageConsent()" hidden="hidden">Manage cookies</a>
+                            </li>
+                            <li>
+                                <a href="mailto:mvpga@microsoft.com">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839" target="_blank">Privacy &amp; cookies </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?LinkID=206977" target="_blank">Terms of use</a>
+                            </li>
+                            <li>
+                                <a href="https://www.microsoft.com/trademarks" target="_blank">Trademarks</a>
+                            </li>
+                            <li>
+                                <a href="https://choice.microsoft.com" target="_blank">About our ads</a>
+                            </li>
+                                                        <li>
+                                <img src="https://c.s-microsoft.com/en-us/CMSImages/ms_footerlogo_symbol.png?version=ee37649c-b0fc-fb61-2145-208603a372db" alt="Microsoft" class="mscom-image" width="85" height="16">
+                                <br />
+                                &copy; Microsoft 2022
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+        $(function () {
+            var PrivatePortal = Microsoft.Support.Mvp.PrivatePortal;
+            var viewedMsgIds = PrivatePortal.GetViewedMsgFlag();
+
+            // we pass default Announcement type of zero for now
+            // messageIds are the messages that have already been viewed
+PrivatePortal.ShowPortalAnnouncements(0, viewedMsgIds);
+            // we need to disable EU cookie consent on the footer legal links
+            $("#e5f51bda-8524-4ad4-ae34-86579f2358db").find("a").attr("data-mscc-ic", false);
+
+            // Slide up message drawer when user clicks it
+            $('#messageDrawerClose').click(function (event) {
+                event.preventDefault();  // prevent default link behavior
+                PrivatePortal.HideMessageDrawer();
+                PrivatePortal.SetViewedMsgFlag();
+            });
+            //Start Accessibility for control Slide
+            $(".slick-list").focus(function () { $(this).css("outline", "4px solid #1c8ae0"); })
+            $(".slick-list").blur(function () { $(this).css("outline", "none"); })
+            var $footerLink = $("footer .CSPvNext li a");
+            $footerLink.each(function () {
+                $(this).attr("aria-label", $(this).text());
+            });
+
+
+            //Start Accessibility for Navigation
+            if ($('#menu').children('li').length>5) {
+                var body_width = $('body').width();
+                var margin_left = $($('#menu').children('li')[5]).offset().left;
+                var target_width = $($($('#menu').children('li')[5]).children('ul')).width();
+
+                var max_target_width = body_width - margin_left;
+                if (target_width > max_target_width) {
+                    var moveLeft = target_width - max_target_width;
+                    $($($('#menu').children('li')[5]).children('ul')[0]).css('position', 'absolute').css('left', '-' + moveLeft + 'px');
+                }
+            }
+        //BugFix: Keros Keyboard interaction
+            $("input,select,image").tooltip();
+
+            //BugFix: Navigation roles
+            $('#menu').children('li').each(function () {
+                var hasClass = $(this).hasClass('hasItems');
+                var id = $(this).find('a').attr('aria-owns');
+                if (hasClass) {
+                    $(this).find('ul').attr('id', id);
+                    $(this).find('ul').attr('role', 'menu');
+                    $(this).find('ul').children('li').each(function () {
+                        $($(this).find('a')[0]).attr('role', 'menuitem');
+                        //$(this).attr('role', 'menuitem');
+                    });
+                }
+            });
+
+             // EU Cookie Consent to add the Tealium script or not
+            function addTealiumTag() {
+                if (!true) {
+                    var script = document.createElement("script");
+                    script.setAttribute('type', 'text/javascript');
+                    script.src = "//tags.tiqcdn.com/utag/msft/mvp/prod/utag.js";
+                    document.getElementsByTagName("body")[0].appendChild(script);
+                }
+        }
+
+        // mscc will only exist if written by the server
+            if (typeof (mscc) === 'undefined' || mscc.hasConsent()) {
+                addTealiumTag();
+            }
+            else if (mscc) {
+                // add tag on consent
+                mscc.on('consent', addTealiumTag);
+
+                // mscc does not check for text box input
+                $("input[type='text']").keyup(function (event) {
+                    // we dont have to worry about tab
+                    if (event.which != 9) {
+                        mscc.setConsent();
+                    }
+                });
+
+            }
+
+        });
+</script>
+    <script>
+        {
+            var siteConsent;
+
+            // Function called by <a> tag in _Footer.cshtml to show dialog to allow manage cookies.
+            function manageConsent() {
+                if (siteConsent.isConsentRequired) {
+                    siteConsent.manageConsent();
+                }
+            }
+
+            // Initialize WCP cookie consent
+            window.WcpConsent && WcpConsent.init("en-us", "cookie-banner", function (err, _siteConsent) {
+                if (!err) {
+                    siteConsent = _siteConsent;
+                    //siteConsent is used to get the current consent
+
+                    if (siteConsent.isConsentRequired) {
+                        // <a> tag in _Footer.cshtml with id "manageCookiesLink"
+                        manageCookiesLink.removeAttribute("hidden");
+                    }
+                } else {
+                    console.log("Error initializing WcpConsent: " + err);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

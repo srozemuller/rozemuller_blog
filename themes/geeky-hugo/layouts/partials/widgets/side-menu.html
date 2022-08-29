@@ -1,0 +1,13 @@
+<div class="widget az-avd-status">
+    <div class="widget-title">
+        <h3 class="h5 title-border">Other hot topics</h3>
+      </div>
+<ul class="list-unstyled mb-5 footer-menu">
+    {{ range site.Menus.sidebar }}
+    <li class="list-inline-item">
+      <a {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+    </li></br>
+    {{ end }}
+  </ul>
+</div>

@@ -1,0 +1,79 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = ""
+weight = 1
+
+[[main]]
+name = "Azure"
+url = "azure/"
+weight = 2
+hasChildren = true
+
+  [[main]]
+  parent = "Azure"
+  name = "AVD"
+  url = "tags/avd"
+  weight = 1
+
+[[main]]
+name = "M365"
+url = "m365/"
+weight = 3
+hasChildren = true
+
+  [[main]]
+  parent = "M365"
+  name = "Microsoft Endpoint Manager"
+  url = "tags/mem"
+  weight = 1
+
+[[main]]
+name = "Identity"
+url = "tags/identity"
+weight = 4
+
+[[main]]
+name = "Security"
+url = "tags/security"
+weight = 5
+
+[[main]]
+name = "Monitoring"
+url = "tags/monitoring"
+weight = 6
+
+# sidebar menu
+[[sidebar]]
+name = "AVD Automation Cocktail"
+url = "categories/avd-cocktail/"
+weight = 1
+
+[[sidebar]]
+name = "Image Management"
+url = "category/image-management/"
+weight = 2
+
+
+# footer menu
+[[footer]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[footer]]
+name = "About"
+url = "about/"
+weight = 2
+
+[[footer]]
+name = "Contact"
+url = "contact/"
+weight = 3
+
+[[footer]]
+name = "Privacy Policy"
+url = "privacy-policy/"
+weight = 4
