@@ -55,9 +55,15 @@ button_label = "Know About Me"
 button_link = "about/"
 
 # Advertise
-[advertisement]
-image = "images/promotion.png"
-link = "https://gethugothemes.com/"
+[[featured]]
+image = "images/avd-cocktail-menu.png"
+link = "/categories/avd-cocktail/"
+category = "AVD Automation Cocktail"
+
+[[featured]]
+image = "images/security.jpg"
+link = "/categories/security/"
+category = "Security"
 
 # cookies
 [cookies]
