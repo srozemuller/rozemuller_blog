@@ -1,9 +1,9 @@
 ---
 title: "Move from WordPress to Static Page Hugo"
 description: "In this blog, I show how to move from WordPress to Hugo. I show the whole process on how and what."
-image: "movement.jpeg"
+image: "images/move-from-wordpress-to-static-page-hugo/movement.jpeg"
 images: 
-- "/move-from-wordpress-to-static-page-hugo/movement.jpeg"
+- "images/move-from-wordpress-to-static-page-hugo/movement.jpeg"
 date: 2022-08-26T16:09:25+06:00
 categories:
 - "Static Web"
