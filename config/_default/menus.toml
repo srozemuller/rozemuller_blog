@@ -32,17 +32,17 @@ hasChildren = true
 
 [[main]]
 name = "Identity"
-url = "tags/identity"
+url = "categories/identity"
 weight = 4
 
 [[main]]
 name = "Security"
-url = "tags/security"
+url = "categories/security"
 weight = 5
 
 [[main]]
 name = "Monitoring"
-url = "tags/monitoring"
+url = "categories/monitoring"
 weight = 6
 
 # sidebar menu

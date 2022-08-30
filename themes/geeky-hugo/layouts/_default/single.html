@@ -68,7 +68,19 @@
           </li>
           <li class="list-inline-item d-flex align-items-center">
             <i class="fas fa-calendar me-2"></i>
-            <span>{{ time.Format ":date_long" .PublishDate }}</span>
+            <span>posted: {{ time.Format ":date_long" .PublishDate }}</span>
+          </li>
+          <li class="list-inline-item d-flex align-items-center">
+            <i class="fas fa-hashtag me-2"></i>
+            <span>{{ .WordCount }} words</span>
+          </li>
+          <li class="list-inline-item d-flex align-items-center">
+            <i class="fas fa-stopwatch me-2"></i>
+            <span>{{ .ReadingTime }} minutes</span>
+          </li>
+          <li class="list-inline-item d-flex align-items-center">
+            <i class="fas fa-user-edit me-2"></i>
+            <span>last updated:  {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05" }}</span>
           </li>
         </ul>
         <div class="content drop-cap">{{.Content}}</div>
