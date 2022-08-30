@@ -45,13 +45,12 @@ Another thing that matters is security. Client-server means you have to use cred
 
 #### Plugins
 
-To keep my site as secure and fast as possible I use plug-ins. For every purpose I need a different plugin
-
-In the end, I used more than 15 plug-ins to run my website in a way I like.  Good to know the more plug-ins you have to more your website is slowing down. Adding more plugins is working oppositely.
+To keep my site as secure and fast as possible I use plug-ins. For every purpose I need a different plugin.
+In the end, I used more than 15 plug-ins to run my website in a way I like. Good to know is that the more plug-ins you have the more your website is slowing down. Adding more plugins is working oppositely.
 
 #### Updates
 
-Mentioned a bit before our updates. We have WordPress itself, the plug-ins and also the WordPress theme. In the end, a long component list needs updates. There is no day without an available update.
+Mentioned a bit before are updates. At first we have WordPress itself that has an update almost every week. Then we have the plug-ins and also the WordPress theme. In the end, there is a long list with updates almost every day. 
 
 #### Backups
 
@@ -61,13 +60,13 @@ Not the most annoying thing but you need a WordPress backup. This is the databas
 
 In the end, maintaining the website is a job in itself. But there is more. I was looking for a faster way of working from a writing experience.
 
-Often I write about new features that depend on specific lines of code. During the time code changes. Specific configuration versions, AVD DSC artifact, for example.  At that moment I have to update every single blog and hopefully, I updated them all.
+Often I write about new features that depends on specific lines of code. During the time these line of code are changing. Think about specific configuration versions like the AVD desired stated configuration artifact. If these lines change I have to update these lines in every single blog and hopefully, I updated them all.
 
-As in writing code, I try to keep a rule also in writing blogs: don’t repeat yourself. In every article, I use components like a table of contents, a summary, and a goodbye saying.
+This isn't very efficient. Also in every article I use components like a table of contents, a summary, and a goodbye saying.
 
 Every time I have to create that myself (or use an extra plug-in(s) for using shortcodes or reusable blocks.
 
-Another extra topic is my post format. I use many chapters, sub-chapters, paragraphs, and code blocks. In WordPress, every block must be selected from a library. While writing costs a lot of time.
+Another extra topic is the post format. A WordPress post consists of many chapters, sub-chapters, paragraphs, and code blocks. In WordPress, every block must be selected from a library. While writing costs a lot of time.
 
 So for me enough reasons to change direction.
 
