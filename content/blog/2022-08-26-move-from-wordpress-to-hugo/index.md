@@ -143,6 +143,7 @@ It was a very time-consuming job. But looking at the bright sight, rebuilding my
 ## Build up your new static website
 
 Now the fun part starts. Setting up your new Hugo website. At first, I deploy a Hugo site on my own system before we start creating an Azure static web app connected to GitHub.
+I started based on this [Microsoft Document about how to publish a Hugo site to Azure Static Web Apps](https://docs.microsoft.com/en-gb/azure/static-web-apps/publish-hugo)
 
 ### Running Hugo local
 
@@ -332,8 +333,10 @@ I know Yoast helps you get your SEO better but all these little extras don’t f
 
 ### Comments
 
-People do react to my blog posts. Most comments are a thank you or code updates (thank you for that :)). Hugo supports Disqus this is fine for me. For code updates also Github provides an option to create a new issue. At last, we have social media like [Twitter](https://www.twitter.com/sanderozemuller).
+People do react to my blog posts. Most comments are a thank you or code updates (thank you for that :)). Hugo supports Disqus this is fine for me. For code updates also Github provides an option to create a new issue. At last, we have social media like [Twitter](https://www.twitter.com/sanderozemuller). I tried to update my blog pages based on the comments. However, due the migration some comments felt of. If you have any question please let me know. 
 
 Enough options to reach out to me.
+
+I still have some work to do on the new format that will cost some time. Overall I'm happy about the way how the migration went and the speed my website is reacting. I hope it will help you getting the right content even more better. I also hope you'll agree with this new format. If you have any suggestions to make this site better please let me know.
 
 {{< bye >}}

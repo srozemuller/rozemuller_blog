@@ -1,6 +1,7 @@
 <div class="card">
   <!-- image path -->
   {{ $imagePath:= .Params.image }}
+  {{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
   {{ if $imagePath }}
   <div class="mb-4 position-relative">
     <!-- image CDN -->
@@ -11,8 +12,8 @@
     <!-- /image cdn -->
 
     <!-- image processing for multiple device -->
-    {{ if fileExists (add `assets/` $imagePath) }}
-    {{ $image:= resources.Get $imagePath }}
+    
+    {{ with $image }}
     {{ $imageFallback:= $image.Resize "650x" }}
     {{ $imageLG:= $image.Resize "650x webp" }}
     {{ $imageMD:= $image.Resize "600x webp" }}
@@ -25,6 +26,7 @@
         alt="{{.Title}}" width="{{$image.Width}}" height="{{$image.Height}}">
     </picture>
     {{ end }}
+
     <!-- /image processing for multiple device -->
     {{ end }}
     <ul class="list-inline card-badge">
