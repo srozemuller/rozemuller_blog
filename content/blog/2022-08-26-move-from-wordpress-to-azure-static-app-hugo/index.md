@@ -1,13 +1,17 @@
 ---
-title: "Move from WordPress to Static Page Hugo"
-description: "In this blog, I show how to move from WordPress to Hugo. I show the whole process on how and what."
+title: "Move from WordPress to Azure Static Web App with Hugo and GitHub"
+description: "In this blog, I show how I migrated from WordPress to an Azure Static Web App based on Hugo. I show the process I went through and how to enroll the Azure Static Web App in an automated way."
 image: "movement.jpeg"
 date: 2022-08-26T16:09:25+06:00
 categories:
-- "Static Web"
+- "Static Web App"
 - 'Azure'
+tags:
+    - Hugo
+    - GitHub
+    - WordPress
 type: "regular" # available types: [featured/regular]
-url: move-from-wordpress-to-static-page-hugo
+url: move-from-wordpress-to-azure-static-app-hugo
 draft: false
 ---
 
@@ -336,6 +340,9 @@ I know Yoast helps you get your SEO better but all these little extras don’t f
 People do react to my blog posts. Most comments are a thank you or code updates (thank you for that :)). Hugo supports Disqus this is fine for me. For code updates also Github provides an option to create a new issue. At last, we have social media like [Twitter](https://www.twitter.com/sanderozemuller). I tried to update my blog pages based on the comments. However, due the migration some comments felt of. If you have any question please let me know. 
 
 Enough options to reach out to me.
+
+### Social Sharing
+After I finished all I ran into a problem while sharing a post on the social media. The problem was that the image was not loaded. After searching the web I found [this](https://www.kelvinpapp.com/a-dive-into-social-sharing-and-hugo/) post that describes my problem. After all I created an image with a max width of 600px and stored it into the same folder as the rest of the blog post images and named it xxx-thumbnail.extension.
 
 I still have some work to do on the new format that will cost some time. Overall I'm happy about the way how the migration went and the speed my website is reacting. I hope it will help you getting the right content even more better. I also hope you'll agree with this new format. If you have any suggestions to make this site better please let me know.
 
