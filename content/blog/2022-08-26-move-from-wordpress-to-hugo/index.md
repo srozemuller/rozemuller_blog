@@ -255,11 +255,11 @@ The GitHub action (or DevOps pipeline in case of a DevOps connection) takes care
 
 ![github-action](github-action.png)
 
-After a commit, the action starts automatically. When the action is finished the website will be rebuild again.
+After a commit, the action starts automatically. When the action is finished the website will be rebuilt again.
 ![deployment-complete](deployment-complete.png)
 ## Add a custom domain to Azure static web app
 
-A Static Web App in Azure does have a unique URL by default. But it is nice to have your own domain connected. Connecting you own domain is simple. Adding your domain is the first step followed by a validation step. (CNAME or TXT)
+A Static Web App in Azure does have a unique URL by default. But it is nice to have your domain connected. Connecting your domain is simple. Adding a custom domain is the first step followed by a validation step. (CNAME or TXT)
 
 ![custom-domain](custom-domain.png)
 
@@ -283,6 +283,8 @@ Use ```cname-delegation``` under **validationMethod** in case you like adding a 
 
 ![custom-domain-added](custom-domain-added.png)
 
+For more information about adding custom domains check: https://docs.microsoft.com/en-us/azure/static-web-apps/custom-domain
+Take a good look at the preparation part. 
 ## My workflow
 
 Now everything is in place and the website is globally available. I like to share my workflow on how I update my website.
