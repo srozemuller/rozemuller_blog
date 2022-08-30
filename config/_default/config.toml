@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://rozemuller.com/"
+baseURL = "https://www.rozemuller.com/"
 title = "Sander Rozemuller | All about Azure, AVD, Automation, DevOps, Monitoring, MEM and Security"
 theme = "geeky-hugo"
 languageName = "En"
