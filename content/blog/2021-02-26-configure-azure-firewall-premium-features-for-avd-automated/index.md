@@ -80,7 +80,7 @@ More information about the Azure Firewall features please check the [feature lis
 ## Azure Firewall for AVD Automated
 
 Now we know which components we need it is time to deploy an Azure Firewall for AVD automated.   
-At the end of this chapter we have an Azure Firewall configured specially for a AVD environment. This means we have configured the new premium features and also added some rule to keep in contact with Microsoft. This is needed to [stay supported](https://rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
+At the end of this chapter we have an Azure Firewall configured specially for a AVD environment. This means we have configured the new premium features and also added some rule to keep in contact with Microsoft. This is needed to [stay supported](https://www.rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
 
 In this first part I will deploy a premium firewall with PowerShell. As I mentioned before you will need information like a VNET and public IP.
 

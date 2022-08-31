@@ -21,9 +21,9 @@ In this series about Prepare Azure DevOps for Windows Virtual Desktop deployment
 
 This series consists of the following subjects:
 
-- [App registration in Azure Active Directory](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
-- [Create an Azure DevOps project](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/)
-- [Add a Service connection in the DevOps project](https://rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/)
+- [App registration in Azure Active Directory](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
+- [Create an Azure DevOps project](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/)
+- [Add a Service connection in the DevOps project](https://www.rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/)
 - Create a pipeline from a source project
 - Using environments for manual image action dynamically
 
@@ -92,13 +92,13 @@ Although it is simple to create a service connection via the portal there are se
 ### REST API
 
 For the automated configuration we are going to use the DevOps API’s again.  
-As you can read in the [previous post](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/) I’m using the API at organisation level and will create a project. In this post we need to go into the project and create a service connection. As far as I know this is the only way to create a service connection automated.
+As you can read in the [previous post](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/) I’m using the API at organisation level and will create a project. In this post we need to go into the project and create a service connection. As far as I know this is the only way to create a service connection automated.
 
 In the script we will call the API two times to achieve this goal. The first call to get the projectID, because we needed in the API call body. The second time to create a service connection at project level.
 
 ### Body
 
-With the manual configuration in mind we now know there are different Azure service connection methods, their different types and scopes. In this scenario we need to deploy Azure resources based on a service principal on a management group scope. The service principal was created at the [first part of this series](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/).
+With the manual configuration in mind we now know there are different Azure service connection methods, their different types and scopes. In this scenario we need to deploy Azure resources based on a service principal on a management group scope. The service principal was created at the [first part of this series](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/).
 
 After some research I was able to map the portal values to the API body values.   
 The way I used was creating a manual service connection first, after creation I did a GET API call and read the data. If you aren’t familiar with API the code below will help you finding the correct settings. This will also help with creating complete new connections with other types like GitHub. In that case I also will create a connection manual first to find out which parameters I need.

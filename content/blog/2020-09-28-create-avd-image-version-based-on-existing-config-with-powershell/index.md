@@ -22,11 +22,11 @@ This article is part one of a series of posts about AVD image management automat
 
 This post is a part of the series AVD Image Management Automated.
 
-1. [Create AVD image version based on existing config with PowerShell – Part 1](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)
-2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/)
-3. [Create AVD Session hosts based on Shared Image Gallery version – Part 3](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
-4. [AVD housekeeping, removing all unused session hosts](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/), disks,[ and images – Part 4 ](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/)
-5. [Monitor Image Versions with Azure Monitor – Part 5](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
+1. [Create AVD image version based on existing config with PowerShell – Part 1](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)
+2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/)
+3. [Create AVD Session hosts based on Shared Image Gallery version – Part 3](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
+4. [AVD housekeeping, removing all unused session hosts](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/), disks,[ and images – Part 4 ](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/)
+5. [Monitor Image Versions with Azure Monitor – Part 5](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
 
 {{< toc >}}
 

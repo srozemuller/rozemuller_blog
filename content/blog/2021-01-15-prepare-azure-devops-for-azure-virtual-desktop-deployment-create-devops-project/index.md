@@ -23,8 +23,8 @@ In this series about Prepare Azure DevOps for Azure Virtual Desktop deployment I
 
 This series consists of the following subjects:
 
-- [App registration in Azure Active Directory](https://rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-app-registration/)
-- [Create an Azure DevOps project](https://rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/)
+- [App registration in Azure Active Directory](https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-app-registration/)
+- [Create an Azure DevOps project](https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/)
 - Add a Service connection in the DevOps project
 - Create a pipeline from a source project
 

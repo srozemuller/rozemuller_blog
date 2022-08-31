@@ -69,7 +69,7 @@ $graphAuthHeader = @{
 ```
 
 
-In the case of a DevOps pipeline or another automation sequence, you might use an application. If you use an application please read this[ article where I explain how to log in with an application registration](https://rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell).
+In the case of a DevOps pipeline or another automation sequence, you might use an application. If you use an application please read this[ article where I explain how to log in with an application registration](https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell).
 
 ### Starting variables
 
@@ -125,7 +125,7 @@ $laws
 ![image-3](image-3.png)
 ### Configure AVD host pool diagnostics
 
-In the next step, we configure the AVD hostpool to sent data to the Log Analytics Workspace. In this step, we configure the diagnostics settings at AVD hostpool level. The setting we need at least is AgentHealthStatus. For more information about configuring monitoring for AVD checks the [monitoring part of this article](https://rozemuller.com/avd-automation-cocktail-avd-automated-with-rest-api/#monitoring).
+In the next step, we configure the AVD hostpool to sent data to the Log Analytics Workspace. In this step, we configure the diagnostics settings at AVD hostpool level. The setting we need at least is AgentHealthStatus. For more information about configuring monitoring for AVD checks the [monitoring part of this article](https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-rest-api/#monitoring).
 
 To configure the diagnostics at the host pool level we need the host pool ID first. To get the host pool’s resource ID quick I use the Az.Avd PowerShell module.
 

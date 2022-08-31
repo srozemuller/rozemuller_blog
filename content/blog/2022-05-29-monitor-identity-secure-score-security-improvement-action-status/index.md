@@ -31,7 +31,7 @@ The needed API permissions for reading security improvement actions are:
 
 - **Delegated or Application**: *SecurityEvents.Read.All, SecurityEvents.ReadWrite.All*
 
-To authenticate against the Graph API with PowerShell, check [this part](https://rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell).
+To authenticate against the Graph API with PowerShell, check [this part](https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell).
 
 ## Main idea and philosophy
 
@@ -97,9 +97,9 @@ At first, we get the improvement actions from the overview layer. I use PowerShe
 https://graph.microsoft.com/beta/security/secureScoreControlProfiles
 ```
 
-After [authenticating](https://rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell) with the application, let’s search for actions. To keep my code clean I often work with the splatting technique. In fact, you create a table and push all the parameters as one single parameter. In the case of 3 parameters, it looks a bit overkill but if you have 5 or more it really helps.
+After [authenticating](https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell) with the application, let’s search for actions. To keep my code clean I often work with the splatting technique. In fact, you create a table and push all the parameters as one single parameter. In the case of 3 parameters, it looks a bit overkill but if you have 5 or more it really helps.
 
-The $authHeader variable is the output from the code in the [authentication](https://rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell) part. I used a filter to gather only the identity actions.
+The $authHeader variable is the output from the code in the [authentication](https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/#auth-with-powershell) part. I used a filter to gather only the identity actions.
 
 ```powershell
 $improvementsParams = @{

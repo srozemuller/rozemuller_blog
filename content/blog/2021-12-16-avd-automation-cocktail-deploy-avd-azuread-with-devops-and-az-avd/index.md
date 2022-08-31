@@ -26,7 +26,7 @@ In this “SantasRide”-deployment recipe I will deploy an AVD environment base
 
 ### Before to drink
 
-To start enrolling AVD automated with DevOps and Az.Avd you need to have a DevOps organization. Within that organization, you need a project. In that project, you will have to configure a service connection to an Azure tenant. Configuring the DevOps requirements is not the scope of this cocktail. For more info about configuring DevOps the automated way please check my series [‘the DevOps project’](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
+To start enrolling AVD automated with DevOps and Az.Avd you need to have a DevOps organization. Within that organization, you need a project. In that project, you will have to configure a service connection to an Azure tenant. Configuring the DevOps requirements is not the scope of this cocktail. For more info about configuring DevOps the automated way please check my series [‘the DevOps project’](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
 
 ### List DevOps of ingredients
 
@@ -311,6 +311,6 @@ New-AvdAadSessionHost @avdHostParameters
 
 ## Thank you!
 
-I hope you liked Santa’s 🎅 Tree 🎄 Ride 🛷 and got a bit inspired. Now you know deploy an AVD based on AzureAD with DevOps and the Az.Avd PowerShell module is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked Santa’s 🎅 Tree 🎄 Ride 🛷 and got a bit inspired. Now you know deploy an AVD based on AzureAD with DevOps and the Az.Avd PowerShell module is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}

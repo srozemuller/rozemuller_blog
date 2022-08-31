@@ -31,7 +31,7 @@ For more information about this series please my blog about the North Star frame
 
 ### General background info
 
-In the picture below the red circles are in the scope of this part of the series. Before starting, I recommend start reading the [kick-off blog about Operation North-Star](https://rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager).
+In the picture below the red circles are in the scope of this part of the series. Before starting, I recommend start reading the [kick-off blog about Operation North-Star](https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager).
 
 <figure class="wp-block-image is-resized">![](https://raw.githubusercontent.com/srozemuller/AVD/main/OperationNorthStar/Drawings/operation-northstar-onedrive-w.png)</figure>## OneDrive
 
@@ -63,7 +63,7 @@ $parameters = @{
 ![image-16](image-16.png)
 ![image-17](image-17.png)
 
-In addition to this subject, check my blog post about [installing Winget applications in Microsoft Endpoint Manager](https://rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/).
+In addition to this subject, check my blog post about [installing Winget applications in Microsoft Endpoint Manager](https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/).
 
 For more information about Windows Package Manager check the Microsoft Docs: <https://devblogs.microsoft.com/commandline/windows-package-manager-1-1/>
 

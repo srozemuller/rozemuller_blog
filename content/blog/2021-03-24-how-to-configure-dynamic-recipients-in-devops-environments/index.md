@@ -309,7 +309,7 @@ I fixed it by adding an ID to the button which will be returned, otherwise the t
 
 Summary of the links I posted throughout the article.
 
-- <https://rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/#overview>
+- <https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/#overview>
 - <https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops>
 - [https://docs.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&amp;tabs=check-pass](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass)
 - <https://adaptivecards.io/designer/>

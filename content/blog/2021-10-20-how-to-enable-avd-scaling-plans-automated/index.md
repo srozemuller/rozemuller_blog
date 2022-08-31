@@ -18,7 +18,7 @@ tags:
 
 In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.
 
-In Azure the best way is to save costs is to make sure you don’t ‘claim’ resources when you don’t need them. For Azure VM’s, it means they must be deallocated. This results in session hosts which are unavailable. AVD already knows the ability to [start VM’s on connect](https://rozemuller.com/configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/) at the moment a user connects to it. Start VM on connect works fine at the moment the environment isn’t used (mostly at night) and every host is down.   
+In Azure the best way is to save costs is to make sure you don’t ‘claim’ resources when you don’t need them. For Azure VM’s, it means they must be deallocated. This results in session hosts which are unavailable. AVD already knows the ability to [start VM’s on connect](https://www.rozemuller.com/configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/) at the moment a user connects to it. Start VM on connect works fine at the moment the environment isn’t used (mostly at night) and every host is down.   
   
 Now there is also AVD Auto Scaling which came in public preview. Scaling plans help you control your AVD environment automatically within a specific time window. If hosts are unused it shutdown hosts (automatically) and start them if the environment needs one.   
   

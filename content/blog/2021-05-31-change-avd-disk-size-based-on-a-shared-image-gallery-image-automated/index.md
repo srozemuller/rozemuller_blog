@@ -17,7 +17,7 @@ tags:
 ---
 
 It is very common to use a golden image in avd environments. Some are using Azure images, others are using a Shared Image Gallery. A great advantage of using preconfigured images is that you just have to create a new session host from that image and you’re all set.   
-The [change process](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/) for an image version is very simple, you will start a virtual machine from the version and you will make the changes. But what if you need to change the OS disk size of the golden image. In this article I will explain how to change a avd disk size when using a golden image based on the existing environment automated.
+The [change process](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/) for an image version is very simple, you will start a virtual machine from the version and you will make the changes. But what if you need to change the OS disk size of the golden image. In this article I will explain how to change a avd disk size when using a golden image based on the existing environment automated.
 
 At some day you will have to extend or shrink an OS disk for your session hosts. You log in into the portal, create a new vm, change the disk size afterwards, log in for running a Sysprep and at last generate a new version. These are quite a lot of steps which can be simplified in an automation sequence. In the next chapters I will explain the process about how to change a avd the session host disk size automated.
 
@@ -68,7 +68,7 @@ Now the fun begins where we are going to automate things, this time with PowerSh
 
 #### Install Az.avd module
 
-The first step is making sure you have installed the new [Az.avd PowerShell](https://rozemuller.com/launching-the-first-version-of-az-avd-avd-powershell-module/) module.
+The first step is making sure you have installed the new [Az.avd PowerShell](https://www.rozemuller.com/launching-the-first-version-of-az-avd-avd-powershell-module/) module.
 
 ```powershell
 install-module az.avd
@@ -188,7 +188,7 @@ To make sure the machine is really stopped I wrote a simple PowerShell loop whic
 ```
 
 
-More information about creating images please check my series about [avd image management automated](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/).
+More information about creating images please check my series about [avd image management automated](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/).
 
 Since a while it is possible to create a new image version from an virtual machine directly. This will make it possible to skip making a snapshot so we are going to deploy a new image from the machine directly.
 

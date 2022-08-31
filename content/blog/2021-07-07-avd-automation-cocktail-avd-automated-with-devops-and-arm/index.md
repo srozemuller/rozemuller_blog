@@ -27,7 +27,7 @@ In this “StrawberryBanana”-deployment recipe I will deploy an AVD environmen
 
 ### Before to drink
 
-To start enrolling AVD automated with DevOps and ARM templates you will need to have a DevOps organization. In that organization, you need a project. In that project you will have to configure a service connection to an Azure tenant. Configuring the DevOps requirements is not the scope of this cocktail. For more info about configuring DevOps the automated way please check my series [‘the DevOps project’](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
+To start enrolling AVD automated with DevOps and ARM templates you will need to have a DevOps organization. In that organization, you need a project. In that project you will have to configure a service connection to an Azure tenant. Configuring the DevOps requirements is not the scope of this cocktail. For more info about configuring DevOps the automated way please check my series [‘the DevOps project’](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/)
 
 Also, make sure you have an Active Directory domain present for the domain join.
 
@@ -510,7 +510,7 @@ For monitoring I created a template file as well with a parameter file. Addition
       overrideParameters: '-hostpoolName $(hostpoolDeploy.hostpoolName)'
 ```
 
-Enabling these settings is the basics for a good monitoring environment. If you like to configure advanced AVD monitoring automated please check my post about[ enabling AVD monitoring automated](https://rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). I will recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
+Enabling these settings is the basics for a good monitoring environment. If you like to configure advanced AVD monitoring automated please check my post about[ enabling AVD monitoring automated](https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). I will recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://www.rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
 
 ### AVD Session hosts
 
@@ -585,6 +585,6 @@ How to use output variables please check this link: [https://docs.microsoft.com/
 
 ## Thank you!
 
-I hope you liked the Strawberry Banana Mix 🍓 🍌 and got a bit inspired. Now you know deploy AVD automated with DevOps and ARM templates is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Strawberry Banana Mix 🍓 🍌 and got a bit inspired. Now you know deploy AVD automated with DevOps and ARM templates is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}

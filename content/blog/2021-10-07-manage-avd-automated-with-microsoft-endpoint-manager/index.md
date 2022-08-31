@@ -19,7 +19,7 @@ tags:
 
 Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Endpoint Manager. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.
 
-In the [AVD Automation Cocktail](https://rozemuller.com/avd-automation-cocktail-the-menu/) series, I showed how to deploy an AVD environment automated in several ways. For example with PowerShell, Bicep, or DevOps. As said in the upcoming series I will add a new layer for modern management with the main focus on Azure Virtual Desktop. What do you need? Why do you need it? How to deploy all these settings?
+In the [AVD Automation Cocktail](https://www.rozemuller.com/avd-automation-cocktail-the-menu/) series, I showed how to deploy an AVD environment automated in several ways. For example with PowerShell, Bicep, or DevOps. As said in the upcoming series I will add a new layer for modern management with the main focus on Azure Virtual Desktop. What do you need? Why do you need it? How to deploy all these settings?
 
 I called this operation ‘North-Star’. With this purpose, I try to help you further in the world of managing a modern workplace.
 

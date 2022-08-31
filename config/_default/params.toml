@@ -32,7 +32,7 @@ about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT (Enschede
 # footer content
 footer_content = "Copyright © 2022 by Sander Rozemuller. All rights reserved. No part of the information on this web site may be reproduced or posted in any form or by any means without the prior written permission of the publisher. All post are written based on my own experience with no warranties, confers no rights and is not supported by the authors. "
 # copyright
-copyright = "Copyright [Rozemuller](https://rozemuller.com/)"
+copyright = "Copyright [Rozemuller](https://www.rozemuller.com/)"
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= ""

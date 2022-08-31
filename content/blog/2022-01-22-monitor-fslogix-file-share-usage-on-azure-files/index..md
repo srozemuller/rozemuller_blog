@@ -33,7 +33,7 @@ An Azure storage account contains all of your Azure Storage data objects. The fo
   
 In the case of FSLogix, we need a file share. This file share is available from your desktop and used to store the .VHD file representing your profile.
 
-To create a storage account automated, check my blog post about [Configure FSLogix profile for Azure AD joined AVD session host automated](https://rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/#storage-account).   
+To create a storage account automated, check my blog post about [Configure FSLogix profile for Azure AD joined AVD session host automated](https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/#storage-account).   
 For more information about Azure storage accounts in general, check the [storage account overview](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview).
 
 ## Monitoring storage account file shares

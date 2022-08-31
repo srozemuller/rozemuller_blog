@@ -30,7 +30,7 @@ As you may properly know Microsoft provide a ServiceHealth API for monitoring th
 ### Getting the messages
 
 In my blogpost about authenticating against the API with PowerShell i’ve wrote in basics how to get an authentication token which you need for requesting an API.   
-[How to use](https://rozemuller.com/how-to-use-rest-api-with-powershell/) [REST](https://rozemuller.com/how-to-use-rest-api-with-powershell/)[API with Powershell](https://rozemuller.com/how-to-use-rest-api-with-powershell/)  
+[How to use](https://www.rozemuller.com/how-to-use-rest-api-with-powershell/) [REST](https://www.rozemuller.com/how-to-use-rest-api-with-powershell/)[API with Powershell](https://www.rozemuller.com/how-to-use-rest-api-with-powershell/)  
   
 First you need to request the ServiceHealth message API. This API shows every message for the past few weeks.
 

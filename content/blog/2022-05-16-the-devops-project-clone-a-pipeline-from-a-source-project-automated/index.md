@@ -22,9 +22,9 @@ In this series about Prepare Azure DevOps for Azure Virtual Desktop deployment, 
 
 What we have so far:
 
-- We have created an [App registration in Azure Active Directory](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/) which allows us to build a connection from DevOps to a subscription
-- We have created an [Azure DevOps project](https://rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/). This is the first step in DevOps (after you created an organization first)
-- Then we create a [Service connection in the DevOps project](https://rozemuller.com/prepare-azure-devops-for-wvd-deployment-create-a-service-connection/). This is the connection itself
+- We have created an [App registration in Azure Active Directory](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/) which allows us to build a connection from DevOps to a subscription
+- We have created an [Azure DevOps project](https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-create-devops-project/). This is the first step in DevOps (after you created an organization first)
+- Then we create a [Service connection in the DevOps project](https://www.rozemuller.com/prepare-azure-devops-for-wvd-deployment-create-a-service-connection/). This is the connection itself
 
 Finally, it is time to create the first pipeline into the project.
 

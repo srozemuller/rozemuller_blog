@@ -33,7 +33,7 @@ However, it is not a part of the North Start framework I also configure a lot of
 This blog post is a part of Operation North-Star. What is operation “North-Star”?  
 The main goal of operation “North-Star” is showing a way how to manage the modern workplace based on the North Star framework. Microsoft has released a framework for Microsoft Endpoint Management called ‘North Star’. This framework is designed to deploy, secure, optimize and manage Windows devices in the cloud.
 
-For more information about this series please read [my kick-off blog about the North Star framework](https://rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/).
+For more information about this series please read [my kick-off blog about the North Star framework](https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/).
 
 ## Secure AVD and CloudPC using security baselines
 
@@ -127,7 +127,7 @@ Invoke-RestMethod -Uri $script:templatesUrl -Method POST -Headers $script:token 
 ### Assign security baseline to a group
 
 At last, we need to assign the policy to the Azure Virtual Desktop hosts AD group.   
-In [the Operation North Star Update AVD hosts blog article](https://rozemuller.com/manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/#assignment), I created an <span style="text-decoration: underline;">AVD – Session hosts</span> AD group. In this step, I also use this AD group.
+In [the Operation North Star Update AVD hosts blog article](https://www.rozemuller.com/manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/#assignment), I created an <span style="text-decoration: underline;">AVD – Session hosts</span> AD group. In this step, I also use this AD group.
 
 First, I search for the AVD – Session hosts AD group again and use the group object ID to assign the security baseline to.
 

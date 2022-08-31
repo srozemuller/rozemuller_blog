@@ -19,7 +19,7 @@ tags:
     - Terraform
 ---
 
-Welcome (back) to the AVD Automation Cocktail. In the past [cocktail series](https://rozemuller.com/avd-automation-cocktail-the-menu), I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.
+Welcome (back) to the AVD Automation Cocktail. In the past [cocktail series](https://www.rozemuller.com/avd-automation-cocktail-the-menu), I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.
 
 {{< toc >}}
 
@@ -612,6 +612,6 @@ In fact, this whole sequence is able to run with Azure DevOps for example.
 
 ## Thank you!
 
-I hope you liked the Dutch Bloody Harry and got a bit inspired. Now you know how to deploy AVD automated with Terraform Cloud. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Dutch Bloody Harry and got a bit inspired. Now you know how to deploy AVD automated with Terraform Cloud. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 Enjoy your day and happy automating 👋

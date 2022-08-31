@@ -24,7 +24,7 @@ This specific setting became available on 7 March 2022 as a new setting in the s
 
 ## AVD Auto subscription with Microsoft Endpoint Manager
 
-In this first chapter, I show how to deploy a configuration policy with the Remote Desktop Auto Subscribe URL automated. The policy is assigned to all devices. Before we are able to deploy the AVD auto subscribe policy automated we need to authenticate first. In earlier posts, [I described how to authenticate based on an application registration](https://rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/#auth). For now, I skip that part. The following permissions are needed:
+In this first chapter, I show how to deploy a configuration policy with the Remote Desktop Auto Subscribe URL automated. The policy is assigned to all devices. Before we are able to deploy the AVD auto subscribe policy automated we need to authenticate first. In earlier posts, [I described how to authenticate based on an application registration](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/#auth). For now, I skip that part. The following permissions are needed:
 
 - **DeviceManagementConfiguration.ReadWrite.All**  
     *(Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.)*

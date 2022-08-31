@@ -116,7 +116,7 @@ $filters = Invoke-RestMethod @filterParams
 $filters
 ```
 
-<figure class="wp-block-image size-large">![intune filter created automated](https://rozemuller.com/wp-content/uploads/2022/03/image-29-1024x214.png)</figure>
+<figure class="wp-block-image size-large">![intune filter created automated](https://www.rozemuller.com/wp-content/uploads/2022/03/image-29-1024x214.png)</figure>
 For more information about creating filters check the URL: <https://docs.microsoft.com/en-us/graph/api/intune-policyset-deviceandappmanagementassignmentfilter-get?view=graph-rest-beta>
 
 ## Assing profiles with Intune filters automated
@@ -185,9 +185,9 @@ $assignment = Invoke-RestMethod @policyParams
 $assignment
 ```
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![intune filter assigned automated](https://rozemuller.com/wp-content/uploads/2022/03/image-31-1024x460.png)</figure></div>## Summary
+<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![intune filter assigned automated](https://www.rozemuller.com/wp-content/uploads/2022/03/image-31-1024x460.png)</figure></div>## Summary
 
 In this blog post, I showed how to create a filter in Intune automated and how to assign a filter. Filters help target policies to the correct devices without creating new AD groups every time and improve the environment’s performance.   
-Thank you for reading my blog about how to create Intune filters automated into Microsoft Endpoint Manager. If you need another example, take a look at my blog about how to deploy [power management settings to non-virtual machines](https://rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/)
+Thank you for reading my blog about how to create Intune filters automated into Microsoft Endpoint Manager. If you need another example, take a look at my blog about how to deploy [power management settings to non-virtual machines](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/)
 
 Enjoy your day and happy automating 👋

@@ -4,7 +4,7 @@ title: 'Enable RDP ShortPath for WVD on an image version automated'
 date: '2020-11-22T12:15:01+01:00'
 author: 'Sander Rozemuller'
 layout: post
-guid: 'https://rozemuller.com/?p=879'
+guid: 'https://www.rozemuller.com/?p=879'
 url: enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated/
 newszone_post_views_count:
     - '97'
@@ -51,10 +51,10 @@ For enabling RDP ShortPath in a new image version you do the following steps:
 
 ## Create new virtual machine
 
-For creating a new virtual I worte a blogpost earlier. Please check my blogpost [Windows Virtual Desktop Image Management Automated – Part 1 – Create WVD image version based on existing config with PowerShell](https://rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/). In that post I will explain how to create a new virtual machine based on a existing sessionhost. The only thing you need know is the Windows Virtual Desktop hostpool.   
+For creating a new virtual I worte a blogpost earlier. Please check my blogpost [Windows Virtual Desktop Image Management Automated – Part 1 – Create WVD image version based on existing config with PowerShell](https://www.rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/). In that post I will explain how to create a new virtual machine based on a existing sessionhost. The only thing you need know is the Windows Virtual Desktop hostpool.   
 After following that post at the end you will have an output somthing like this:
 
-<figure class="wp-block-image size-large is-resized">![image-version-output](https://rozemuller.com/wp-content/uploads/2020/10/Image-1159.png)</figure>Use the information for the rest of this article.
+<figure class="wp-block-image size-large is-resized">![image-version-output](https://www.rozemuller.com/wp-content/uploads/2020/10/Image-1159.png)</figure>Use the information for the rest of this article.
 
 ## Local tasks on the virtual machine
 
@@ -171,11 +171,11 @@ New-NetFirewallRule -DisplayName 'Remote Desktop - Shortpath (UDP-In)'  -Action 
 Restart-Computer $env:computername -Force
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div><figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2020/11/image-7.png)</figure>The local Windows Firewall has been set.
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-7.png)</figure>The local Windows Firewall has been set.
 
-<figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2020/11/image-5.png)</figure><figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2020/11/image-4.png)</figure>The needed registry keys.
+<figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-5.png)</figure><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-4.png)</figure>The needed registry keys.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.59.57.png)</figure>### Configure Network Security Group
+<figure class="wp-block-image size-large">![](https://www.rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.59.57.png)</figure>### Configure Network Security Group
 
 After the local settings has been done the next step is to add port 3390 to the correct NSG. In this step we will execute the add-firewallRule function again, this time without a source.
 
@@ -187,12 +187,12 @@ add-firewallRule -NSG $NSG -port 3390 -Protocol "UDP" -Name "Allow-3390"
 
 <div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>## Finalizing the virtual machine
 
-The second last step is Sysprep the virtual machine and create a new version into the Shared Image Gallery. I talked about how to Sysprep and create a new version automatically in [part 2 of Windows Virtual Desktop Image Management Automated](https://rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/).
+The second last step is Sysprep the virtual machine and create a new version into the Shared Image Gallery. I talked about how to Sysprep and create a new version automatically in [part 2 of Windows Virtual Desktop Image Management Automated](https://www.rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/).
 
-The very last step is adding the new virtual machines to the Windows Virtual Desktop hostpool. How to achieve that goal fully automatically please check [part 3 Create WVD sessionhosts on image version](https://rozemuller.com/windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
+The very last step is adding the new virtual machines to the Windows Virtual Desktop hostpool. How to achieve that goal fully automatically please check [part 3 Create WVD sessionhosts on image version](https://www.rozemuller.com/windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
 
 ## Verify connection
 
 At the end after connecting with the Windows Remote Client (download via [Windows desktop client page](https://docs.microsoft.com/nl-nl/windows-server/remote/remote-desktop-services/clients/windowsdesktop#install-the-client)) and the Workspace tab you are able to view the connection settings.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.55.26.png)</figure>
+<figure class="wp-block-image size-large">![](https://www.rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.55.26.png)</figure>

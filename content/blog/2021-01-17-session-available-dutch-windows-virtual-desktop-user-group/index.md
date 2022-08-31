@@ -14,4 +14,4 @@ Check the video below.
 
 If you like more video’s from the Dutch WVD community please subscribe to the [Dutch Azure Virtual Desktop User Group channel](https://www.youtube.com/channel/UCFRbwLFXyEtYPPZJ0O5HlFg)
 
-More information about automation and Azure Virtual Desktop please check my series about [Azure Virtual Desktop Image Management Automated](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)
+More information about automation and Azure Virtual Desktop please check my series about [Azure Virtual Desktop Image Management Automated](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)

@@ -281,7 +281,7 @@ $imageVersion = New-AzGalleryImageVersion @imageVersionParameters
 ![image-](image-40.png)
 ## Azure Virtual Desktop
 
-After the backend is prepared, it is time to deploy the AVD environment. This deployment differs a little in relation to other cocktails like [The Fresh Minty Breeze](https://rozemuller.com/avd-automation-cocktail-avd-with-bicep-and-azure-cli/#avd). In the cocktails where templates and parameter files are used I recommend creating single template files. These files are used for repeatable actions like deploying session host. This will make life easier and you code a lot more cleaner.
+After the backend is prepared, it is time to deploy the AVD environment. This deployment differs a little in relation to other cocktails like [The Fresh Minty Breeze](https://www.rozemuller.com/avd-automation-cocktail-avd-with-bicep-and-azure-cli/#avd). In the cocktails where templates and parameter files are used I recommend creating single template files. These files are used for repeatable actions like deploying session host. This will make life easier and you code a lot more cleaner.
 
 In this case we only use code and we are in full control which commands we are using and when.
 
@@ -311,7 +311,7 @@ $avdHostpool = New-AzWvdHostPool @hostpoolParameters
 To save costs it is recommended to enable the Start VM on Connection feature. Enabling this feature allows you to shutdown all the hosts at the end of the day. If all hosts are down and a person is logging in a session host will start automatically.   
 To enable this feature you will need to create a custom role in the Azure AD and assign this role to the session host resourcegroup.
 
-To make this process easier [I wrote the PowerShell module Az.Avd](https://rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this module there is a command which allows you enabling the Start VM on Connect feature in one simple command. Because this is an initial deployment I need to provide a HostResourceGroup as well. This is the resource group where the session hosts are. In an existing environment you can skip the parameter. The module will find out itself.
+To make this process easier [I wrote the PowerShell module Az.Avd](https://www.rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this module there is a command which allows you enabling the Start VM on Connect feature in one simple command. Because this is an initial deployment I need to provide a HostResourceGroup as well. This is the resource group where the session hosts are. In an existing environment you can skip the parameter. The module will find out itself.
 
 Needed module: Az.Avd
 
@@ -522,13 +522,13 @@ In the next part I’m connecting the workspace to the AVD diagnostics settings.
 Make a notice on the orange arrow. This variable was created in the [hostpool part of the AVD environment](#hostpool).
 
 ![image-53](image-53.png)
-Enabling these settings are the basics for a good monitoring environment. If you like to configure advanced AVD monitoring automated please check my post about[ enabling AVD monitoring automated](https://rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). I will recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
+Enabling these settings are the basics for a good monitoring environment. If you like to configure advanced AVD monitoring automated please check my post about[ enabling AVD monitoring automated](https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). I will recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://www.rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
 
 ## Conclusion
 
 PowerShell is my ‘mother’-language for automation. I’ve created a lot of scripts with PowerShell but must say, during writing this post, I’ve seen some new commands. I took some time to figure it out how these work the best. Especially the extension part took some time.
 
-The great of PowerShell is that it is community driven. This makes it possible to created modules to make life easier. For example the [Az.Avd module I wrote](https://rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this post I use my own module and the native modules like Az.Resources or Az.Compute.
+The great of PowerShell is that it is community driven. This makes it possible to created modules to make life easier. For example the [Az.Avd module I wrote](https://www.rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this post I use my own module and the native modules like Az.Resources or Az.Compute.
 
 All these modules are great and nasty at the same time. If you think you’re all set a new module dependency came up. So make sure you have install all the needed module.   
 If you are using this sequence in a DevOps pipeline for example, I would suggest to only install the needed modules. Installing all the Az\* module will take some time and is totally overkill.
@@ -538,6 +538,6 @@ And that’s what I like about PowerShell.
 
 ## Thank you!
 
-I hope you liked the Coconut Beach Party 🧉 🏖 🥳 and got a bit inspired. Now you know deploy AVD automated with PowerShell is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Coconut Beach Party 🧉 🏖 🥳 and got a bit inspired. Now you know deploy AVD automated with PowerShell is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}

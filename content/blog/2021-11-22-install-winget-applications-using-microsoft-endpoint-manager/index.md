@@ -18,7 +18,7 @@ tags:
 
 In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.
 
-During writing the next part of my blog series [Operation North Star](https://rozemuller.com/category/north-star/), application management was one of the subjects. Because application management is one of the biggest investments in Endpoint management, I decided to write a blog about this subject only.
+During writing the next part of my blog series [Operation North Star](https://www.rozemuller.com/category/north-star/), application management was one of the subjects. Because application management is one of the biggest investments in Endpoint management, I decided to write a blog about this subject only.
 
 Creating images for endpoints is can be done in many ways. We are using tools like System Center Configuration Manager (SCCM), Packer, or writing our own packages installed by Azure DevOps. All good of course. In this blog, I use Winget for application distribution. This is with the back of Microsoft Endpoint Manager. Winget got major improvements in the past months. Major improvements in installation and many application additions. At the moment, there are around 2000 applications available. So in my opinion a good way to deploy applications.
 

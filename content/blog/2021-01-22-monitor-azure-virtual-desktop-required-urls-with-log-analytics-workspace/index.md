@@ -46,7 +46,7 @@ An another place where to find issues is on the Azure Portal itself under the Az
 
 A second place where you can find events is the Log Analytics Workspace. Important thing to know is that Log Analytics is not working out of the box. For using Log Analytics is you will need a Log Analytics workspace. Also make sure you installed the MicrosoftMonitoringAgent extension on each AVD session host.
 
-I wrote a blog post about enabling [Azure Monitor for Azure Virtual Desktop](https://rozemuller.com/deploy-azure-monitor-for-azure-virtual-desktop-automated/). In that post I explain how to enable the Azure Monitor in basics for AVD including setting up a Log Analytics workspace with the correct settings.   
+I wrote a blog post about enabling [Azure Monitor for Azure Virtual Desktop](https://www.rozemuller.com/deploy-azure-monitor-for-azure-virtual-desktop-automated/). In that post I explain how to enable the Azure Monitor in basics for AVD including setting up a Log Analytics workspace with the correct settings.   
 The blog post below will continue at the last section when adding session host to the workspace.
 
 ### **Add session hosts to Log Analytics Workspace**

@@ -21,11 +21,11 @@ In this part I will describe some options how to create an image overview with A
 
 This post is a part of the series Azure Virtual Desktop Image Management Automated.
 
-1. [Create AVD image version based on existing config with PowerShell – Part 1](https://rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/)
-2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/)
-3. [Create AVD Sessionhosts based on Shared Image Gallery version – Part 3](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
-4. [AVD housekeeping, removing all unused sessionhosts, disks and images – Part 4 ](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-wvd-clean-up-unused-resources/)
-5. [Monitor Image Versions with Azure Monitor – Part 5](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
+1. [Create AVD image version based on existing config with PowerShell – Part 1](https://www.rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/)
+2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://www.rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/)
+3. [Create AVD Sessionhosts based on Shared Image Gallery version – Part 3](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
+4. [AVD housekeeping, removing all unused sessionhosts, disks and images – Part 4 ](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-wvd-clean-up-unused-resources/)
+5. [Monitor Image Versions with Azure Monitor – Part 5](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
 
 {{< toc >}}
 

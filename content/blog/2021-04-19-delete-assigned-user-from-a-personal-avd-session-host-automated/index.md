@@ -42,15 +42,15 @@ In a Depth-First situation every new session is assigned to next available sessi
 For example:  
 You have 3 session hosts with a max session limit of 10. The first session host has 8 sessions, the second has 4 and the last has 7. In a breath-first the next session is assigned to the second host (with 4 sessions). In case of depth-first the first session host (with 8 sessions) will be used.
 
-<figure class="wp-block-image size-large">![wvd pooled hostpool type](https://rozemuller.com/wp-content/uploads/2021/04/image-7.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>### Personal
+<figure class="wp-block-image size-large">![wvd pooled hostpool type](https://www.rozemuller.com/wp-content/uploads/2021/04/image-7.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>### Personal
 
 In a personal environment there is no load balancing. Every user has its own session host. The only thing which can be configured is the assignment type, automatically or direct. There could be reasons to choose the direct option but most of the time the automatically option will good.
 
-<figure class="wp-block-image size-full is-resized">![wvd hostpool types](https://rozemuller.com/wp-content/uploads/2021/04/image-6.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>More information about host pool load balancing you can check the [Microsoft documentation about these methods](https://docs.microsoft.com/en-us/azure/virtual-desktop/host-pool-load-balancing).
+<figure class="wp-block-image size-full is-resized">![wvd hostpool types](https://www.rozemuller.com/wp-content/uploads/2021/04/image-6.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>More information about host pool load balancing you can check the [Microsoft documentation about these methods](https://docs.microsoft.com/en-us/azure/virtual-desktop/host-pool-load-balancing).
 
-What happens if a user logs in, an available session host will be assigned to that user and will keep it as long as the session host exists. A great advantage in relation to a pooled environment is that you are able [enable start VM on connect](https://rozemuller.com/configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/) and shutdown the session hosts at the end of the day. This will save consumption and so costs.
+What happens if a user logs in, an available session host will be assigned to that user and will keep it as long as the session host exists. A great advantage in relation to a pooled environment is that you are able [enable start VM on connect](https://www.rozemuller.com/configure-wvd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/) and shutdown the session hosts at the end of the day. This will save consumption and so costs.
 
-<figure class="wp-block-image size-large is-resized">![](https://rozemuller.com/wp-content/uploads/2021/04/image-9-1024x87.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>An disadvantage is that when a user is leaving, needs a new login name or in my case, I logged in with a wrong test user, the session host is claimed by that user account. Of course you can delete that session host and create a new one but some side effects are you will have to clean up your Active Directory and remove all related resources as well.   
+<figure class="wp-block-image size-large is-resized">![](https://www.rozemuller.com/wp-content/uploads/2021/04/image-9-1024x87.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>An disadvantage is that when a user is leaving, needs a new login name or in my case, I logged in with a wrong test user, the session host is claimed by that user account. Of course you can delete that session host and create a new one but some side effects are you will have to clean up your Active Directory and remove all related resources as well.   
 So I like to remove that user from the host without creating a new VM and all other.
 
 ## Delete assigned from personal session host
@@ -63,7 +63,7 @@ Before we are able to register session hosts into a host pool we have to create 
   
 There are several way to create a new token. Through the portal under the host pool overview.
 
-<figure class="wp-block-image size-large">![](https://rozemuller.com/wp-content/uploads/2021/04/image-11.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>Or by PowerShell via the command below. (I will generate a new token for 30 minutes in this case). I will save the token into a $token variable to use it later.
+<figure class="wp-block-image size-large">![](https://www.rozemuller.com/wp-content/uploads/2021/04/image-11.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>Or by PowerShell via the command below. (I will generate a new token for 30 minutes in this case). I will save the token into a $token variable to use it later.
 
 ```powershell
 $now = get-date
@@ -82,7 +82,7 @@ The next step is to find the session host with the user which need to be removed
 $sessionHost = Get-AzWvdSessionHost @Parameters | where {$_.AssignedUser -eq 'useraccount'} | FL
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div><figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2021/04/image-10.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>Important is that the session host needs to be removed from the host pool. (Not the VM it self)  
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2021/04/image-10.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>Important is that the session host needs to be removed from the host pool. (Not the VM it self)  
 Execute the command below to remove the session host.
 
 ```powershell
@@ -127,7 +127,7 @@ Get-AzVM -Name $vm.Name | Restart-AzVm
 
 The final result is a clean session host for a new user.
 
-<figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2021/04/image-12.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div><figure class="wp-block-image size-full is-resized">![](https://rozemuller.com/wp-content/uploads/2021/04/image-13.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>  
+<figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2021/04/image-12.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2021/04/image-13.png)</figure><div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>  
 The change-sessionhost-token.ps1 script can be find at my [Github repository](https://github.com/srozemuller/Windows-Virtual-Desktop/blob/master/Recycle/UserAssignment/change-sessionhost-token.ps1)
 
 Thank you for reading my blog post about delete an assign user from a personal Windows Virtual Desktop session host.

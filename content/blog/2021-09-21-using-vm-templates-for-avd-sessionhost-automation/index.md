@@ -22,7 +22,7 @@ In automation using templates is key! Using templates makes life easier. No new 
 
 ## Templates
 
-During my travel in the world of AVD, I tested lots of automation sequences. Some of them I wrote down in the [AVD Automation Cocktail](https://rozemuller.com/avd-automation-cocktail-the-menu/). All of these cocktails have one thing in common, the use of templates (Bicep, ARM, YAML). Actually, even PowerShell functions are a sort of template.
+During my travel in the world of AVD, I tested lots of automation sequences. Some of them I wrote down in the [AVD Automation Cocktail](https://www.rozemuller.com/avd-automation-cocktail-the-menu/). All of these cocktails have one thing in common, the use of templates (Bicep, ARM, YAML). Actually, even PowerShell functions are a sort of template.
 
 In the end, all ‘deployment’-templates having the same goal: make sure you don’t have to repeat code and can use them in generic.
 

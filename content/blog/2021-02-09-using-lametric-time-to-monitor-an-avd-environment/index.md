@@ -87,11 +87,11 @@ Before the function will run successfully make sure the function app has the cor
 
 To configure the correct permissions first you need to setup an identity. By enable the identity status the function will become an Azure AD object. When configuring permissions the function will appear in the list of object.
 
-![Image-1518](https://rozemuller.com/wp-content/uploads/2021/02/Image-1518.png)
+![Image-1518](https://www.rozemuller.com/wp-content/uploads/2021/02/Image-1518.png)
 Now there are special roles I have chosen the Desktop Virtualization Host Pool Reader and LogAnalyics Reader.
 
-![Image-1519](https://rozemuller.com/wp-content/uploads/2021/02/Image-1519.png)
-![Image-1520](https://rozemuller.com/wp-content/uploads/2021/02/Image-1520.png)
+![Image-1519](https://www.rozemuller.com/wp-content/uploads/2021/02/Image-1519.png)
+![Image-1520](https://www.rozemuller.com/wp-content/uploads/2021/02/Image-1520.png)
 ### The code
 
 Basically, the code consists on four parts (regions), receiving and handling the request, finding sessionhost availabillity, gathering LogAnalytics information and throw out the JSON format where the LaMetric app will pick up the body.
@@ -173,7 +173,7 @@ Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
 })
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>Good to know is that the function is querying the Log Analytics workspace. Make sure you have AVD monitoring enabled. You could take a look at my page about [enabling AVD monitoring automated](https://rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated).
+<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>Good to know is that the function is querying the Log Analytics workspace. Make sure you have AVD monitoring enabled. You could take a look at my page about [enabling AVD monitoring automated](https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated).
 
 ## Result
 

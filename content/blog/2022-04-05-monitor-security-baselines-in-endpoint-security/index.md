@@ -17,13 +17,13 @@ tags:
 
 A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.
 
-To understand security baselines please read [my security baseline explained post](https://rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/) first. This post is going further on that base.
+To understand security baselines please read [my security baseline explained post](https://www.rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/) first. This post is going further on that base.
 
 {{< toc >}}
 
 ## Security baselines data
 
-Security baselines have some important data which need attention. In this chapter, I will show why this data is important and how to get this data. As shown in [my earlier post](https://rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/), security baselines are templates with predefined settings. A security baseline consists of profiles with **versions**. Based on the settings you are able to create a profile. The profile can be **assigned** to a group, all users, or all devices. After assignment, a profile gets a **status**.
+Security baselines have some important data which need attention. In this chapter, I will show why this data is important and how to get this data. As shown in [my earlier post](https://www.rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/), security baselines are templates with predefined settings. A security baseline consists of profiles with **versions**. Based on the settings you are able to create a profile. The profile can be **assigned** to a group, all users, or all devices. After assignment, a profile gets a **status**.
 
 Those three values are important and tell if a security baseline is working fine and is up-to-date.
 
@@ -119,7 +119,7 @@ After requesting the profiles I use the output to compare with the source baseli
 
 ### Security baseline version monitoring
 
-As mentioned in [my security baseline explain post](https://rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/#versions), security baselines have versions. A version represents a baseline with settings and values. Each new version instance of a baseline can add or remove settings or introduce other changes. Because baselines are not updating to new versions automatically, it is a good idea to monitor your own baselines as Microsoft’s baseline. An older version remains to work but it is a best practice to update profiles to the latest versions as soon as possible.
+As mentioned in [my security baseline explain post](https://www.rozemuller.com/microsoft-endpoint-managerm-security-baselines-explained/#versions), security baselines have versions. A version represents a baseline with settings and values. Each new version instance of a baseline can add or remove settings or introduce other changes. Because baselines are not updating to new versions automatically, it is a good idea to monitor your own baselines as Microsoft’s baseline. An older version remains to work but it is a best practice to update profiles to the latest versions as soon as possible.
 
 I asked the Microsoft product team what is happening when a new version becomes available. One of the things which happen is the change of the security baseline ID. Every security baseline version has its own ID. With that in mind, we could make a match between the security baseline ID and the templateID object from the profile.
 

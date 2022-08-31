@@ -348,7 +348,7 @@ Invoke-RestMethod @postParams
 
 ## Assign security baseline
 
-Before the security baselines work, we need to assign the baseline to something. There are three types of assignment, users, groups, and devices. If you don’t need special assignments (like to specific users or devices) use add all users or all devices. Currently, filters are not available at the security baseline level so if you need some filtering, then use (dynamic) groups. Please check [my post about securing and optimizing AVD hosts and CloudPC](https://rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/#assign-security-baseline) to learn more about assigning groups.
+Before the security baselines work, we need to assign the baseline to something. There are three types of assignment, users, groups, and devices. If you don’t need special assignments (like to specific users or devices) use add all users or all devices. Currently, filters are not available at the security baseline level so if you need some filtering, then use (dynamic) groups. Please check [my post about securing and optimizing AVD hosts and CloudPC](https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/#assign-security-baseline) to learn more about assigning groups.
 
 ![assignments](assignments.png)
 

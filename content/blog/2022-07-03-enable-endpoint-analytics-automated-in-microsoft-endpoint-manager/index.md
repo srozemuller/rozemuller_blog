@@ -59,7 +59,7 @@ Source: [https://docs.microsoft.com/en-us/mem/analytics/enroll-intune#bkmk\_onbo
 
 During configuration, you will have the ability to configure applicability rules. In these rules, you specify device profiles to where a policy is assigned or not. In the case of Azure Virtual Desktop (AVD), choose the Windows 10 Enterprise option.
 
-After log-in using Connect-AzAccount, I request a Graph token. Because endpoint analytics is also a device configuration policy, we need the device configuration URL. By pointing to the correct @odata.type, we can configure the correct objects. In my [blog about Update AVD with MEM](https://rozemuller.com/manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/#odata-types), I explained more about @odata.types.
+After log-in using Connect-AzAccount, I request a Graph token. Because endpoint analytics is also a device configuration policy, we need the device configuration URL. By pointing to the correct @odata.type, we can configure the correct objects. In my [blog about Update AVD with MEM](https://www.rozemuller.com/manage-windows-updates-for-avd-using-micrcosoft-endpoint-manager/#odata-types), I explained more about @odata.types.
 
 ```powershell
 function GetAuthToken($resource) {

@@ -21,13 +21,13 @@ This is part two of a serie posts about AVD disk management. In this blogpost I 
 
 This post is a part of the series Azure Virtual Desktop Image Management Automated.
 
-1. [Create AVD image version based on existing config with PowerShell – Part 1](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)
-2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/)
-3. [Create AVD Sessionhosts based on Shared Image Gallery version – Part 3](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
-4. [WVD housekeeping, removing all unused sessionhosts, disks and images – Part 4 ](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/)
-5. [Monitor Image Versions with Azure Monitor – Part 5](https://rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
+1. [Create AVD image version based on existing config with PowerShell – Part 1](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/)
+2. [Save AVD image with Sysprep as Image Gallery version – Part 2](https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/)
+3. [Create AVD Sessionhosts based on Shared Image Gallery version – Part 3](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-3-create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
+4. [WVD housekeeping, removing all unused sessionhosts, disks and images – Part 4 ](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-4-avd-clean-up-unused-resources/)
+5. [Monitor Image Versions with Azure Monitor – Part 5](https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/)
 
-*Before continuing I will strongly recommend reading [part 1](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/) first. This part will continue based on part one and you will need the information from that part.*
+*Before continuing I will strongly recommend reading [part 1](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/) first. This part will continue based on part one and you will need the information from that part.*
 
 {{< toc >}}
 
@@ -152,7 +152,7 @@ Invoke-AzVMRunCommand -CommandId "EnableRemotePS" -VM $vm
 ### Add port to firewall
 
 The second part is adding a firewall rule for port 5986, which is the ssl port for remote PowerShell connection url.  
-Now we need the PowerShell function add-firewallRule from [part 1 ](https://rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/#add-ip)again. After adding the port we will setup a remote PowerShell session.
+Now we need the PowerShell function add-firewallRule from [part 1 ](https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/#add-ip)again. After adding the port we will setup a remote PowerShell session.
 
 ![image-1169](image-1169.png)
 ```powershell

@@ -74,7 +74,7 @@ In the upcoming paragraphs, I show how to deploy configuration profiles automate
 
 ### Log in
 
-To configure policies, we need to log in. As shown in the [operation briefing](https://rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/), I created an application registration with the correct permissions. This is the first time we use the application. To log in I use the command below. After log-in, request a token for the Graph API. I also set the device configuration URL.
+To configure policies, we need to log in. As shown in the [operation briefing](https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/), I created an application registration with the correct permissions. This is the first time we use the application. To log in I use the command below. After log-in, request a token for the Graph API. I also set the device configuration URL.
 
 ```powershell
 $appId = ""
@@ -263,7 +263,7 @@ I decided to fill the membership rule based on the computers OU with only AVD ma
 
 I use the **Az.Avd** PowerShell module to get the AVD prefix. Running the Get-AvdHostpoolInfo will get all the hostpool information. From that information, I’m searching for the VM template information. This VM template stores all the information for current and future session hosts in a hostpool. However, this value is not mandatory I should suggest using this parameter.
 
-For more information about the use of VM templates,[ please check my blog post about this subject](https://rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/).
+For more information about the use of VM templates,[ please check my blog post about this subject](https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/).
 
 ```powershell
 $prefix = Get-AvdHostPool -HostpoolName AVD-Hostpool -ResourceGroupName rg-avd-demo-01

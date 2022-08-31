@@ -24,7 +24,7 @@ Welcome to the AVD Automation Cocktail. In this cocktail series I will show diff
 
 ## Recipe
 
-In this “OrangeSunset “-deployment recipe I will deploy an AVD environment automated with Azure CLI only. This cocktail looks a bit like the [Fresh Minty Breeze](https://rozemuller.com/avd-automation-cocktail-avd-with-bicep-and-azure-cli/). However this cocktail has no templates and using the specific deployment commands. This deployment also using the input parameters. This because to show all the needed Azure CLI commands and parameters. A great extra is the Azure AAD Join deployment.
+In this “OrangeSunset “-deployment recipe I will deploy an AVD environment automated with Azure CLI only. This cocktail looks a bit like the [Fresh Minty Breeze](https://www.rozemuller.com/avd-automation-cocktail-avd-with-bicep-and-azure-cli/). However this cocktail has no templates and using the specific deployment commands. This deployment also using the input parameters. This because to show all the needed Azure CLI commands and parameters. A great extra is the Azure AAD Join deployment.
 
 ### Before to drink
 
@@ -441,6 +441,6 @@ An another point is that you don’t have to remember use a lot different comman
 
 ## Thank you!
 
-I hope you liked the Sweet Orange [🍊](https://emojipedia.org/tangerine/) Sunset [☀️](https://emojipedia.org/sun/) you are a bit inspired. Now you know deploy AVD automated with Azure CLI is one of the options. If you like an another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Sweet Orange [🍊](https://emojipedia.org/tangerine/) Sunset [☀️](https://emojipedia.org/sun/) you are a bit inspired. Now you know deploy AVD automated with Azure CLI is one of the options. If you like an another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}

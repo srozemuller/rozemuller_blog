@@ -442,6 +442,6 @@ An another point is that you don’t have to remember use a lot different comman
 
 ## Thank you!
 
-I hope you liked the Fresh Minty Breeze 🍃💨 you are a bit inspired. Now you know deploy AVD automated with Bicep and Azure CLI is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Fresh Minty Breeze 🍃💨 you are a bit inspired. Now you know deploy AVD automated with Bicep and Azure CLI is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}

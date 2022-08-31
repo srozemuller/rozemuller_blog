@@ -537,7 +537,7 @@ $diagnostics = Invoke-WebRequest @diagnosticsParameters
 ```
 
 ![image-43](image-43.png)
-To keep an eye on our environment we need monitoring. For example I added the error and connection logging. These settings are the basics for a good monitoring environment. In addition to monitoring please check my post about[ enabling AVD monitoring automated](https://rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). Further I recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
+To keep an eye on our environment we need monitoring. For example I added the error and connection logging. These settings are the basics for a good monitoring environment. In addition to monitoring please check my post about[ enabling AVD monitoring automated](https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). Further I recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://www.rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
 
 ### Create an AVD session host with REST API
 
@@ -712,6 +712,6 @@ Second is learn how to deal with PowerShell hashtables and arrays. Hashtables an
 
 ## Thank you!
 
-Finally I would say, I hope you liked the Pineapple 🍍 Citrus 🍊 Splash 🌊 . In the hope that you got a bit inspired. Now you know deploy AVD automated with REST API, JSON and PowerShell is one of the options. If you like an another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://rozemuller.com/avd-automation-cocktail-the-menu/).
+Finally I would say, I hope you liked the Pineapple 🍍 Citrus 🍊 Splash 🌊 . In the hope that you got a bit inspired. Now you know deploy AVD automated with REST API, JSON and PowerShell is one of the options. If you like an another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}
