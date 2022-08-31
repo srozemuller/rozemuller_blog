@@ -69,20 +69,31 @@
           </div>
         </div>
 
-        <div class="border rounded d-lg-flex p-4 mb-5">
+        <div class="border pt-4 mb-5 rounded">
           <!-- featured content -->
-          {{ range site.Params.featured }}
-          <div class="img-fluid w-100 rounded-4">
-
+          <div class="row mx-0 g-5">
+            {{ range site.Params.featured }}
+            <div class="col-sm-6 mb-4">
+              
+              <div class="mb-4 position-relative">
             <h4 class="h5 title-border" style="text-align:center;">{{ .category }}</h4>
             <a href="{{.link | absLangURL}}">
               {{ $image:= resources.Get .image }}
-              <img width="379" height="252" src="{{ $image.RelPermalink }}" alt="image">
+              {{ with $image }}
+              {{ $imageFallback:= $image.Fill "379x213" }}
+              {{ $imageWebp:= $image.Fill "379x213 webp" }}
+              <img class="img-fluid w-100 rounded-4" width="379" height="252" src="{{ $imageWebp.RelPermalink }}" alt="image">
+              {{ end }}
             </a>
-          </div>  
+            </div>
+          </div> 
           {{ end }}
+        </div> 
+      </div>
           <!-- /advertisement -->
-        </div>
+
+
+
         {{with site.Params.recent_post_title}}
         <div class="section-title">
           <h2 class="h4 title-border">{{ . | markdownify}}</h2>
