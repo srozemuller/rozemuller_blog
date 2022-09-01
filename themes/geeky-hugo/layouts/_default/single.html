@@ -87,6 +87,7 @@
           </li>
           {{ end }}
         </ul>
+        {{ partial "tags.html" . }}
         <div class="content drop-cap">{{.Content}}</div>
         <!-- google ads footer -->
         {{ partial "ads-footer.html" . }}
@@ -149,5 +150,4 @@
 </section>
 {{ end }}
 <!-- /regular page -->
-
 {{ end }}
