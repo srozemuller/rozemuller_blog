@@ -13,6 +13,8 @@ tags:
     - MEMPowered
     - Powershell
     - 'REST API'
+type: "regular" # available types: [featured/regular]
+url: deploy-power-settings-automated-in-microsoft-endpoint-manager
 ---
 
 Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Endpoint Manager. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.
