@@ -62,5 +62,8 @@ weight = 2
 name = "Home"
 url = "/"
 weight = 1
-
+[[footer]]
+name = "Tags"
+url = "/tags"
+weight = 2
 

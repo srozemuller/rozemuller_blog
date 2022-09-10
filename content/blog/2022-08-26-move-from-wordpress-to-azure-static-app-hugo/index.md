@@ -302,7 +302,7 @@ It is very simple and repeats steps from above.
 
 - In the created folder, I create an index.md file with the blog content. All other content like images is also stored in this folder.
 
-I used the branch bundle to have all related blog content in one place.
+I used the [leaf bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles) to have all related blog content in one place.
 
 - After I finished writing I commit the changes to the main branch.
 
