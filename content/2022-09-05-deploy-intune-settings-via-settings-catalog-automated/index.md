@@ -1,9 +1,9 @@
 ---
-title: 'Deploy Intune settings catalog automated from scratch with Graph API'
-description: I show in this blog how to create a device configuration profile with settings from the settings catalog in Intune. I show how to build settings templates from an existing profile to reuse in the next scenario.
+title: "Deploy Intune settings catalog automated from scratch with Graph API"
+description: "I show in this blog how to create a device configuration profile with settings from the settings catalog in Intune. I show how to build settings templates from an existing profile to reuse in the next scenario."
 date: 2022-09-11T07:55:46+02:00
 author: 'Sander Rozemuller'
-image: catalog.png
+image: "catalog.png"
 categories:
 - "Microsoft Endpoint Manager"
 - "Graph API"
@@ -15,10 +15,7 @@ tags:
     - Backup
     - Settings Templates
 type: "regular" # available types: [featured/regular]
-draft: true
 url: deploy-intune-settings-catalog-automated-from-scratch-with-graph-api
-Victor_Hugo: "true"
-Focus_Keyword: "intune settings catalog automated"
 ---
 I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I[ created a profile with power settings and deployed the profile to all devices including a filter](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/). 
 
