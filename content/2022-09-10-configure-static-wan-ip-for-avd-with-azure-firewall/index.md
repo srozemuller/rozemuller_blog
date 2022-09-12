@@ -1,5 +1,5 @@
 ---
-title: 'Configure static WAN IP for AVD with Azure Firewall'
+title: 'Configure static WAN IP for AVD with Azure Firewall Blg'
 description: I show in this blog how to configure an external static WAN IP for AVD in an automated way with the use of an Azure Firewall.
 date: 2022-09-01T07:55:46+02:00
 author: 'Sander Rozemuller'
