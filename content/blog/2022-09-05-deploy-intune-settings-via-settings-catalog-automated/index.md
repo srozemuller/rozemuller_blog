@@ -62,7 +62,7 @@ There are several API methods available that tell **how** you interact with the 
 |PUT|Replace a resource with a new one.|
 |DELETE|Remove a resource.|
 
-
+For more information about Graph API methods, check this URL: https://docs.microsoft.com/en-us/graph/use-the-api#http-methods
 ### Authenticate to Graph API
 To deploy settings in Microsoft Endpoint Manager we need to authenticate. I've configured an application registration in Azure AD and set the correct API permissions. To get the correct permissions for a specific action check the Graph API documentation. 
 
@@ -179,5 +179,7 @@ Assigning policies is the next step where more options are available.
 In this part of my earlier power setting blog post, I show how to assign a policy to all devices based on filters.   
 https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/#power-settings-assignment-with-filters
 
+
+If you want to try the Graph API I would suggest start to read here: https://docs.microsoft.com/en-us/graph/auth/. It start with authentication and continues the Graph API journey.
 
 {{< bye >}}
