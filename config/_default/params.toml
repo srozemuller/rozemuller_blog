@@ -26,7 +26,7 @@ search = true
 # featured post title
 featured_post_title = ""
 recent_post_title = ""
-# mainSections = ["/"]
+# mainSections = ["blog"]
 # about widget content
 about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT (Enschede) as a Cloud Architect. I love to share my knowledge about automation in Azure and M365. </br>You can find me on the links below."
 # footer content
