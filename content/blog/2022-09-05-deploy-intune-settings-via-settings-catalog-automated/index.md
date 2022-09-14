@@ -174,12 +174,15 @@ $request = Invoke-RestMethod @requestParameters
 $request
 ```
 
+The example of the ```configpolicy.json``` is stored in [my GitHub](https://github.com/srozemuller/MicrosoftEndpointManager/tree/main/ConfigurationPolicies/Full).
+
+
 ## Assignment
 Assigning policies is the next step where more options are available. 
-In this part of my earlier power setting blog post, I show how to assign a policy to all devices based on filters.   
+In this part of my earlier power-setting blog post, I show how to assign a policy to all devices based on filters.   
 https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/#power-settings-assignment-with-filters
 
 
-If you want to try the Graph API I would suggest start to read here: https://docs.microsoft.com/en-us/graph/auth/. It start with authentication and continues the Graph API journey.
+If you want to try the Graph API I would suggest start reading here: https://docs.microsoft.com/en-us/graph/auth/. It starts with authentication and continues the Graph API journey.
 
 {{< bye >}}
