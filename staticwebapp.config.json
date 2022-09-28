@@ -1,7 +1,15 @@
 {
+    "trailingSlash": "auto",
+    "routes": [
+        {
+            "route": "https://www.rozemuller.com/*",
+            "redirect": "https://rozemuller.com/*",
+            "statusCode": 301
+        }
+    ],
     "responseOverrides": {
-      "404": {
-        "rewrite": "/404.html"
-      }
+        "404": {
+            "rewrite": "/404.html"
+        }
     }
-  }
+}
