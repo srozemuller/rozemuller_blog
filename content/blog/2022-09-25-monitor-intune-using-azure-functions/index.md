@@ -15,13 +15,15 @@ tags:
 type: "regular" # available types: [featured/regular]
 url: monitor-intune-using-azure-functions-powershell-and-graph-api
 ---
+Intune and the rest of Microsoft Endpoint Manager are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
+In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions. 
 
 {{< toc >}}
 
 ## Monitor Intune with Diagnostics Settings or Graph API
-Intune and the rest of Microsoft Endpoint Manager are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment. With that in mind, I enabled the diagnostics settings that send the logs to Log Analytics. When digging into that data you will notice a lot of interesting information is not available. Think about a security profile that is out of date or unassigned baselines. 
+With growing environments in mind, I enabled the diagnostics settings that send the logs to Log Analytics. When digging into the logs I noticed a lot of interesting information is not available. Think about a security profile that is out of date or unassigned baselines. 
 Also, some form of notification is missing. Luckily, we have the Graph API that has lots of valuable information to dig into.
-In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions. 
+
 
 ![diagnostics-vs-graphapi](diagnostics-vs-graphapi.png)
 
