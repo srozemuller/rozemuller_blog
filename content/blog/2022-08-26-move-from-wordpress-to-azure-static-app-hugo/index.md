@@ -343,6 +343,26 @@ Enough options to reach out to me.
 ### Social Sharing
 After I finished all I ran into a problem while sharing a post on the social media. The problem was that the image was not loaded. After searching the web I found [this](https://www.kelvinpapp.com/a-dive-into-social-sharing-and-hugo/) post that describes my problem. After all I created an image with a max width of 600px and stored it into the same folder as the rest of the blog post images and named it xxx-thumbnail.extension.
 
-I still have some work to do on the new format that will cost some time. Overall I'm happy about the way how the migration went and the speed my website is reacting. I hope it will help you getting the right content even more better. I also hope you'll agree with this new format. If you have any suggestions to make this site better please let me know.
+
+## Fixes
+Now a short time later the website is running fine but I noticed some things were handled by Apache which is now Hugo. Think about URL redirection in the case of 404. 
+
+### Custom 404 page Azure Static Web App
+Azure Static Web App can handle 404, but it redirects the client to a default Azure 404 page. I do have my 404 that I want to use. To use your  redirect pages you need *response overrides*
+
+https://learn.microsoft.com/en-us/azure/static-web-apps/configuration#response-overrides
+
+In the website`s root, I create a file staticwebapp.config.json. In the file, I created a responseOverrides with the 404 code and the page where clients need to be sent.
+
+```json
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/404.html"
+        }
+    }
+```
+
+
+I still have some work to do on the new format that will cost some time. Overall I'm happy about the way how the migration went and the website`s speed. I hope it will help you get the right content even better. I also hope you'll agree with this new format. If you have any suggestions to make this site better please let me know.
 
 {{< bye >}}
