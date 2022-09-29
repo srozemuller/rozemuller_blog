@@ -352,7 +352,7 @@ Azure Static Web App can handle 404, but it redirects the client to a default Az
 
 https://learn.microsoft.com/en-us/azure/static-web-apps/configuration#response-overrides
 
-In the website`s root, I create a file staticwebapp.config.json. In the file, I created a responseOverrides with the 404 code and the page where clients need to be sent.
+In the website`s root, I create a file [staticwebapp.config.json](https://github.com/srozemuller/rozemuller_blog/blob/main/staticwebapp.config.json). In the file, I created a responseOverrides with the 404 code and the page where clients need to be sent.
 
 ```json
     "responseOverrides": {
