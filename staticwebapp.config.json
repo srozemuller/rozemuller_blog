@@ -3,8 +3,7 @@
     "routes": [
         {
             "route": "https://www.rozemuller.com/*",
-            "redirect": "https://rozemuller.com/*",
-            "statusCode": 301
+            "redirect": "https://rozemuller.com/*"
         }
     ],
     "responseOverrides": {
