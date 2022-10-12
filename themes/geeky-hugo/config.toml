@@ -61,8 +61,6 @@ link = "plugins/jquery/jquery.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.js"
 [[params.plugins.js]]
-link = "plugins/search/fuse.js"
-[[params.plugins.js]]
 link = "plugins/search/mark.js"
 [[params.plugins.js]]
 link = "plugins/search/search.js"

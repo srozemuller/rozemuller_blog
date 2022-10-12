@@ -27,6 +27,7 @@ min = "0.87.0"
 [outputs]
 home = ["HTML", "RSS", "JSON", "WebAppManifest"]
 
+
 ############################# Imaging ##############################
 [imaging]
 # See https://github.com/disintegration/imaging
