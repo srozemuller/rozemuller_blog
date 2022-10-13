@@ -1,16 +1,9 @@
 ---
-id: 879
 title: 'Enable RDP ShortPath for WVD on an image version automated'
 date: '2020-11-22T12:15:01+01:00'
 author: 'Sander Rozemuller'
-layout: post
-guid: 'https://www.rozemuller.com/?p=879'
-url: enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated/
-newszone_post_views_count:
-    - '97'
-ekit_post_views_count:
-    - '98'
-image: /wp-content/uploads/2020/11/rdp-shortpath-connections.png
+url: enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated
+image: rdp-shortpath-connections.png
 categories:
     - Azure
     - 'Azure Virtual Desktop'
@@ -21,11 +14,13 @@ tags:
 ---
 
 Since Windows Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the WVD client and latency improvements at the most of the regions.   
-Since 16 November 2020 a really nice improvement has been added to the list, Windows Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in WVD with some automation tasks.
+Since 16 November 2020 a nice improvement has been added to the list, Windows Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in WVD with some automation tasks.
+
+{{< toc >}}
 
 ### Introduction
 
-First some basic background information about Windows Virtual Desktop and default network connectivity. A Windows Virtual Desktop environment consists of hostpools, session hosts, workspaces and application groups. If everything has been configured correctly you will be able to connect with a domain account to <https://rdweb.wvd.microsoft.com/arm/webclient/index.html>. After connecting you will able to connect workspaces and/or applications.   
+First some basic background information about Windows Virtual Desktop and default network connectivity. A Windows Virtual Desktop environment consists of host pools, session hosts, workspaces and application groups. If everything has been configured correctly you will be able to connect with a domain account to <https://rdweb.wvd.microsoft.com/arm/webclient/index.html>. After connecting you will able to connect workspaces and/or applications.   
   
 The user validation, securing and other connection needs will be handled by the Windows Virtual Desktop gateway and broker. Because I am an automation guy and not a networking guy I will stop talking about networking now :). For a complete networking overview please check the [Windows Virtual Desktop network connectivity page](https://docs.microsoft.com/en-us/azure/virtual-desktop/network-connectivity).
 
@@ -140,7 +135,7 @@ while (!($session)) {
 
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>After the session has been established we are able to execute remote commands.  
+After the session has been established we are able to execute remote commands.  
 In the first place I will set the execution policy to unrestricted so my script will run. Next the script will test if there is a C:\\Scripts directory allready, if it does not exist we will create one.   
 The next part will download the real script which will configure the needed register keys and the local Windows Firewall. At last it will execute the script.
 
@@ -158,7 +153,7 @@ Remove-PSSession -Session $session
 
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>After the script has run locally you will see the prepare script in C:\\Scripts. The Prepare-ForRDPShortpath.ps1 content will take care of the register keys and the local Windows Firewall
+After the script has run locally you will see the prepare script in C:\\Scripts. The Prepare-ForRDPShortpath.ps1 content will take care of the register keys and the local Windows Firewall
 
 ```powershell
 $WinstationsKey = 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations'
@@ -171,11 +166,17 @@ New-NetFirewallRule -DisplayName 'Remote Desktop - Shortpath (UDP-In)'  -Action 
 Restart-Computer $env:computername -Force
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-7.png)</figure>The local Windows Firewall has been set.
+![image-7](image-7.png)
+The local Windows Firewall has been set.
 
-<figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-5.png)</figure><figure class="wp-block-image size-full is-resized">![](https://www.rozemuller.com/wp-content/uploads/2020/11/image-4.png)</figure>The needed registry keys.
+![image-5](image-5.png)
+![image-4](image-4.png)
 
-<figure class="wp-block-image size-large">![](https://www.rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.59.57.png)</figure>### Configure Network Security Group
+The needed registry keys.
+
+![image-3](image-3.png)
+
+### Configure Network Security Group
 
 After the local settings has been done the next step is to add port 3390 to the correct NSG. In this step we will execute the add-firewallRule function again, this time without a source.
 
@@ -185,7 +186,7 @@ After the local settings has been done the next step is to add port 3390 to the 
 add-firewallRule -NSG $NSG -port 3390 -Protocol "UDP" -Name "Allow-3390"
 ```
 
-<div aria-hidden="true" class="wp-block-spacer" style="height:50px"></div>## Finalizing the virtual machine
+## Finalizing the virtual machine
 
 The second last step is Sysprep the virtual machine and create a new version into the Shared Image Gallery. I talked about how to Sysprep and create a new version automatically in [part 2 of Windows Virtual Desktop Image Management Automated](https://www.rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/).
 
@@ -195,4 +196,4 @@ The very last step is adding the new virtual machines to the Windows Virtual Des
 
 At the end after connecting with the Windows Remote Client (download via [Windows desktop client page](https://docs.microsoft.com/nl-nl/windows-server/remote/remote-desktop-services/clients/windowsdesktop#install-the-client)) and the Workspace tab you are able to view the connection settings.
 
-<figure class="wp-block-image size-large">![](https://www.rozemuller.com/wp-content/uploads/2020/11/Schermafbeelding-2020-11-22-om-12.55.26.png)</figure>
+![image-2](image-2.png)

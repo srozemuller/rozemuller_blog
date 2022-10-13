@@ -3,11 +3,12 @@
 
 {{ $date:= time.Format ":date_long" .PublishDate }}
 
-{{ with .Params.image }}
-{{ if (fileExists (add `assets/` .)) }}
-{{ $image:= . }}
-{{ $image:= $image.Resize "650x" }}
-{{ $.Scratch.Set "image" $image.Permalink }}
+{{ $imagePath:= .Params.image }}
+{{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
+
+{{ if $imagePath }}
+{{ with $image }}
+{{ $.Scratch.Set "image"  $image.Permalink}}
 {{ end }}
 {{ end }}
 {{ $image:= $.Scratch.Get "image" }}
