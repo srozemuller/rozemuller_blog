@@ -4,9 +4,8 @@
 {{ $date:= time.Format ":date_long" .PublishDate }}
 
 {{ $imagePath:= .Params.image }}
-{{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
-
 {{ if $imagePath }}
+{{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
 {{ with $image }}
 {{ $.Scratch.Set "image"  $image.Permalink}}
 {{ end }}
