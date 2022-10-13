@@ -4,12 +4,12 @@ var fuseOptions = {
   includeScore: true,
   shouldSort: true,
   includeMatches: true,
-  findAllMatches: true,
+  findAllMatches: false,
   minMatchCharLength: 2,
   location: 0,
   threshold: 0.5,
   distance: 50,
-  useExtendedSearch: true,
+  useExtendedSearch: false,
   ignoreLocation: false,
   ignoreFieldNorm: false,
   keys: [{
@@ -40,7 +40,7 @@ if (searchQuery) {
 
 
 function executeSearch(searchQuery){
-  $.getJSON( "/index.json", function( data ) {
+  $.getJSON(indexURL, function( data ) {
     var pages = data;
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
