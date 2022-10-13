@@ -14,6 +14,7 @@ tags:
     - PowerShell
 type: "regular" # available types: [featured/regular]
 url: monitor-intune-using-azure-functions-powershell-and-graph-api
+draft: true
 ---
 
 

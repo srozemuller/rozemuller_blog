@@ -12,6 +12,7 @@ tags:
     - Monitoring
 type: "regular" # available types: [featured/regular]
 url: deploy-monitor-conditional-access-require-authentication-strength
+draft: true
 ---
 
 Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example. 
