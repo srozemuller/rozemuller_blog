@@ -27,7 +27,7 @@ Also, some form of notification is missing. Luckily, we have the Graph API that 
 
 ![diagnostics-vs-graphapi](diagnostics-vs-graphapi.png)
 
->Graph API is a treasure chest which lots of valuable information to dig into.
+>Graph API is a treasure chest that has lots of valuable information to dig into.
 
 ## Why Azure Functions
 More ways are leading to Rome so why do I use Azure Functions instead of Logic App for example? The answer is simple, CONTROL. I do have the infrastructure-as-a-code philosophy and try to have all components in code as much as possible. But there is more. 
