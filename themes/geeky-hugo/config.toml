@@ -68,3 +68,5 @@ link = "plugins/search/search.js"
 link = "plugins/copy-clipboard/clipboard.js"
 [[params.plugins.js]]
 link = "plugins/webfont-loader/webfont-loader-2.js"
+[[params.plugins.js]]
+link = "plugins/index-chapters/index-chapters.js"
