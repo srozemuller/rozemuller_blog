@@ -157,7 +157,7 @@ $roleUri = "{0}/{1}/providers/Microsoft.Authorization/roleAssignments/{2}?api-ve
 $roleBody = @{
     properties = @{
         roleDefinitionId = "/subscriptions/{0}/providers/Microsoft.Authorization/roleDefinitions/b86a8fe4-44ce-4948-aee5-eccb2c155cd7" -f $subscriptionId ## b86a8fe4... guid is the buildin role ID Key Vault Secrets Officer
-        principalId = "66bdd111-6acf-41bb-a68f-cdf3f2a39842" ## This is the system identity id or the resource
+        principalId = "system identity ID" ## This is the system identity id or the resource (I used the .id object from the )
     }
 } | ConvertTo-Json -Depth 5
 
