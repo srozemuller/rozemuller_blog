@@ -53,9 +53,28 @@ weight = 1
 
 [[sidebar]]
 name = "Image Management"
-url = "category/image-management/"
+url = "categories/image-management/"
 weight = 2
 
+[[sidebar]]
+name = "Azure Functions"
+url = "tags/azure-functions/"
+weight = 3
+
+[[sidebar]]
+name = "Endpoint Management"
+url = "tags/mem/"
+weight = 4
+
+[[sidebar]]
+name = "PowerShell"
+url = "tags/powershell/"
+weight = 5
+
+[[sidebar]]
+name = "Az.Avd Module"
+url = "tags/az.avd/"
+weight = 6
 
 # footer menu
 [[footer]]
