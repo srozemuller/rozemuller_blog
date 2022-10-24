@@ -1,7 +1,7 @@
 ---
 title: 'Use internal main.iam.ad API with Logic Apps'
 description: In this blog, I show how to use the Azure hidden API (main.iam.ad) with Logic Apps. I show how to get Microsoft licenses to an overview with display names that are not available in the Graph API. 
-date: 2022-10-17T11:46:12+02:00
+date: 2022-10-24T11:46:12+02:00
 author: 'Sander Rozemuller'
 image: 'logic-app-design-thumbnail.png'
 categories:
