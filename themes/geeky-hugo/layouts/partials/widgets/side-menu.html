@@ -2,12 +2,14 @@
     <div class="widget-title">
         <h3 class="h5 title-border">Other topics</h3>
       </div>
-<ul class="list-unstyled mb-5 footer-menu">
+
+ <ul class="list-group list-unstyled">
     {{ range site.Menus.sidebar }}
-    <li class="list-inline-item">
+    <li>
       <a {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
-    </li></br>
+      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}
+    </a>
+    </li>
     {{ end }}
   </ul>
 </div>
