@@ -105,6 +105,8 @@ triggers = @{
     }
 }
 ```
+
+![http-req](http-req.png)
 ### Trigger (Recurrence)
 If you want to run the Logic App at scheduled times, then use the recurrence trigger. Run the code below to create a recurrence trigger instead of a HTTP trigger.
 ```powershell
