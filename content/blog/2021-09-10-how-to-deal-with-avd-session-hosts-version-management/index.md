@@ -50,8 +50,9 @@ So far so good.
 
 After the module is installed a whole new set of AVD PowerShell command become available. One of them is Get-AvdImageVersionStatus. This command accepts a few parameters and will look into the environment for all the needed information.
 
-```powershell
-`SYNTAX     Get-AvdImageVersionStatus -HostpoolName  -ResourceGroupName  [-NotLatest] [] <span style="background-color: rgba(0, 0, 0, 0.05); font-size: inherit;">    Get-AvdImageVersionStatus -HostpoolName <String> -ResourceGroupName <String> [-SessionHostName <String>] [-NotLatest] [<CommonParameters>]</span>`
+```powershell    
+Get-AvdImageVersionStatus -HostpoolName  -ResourceGroupName  [-NotLatest]
+Get-AvdImageVersionStatus -HostpoolName <String> -ResourceGroupName <String> [-SessionHostName <String>] [-NotLatest] [<CommonParameters>]
 ```
 
 For all help, information use the command Get-Help Get-AvdImageVersionStatus -Full
@@ -63,7 +64,7 @@ $hostpoolInfo = @{
     HostpoolName      = "avd-hostpool"
     ResourceGroupName = "rg-avd-01"
 }
-Get-AvdImageVersionStatus @hostpoolInfo -Verbose | Select-Object 
+Get-AvdImageVersionStatus @hostpoolInfo -Verbose 
 ```
 
 The result of the command is shown in the picture below. If there are different versions active in one hostpool, you see differences between the latestVersion object and the currentImageVersion object. The latest version is picked from the Azure Compute Gallery from where the sessionhost got his image. The currentImageVersion is the version that has the sessionhost now.
@@ -79,7 +80,13 @@ To clean up the mess it is recommended to get the users to correct session hosts
 Putting hosts into drain mode is simple with the Az.Avd PowerShell module. In the first step, I’m only requesting the old session hosts with the -NotLatest switch parameter. The results will be piped to another command Update-AvdSessionhostDrainMode.
 
 ```powershell
-Get-AvdImageVersionStatus -HostpoolName avd-hostpool -ResourceGroupName rg-avd-001 -NotLatest | foreach {Update-AvdSessionhostDrainMode -HostpoolName $_.Hostpoolname -ResourceGroupName rg-avd-001 -SessionHostName $_.sessionHostName -AllowNewSession $true}
+$avdParams = @{
+    hostpoolName      = "AVD-Hostpool"
+    resourceGroupName = 'rg-roz-avd-01'
+}
+Get-AvdImageVersionStatus @avdParams -NotLatest | foreach {
+    Update-AvdSessionhostDrainMode -InputObject $_ -AllowNewSession $true
+}
 ```
 
 ![image-55](image-55.png)
@@ -89,29 +96,43 @@ Get-AvdImageVersionStatus -HostpoolName avd-hostpool -ResourceGroupName rg-avd-0
 Now the session hosts are in drain mode it is a matter of time till the hosts are empty. At the moment the hosts are empty it is time to clean up the resources. First, we will delete the session host from the host pool. Later we are going to remove the virtual machine, the disk and the network card.
 
 ```powershell
-
-Get-AvdImageVersionStatus -HostpoolName avd-hostpool -ResourceGroupName rg-avd-001 -NotLatest | foreach {
-    $sessionHostInfo = @{
-        HostpoolName = $_.HostpoolName
-        ResourceGroupName = "rg-avd-001" 
-        SessionHostName = $_.SessionHostName
-    }
-    
-    $sessionHost = Get-AvdSessionHostResources @sessionHostInfo
-    Remove-AzResource -ResourceId $sessionHost.Id -Force
-    Remove-AzResource -ResourceId $sessionHost.StorageProfile.OsDisk.ManagedDisk.id -Force
-    Remove-AzResource -ResourceId (Get-AvdNetworkInfo @sessionHostInfo).nicId -Force
+$avdParams = @{
+    hostpoolName      = "AVD-Hostpool"
+    resourceGroupName = 'rg-roz-avd-01'
+}
+Get-AvdImageVersionStatus @avdParams -NotLatest | foreach {
+    $sessionHost = Get-AvdSessionHostResources -Id $_.sessionHostId
+    Remove-AzResource -ResourceId $sessionHost.vmResources.Id -Force
+    Remove-AzResource -ResourceId $sessionHost.vmResources.properties.StorageProfile.OsDisk.ManagedDisk.id -Force
+    Remove-AzResource -ResourceId (Get-AvdNetworkInfo @avdParams -SessionHostName $sessionHost.name).NetworkCardInfo.nicId -Force
 }
 ```
 
-The next step is removing the session hosts from the hostpool.
+The next step is removing the session hosts from the AVD host pool.
 
 With the command below we are deleting the AVD session host from the host pool. This command is also in the Az.Avd PowerShell module.
 
 ```powershell
-Get-AvdImageVersionStatus -HostpoolName avd-hostpool -ResourceGroupName rg-avd-001 -NotLatest | foreach {Remove-AvdSessionhost -HostpoolName $_.Hostpoolname -ResourceGroupName rg-avd-001 -SessionHostName $_.sessionHostName}
+$avdParams = @{
+    hostpoolName      = "AVD-Hostpool"
+    resourceGroupName = 'rg-roz-avd-01'
+}
+Get-AvdImageVersionStatus @avdParams -NotLatest | foreach{
+    Remove-AvdSessionhost -HostpoolName $_.Hostpoolname -ResourceGroupName $_.ResourceGroupName -Name $_.tName
+    }
 ```
 
+Or based on AVD session host ID.
+
+```powershell
+$avdParams = @{
+    hostpoolName      = "AVD-Hostpool"
+    resourceGroupName = 'rg-roz-avd-01'
+}
+Get-AvdImageVersionStatus @avdParams -NotLatest | foreach{
+    Remove-AvdSessionhost -Id $_.id
+    }
+```
 And now the old session hosts are removed.
 
 ![](image-56.png)
