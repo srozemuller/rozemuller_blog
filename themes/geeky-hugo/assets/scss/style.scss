@@ -33,6 +33,7 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'highlight';
 
+@import 'custom';
 
 @import 'templates/navigation.scss';
 
