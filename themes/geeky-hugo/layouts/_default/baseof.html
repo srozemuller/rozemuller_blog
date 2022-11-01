@@ -21,7 +21,7 @@ AUTHOR WEBSITE: https://gethugothemes.com
 	{{ end }}
 </head>
 
-<body>
+<body class="dark-mode">
 	<!-- cache partial only in production -->
 	{{ if hugo.IsProduction }}
 	{{ partialCached "preloader.html" . }}
@@ -29,6 +29,7 @@ AUTHOR WEBSITE: https://gethugothemes.com
 	{{ else }}
 	{{ partial "preloader.html" . }}
 	{{ partial "header.html" . }}
+
 	{{ end }}
 
 	<main>

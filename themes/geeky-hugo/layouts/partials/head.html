@@ -39,6 +39,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{$favicon_16.RelPermalink}}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{$favicon_32.RelPermalink}}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{$favicon_180.RelPermalink}}">
+<link disabled id="dark-mode-theme" rel="stylesheet" href="/css/dark.css">
 {{ end }}
 {{ end }}
 <link rel="manifest" href="{{`manifest.webmanifest` | relURL }}">
@@ -48,7 +49,7 @@
 
 {{ "<!-- Open Graph image and Twitter Card metadata -->" | safeHTML }}
 {{ $image_path := .Params.image | default site.Params.image -}}
-{{ $image_path_local :=  printf "static/%s" $image_path -}}
+{{ $image_path_local :=  printf "%s" $image_path -}}
 {{ $image_ext := trim (path.Ext $image_path | lower) "." -}}
 {{ if fileExists $image_path_local -}}
   <meta property="og:image" content="{{ $image_path | absURL }}" />

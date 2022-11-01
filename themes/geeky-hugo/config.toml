@@ -70,3 +70,5 @@ link = "plugins/copy-clipboard/clipboard.js"
 link = "plugins/webfont-loader/webfont-loader-2.js"
 [[params.plugins.js]]
 link = "plugins/index-chapters/index-chapters.js"
+[[params.plugins.js]]
+link = "plugins/dark/dark.js"
