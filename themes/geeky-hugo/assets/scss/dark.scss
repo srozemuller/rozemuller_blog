@@ -75,6 +75,23 @@ body.dark-mode {
     background-image: url('/images/footer-bg-shape-dark.svg') !important;
   }
 
+  .page-item.disabled .page-link {
+    display: none;
+  }
+  
+  .pagination {
+
+    .prev,
+    .next {
+      a {
+        padding: 12px 10px;
+  
+        &:hover {
+          background-color: #008ad7;
+        }
+      }
+    }
+  }
   /*
 * Chroma PowerShell Console Style v1.0
 * 
