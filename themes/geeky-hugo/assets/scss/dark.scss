@@ -32,8 +32,7 @@ body.dark-mode {
   .pagination .page-link,
   .social-icons li a,
   a,
-  .card-meta li a,
-  .fa-inverse {
+  .card-meta li a  {
     color: #e0e0e0 !important;
   }
 
@@ -68,7 +67,7 @@ body.dark-mode {
     color: #999;
   }
 
-  code {
+  code, .fa-moon {
     color: #008ad7
   }
 
