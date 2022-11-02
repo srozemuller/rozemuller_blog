@@ -16,10 +16,13 @@ jQuery.event.special.touchmove = {
   }
 };
 
+
+
 // Preloader js
 $(window).on('load', function () {
   'use strict';
   $('.preloader').fadeOut(0);
+
 });
 
 // on ready state
