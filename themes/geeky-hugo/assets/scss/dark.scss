@@ -1,10 +1,19 @@
 html.theme-selection.dark {
 
-  body {
+  body, div#offcanvasRight, .offcanvas .btn-close {
     background: rgb(45, 45, 45);
     color: #e0e0e0;
   }
 
+  .search-wrap {
+    background: rgb(34, 34, 34);
+    border-bottom: 1px dashed #555;
+  }
+
+  .search-wrap input, .search-wrap .close-search, .search-wrap .toggle-search {
+    background: transparent;
+    color: #ccc
+  }
   .header .dropdown-menu {
     background: rgb(58, 58, 58);
   }
