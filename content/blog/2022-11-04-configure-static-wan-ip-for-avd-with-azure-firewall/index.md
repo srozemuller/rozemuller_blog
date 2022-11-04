@@ -4,7 +4,7 @@ description: I show in this blog how to configure an external static WAN IP for 
 date: 2022-11-04T07:55:46+02:00
 author: 'Sander Rozemuller'
 image: traffic-above.png
-images: ['traffic-above.png']
+images: ['route-avd-traffic-static-wan-ip-with-azure-firewall-automated/traffic-above.png']
 categories:
 - "Azure Virtual Desktop"
 - 'Network'
