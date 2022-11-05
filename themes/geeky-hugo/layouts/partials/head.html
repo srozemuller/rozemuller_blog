@@ -88,7 +88,7 @@
   {{ with .twitter -}}<meta name="twitter:creator" content="@{{ . }}"/>{{ end -}}
 {{ end -}}
 
-{{ template "_internal/opengraph.html" . }}
+{{ partial "opengraph.html" . }}
 
 <!-- google analytics -->
 {{ template "_internal/google_analytics.html" . }}
