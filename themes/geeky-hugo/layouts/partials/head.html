@@ -77,13 +77,20 @@
 {{ end -}}
 <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
+{{ $imagePath:= .Params.image }}
+{{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
+{{ if $imagePath }}
+{{ with $image }}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ index $image | absURL }}" media="(max-width: 575px)"/>
+{{ end }}
+{{ end }}
 {{ with site.Social.twitter -}}<meta name="twitter:site" content="@{{ . }}"/>{{ end -}}
 {{ range site.Authors }}
   {{ with .twitter -}}<meta name="twitter:creator" content="@{{ . }}"/>{{ end -}}
 {{ end -}}
 
 {{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
 
 <!-- google analytics -->
 {{ template "_internal/google_analytics.html" . }}
