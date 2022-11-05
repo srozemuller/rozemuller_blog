@@ -77,8 +77,8 @@
 {{ end -}}
 <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-{{ $postImage := .Params.image }}
-{{- $image := ($.Resources.ByType "image").GetMatch $postImage -}}
+
+{{- $image := ($.Resources.ByType "image").GetMatch $image_path -}}
 {{- with $image -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $image.Permalink }}" media="(max-width: 600px)"/>
