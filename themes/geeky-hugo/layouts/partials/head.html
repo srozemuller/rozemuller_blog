@@ -77,12 +77,12 @@
 {{ end -}}
 <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-{{ $imagePath:= .Params.image }}
+{{ $imagePath:= $.Params.image }}
 {{ $image := (.Resources.ByType "image").GetMatch $imagePath }}
 {{ if $imagePath }}
 {{ with $image }}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ index $image | absURL }}" media="(max-width: 575px)"/>
+<meta name="twitter:image" content="{{ $image | absURL }}" media="(max-width: 600px)"/>
 {{ end }}
 {{ end }}
 {{ with site.Social.twitter -}}<meta name="twitter:site" content="@{{ . }}"/>{{ end -}}
