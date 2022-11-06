@@ -3,7 +3,7 @@ title: 'Use internal main.iam.ad API in automation'
 description: In this blog, I show how to use the Azure hidden API (main.iam.ad) in automation tasks. Think about the use of Azure Functions or Logic Apps.
 date: 2022-10-17T11:46:12+02:00
 author: 'Sander Rozemuller'
-image: steam-engine-thumbnail.png
+image: machine.png
 categories:
     - "Azure AD"
     - API
