@@ -50,6 +50,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{$favicon_16.RelPermalink}}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{$favicon_32.RelPermalink}}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{$favicon_180.RelPermalink}}">
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/feed.xml" title="{{ .Site.Title }}">
 {{ end }}
 {{ end }}
 <link rel="manifest" href="{{`manifest.webmanifest` | relURL }}">
