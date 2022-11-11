@@ -63,7 +63,7 @@
         {{ $date := .Date.UTC.Format "Jan 2, 2006" }}
 {{ $lastmod := .Lastmod.UTC.Format "Mon, 02 Jan 2006 15:04:05" }}
         <h1 class="h1 mb-4">{{.Title | markdownify}}</h1>
-        <ul class="list-inline card-meta d-flex align-items-center mb-4">
+        <ul class="list-inline card-meta d-flex align-items-center">
           <li class="list-inline-item d-flex align-items-center">
             <i class="fas fa-user me-2"></i>
             <a href="{{`about` | relLangURL}}">{{site.Params.author}}</a>
@@ -80,13 +80,14 @@
             <i class="fas fa-stopwatch me-2"></i>
             <span>{{ .ReadingTime }} minutes</span>
           </li>
+        </ul>
+        <ul class="list-inline card-meta d-flex align-items-center mb-4">
           {{ if and (ne $lastmod $date) (gt .Lastmod .Date) }}
           <li class="list-inline-item d-flex align-items-center">
             <i class="fas fa-user-edit me-2"></i>
             <span>last updated:  {{ $lastmod }}</span>
           </li>
-          {{ end }}
-        </ul>
+          {{ end }}</ul>
         {{ partial "tags.html" . }}
         <div class="content drop-cap">{{.Content}}</div>
         <!-- google ads footer -->
