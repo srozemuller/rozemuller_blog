@@ -14,12 +14,8 @@ html.theme-selection.dark {
     background: transparent;
     color: #ccc
   }
-  .header .dropdown-menu {
-    background: rgb(58, 58, 58);
-  }
-
-  .dropdown-item {
-    background: rgb(58, 58, 58);
+  .header .dropdown-menu, .bg-light, .dropdown-item {
+    background: rgb(58, 58, 58)  !important;
   }
 
   .header {
@@ -60,7 +56,7 @@ html.theme-selection.dark {
     border-color: #555 !important;
   }
 
-  .category-widget ul li:not(:last-child) {
+  .category-widget ul li:not(:last-child), .blog-card-list .card:not(:last-child) {
     border-bottom: 1px solid #555;
   }
 
