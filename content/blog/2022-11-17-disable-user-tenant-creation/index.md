@@ -20,7 +20,7 @@ The nasty thing about it is that the option default allows users to create new t
 
 ![tenant-creation](tenant-creation.png)
 
-In this short blob, I show how to disable this option for users. 
+In this short blog, I show how to disable this option for users. 
 
 {{< toc >}}
 
@@ -34,7 +34,7 @@ The tenant creation option is part of the authorization policy and is available 
 The documentation, however, is not updated (yet).
 
 ### Get authorization policy
-Use the command below to update the authorization policy with the Graph API. First, First, I request the authorization policy to get the name.
+Use the command below to update the authorization policy with the Graph API. First, I request the authorization policy to get the name.
 
 ```powershell
 Connect-AzAccount
@@ -68,5 +68,8 @@ Invoke-RestMethod -Uri $updateUrl -Method PATCH -Headers $authHeader -Body $body
 The command does not return any content.
 
 
+Check the disqussion below.
+
+{{< tweet user=JefTek id=1593291041305665539 >}}
 
 {{< bye >}}
