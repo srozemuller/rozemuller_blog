@@ -187,7 +187,12 @@ html.theme-selection.dark {
   }
 
   .chroma .n {
-    color: #c9d1d9;
+    color: #e9ecef;
+  }
+
+  .chroma .nb {
+    color: #79c0ff;
+    font-weight: bold;
   }
 
   .chroma .nc {
@@ -196,7 +201,7 @@ html.theme-selection.dark {
   }
 
   .chroma .no {
-    color: #79c0ff;
+    color: #e76877;
     font-weight: bold;
   }
 
@@ -242,7 +247,7 @@ html.theme-selection.dark {
   }
 
   .chroma .nv {
-    color: #79c0ff;
+    color: #e9ecef;
   }
 
   .chroma .vc {
