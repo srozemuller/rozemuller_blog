@@ -61,7 +61,7 @@
         {{ end }}
         {{ end }}
         {{ $date := .Date.UTC.Format "Jan 2, 2006" }}
-{{ $lastmod := .Lastmod.UTC.Format "Mon, 02 Jan 2006 15:04:05" }}
+{{ $lastmod := .Page.Lastmod.UTC.Format "Mon, 02 Jan 2006 15:04:05" }}
         <h1 class="h1 mb-4">{{.Title | markdownify}}</h1>
         <ul class="list-inline card-meta d-flex align-items-center">
           <li class="list-inline-item d-flex align-items-center">

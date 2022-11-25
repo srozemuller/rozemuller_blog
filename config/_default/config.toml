@@ -17,6 +17,10 @@ disableLanguages = ["fr"] # example: ["fr"] for disable french language
 autoHeadingID = true
 
 enableGitInfo = true
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+  
 ############################# Modules ##############################
 [module]
 [module.hugoVersion]
