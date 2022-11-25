@@ -104,7 +104,7 @@ In the example below, I enable the ```SessionHostManagement``` category.
 The script I’m using needs two parameters, the host pool and the workspace.   
 Check first if the Microsoft.Insights provider is registered in the subscription. Otherwise, the script will install the Microsoft.Insights provider.
 
-Make sure you use at least beta version 2.4.4-beta.21: https://github.com/srozemuller/AzAvd/releases/tag/v2.4.4-beta.21
+Make sure you use at least beta version 2.4.4-beta.21: https://github.com/srozemuller/AzAvd/releases/tag/v2.4.4-beta.22
 
 ```powershell
 param(
