@@ -16,7 +16,6 @@ tags:
     - Identity
 type: "regular"
 URL: the-endpoint-security-train-introduction
-draft: true
 ---
 
 The IT landscape is changing. Private becomes public, local resources are moving to the public cloud. More and more workloads return to the local endpoint. Cloud endpoints (AVD, W365) are mostly used to run legacy software.
