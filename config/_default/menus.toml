@@ -26,7 +26,7 @@ hasChildren = true
 
   [[main]]
   parent = "M365"
-  name = "Microsoft Endpoint Manager"
+  name = "Microsoft Intune"
   url = "tags/mem"
   weight = 1
 
