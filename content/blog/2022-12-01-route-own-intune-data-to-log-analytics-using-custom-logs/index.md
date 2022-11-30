@@ -20,7 +20,7 @@ In this blog post, I show how to ingest custom MEM data into a Log Analytics tab
 
 I knew it was possible to create custom tables but it was only possible to ingest data from an extension, performance counters, Syslog, or Windows events as a source. Now I have REST API output. After some search in Microsoft Docs, I found an ARM template that allows me to create another type of data collection rule. That allows me to ingest data that come from any other resource.
 
-{{ toc }}
+{{< toc >}}
 
 ## Situation
 
