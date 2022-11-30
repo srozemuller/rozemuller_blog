@@ -9,7 +9,7 @@ paginate = "8"
 # post excerpt
 summaryLength = "25"
 # google analytics
-googleAnalytics = "UA-199501791-1" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+googleAnalytics = "G-H0ZV8ELWWH" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 # disqus short name
 disqusShortname = "rozemuller-com-1" # get your shortname form here : https://disqus.com
 # disable language
