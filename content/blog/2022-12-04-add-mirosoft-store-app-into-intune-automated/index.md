@@ -74,10 +74,9 @@ A second request is needed to the Microsoft store to get an icon URL. This time 
 In the code below I request the specific application, with the ID again. Thereafter, I download the image to a temporary location, convert it to a hashed string and sent the output in the deploy body. 
 ```powershell
 $imageUrl = "https://apps.microsoft.com/store/api/ProductsDetails/GetProductDetailsById/{0}?hl=en-US&gl=US" -f $exactApp.PackageIdentifier
-$test = Invoke-RestMethod -Uri $imageUrl -Method GET 
-$test
+$image = Invoke-RestMethod -Uri $imageUrl -Method GET 
 $wc = New-Object System.Net.WebClient
-$wc.DownloadFile($test.IconUrl, "./temp.jpg")
+$wc.DownloadFile($image.IconUrl, "./temp.jpg")
 $base64string = [Convert]::ToBase64String([IO.File]::ReadAllBytes('./temp.jpg'))
 ```
 
@@ -153,4 +152,6 @@ In the end, the Windows Store application is deployed including assignment and a
 ![app-deployed](app-deployed.png)
 
 If you want more underlying information in detail you should check Peter Klapwijk his post. You can check it here: https://www.inthecloud247.com/new-microsoft-store-integrated-in-intune/
+
+You can find the script in my GitHub repository: https://github.com/srozemuller/MicrosoftEndpointManager/blob/main/Deployment/Applications/deploy-win-store-app.ps1
 {{< bye >}}
