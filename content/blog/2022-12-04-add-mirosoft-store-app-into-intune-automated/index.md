@@ -83,7 +83,11 @@ $base64string = [Convert]::ToBase64String([IO.File]::ReadAllBytes('./temp.jpg'))
 
 ## Deploy Windows Store application in Intune automated with icon
 We have all the needed details to create a valid request. In the request below I deploy the application in Intune first.  
-As you can see there is a new type available called ```#microsoft.graph.winGetApp```. Using this type gives us options to provide Microsoft Store application details in the deployment. 
+As you can see there is a new type available called ```#microsoft.graph.winGetApp```. Using this type gives options to provide Microsoft Store application details in the deployment. 
+
+To authenticate please check this part of my other blog: https://www.rozemuller.com/intune-filters-explained-and-create-automated/#authentication
+
+Give your app the correct permissions: *```DeviceManagementApps.ReadWrite.All```*
 
 The body isn't very hard. The only thing I noticed is the ```installExperience```. 
 
@@ -148,5 +152,5 @@ Invoke-RestMethod -uri $assignUrl -Method POST -Headers $authHeader -ContentType
 In the end, the Windows Store application is deployed including assignment and an icon in an automated way. 
 ![app-deployed](app-deployed.png)
 
-If you want more underlaying information in detail you should check Peter Klapwijk his post. You can check it here: https://www.inthecloud247.com/new-microsoft-store-integrated-in-intune/
+If you want more underlying information in detail you should check Peter Klapwijk his post. You can check it here: https://www.inthecloud247.com/new-microsoft-store-integrated-in-intune/
 {{< bye >}}
