@@ -11,7 +11,7 @@ tags:
     - PowerShell
     - Microsoft Store
     - WinGet
-url: add-mirosoft-store-app-with-icon-into-intune-automated
+url: add-microsoft-store-app-with-icon-into-intune-automated
 ---
 
 In the week of November 28, 2022, Microsoft released the new Microsoft Store which is implemented in Intune using the Windows Packager Manager. This is because the Microsoft Store for Business will be deprecated in the first quarter of 2023.  
