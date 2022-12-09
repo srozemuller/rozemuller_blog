@@ -68,7 +68,7 @@ Invoke-RestMethod -Uri $updateUrl -Method PATCH -Headers $authHeader -Body $body
 The command does not return any content.
 
 
-Check the disqussion below.
+Check the discussion below.
 
 {{< tweet user=JefTek id=1593291041305665539 >}}
 
