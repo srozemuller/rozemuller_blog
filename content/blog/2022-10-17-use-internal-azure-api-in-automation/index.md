@@ -78,7 +78,7 @@ $method = "PUT"
 ```
 
 
-## Authenctication process
+## Authentication process
 The first step is running the initial authentication process. The process needs to run once to get a refresh token. You also get an access token but is not needed in this step. 
 
 Inspired by [Jos Lieben`s script](https://www.lieben.nu/liebensraum/2020/04/calling-graph-and-other-apis-silently-for-an-mfa-enabled-account/), I created a script that creates an access token and the refresh token based on a device login and, writes the refresh token back to the Key Vault.
