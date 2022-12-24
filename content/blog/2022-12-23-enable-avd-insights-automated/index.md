@@ -16,7 +16,7 @@ url: enable-avd-insights-automated
 Azure Virtual Desktop (AVD) Insights is a way to get sight into your AVD environment. In short (from Microsoft), Azure Virtual Desktop Insights is a dashboard built on Azure Monitor Workbooks that helps IT professionals understand their Azure Virtual Desktop environments. 
 
 In this blog post, I show how to configure AVD Insights in an automated way using the [Az.Avd PowerShell module](https://www.powershellgallery.com/packages/Az.Avd/).   
-The commands used in the blog post are available in the [v2.5.0-beta.28](https://github.com/srozemuller/AzAvd/releases/tag/v2.5.0-beta.28) and above.
+The commands used in the blog post are available in the [v2.5.0-beta.32](https://github.com/srozemuller/AzAvd/releases/tag/v2.5.0-beta.32) and above.
 
 {{< toc >}}
 
