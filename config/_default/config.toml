@@ -17,6 +17,7 @@ disableLanguages = ["fr"] # example: ["fr"] for disable french language
 autoHeadingID = true
 
 enableGitInfo = true
+enableEmoji = true
 
 [frontmatter]
   lastmod = ["lastmod", ":git", "date", "publishDate"]

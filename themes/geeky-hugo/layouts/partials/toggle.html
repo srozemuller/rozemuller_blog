@@ -16,7 +16,7 @@
     const darkSwitch = document.getElementById("darkSwitch");
     const toggle = document.getElementById("darkSwitchToggle")
     function initTheme() {
-      const e = null !== localStorage.getItem("darkSwitch") && "dark" === localStorage.getItem("darkSwitch");
+      const e = dm_on !== localStorage.getItem("darkSwitch") && "dark" === localStorage.getItem("darkSwitch");
       if (e) {
         toggle.classList.add(dm_on)
         themeSwitch.classList.add('dark');
