@@ -153,7 +153,7 @@
 
 }
 
-.line {
+.treeline {
   z-index: 1;
   position: absolute;
   top: 70px; left: -43px;
@@ -164,7 +164,7 @@
   transform: rotate(-30deg);
 }
 
-.line.two {
+.treeline.two {
   top: 93px; left: -50px;
   width: 85px;
   height: 0;
@@ -173,7 +173,7 @@
   transform: rotate(-30deg);
 }
 
-.line.three {
+.treeline.three {
   top: 123px; left: -60px;
   width: 106px;
   height: 0;
@@ -182,7 +182,7 @@
   transform: rotate(-30deg);
 }
 
-.line.four {
+.treeline.four {
   top: 153px; left: -80px;
   width: 136px;
   height: 0;
