@@ -5,6 +5,7 @@ author: 'Sander Rozemuller'
 image: timer.png
 categories:
     - Azure
+draft: true
 ---
 
 Recently Microsoft announced a new feature called AVD hostpool image update. In this blog, I explain how to configure this new feature in an automated way.
