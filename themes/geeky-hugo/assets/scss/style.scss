@@ -45,6 +45,8 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'lights';
 
+@import 'fireworks';
+
 @import 'templates/navigation.scss';
 
 @import 'templates/main.scss';

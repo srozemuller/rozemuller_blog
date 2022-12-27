@@ -8,139 +8,9 @@
       <h2 class="h4 title-border">{{ . | markdownify}}</h2>
     </div>
     {{end}}
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
-    <div class="snow"></div>
+    {{ if site.Params.snow }}
+    {{ partial "snow.html" . }}
+    {{ end }}
     <div class="row">
 
 
@@ -209,23 +79,24 @@
           <div class="row mx-0 g-5">
             {{ range site.Params.featured }}
             <div class="col-sm-6 mb-4">
-              
+
               <div class="mb-4 position-relative">
-            <h4 class="h5 title-border" style="text-align:center;">{{ .category }}</h4>
-            <a href="{{.link | absLangURL}}">
-              {{ $image:= resources.Get .image }}
-              {{ with $image }}
-              {{ $imageFallback:= $image.Fill "379x213" }}
-              {{ $imageWebp:= $image.Fill "379x213 webp" }}
-              <img class="img-fluid w-100 rounded-4" width="379" height="252" src="{{ $imageWebp.RelPermalink }}" alt="image">
-              {{ end }}
-            </a>
+                <h4 class="h5 title-border" style="text-align:center;">{{ .category }}</h4>
+                <a href="{{.link | absLangURL}}">
+                  {{ $image:= resources.Get .image }}
+                  {{ with $image }}
+                  {{ $imageFallback:= $image.Fill "379x213" }}
+                  {{ $imageWebp:= $image.Fill "379x213 webp" }}
+                  <img class="img-fluid w-100 rounded-4" width="379" height="252" src="{{ $imageWebp.RelPermalink }}"
+                    alt="image">
+                  {{ end }}
+                </a>
+              </div>
             </div>
-          </div> 
-          {{ end }}
-        </div> 
-      </div>
-          <!-- /advertisement -->
+            {{ end }}
+          </div>
+        </div>
+        <!-- /advertisement -->
 
 
 
@@ -238,7 +109,7 @@
           <div class="row mx-0 g-5">
             <!-- recent post -->
             {{ $paginator:= .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections | after 3 ) }}
-            
+
             {{ range $paginator.Pages }}
             <div class="col-sm-6 mb-4">
               {{ .Render "post" }}

@@ -16,7 +16,7 @@
     const darkSwitch = document.getElementById("darkSwitch");
     const toggle = document.getElementById("darkSwitchToggle")
     function initTheme() {
-      const e = dm_on !== localStorage.getItem("darkSwitch") && "dark" === localStorage.getItem("darkSwitch");
+      const e = null !== localStorage.getItem("darkSwitch") && "dark" === localStorage.getItem("darkSwitch");
       if (e) {
         toggle.classList.add(dm_on)
         themeSwitch.classList.add('dark');
@@ -38,6 +38,12 @@
     }
 
     window.addEventListener("load", () => {
+      // default to dark mode because of Holidays
+      {{ if site.Params.snow }}
+      localStorage.setItem("darkSwitch", "dark")
+      themeSwitch.classList.add('dark');
+      toggle.classList.toggle(dm_on)
+      {{ end }}
       darkSwitch && (initTheme(), darkSwitch.addEventListener("click", () => {
         resetTheme()
       }))
