@@ -23,6 +23,10 @@ contact_form_action = "#" # contact form works with https://formspree.io
 # search
 search = true
 
+# Holidays
+christmas = true
+lights = true
+
 # featured post title
 featured_post_title = ""
 recent_post_title = ""

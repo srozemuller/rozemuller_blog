@@ -139,3 +139,6 @@
     </div>
   </div>
 </header>
+{{ if site.Params.lights }}
+{{ partial "lights.html" . }}
+{{ end }}

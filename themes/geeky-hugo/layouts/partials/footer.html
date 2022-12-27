@@ -12,7 +12,8 @@
           {{ range site.Menus.footer }}
           <li class="list-inline-item">
             <a {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-            href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+              href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{
+              .Name }}</a>
           </li>
           {{ end }}
         </ul>
@@ -21,10 +22,13 @@
           <li class="list-inline-item">
             <a href="{{.link | safeURL}}"><i class="{{ .icon }}"></i></a>
           </li>
-          {{ end }} 
-        <p class="content">{{ site.Params.copyright | markdownify }}</p>
-      </ul>   
-      </div>
+          {{ end }}
+          <p class="content">{{ site.Params.copyright | markdownify }}</p>
+        </ul>
+      {{ if site.Params.christmas }}
+        {{ partial "christmas-tree.html" . }}
+      {{ end }}
     </div>
+  </div>
   </div>
 </footer>
