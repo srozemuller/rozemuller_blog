@@ -129,4 +129,6 @@ At last, after some time, also there is data captured. I shot some of the graphs
 
 ![event-data](event-data.png)
 
+For more information about AVD Insights, check the documentation at Microsoft Docs: https://learn.microsoft.com/en-us/azure/virtual-desktop/insights
+
 {{< bye >}}

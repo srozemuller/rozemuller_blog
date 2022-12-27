@@ -38,8 +38,8 @@ $light-off-opacity: 0.4;
       animation-duration: 0.4s;
     }
     &:nth-child(4n+2) {
-      background: rgba(247,0,148,1);
-      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);
+      background: rgb(247, 156, 0);
+      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgb(247, 214, 0);
       animation-name: flash-3;
       animation-duration: 1.1s;
     }
