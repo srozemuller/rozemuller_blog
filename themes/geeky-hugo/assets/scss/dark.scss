@@ -17,12 +17,12 @@ html.theme-selection.dark {
     border-radius: 50%;
   
     @for $i from 1 through $total {
-      $random-x: random(1000000) * 0.0001vw;
-      $random-offset: random_range(-100000, 100000) * 0.0001vw;
+      $random-x: random(800000) * 0.0001vw;
+      $random-offset: random_range(-600000, 400000) * 0.0001vw;
       $random-x-end: $random-x + $random-offset;
       $random-x-end-yoyo: $random-x + ($random-offset / 2);
       $random-yoyo-time: random_range(30000, 80000) / 100000;
-      $random-yoyo-y: $random-yoyo-time * 100vh;
+      $random-yoyo-y: $random-yoyo-time * 160vh;
       $random-scale: random(10000) * 0.0001;
       $fall-duration: random_range(10, 30) * 1s;
       $fall-delay: random(30) * -1s;
@@ -39,7 +39,7 @@ html.theme-selection.dark {
         }
   
         to {
-          transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+          transform: translate($random-x-end-yoyo, 160vh) scale($random-scale);
         }
       }
     }
