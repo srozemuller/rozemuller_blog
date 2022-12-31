@@ -26,8 +26,8 @@ search = true
 # Holidays
 christmas = false
 lights = true
-fireworks = false
-snow = true
+fireworks = true
+snow = false
 
 # featured post title
 featured_post_title = ""
