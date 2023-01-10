@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - AVD
-    - AzureAD
+    - Azure AD
     - 'Graph API'
     - 'REST API'
     - Roles

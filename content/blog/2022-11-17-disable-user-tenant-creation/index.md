@@ -5,7 +5,7 @@ date: 2022-11-17T20:38:46+02:00
 author: 'Sander Rozemuller'
 image: user-create-tenant.png
 categories:
-- AzureAD
+- Azure AD
 - Security
 tags:
     - Azure

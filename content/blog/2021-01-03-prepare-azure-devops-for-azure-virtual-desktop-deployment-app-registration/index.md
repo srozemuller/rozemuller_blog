@@ -11,7 +11,7 @@ categories:
     - Powershell
 tags:
     - Application
-    - AzureAD
+    - Azure AD
     - DevOps
     - Powershell
     - 'Service Principal'

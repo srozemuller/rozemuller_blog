@@ -7,6 +7,7 @@ categories:
     - Azure AD
 tags:
     - Sign In
+    - Graph API
     - Company branding
 url: automated-user-sign-in-experience-with-company-branding
 ---
