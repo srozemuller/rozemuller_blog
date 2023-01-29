@@ -3,7 +3,6 @@ title: "Delete AAD and Intune devices based on CSV and Graph API"
 author: Sander Rozemuller
 date: 2023-01-28T10:52:11+01:00
 image: image.jpeg
-draft: true
 url: "delete-aad-intune-devices-based-on-csv-and-graph-api"
 categories:
 - Identity
