@@ -85,6 +85,12 @@ To point to the correct device just put the ID at the end of the URL after a /.
 In the end, it results in a PowerShell script that accepts a path to CSV. The scripts use the MSAL.PS PowerShell to get an access token with the correct scope. 
 Then, the script imports the CSV content, and per row. it searches for the correct device in Intune and Azure AD. In the same loop, the device is deleted in both worlds.
 
+### How to use
+The script can be used by the following command:
+```powershell
+.\remove-devices.ps1 -PathToCSV .\path\file.csv -Delimiter ";"
+```
+
 You can find the script at: https://github.com/srozemuller/Identity/blob/main/RemoveDevices/remove-devices.ps1
 
 {{< bye >}}
