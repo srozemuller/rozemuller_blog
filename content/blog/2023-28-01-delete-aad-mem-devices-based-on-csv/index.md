@@ -13,9 +13,9 @@ tags:
 - AzureAD
 - Devices
 ---
-The power of community is to collaborate and help others achieve goals. In this case, I got a question from a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.
+The power of community is to collaborate and help others achieve goals. In this case, I got a question from [Jeroen Burgerhout](https://linktr.ee/burgerhoutj) a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.
 
-In this blog post, I explain the steps how the script works.
+In this blog post, I explain the steps of how the script works.
 
 {{< toc >}}
 
