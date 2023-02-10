@@ -1,5 +1,5 @@
 ---
-title: 'Secure and optimize AVD and CloudPC using Microsoft Endpoint Manager'
+title: 'Secure and optimize AVD and CloudPC using Microsoft Intune'
 date: '2022-01-12T12:39:42+01:00'
 author: 'Sander Rozemuller'
 url: secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager
@@ -7,7 +7,7 @@ image: standards.jpg
 categories:
     - Azure
     - 'Azure Virtual Desktop'
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - 'North Star'
     - Security
 tags:
@@ -17,7 +17,7 @@ tags:
     - Security
 ---
 
-In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Endpoint Manager automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.
+In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.
 
 In this blog post, the focus is on the standardized part of the North Star framework. This means we are going to look at the following subjects:
 
@@ -37,14 +37,14 @@ For more information about this series please read [my kick-off blog about the N
 
 ## Secure AVD and CloudPC using security baselines
 
-The first part of secure and optimize AVD and CloudPC is creating a security baseline. Security baselines are a part of Endpoint Security in Microsoft Endpoint Manager. Security Baselines consist of profiles and versions. Currently, there are four profiles available.
+The first part of secure and optimize AVD and CloudPC is creating a security baseline. Security baselines are a part of Endpoint Security in Microsoft Intune. Security Baselines consist of profiles and versions. Currently, there are four profiles available.
 
 ![EndpointSecurity-SecurityBaselines](EndpointSecurity-SecurityBaselines.png)
 
 In my situation, I choose the Windows 365 Security Baseline (Preview) profile. I have chosen this one because it fits the most to Azure Virtual Desktop and CloudPC. Antivirus exclusions for FSLogix are preconfigured and WiFi are stripped from this settings policy.
 
 ![Security-baseline-w365-profile](Security-baseline-w365-profile.png)
-At this place, I mentioned the word settings a few times already. This is because a Security Baseline profile consists of settings. Just like a configuration profile under device management. Actually, under the hood Security Baselines are a part of the device management REST API. However, a lot more is happening underwater. For that reason, I decided to write another blog post about Security Profiles under de hood. How it fits in Endpoint Manager and how to use the REST API for automation. (keep attention on my website or follow me via [Twitter](https://twitter.com/SandeRozemuller)) For now, I continue with standardizing AVD using Microsoft Endpoint Manager automated.
+At this place, I mentioned the word settings a few times already. This is because a Security Baseline profile consists of settings. Just like a configuration profile under device management. Actually, under the hood Security Baselines are a part of the device management REST API. However, a lot more is happening underwater. For that reason, I decided to write another blog post about Security Profiles under de hood. How it fits in Endpoint Manager and how to use the REST API for automation. (keep attention on my website or follow me via [Twitter](https://twitter.com/SandeRozemuller)) For now, I continue with standardizing AVD using Microsoft Intune automated.
 
 ### Create a security baseline profile automated
 
@@ -172,14 +172,14 @@ For more information about device management and templates check the urls: <http
 
 ## Optimize AVD with the settings catalog
 
-In this second secure and optimize AVD and CloudPC part we create optimization settings. I use the settings catalog in Microsoft Endpoint Manager to create a configuration profile. The settings catalog lists all the settings you can configure and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. The settings catalog should be compared with the Group Policy Objects (GPO’s) in the native Active Directory.   
+In this second secure and optimize AVD and CloudPC part we create optimization settings. I use the settings catalog in Microsoft Intune to create a configuration profile. The settings catalog lists all the settings you can configure and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. The settings catalog should be compared with the Group Policy Objects (GPO’s) in the native Active Directory.   
 In the chapter below, I use the settings catalog to configure settings for optimizing Azure Virtual Desktop. I show how to deploy these settings automated. Also, I will show how to assign the configuration profile to the AVD – Session hosts group.
 
 ### Azure Virtual Desktop optimization settings
 
 As you properly know, there is a tool called [The Virtual Desktop Optimization Tool](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool). The tool/script helps you set a lot of settings to get the best out of your virtual desktop. Based on the OS version the correct settings are set. Also, things like services and unwanted applications are disabled. And much more.  
   
-It is a great help and I’m using it while creating Azure Virtual Desktop images. During my image preparation process, I also run the script. However, there are more options, besides PowerShell, to set the correct settings. What about Microsoft Endpoint Manager and configuration profiles. I [found an article that describes what setting needs to be set in MEM](https://github.com/DanielWep/Intune-ConfigProfiles-AVD-Optimization) based on the Virtual Desktop Tool.   
+It is a great help and I’m using it while creating Azure Virtual Desktop images. During my image preparation process, I also run the script. However, there are more options, besides PowerShell, to set the correct settings. What about Microsoft Intune and configuration profiles. I [found an article that describes what setting needs to be set in MEM](https://github.com/DanielWep/Intune-ConfigProfiles-AVD-Optimization) based on the Virtual Desktop Tool.   
   
 From that point, I go a step further and show how to deploy AVD optimization settings in MEM all automated.
 
@@ -237,6 +237,6 @@ Invoke-RestMethod -Uri $url -Headers $script:token -Method POST -Body $jsonbody
 
 For more information about configuration policies, check the URL: <https://docs.microsoft.com/en-us/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationpolicy?view=graph-rest-beta>
 
-Thank you for reading this blog about how to secure and optimize AVD and CloudPC with Microsoft Endpoint Manager automated. 
+Thank you for reading this blog about how to secure and optimize AVD and CloudPC with Microsoft Intune automated. 
 
 {{< bye >}}

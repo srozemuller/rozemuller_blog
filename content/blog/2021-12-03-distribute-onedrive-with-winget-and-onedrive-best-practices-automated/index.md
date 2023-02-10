@@ -8,7 +8,7 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - 'North Star'
     - Powershell
 tags:
@@ -44,7 +44,7 @@ In this paragraph, I show how to install and assign the OneDrive application to 
 
 A new way of installing applications is using the [Windows Package Manager](https://docs.microsoft.com/en-us/windows/package-manager/). Windows Package Manager is a CLI package installation tool, aka Winget. Winget is used for installing applications on Windows 10 and Windows 11. For installing OneDrive I also use this new way of application distribution.
 
-To deploy OneDrive as a Win32 application in Microsoft Endpoint Manager I used the commands below. I use the updated [IntuneWin32App PowerShell module](https://github.com/srozemuller/IntuneWin32App/tree/clientsecret-login-option) to log in with a service principal. Second, I created a PowerShell file. This file is used for configuring a Win32 application in MEM.
+To deploy OneDrive as a Win32 application in Microsoft Intune I used the commands below. I use the updated [IntuneWin32App PowerShell module](https://github.com/srozemuller/IntuneWin32App/tree/clientsecret-login-option) to log in with a service principal. Second, I created a PowerShell file. This file is used for configuring a Win32 application in MEM.
 
 I created a manifest file and stored it in my repository.   
 About the intunewinfile, I created a general executable that is used with any manifest file. So, I did not create a specific file for OneDrive only. At last, I run the PowerShell script with these parameters.
@@ -64,7 +64,7 @@ $parameters = @{
 ![image-16](image-16.png)
 ![image-17](image-17.png)
 
-In addition to this subject, check my blog post about [installing Winget applications in Microsoft Endpoint Manager](https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/).
+In addition to this subject, check my blog post about [installing Winget applications in Microsoft Intune](https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/).
 
 For more information about Windows Package Manager check the Microsoft Docs: <https://devblogs.microsoft.com/commandline/windows-package-manager-1-1/>
 
@@ -223,6 +223,6 @@ $devices.value | Where-Object {$_.skuFamily -eq 'EnterpriseMultisession'} | ForE
 }
 ```
 
-Thank you for reading this blog about installing OneDrive with OneDrive best practices in Microsoft Endpoint Manager. 
+Thank you for reading this blog about installing OneDrive with OneDrive best practices in Microsoft Intune. 
 
 {{< bye >}}

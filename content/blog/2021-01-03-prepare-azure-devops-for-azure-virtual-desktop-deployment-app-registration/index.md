@@ -5,7 +5,7 @@ author: 'Sander Rozemuller'
 url: prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration
 image: devops.png
 categories:
-    - API
+    - Graph API
     - Automation
     - 'Azure Virtual Desktop'
     - Powershell

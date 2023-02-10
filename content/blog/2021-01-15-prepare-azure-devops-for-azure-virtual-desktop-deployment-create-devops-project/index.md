@@ -5,7 +5,7 @@ author: 'Sander Rozemuller'
 url: prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project
 image: man_working-scaled.jpg
 categories:
-    - API
+    - Graph API
     - 'Azure Virtual Desktop'
     - DevOps
 tags:

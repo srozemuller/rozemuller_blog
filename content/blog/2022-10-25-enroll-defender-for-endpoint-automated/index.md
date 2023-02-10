@@ -5,7 +5,7 @@ date: 2022-09-28T09:12:46+02:00
 author: 'Sander Rozemuller'
 image: dfe-protect-thumbnail.png
 categories:
-- "Microsoft Endpoint Manager"
+- "Microsoft Intune"
 - 'Monitoring'
 tags:
     - Intune

@@ -1,12 +1,12 @@
 ---
-title: 'Manage Windows Updates for AVD using Microsoft Endpoint Manager'
+title: 'Manage Windows Updates for AVD using Microsoft Intune'
 date: '2021-10-14T22:44:52+02:00'
 url: manage-windows-updates-for-avd-using-microsoft-endpoint-manager
 image: update-progress.png
 categories:
     - Automation
     - 'Azure Virtual Desktop'
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - 'North Star'
     - Powershell
 tags:
@@ -14,13 +14,13 @@ tags:
     - AVD
     - Intune
     - MEM
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - North-Star
     - Powershell
     - 'REST API'
 ---
 
-In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Endpoint Manager. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.
+In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.
 
 {{< toc >}}
 
@@ -38,7 +38,7 @@ In the picture below the red circles are in the scope of this part of the series
 [operation-northstar-updates](operation-northstar-updates.png)
 ## Device configuration
 
-To manage Windows Updates on the AVD session host automated, we need to create and assign an Update Ring policy. But there is more. Updating machines is only one part of all. After the update, we also need to check the device’s health. And what about update delivery. You don’t want your network down because of Windows Updates. All these aspects are managed with device configuration in Microsoft Endpoint Manager (MEM).
+To manage Windows Updates on the AVD session host automated, we need to create and assign an Update Ring policy. But there is more. Updating machines is only one part of all. After the update, we also need to check the device’s health. And what about update delivery. You don’t want your network down because of Windows Updates. All these aspects are managed with device configuration in Microsoft Intune (MEM).
 
 ### odata types
 

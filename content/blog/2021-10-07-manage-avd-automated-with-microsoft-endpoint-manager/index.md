@@ -1,12 +1,12 @@
 ---
-title: 'Manage AVD automated with Microsoft Endpoint Manager'
+title: 'Manage AVD automated with Microsoft Intune'
 date: '2021-10-07T14:11:01+02:00'
 author: 'Sander Rozemuller'
 url: manage-avd-automated-with-microsoft-endpoint-manager
 image: Image-2029.png
 categories:
     - 'Azure Virtual Desktop'
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
 tags:
     - AVD
     - 'azure virtual desktop'
@@ -17,7 +17,7 @@ tags:
     - 'REST API'
 ---
 
-Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Endpoint Manager. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.
+Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.
 
 In the [AVD Automation Cocktail](https://www.rozemuller.com/avd-automation-cocktail-the-menu/) series, I showed how to deploy an AVD environment automated in several ways. For example with PowerShell, Bicep, or DevOps. As said in the upcoming series I will add a new layer for modern management with the main focus on Azure Virtual Desktop. What do you need? Why do you need it? How to deploy all these settings?
 
@@ -31,7 +31,7 @@ At least the following subjects will pass:
 - Application management
 - Optimizing
 
-Altogether, with the back of Microsoft Endpoint Manager. To complete the series I will show how to deploy all of this automated.
+Altogether, with the back of Microsoft Intune. To complete the series I will show how to deploy all of this automated.
 
 Because of overlapping subjects, I have chosen to use this article to explain the background. Information about used techniques and prerequisites. At last how to deploy them. All of this, to avoid extremely long articles which make them hard to read.
 
@@ -46,11 +46,11 @@ In addition to the introduction, more information is available via the link belo
 
 <https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684>
 
-## Microsoft Endpoint Manager
+## Microsoft Intune
 
-To manage modern workplaces we use Microsoft Endpoint Manager (MEM). During this time, MEM has grown into a full management platform. In a Microsoft world a good way to manage client endpoints. Besides that, it also supports you in managing iOS and Android devices. In this series, the main focus is on Windows (10 and 11) devices from an AVD perspective. It helps you deliver a modern workplace and keeps your data secure.
+To manage modern workplaces we use Microsoft Intune (MEM). During this time, MEM has grown into a full management platform. In a Microsoft world a good way to manage client endpoints. Besides that, it also supports you in managing iOS and Android devices. In this series, the main focus is on Windows (10 and 11) devices from an AVD perspective. It helps you deliver a modern workplace and keeps your data secure.
 
-Microsoft Endpoint Manager combines services like Microsoft Intune, Configuration Manager, Desktop Analytics, and Windows Autopilot. These services are part of the Microsoft 365 stack. And, help to secure access, protect data, and responds to risks.
+Microsoft Intune combines services like Microsoft Intune, Configuration Manager, Desktop Analytics, and Windows Autopilot. These services are part of the Microsoft 365 stack. And, help to secure access, protect data, and responds to risks.
 
 These Microsoft 365 services in combination with Microsoft Azure services as Azure Virtual Desktop makes it a really interesting one. From that point, I started building up a new environment.
 
@@ -77,10 +77,10 @@ In every operation, you will find a drawing like the above. The current situatio
 
 The first step in this operation is authentication. Good to know is we have to deal with two environments. These environments are Azure and Microsoft 365. Each environment has its management method. For Azure I use PowerShell. For Microsoft 365 I use the Graph API.
 
-In the whole operation, we are connecting to Azure first. From there we also configure Microsoft Endpoint Manager.
+In the whole operation, we are connecting to Azure first. From there we also configure Microsoft Intune.
 
 ```
-Huh? But why do I need Azure for configuring Microsoft Endpoint Manager?
+Huh? But why do I need Azure for configuring Microsoft Intune?
 ```
 
 Yes, I know this sounds a bit weird but there is a philosophy behind this.  
@@ -398,7 +398,7 @@ For more info about log-in with a service principal, check the [Microsoft docume
 
 ### Microsoft 365 log-in
 
-Second, I requested the endpoints in Microsoft Endpoint Manager. This time I first requested a token for the Graph API. The Graph API is used for managing Microsoft 365 components.
+Second, I requested the endpoints in Microsoft Intune. This time I first requested a token for the Graph API. The Graph API is used for managing Microsoft 365 components.
 
 ```powershell
 $token = GetAuthToken -resource "https://graph.microsoft.com"
@@ -412,6 +412,6 @@ rz-avd-1   hybridAzureADJoined EnterpriseMultisession
 ```
 
 ![image-43](image-43.png)
-Thank you for reading this kick-off blog about managing AVD environments automated with Microsoft Endpoint Manager.  
+Thank you for reading this kick-off blog about managing AVD environments automated with Microsoft Intune.  
 
 {{< bye >}}

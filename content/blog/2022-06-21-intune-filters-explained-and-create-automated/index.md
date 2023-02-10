@@ -6,7 +6,7 @@ type: 'featured'
 image: filters-coffee-e1646681551213.jpeg
 url: intune-filters-explained-and-create-automated
 categories:
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
 tags:
     - Filters
     - MEM
@@ -41,7 +41,7 @@ For a filter overview please check the Microsoft documentation: <https://docs.mi
 
 ## Authentication
 
-To deploy filters in Microsoft Endpoint Manager we need to authenticate. I use the Graph API for automated filter deployment. To authenticate against the Graph API we need API permissions. The API permissions are set at an application registration. The application registration needs the following permissions:
+To deploy filters in Microsoft Intune we need to authenticate. I use the Graph API for automated filter deployment. To authenticate against the Graph API we need API permissions. The API permissions are set at an application registration. The application registration needs the following permissions:
 
 - **DeviceManagementConfiguration.ReadWrite.All**   
     *(Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.)*
@@ -189,6 +189,6 @@ $assignment
 <div class="wp-block-image"><figure class="aligncenter size-large is-resized">![intune filter assigned automated](https://www.rozemuller.com/wp-content/uploads/2022/03/image-31-1024x460.png)</figure></div>## Summary
 
 In this blog post, I showed how to create a filter in Intune automated and how to assign a filter. Filters help target policies to the correct devices without creating new AD groups every time and improve the environment’s performance.   
-Thank you for reading my blog about how to create Intune filters automated into Microsoft Endpoint Manager. If you need another example, take a look at my blog about how to deploy [power management settings to non-virtual machines](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/)
+Thank you for reading my blog about how to create Intune filters automated into Microsoft Intune. If you need another example, take a look at my blog about how to deploy [power management settings to non-virtual machines](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/)
 
 Enjoy your day and happy automating 👋

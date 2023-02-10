@@ -1,12 +1,12 @@
 ---
-title: 'Deploy power settings automated in Microsoft Endpoint Manager'
+title: 'Deploy power settings automated in Microsoft Intune'
 date: '2022-03-07T16:23:52+01:00'
 author: 'Sander Rozemuller'
 image: green-it.jpg
 categories:
-    - API
+    - Graph API
     - Automation
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - Powershell
 tags:
     - MEM
@@ -17,15 +17,15 @@ type: "regular" # available types: [featured/regular]
 url: deploy-power-settings-automated-in-microsoft-endpoint-manager
 ---
 
-Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Endpoint Manager. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.
+Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.
 
-Together with [Mattias Melkersen](https://twitter.com/MMelkersen) (Twitter), we decided to write a blog about how to configure power settings in Microsoft Endpoint Manager. Matthias has [written a blog](https://blog.mindcore.dk/2022/02/manage-power-settings-via-microsoft.html) about how to configure power settings in the portal. Based on that post, I’m writing a post about how to configure power settings the automated way.
+Together with [Mattias Melkersen](https://twitter.com/MMelkersen) (Twitter), we decided to write a blog about how to configure power settings in Microsoft Intune. Matthias has [written a blog](https://blog.mindcore.dk/2022/02/manage-power-settings-via-microsoft.html) about how to configure power settings in the portal. Based on that post, I’m writing a post about how to configure power settings the automated way.
 
 {{< toc >}}
 
 ## Authentication
 
-To deploy settings in Microsoft Endpoint Manager we need to authenticate. During deployment, I use the Graph API. To authenticate against the Graph API we need API permissions. The API permissions are set at an application registration. The application registration needs the following permissions:
+To deploy settings in Microsoft Intune we need to authenticate. During deployment, I use the Graph API. To authenticate against the Graph API we need API permissions. The API permissions are set at an application registration. The application registration needs the following permissions:
 
 - **DeviceManagementConfiguration.ReadWrite.All**   
     *(Allows the app to read and write properties of Microsoft Intune-managed device configuration and device compliance policies and their assignment to groups, without a signed-in user.)*
@@ -236,8 +236,8 @@ $assignment
 ![mem-filter-assignment](mem-filter-assignment.png)
 ## Summary
 
-In this post, I showed how to configure power management settings in Microsoft Endpoint Manager the automated way. I showed how to create a configuration policy and how to assign the policy to all devices. A part of the assignment is the use of filters.
+In this post, I showed how to configure power management settings in Microsoft Intune the automated way. I showed how to create a configuration policy and how to assign the policy to all devices. A part of the assignment is the use of filters.
 
-Thank you for reading this blog about how to enroll power management settings automated in Microsoft Endpoint Manager. 
+Thank you for reading this blog about how to enroll power management settings automated in Microsoft Intune. 
 
 {{< bye >}}

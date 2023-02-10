@@ -5,7 +5,7 @@ author: 'Sander Rozemuller'
 image: monitoring-security.jpg
 url: monitor-security-baselines-in-endpoint-security
 categories:
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - Monitoring
     - Security
 tags:

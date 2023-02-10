@@ -1,5 +1,5 @@
 ---
-title: 'Monitor and get alerts from Microsoft Endpoint Manager'
+title: 'Monitor and get alerts from Microsoft Intune'
 date: '2022-04-19T11:14:54+02:00'
 author: 'Sander Rozemuller'
 type: 'featured'
@@ -7,7 +7,7 @@ image: remote-monitoring-and-alerting.jpg
 url: monitor-and-get-alerts-from-microsoft-endpoint-manager
 categories:
     - Azure
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - Monitoring
 tags:
     - Automation
@@ -19,9 +19,9 @@ tags:
     - 'REST API'
 ---
 
-Out of the box, Microsoft Endpoint Manager has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Endpoint Manager. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Endpoint Manager.
+Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.
 
-To get alerts we have several methods. Microsoft Endpoint Manager has the ability to connect with an Azure Log Analytics workspace (LAWS). Based on LAWS I use the Azure Monitor. To monitor and get alerting from Microsoft Endpoint Manager I used the strategy below.
+To get alerts we have several methods. Microsoft Intune has the ability to connect with an Azure Log Analytics workspace (LAWS). Based on LAWS I use the Azure Monitor. To monitor and get alerting from Microsoft Intune I used the strategy below.
 
 ![mem-monitoring](mem-monitoring.png)
 
@@ -35,9 +35,9 @@ It is also possible to log in with an account with contributor permissions. The 
 
 *One of my automation ‘rules’ is trying to authenticate as little as possible. In this case, we are dealing with two environments. Microsoft 365 (Graph API) and Azure I’m able to use one login for both worlds. That is the point where I’m using application registrations a lot. Application registrations can have an Azure role as API permissions.*
 
-## Microsoft Endpoint Manager diagnostics settings
+## Microsoft Intune diagnostics settings
 
-In the basics, Microsoft Endpoint Manager has the ability to send diagnostic information to an Azure log analytics workspace (LAWS). You can find the **Diagnostics settings** under **Tenant admin**.   
+In the basics, Microsoft Intune has the ability to send diagnostic information to an Azure log analytics workspace (LAWS). You can find the **Diagnostics settings** under **Tenant admin**.   
 The information contains data about the following subjects:
 
 - Audit Logs
@@ -96,9 +96,9 @@ $laws
 
 ![log-analytics-workspace](log-analytics-workspace.png)
 
-### Configure diagnostics settings for Microsoft Endpoint Manager automated
+### Configure diagnostics settings for Microsoft Intune automated
 
-Next is configuring diagnostics settings Microsoft Endpoint Manager automated. In this step, I also use the Azure management API. Yes, it is a setting on the Microsoft 365 side but this is the place where M365 and Azure come together. But there are some settings that need attention.
+Next is configuring diagnostics settings Microsoft Intune automated. In this step, I also use the Azure management API. Yes, it is a setting on the Microsoft 365 side but this is the place where M365 and Azure come together. But there are some settings that need attention.
 
 First, let’s take a look at the diagnostics REST API with a main focus on the create URL.
 
@@ -108,7 +108,7 @@ In this URL two environmental values are needed. A resource URI (ResourceID) and
 
 ![diagnostics-settings-tenanadmin](diagnostics-settings-tenanadmin.png)  
 
-Secondly, is the resource URI. This is the Azure resource ID. This is the point where we need to look closer. Because Microsoft Endpoint Manager (Intune) is not an Azure resource. After some digging, I noticed there is a way to configure diagnostic settings for Intune. This is by calling the microsoft.intune resource provide directly. It looks like the whole Intune site is a complete resource in the Azure cloud.   
+Secondly, is the resource URI. This is the Azure resource ID. This is the point where we need to look closer. Because Microsoft Intune (Intune) is not an Azure resource. After some digging, I noticed there is a way to configure diagnostic settings for Intune. This is by calling the microsoft.intune resource provide directly. It looks like the whole Intune site is a complete resource in the Azure cloud.   
   
 What happens is that we are configuring diagnostic settings over a whole resource provider. In contrast to the mentioned URL above with a resource ID, the diagnostics settings REST API URL for Intune looks like the URL below.
 
@@ -158,9 +158,9 @@ In the end, the diagnostics settings are configured.
 
 For more information about the diagnostics settings, check the Microsoft documentation: <https://docs.microsoft.com/en-us/rest/api/monitor/diagnostic-settings>
 
-## Using Azure Monitor for monitoring Microsoft Endpoint Manager
+## Using Azure Monitor for monitoring Microsoft Intune
 
-To monitor and get alerts from Microsoft Endpoint Manager we configure Azure Monitor. In the chapters above we configured a Log Analytics workspace and diagnostics settings in MEM. In this chapter, I give monitor some examples and send an alert with Azure Monitor. Before we are able to send alerts we need two things. An alert rule and an action group. The last one is the first thing we create. I create an action group that sent an e-mail to me, the most basic action group.
+To monitor and get alerts from Microsoft Intune we configure Azure Monitor. In the chapters above we configured a Log Analytics workspace and diagnostics settings in MEM. In this chapter, I give monitor some examples and send an alert with Azure Monitor. Before we are able to send alerts we need two things. An alert rule and an action group. The last one is the first thing we create. I create an action group that sent an e-mail to me, the most basic action group.
 
 As a result of configuring diagnostics settings in MEM, we see new tables in the workspace.
 
@@ -327,6 +327,6 @@ https://docs.microsoft.com/en-us/mem/intune/fundamentals/review-logs-using-azure
 
 ## Summary
 
-Thank you for reading this blog about how to monitor and get alerts for Microsoft Endpoint Manager with Log Analytics automated. I hope you got a bit inspired.
+Thank you for reading this blog about how to monitor and get alerts for Microsoft Intune with Log Analytics automated. I hope you got a bit inspired.
 
 Enjoy your day and happy automating 👋

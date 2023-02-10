@@ -6,7 +6,7 @@ author: 'Sander Rozemuller'
 image: 'logic-app-design-thumbnail.png'
 categories:
     - "Azure AD"
-    - API
+    - Graph API
 tags:
     - Security
     - Monitoring

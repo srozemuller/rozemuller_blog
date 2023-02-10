@@ -5,7 +5,7 @@ date: 2022-09-11T07:55:46+02:00
 author: 'Sander Rozemuller'
 image: "catalog-thumbnail.png"
 categories:
-- "Microsoft Endpoint Manager"
+- "Microsoft Intune"
 - "Graph API"
 tags:
     - Settings Catalog
@@ -27,7 +27,7 @@ Let's say this is also IAAC (Intune As A Code)
 {{< toc >}}
 
 ## What is the Settings Catalog
-The Settings catalog in Microsoft Endpoint Manager lists all the settings you can configure in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
+The Settings catalog in Microsoft Intune lists all the settings you can configure in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
 
 
 For more information about the settings catalog please check https://docs.microsoft.com/en-us/mem/intune/configuration/settings-catalog
@@ -64,7 +64,7 @@ There are several API methods available that tell **how** you interact with the 
 
 For more information about Graph API methods, check this URL: https://docs.microsoft.com/en-us/graph/use-the-api#http-methods
 ### Authenticate to Graph API
-To deploy settings in Microsoft Endpoint Manager we need to authenticate. I've configured an application registration in Azure AD and set the correct API permissions. To get the correct permissions for a specific action check the Graph API documentation. 
+To deploy settings in Microsoft Intune we need to authenticate. I've configured an application registration in Azure AD and set the correct API permissions. To get the correct permissions for a specific action check the Graph API documentation. 
 
 In this case, I create a device management configuration policy. The documentation tells me I need the following permissions:
 

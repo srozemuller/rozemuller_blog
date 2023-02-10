@@ -1,12 +1,12 @@
 ---
-title: 'Microsoft Endpoint Manager security baselines explained'
+title: 'Microsoft Intune security baselines explained'
 date: '2022-02-23T16:09:00+01:00'
 author: 'Sander Rozemuller'
 image: lock-fence-security.jpg
 url: microsoft-endpoint-manager-security-baselines-explained
 categories:
-    - API
-    - 'Microsoft Endpoint Manager'
+    - Graph API
+    - 'Microsoft Intune'
     - Powershell
     - Security
 tags:
@@ -54,7 +54,7 @@ $authHeader = @{
 }
 ```
 
-Let’s take a look at what the Graph API output looks like. However security baselines are stored at a different location in Microsoft Endpoint Manager, in the Graph API, you can find the baselines under the /templates endpoint. To get all security baselines, we need the Graph URL below.
+Let’s take a look at what the Graph API output looks like. However security baselines are stored at a different location in Microsoft Intune, in the Graph API, you can find the baselines under the /templates endpoint. To get all security baselines, we need the Graph URL below.
 
 ```basic
 https://graph.microsoft.com/beta/deviceManagement/templates

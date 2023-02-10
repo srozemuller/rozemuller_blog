@@ -5,9 +5,9 @@ author: 'Sander Rozemuller'
 image: subscribe-now.jpeg
 url: configure-subscribe-to-avd-in-rdp-client-automated
 categories:
-    - API
+    - Graph API
     - 'Azure Virtual Desktop'
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
 tags:
     - MEM
     - MEMPowered
@@ -23,7 +23,7 @@ This specific setting became available on 7 March 2022 as a new setting in the s
 
 {{< toc >}}
 
-## AVD Auto subscription with Microsoft Endpoint Manager
+## AVD Auto subscription with Microsoft Intune
 
 In this first chapter, I show how to deploy a configuration policy with the Remote Desktop Auto Subscribe URL automated. The policy is assigned to all devices. Before we are able to deploy the AVD auto subscribe policy automated we need to authenticate first. In earlier posts, [I described how to authenticate based on an application registration](https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/#auth). For now, I skip that part. The following permissions are needed:
 
@@ -83,7 +83,7 @@ In the end, I have a policy with the auto-subscribe URL.
 
 ## Auto subscription configuration on Azure VM (for image management)
 
-Most customers are not using an Azure VM as a client. But in some cases, I use an Azure VM for image management. If you are not using Microsoft Endpoint Manager (MEM) or have an Azure virtual machine, there is another option to configure the auto subscription setting. At the back also MEM adds a registry key with a value. Thank you Tom Hickling for providing the key.
+Most customers are not using an Azure VM as a client. But in some cases, I use an Azure VM for image management. If you are not using Microsoft Intune (MEM) or have an Azure virtual machine, there is another option to configure the auto subscription setting. At the back also MEM adds a registry key with a value. Thank you Tom Hickling for providing the key.
 
 *HKEY\_CURRENT\_USER\\Software\\Policies\\Microsoft\\Windows NT\\Terminal Services\\AutoSusbscription  
 Reg\_SZ: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>*
@@ -134,7 +134,7 @@ Invoke-RestMethod @getParams
 
 ## Auto subscribe without MEM or in image management
 
-There could be also a situation where Microsoft Endpoint Manager is not involved. Because you are managing endpoints in another way or in the case of creating images for autopilot or in the Azure Compute gallery. In that case, it is just a matter of executing the PowerShell script on the device. The [script](https://github.com/srozemuller/AVD/blob/main/Auto%20subscription/auto-subscription.ps1) is in my GitHub repository.
+There could be also a situation where Microsoft Intune is not involved. Because you are managing endpoints in another way or in the case of creating images for autopilot or in the Azure Compute gallery. In that case, it is just a matter of executing the PowerShell script on the device. The [script](https://github.com/srozemuller/AVD/blob/main/Auto%20subscription/auto-subscription.ps1) is in my GitHub repository.
 
 When creating images with platforms Azure DevOps add the script in a YAML task and add it to your sequence. I’ve added a short example below.
 
@@ -153,7 +153,7 @@ When creating images with platforms Azure DevOps add the script in a YAML task a
 
 ## Summary
 
-In this blog post, I show different ways to configure the AVD subscription URL automated. I showed how to configure this setting in Microsoft Endpoint Manager, as on an Azure virtual machine. Also, I showed an example of how to embed the configuration script into a YAML DevOps pipeline.
+In this blog post, I show different ways to configure the AVD subscription URL automated. I showed how to configure this setting in Microsoft Intune, as on an Azure virtual machine. Also, I showed an example of how to embed the configuration script into a YAML DevOps pipeline.
 
 Thank you for reading this blog about how to configure auto subscribe for AVD in the remote desktop client automated. 
 

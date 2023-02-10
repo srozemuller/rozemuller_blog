@@ -1,12 +1,12 @@
 ---
-title: 'Enable Endpoint Analytics automated in Microsoft Endpoint Manager'
+title: 'Enable Endpoint Analytics automated in Microsoft Intune'
 date: '2022-07-03T10:23:17+02:00'
 image: "measure-band.jpeg"
 url: enable-endpoint-analytics-automated-in-microsoft-endpoint-manager
 author: 'Sander Rozemuller'
 type: 'featured'
 categories:
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - Monitoring
 tags:
     - 'Azure virtual desktop'

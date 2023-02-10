@@ -8,7 +8,7 @@ categories:
     - 'Microsoft 365'
     - Monitoring
 tags:
-    - API
+    - Graph API
     - Azure
     - 'Azure Functions'
     - M365

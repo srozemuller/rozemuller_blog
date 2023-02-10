@@ -84,7 +84,7 @@ $domainJoinVersion   = "1.0"
 Set-AzVMExtension -VMName $vmName -ResourceGroupName $resourceGroupName -Location $location -TypeHandlerVersion $domainJoinVersion -Publisher $domainJoinPublisher -ExtensionType $domainJoinType -Name $domainJoinName
 ```
 
-If you like to join the machine also in your Microsoft Endpoint Manager (MEM) environment you need to use the AADLoginForWindowWithIntune extension. In that case, you need to provide the mdmId in the extension settings.
+If you like to join the machine also in your Microsoft Intune (MEM) environment you need to use the AADLoginForWindowWithIntune extension. In that case, you need to provide the mdmId in the extension settings.
 
 ```powershell
 # VM Properties

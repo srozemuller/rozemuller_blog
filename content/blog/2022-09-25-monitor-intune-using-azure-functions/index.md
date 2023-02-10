@@ -5,7 +5,7 @@ date: 2022-09-28T09:12:46+02:00
 author: 'Sander Rozemuller'
 image: monitor-graph-thumbnail.png
 categories:
-- "Microsoft Endpoint Manager"
+- "Microsoft Intune"
 - 'Monitoring'
 tags:
     - Intune
@@ -15,7 +15,7 @@ tags:
 type: "regular" # available types: [featured/regular]
 url: monitor-intune-using-azure-functions-powershell-and-graph-api
 ---
-Intune and the rest of Microsoft Endpoint Manager are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
+Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
 In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions. 
 
 {{< toc >}}

@@ -1,15 +1,15 @@
 ---
-title: 'Install Winget applications using Microsoft Endpoint Manager'
+title: 'Install Winget applications using Microsoft Intune'
 date: '2021-11-22T09:14:22+01:00'
 author: 'Sander Rozemuller'
 url: install-winget-applications-using-microsoft-endpoint-manager
 image: Image-2273.png
 categories:
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
 tags:
     - Automation
     - MEM
-    - 'Microsoft Endpoint Manager'
+    - 'Microsoft Intune'
     - Powershell
     - Win32
     - Win32Application
@@ -21,7 +21,7 @@ In this post, I will show how to install applications with Windows Package Manag
 
 During writing the next part of my blog series [Operation North Star](https://www.rozemuller.com/category/north-star/), application management was one of the subjects. Because application management is one of the biggest investments in Endpoint management, I decided to write a blog about this subject only.
 
-Creating images for endpoints is can be done in many ways. We are using tools like System Center Configuration Manager (SCCM), Packer, or writing our own packages installed by Azure DevOps. All good of course. In this blog, I use Winget for application distribution. This is with the back of Microsoft Endpoint Manager. Winget got major improvements in the past months. Major improvements in installation and many application additions. At the moment, there are around 2000 applications available. So in my opinion a good way to deploy applications.
+Creating images for endpoints is can be done in many ways. We are using tools like System Center Configuration Manager (SCCM), Packer, or writing our own packages installed by Azure DevOps. All good of course. In this blog, I use Winget for application distribution. This is with the back of Microsoft Intune. Winget got major improvements in the past months. Major improvements in installation and many application additions. At the moment, there are around 2000 applications available. So in my opinion a good way to deploy applications.
 
 Unfortunately, there is no way to install Winget applications with MEM directly. This means we are not able ([yet](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423)) to provide a Winget application with its version in the Apps wizard. However, this will not mean we are not able to install applications with the Winget command line.
 
@@ -30,7 +30,7 @@ Unfortunately, there is no way to install Winget applications with MEM directly.
 ## Main idea
 
 So, what are we going to do?   
-Well, the main idea is to install Winget applications as a Windows Application (Win32) via Microsoft Endpoint Manager. Nothing new so far as there are a lot of other blog posts about this subject. So what differs from other blog posts?
+Well, the main idea is to install Winget applications as a Windows Application (Win32) via Microsoft Intune. Nothing new so far as there are a lot of other blog posts about this subject. So what differs from other blog posts?
 
 ### What differs from other blogs
 
@@ -95,7 +95,7 @@ For downloading the preparation tool check [the official repository](https://git
 
 ### Upload the intunewin file
 
-After the .intunewin file is ready it is time to create a Win32 application in Microsoft Endpoint Manager. To do that, I use [Nickolaj’s IntuneWin32App](https://github.com/MSEndpointMgr/IntuneWin32App) PowerShell module. The module has now also a service principal login option. <s>As mentioned at the start of this post I was able to add an extra feature into the module for authenticating to Intune with a service principal. </s>
+After the .intunewin file is ready it is time to create a Win32 application in Microsoft Intune. To do that, I use [Nickolaj’s IntuneWin32App](https://github.com/MSEndpointMgr/IntuneWin32App) PowerShell module. The module has now also a service principal login option. <s>As mentioned at the start of this post I was able to add an extra feature into the module for authenticating to Intune with a service principal. </s>
 
 <s>Because this feature isn’t added to the module yet (the is a pull request waiting) I would suggest [cloning the module from my repository](https://github.com/srozemuller/IntuneWin32App/tree/clientsecret-login-option). Make sure you select the correct branch first. </s>
 
@@ -116,7 +116,7 @@ Connect-MSIntuneGraph -ClientID $clientId -ClientSecret $clientSecret -TenantID 
 ```
 
 ![image-9](image-9.png)
-After login, we are creating the Winget Win32 application in Microsoft Endpoint Manager.  
+After login, we are creating the Winget Win32 application in Microsoft Intune.  
 I created a script that allows me to provide multiple YAML manifest files. In the script below, I configured Google Chrome as a Win32 application.
 
 ```powershell
@@ -188,6 +188,6 @@ inputs:
   azurePowerShellVersion: 'LatestVersion'
 ```
 
-Thank you for reading this blog about installing Winget applications with Microsoft Endpoint Manager.
+Thank you for reading this blog about installing Winget applications with Microsoft Intune.
 
 {{< bye >}}
