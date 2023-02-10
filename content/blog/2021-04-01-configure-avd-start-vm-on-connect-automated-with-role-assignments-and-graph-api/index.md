@@ -7,7 +7,7 @@ image: connecting-vm-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Azure AD
     - 'Graph API'
     - 'REST API'

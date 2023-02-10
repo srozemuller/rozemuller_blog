@@ -12,7 +12,7 @@ categories:
 tags:
     - AAD
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'Azure AD'
     - fslogix
     - Powershell

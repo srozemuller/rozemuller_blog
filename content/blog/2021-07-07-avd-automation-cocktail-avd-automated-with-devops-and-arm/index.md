@@ -1,5 +1,5 @@
 ---
-title: 'AVD Automation Cocktail - AVD automated with DevOps and ARM'
+title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps and ARM'
 date: '2021-07-07T15:13:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-devops-and-arm
@@ -10,7 +10,7 @@ categories:
     - DevOps
 tags:
     - 'ARM templates'
-    - AVD
+    - Azure Virtual Desktop
     - Cocktail
     - DevOps
     - JSON

@@ -11,7 +11,7 @@ categories:
 tags:
     - 'ARM templates'
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'Disk management'
     - 'Image Gallery'
     - Powershell

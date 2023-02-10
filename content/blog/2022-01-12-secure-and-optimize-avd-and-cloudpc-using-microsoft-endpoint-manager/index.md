@@ -12,7 +12,7 @@ categories:
     - Security
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'REST API'
     - Security
 ---

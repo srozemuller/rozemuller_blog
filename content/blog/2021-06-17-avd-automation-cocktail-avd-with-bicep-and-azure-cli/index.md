@@ -1,5 +1,5 @@
 ---
-title: 'AVD Automation Cocktail - AVD automated with Bicep and Azure CLI'
+title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with Bicep and Azure CLI'
 date: '2021-06-17T13:00:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-with-bicep-and-azure-cli
@@ -9,7 +9,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'Azure CLI'
     - Bicep
     - Cocktail

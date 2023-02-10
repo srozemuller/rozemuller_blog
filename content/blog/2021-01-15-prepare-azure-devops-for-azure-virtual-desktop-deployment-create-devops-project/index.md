@@ -10,7 +10,7 @@ categories:
     - DevOps
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - DevOps
     - Powershell
 ---

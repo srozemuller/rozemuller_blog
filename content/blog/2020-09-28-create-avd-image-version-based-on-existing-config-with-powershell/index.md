@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Azure
     - Disks
     - NSG

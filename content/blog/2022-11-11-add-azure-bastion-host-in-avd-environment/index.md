@@ -5,7 +5,7 @@ date: 2022-11-11T06:02:46+02:00
 author: 'Sander Rozemuller'
 image: gate-closed.png
 categories:
-- AVD
+- Azure Virtual Desktop
 - Security
 tags:
     - Azure Bastion

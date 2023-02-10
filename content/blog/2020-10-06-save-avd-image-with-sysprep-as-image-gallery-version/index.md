@@ -9,7 +9,7 @@ categories:
     - 'Image Management'
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Azure
     - 'Disk management'
     - Disks

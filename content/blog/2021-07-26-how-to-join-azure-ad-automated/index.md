@@ -9,7 +9,7 @@ categories:
     - Identity
     - Powershell
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - 'Azure CLI'
     - 'Azure Virtual Desktop'
     - Azure AD

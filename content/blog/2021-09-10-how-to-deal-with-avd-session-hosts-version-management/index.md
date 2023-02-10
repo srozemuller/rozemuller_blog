@@ -12,7 +12,7 @@ categories:
     - Powershell
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Az.Avd
     - Powershell
 ---

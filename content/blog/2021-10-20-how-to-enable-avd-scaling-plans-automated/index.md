@@ -10,7 +10,7 @@ categories:
     - 'Azure Virtual Desktop'
     - Powershell
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Az.Avd
     - Azure
     - 'azure virtual desktop'

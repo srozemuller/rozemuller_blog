@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
     - Identity
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Hostpool
     - Powershell
     - SessionHost

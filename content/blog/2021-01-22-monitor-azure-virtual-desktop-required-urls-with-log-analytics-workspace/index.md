@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
     - Monitoring
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - 'Log Analytics'
     - 'Network Security Groups'
     - Powershell

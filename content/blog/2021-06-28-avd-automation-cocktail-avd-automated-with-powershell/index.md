@@ -1,5 +1,5 @@
 ---
-title: 'AVD Automation Cocktail - AVD automated with PowerShell'
+title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with PowerShell'
 date: '2021-06-28T11:28:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-powershell
@@ -9,7 +9,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Cocktail
     - Powershell
 ---

@@ -9,7 +9,7 @@ categories:
     - Azure
     - 'Azure Virtual Desktop'
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Az.Avd
     - Azure
     - Cocktail

@@ -8,7 +8,7 @@ categories:
     - Azure
     - 'Azure Virtual Desktop'
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - Hostpool
     - Powershell
     - 'REST API'

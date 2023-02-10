@@ -11,7 +11,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Cloud
     - Cocktail
     - HashiCorp

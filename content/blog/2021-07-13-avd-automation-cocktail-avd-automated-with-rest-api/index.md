@@ -1,5 +1,5 @@
 ---
-title: 'AVD Automation Cocktail - AVD automated with REST API'
+title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with REST API'
 date: '2021-07-13T16:10:50+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-rest-api
@@ -9,7 +9,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Cocktail
     - 'REST API'
 ---

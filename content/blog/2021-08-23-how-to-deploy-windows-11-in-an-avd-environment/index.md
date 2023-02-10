@@ -11,7 +11,7 @@ categories:
     - Powershell
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'azure virtual desktop'
     - 'Endpoint Management'
     - Powershell

@@ -11,7 +11,7 @@ categories:
     - Powershell
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Intune
     - MEM
     - 'Microsoft Intune'

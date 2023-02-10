@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
     - Security
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - 'azure virtual desktop'
     - Networking
     - Powershell

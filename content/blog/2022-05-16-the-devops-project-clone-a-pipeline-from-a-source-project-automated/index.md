@@ -11,7 +11,7 @@ categories:
     - DevOps
 tags:
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - Pipeline
 ---
 

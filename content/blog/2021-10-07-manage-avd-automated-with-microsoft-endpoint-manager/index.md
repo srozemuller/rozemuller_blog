@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
     - 'Microsoft Intune'
 tags:
-    - AVD
+    - Azure Virtual Desktop
     - 'azure virtual desktop'
     - 'Endpoint Management'
     - MEM

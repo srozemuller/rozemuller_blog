@@ -10,7 +10,7 @@ categories:
 tags:
     - ARM
     - Automation
-    - AVD
+    - Azure Virtual Desktop
     - 'azure virtual desktop'
     - Bicep
     - Cocktail
