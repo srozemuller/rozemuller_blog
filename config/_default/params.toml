@@ -62,9 +62,9 @@ button_link = "about/"
 
 # Advertise
 [[featured]]
-image = "images/avd-cocktail-menu.png"
-link = "/categories/avd-cocktail/"
-category = "AVD Automation Cocktail"
+image = "images/api.png"
+link = "/categories/graph-api/"
+category = "Graph API"
 
 [[featured]]
 image = "images/security.jpg"
