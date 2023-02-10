@@ -27,7 +27,7 @@
           <div class="col-lg-6 pe-4 blog-card-list scroll-list">
             <!-- {{ $data := where site.RegularPages "Type" "regular" | first 4}} -->
             <!-- select first 4 to skip the first. that makes first 3 after the first post-->
-            {{ $data := site.RegularPages | first 3}}
+            {{ $data := site.RegularPages | first 1}}
             {{ range after 1 $data }}
             <div class="card rounded-0">
               <div class="d-sm-flex">
@@ -73,9 +73,8 @@
             {{ end }}
           </div>
         </div>
-
+        <!-- 
         <div class="border pt-4 mb-5 rounded">
-          <!-- featured content -->
           <div class="row mx-0 g-5">
             {{ range site.Params.featured }}
             <div class="col-sm-6 mb-4">
@@ -85,10 +84,17 @@
                 <a href="{{.link | absLangURL}}">
                   {{ $image:= resources.Get .image }}
                   {{ with $image }}
-                  {{ $imageFallback:= $image.Fill "379x213" }}
-                  {{ $imageWebp:= $image.Fill "379x213 webp" }}
-                  <img class="img-fluid w-100 rounded-4" width="379" height="252" src="{{ $imageWebp.RelPermalink }}"
-                    alt="image">
+                  {{ $imageFallback:= $image.Resize "650x" }}
+                  {{ $imageLG:= $image.Resize "650x webp" }}
+                  {{ $imageMD:= $image.Resize "600x webp" }}
+                  {{ $imageSM:= $image.Resize "545x webp" }}
+                  <picture>
+                    <source srcset="{{ $imageSM.RelPermalink }}" media="(max-width: 575px)">
+                    <source srcset="{{ $imageMD.RelPermalink }}" media="(max-width: 767px)">
+                    <source srcset="{{ $imageLG.RelPermalink }}">
+                    <img loading="lazy" decoding="async" class="img-fluid w-100 rounded-4" src="{{$imageFallback.RelPermalink}}"
+                      alt="{{.Title}}" width="{{$image.Width}}" height="{{$image.Height}}">
+                  </picture>
                   {{ end }}
                 </a>
               </div>
@@ -96,8 +102,7 @@
             {{ end }}
           </div>
         </div>
-        <!-- /advertisement -->
-
+        -->
 
 
         {{with site.Params.recent_post_title}}
@@ -108,7 +113,7 @@
         <div class="border pt-4 mb-5 rounded">
           <div class="row mx-0 g-5">
             <!-- recent post -->
-            {{ $paginator:= .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections | after 3 ) }}
+            {{ $paginator:= .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections | after 1 ) }}
 
             {{ range $paginator.Pages }}
             <div class="col-sm-6 mb-4">

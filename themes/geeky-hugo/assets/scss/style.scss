@@ -22,7 +22,9 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 .google-auto-placed {
     display: none;
 }
-
+.col-lg-6 {
+    width : 100% !important
+}
 // import bootstrap
 @import 'bootstrap/bootstrap';
 

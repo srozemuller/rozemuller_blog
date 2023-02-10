@@ -1,15 +1,23 @@
-<div class="widget az-avd-status">
-    <div class="widget-title">
-        <h3 class="h5 title-border">Other topics</h3>
-      </div>
-
- <ul class="list-group list-unstyled">
-    {{ range site.Menus.sidebar }}
-    <li>
-      <a {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}
+<div class="widget category-widget">
+  <div class="card">
+    {{ range site.Params.featured }}
+    <a href="{{.link | absLangURL}}">
+      {{ $image:= resources.Get .image }}
+      {{ with $image }}
+      {{ $imageFallback:= $image.Resize "650x" }}
+      {{ $imageLG:= $image.Resize "650x webp" }}
+      {{ $imageMD:= $image.Resize "600x webp" }}
+      {{ $imageSM:= $image.Resize "545x webp" }}
+      <picture>
+        <source srcset="{{ $imageSM.RelPermalink }}" media="(max-width: 575px)">
+        <source srcset="{{ $imageMD.RelPermalink }}" media="(max-width: 767px)">
+        <source srcset="{{ $imageLG.RelPermalink }}">
+        <img loading="lazy" decoding="async" class="img-fluid w-100 rounded-4" src="{{$imageFallback.RelPermalink}}"
+          alt="{{.Title}}" width="{{$image.Width}}" height="{{$image.Height}}">
+      </picture>
+      {{ end }}
     </a>
-    </li>
+    <h6 class="h6 title-border">{{ .category}}</h6>
     {{ end }}
-  </ul>
+  </div>
 </div>
