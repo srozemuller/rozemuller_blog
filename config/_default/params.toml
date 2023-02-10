@@ -71,6 +71,11 @@ image = "images/security.jpg"
 link = "/categories/security/"
 category = "Security"
 
+[[featured]]
+image = "images/intune.jpg"
+link = "/categories/intune/"
+category = "Intune"
+
 # cookies
 [cookies]
 enable = true
