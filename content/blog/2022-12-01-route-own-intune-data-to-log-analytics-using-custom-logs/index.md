@@ -9,7 +9,7 @@ categories:
 tags:
     - Azure
     - 'Log Analytics'
-    - Intune
+    - Microsoft Intune
     - Powershell
     - 'REST API'
 URL: route-own-intune-data-to-log-analytics-using-custom-logs

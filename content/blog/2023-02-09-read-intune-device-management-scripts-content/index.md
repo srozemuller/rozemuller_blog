@@ -5,7 +5,7 @@ date: 2023-02-09T14:55:00+01:00
 image: image.jpeg
 url: "get-intune-device-management-scripts-content-using-graph"
 categories:
-- Intune
+- Microsoft Intune
 - Device Management
 - Security
 tags:

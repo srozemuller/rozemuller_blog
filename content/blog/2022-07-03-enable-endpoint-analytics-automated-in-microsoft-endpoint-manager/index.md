@@ -28,7 +28,7 @@ It also helps identify issues with hardware or policies which slow down devices 
 
 Before we enable Endpoint Analitycs make sure you pass the following:
 
-- Intune enrolled or co-managed devices running the following:
+- Microsoft Intune enrolled or co-managed devices running the following:
     - Windows 10 version 1903 or later
         - The cumulative update from July 2021 or later installed
         - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) isn’t supported.

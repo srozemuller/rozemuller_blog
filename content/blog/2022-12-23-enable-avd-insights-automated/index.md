@@ -4,7 +4,7 @@ date: '2022-12-23T01:28:14+02:00'
 author: 'Sander Rozemuller'
 image: insights.jpeg
 categories:
-    - AVD
+    - Azure Virtual Desktop
     - Az.Avd
 tags:
     - Insights

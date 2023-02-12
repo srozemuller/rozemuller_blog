@@ -8,7 +8,7 @@ categories:
 - "Microsoft Intune"
 - 'Monitoring'
 tags:
-    - Intune
+    - Microsoft Intune
     - Azure Functions
     - Graph API
     - PowerShell

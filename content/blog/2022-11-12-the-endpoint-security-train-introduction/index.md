@@ -11,7 +11,7 @@ tags:
     - Endpoint
     - Zero Trust
     - The Endpoint Security Train
-    - Intune
+    - Microsoft Intune
     - Azure
     - Identity
 type: "regular"

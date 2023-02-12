@@ -12,7 +12,7 @@ categories:
 tags:
     - Automation
     - Azure Virtual Desktop
-    - Intune
+    - Microsoft Intune
     - MEM
     - 'Microsoft Intune'
     - North-Star
