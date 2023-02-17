@@ -5,10 +5,11 @@ author: 'Sander Rozemuller'
 image: light-dark.jpg
 categories:
     - Azure AD
+    - Identity
 tags:
     - Sign In
     - Graph API
-    - Company branding
+    - Company Branding
 url: automated-user-sign-in-experience-with-company-branding
 ---
 
