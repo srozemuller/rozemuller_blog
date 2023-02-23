@@ -15,8 +15,9 @@ tags:
 - Graph API
 - Zero to Zero Trust
 ---
-Nowadays a good cloud environment has strict security policies. Well known policies are conditional access policies. Policies that require a compliant device before login for example. Configuring conditional access is good but there is always a risk to lockout your self. To not lock yourself out, you must create an emergency account. This post is the start of my Zero to Zero Trust series. 
+Nowadays a good cloud environment has strict security policies. Well known policies are conditional access policies. Policies that require a compliant device before login for example. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.  
 
+This post is the start of my Zero to Zero Trust series. 
 Creating emergency accounts is the first step to a Zero Trust environent. The post explains how to create an emergency, aka break glass, user account including basic monitoring in an automated way.  
 
 *This blog post is part of the [Zero to Zero Trust series](http://localhost:1313/tags/zero-to-zero-trust/)*
