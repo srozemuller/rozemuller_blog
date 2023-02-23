@@ -279,6 +279,10 @@ In Log Analtics the results look like below.
 
 ![log-results](log-results.png)
 
+### Script
+I created a small script that is stored at my [ZeroTrust Repo](https://github.com/srozemuller/Identity/tree/main/ZeroTrust/CreateBreakGlass)
+To use the script change the variables into your own and run the code in a PowerShell environment. 
+
 ## Notes from the field
 Break Glass accounts are high priveledged account, that's not suprise anymore (I hope). So, we need handle these accounts with care.
 Microsoft's documentation says we need to create a Global Admin. But, to be honest I (and more MVP's) do have their concerns about creating an account with the highest permission level with no MFA configured. I also spoke with some fellow MVP's ([Jan Bakker](https://janbakker.tech/about-me/) and [Niels Kok](https://www.nielskok.tech/)) and they have the same.  
