@@ -207,4 +207,6 @@ The error below is one of the results, after importing, when using a break-glass
 ![block-breakglass](block-breakglass.png)
 ![keep-secure](keep-secure.png)
 
+
+The files are stored on [my GitHub](https://github.com/srozemuller/Identity/tree/main/ZeroTrust/ProtectPrivilegedAccounts)
 {{< bye >}}
