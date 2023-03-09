@@ -199,6 +199,8 @@ foreach ($file in $files) {
 }
 ```
 
+![added-policies](added-policies.png)
+
 ### Verify 
 The error below is one of the results, after importing, when using a break-glass account from an untrusted location.
 
