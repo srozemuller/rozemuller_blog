@@ -34,6 +34,13 @@ hasChildren = true
 name = "Identity"
 url = "categories/identity"
 weight = 4
+hasChildren = true
+
+  [[main]]
+  parent = "Identity"
+  name = "Zero Trust"
+  url = "categories/zero-trust/"
+  weight = 1
 
 [[main]]
 name = "Security"
