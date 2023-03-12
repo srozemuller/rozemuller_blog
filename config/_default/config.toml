@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "https://www.rozemuller.com/"
-title = "Sander Rozemuller | All about Azure, AVD, Automation, DevOps, Monitoring, MEM and Security"
+title = "Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security"
 theme = "geeky-hugo"
 languageName = "En"
 languageCode = "en-us"

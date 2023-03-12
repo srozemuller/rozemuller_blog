@@ -85,7 +85,7 @@ button = "I Accept"
 
 ######################## sidebar widgets #########################
 [widgets]
-sidebar = ["az-avd","about","mvp","wpninjanl","adsense-square","side-menu","adsense-square","categories","adsense-square"]
+sidebar = ["az-avd","about","mvp","wpninjanl","adsense-square","adsense-square","categories","adsense-square"]
 # available widget : about,categories,newsletter,recent-post
 
 
