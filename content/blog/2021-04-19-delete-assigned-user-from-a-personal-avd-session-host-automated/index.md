@@ -6,7 +6,7 @@ url: delete-assigned-user-from-a-personal-avd-session-host-automated
 image: avd-recycle-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
-    - Identity
+    - Azure AD
 tags:
     - Azure Virtual Desktop
     - Hostpool

@@ -11,8 +11,8 @@ categories:
     - Security
 tags:
     - Automation
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - 'REST API'
     - 'Security Baselines'
 ---

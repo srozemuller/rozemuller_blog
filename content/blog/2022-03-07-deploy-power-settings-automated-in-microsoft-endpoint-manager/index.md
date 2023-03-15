@@ -9,8 +9,8 @@ categories:
     - 'Microsoft Intune'
     - Powershell
 tags:
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Powershell
     - 'REST API'
 type: "regular" # available types: [featured/regular]

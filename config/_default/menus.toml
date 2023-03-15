@@ -27,14 +27,20 @@ hasChildren = true
   [[main]]
   parent = "M365"
   name = "Microsoft Intune"
-  url = "tags/mem"
+  url = "tags/microsoft-intune"
   weight = 1
 
 [[main]]
 name = "Identity"
-url = "categories/identity"
+url = "categories/identity/"
 weight = 4
 hasChildren = true
+
+  [[main]]
+  parent = "Identity"
+  name = "Azure AD"
+  url = "categories/azure-ad/"
+  weight = 1
 
   [[main]]
   parent = "Identity"

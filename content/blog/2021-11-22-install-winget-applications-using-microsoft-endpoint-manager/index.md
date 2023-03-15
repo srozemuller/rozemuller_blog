@@ -8,7 +8,7 @@ categories:
     - 'Microsoft Intune'
 tags:
     - Automation
-    - MEM
+    - Microsoft Intune
     - 'Microsoft Intune'
     - Powershell
     - Win32

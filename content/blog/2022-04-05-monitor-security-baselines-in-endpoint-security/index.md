@@ -9,8 +9,8 @@ categories:
     - Monitoring
     - Security
 tags:
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Monitoring
     - 'REST API'
     - 'Security Baselines'

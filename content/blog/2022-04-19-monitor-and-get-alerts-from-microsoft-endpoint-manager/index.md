@@ -12,8 +12,8 @@ categories:
 tags:
     - Automation
     - Azure
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Monitoring
     - Powershell
     - 'REST API'

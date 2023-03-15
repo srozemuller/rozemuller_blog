@@ -9,8 +9,8 @@ categories:
     - 'Microsoft Intune'
 tags:
     - Filters
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Powershell
     - 'REST API'
 ---

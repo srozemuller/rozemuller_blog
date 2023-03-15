@@ -9,8 +9,8 @@ categories:
     - 'Azure Virtual Desktop'
     - 'Microsoft Intune'
 tags:
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Powershell
     - 'REST API'
 ---

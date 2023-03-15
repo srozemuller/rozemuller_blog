@@ -6,7 +6,7 @@ url: how-to-join-azure-ad-automated
 image: cloud-identity.png
 categories:
     - Automation
-    - Identity
+    - Azure AD
     - Powershell
 tags:
     - Azure Virtual Desktop

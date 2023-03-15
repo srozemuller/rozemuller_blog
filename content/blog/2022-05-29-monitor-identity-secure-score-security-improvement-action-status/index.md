@@ -6,7 +6,7 @@ type: 'featured'
 image: identity-security-improvements.jpeg
 url: monitor-identity-secure-score-security-improvement-action-status
 categories:
-    - Identity
+    - Azure AD
     - Monitoring
     - Security
 tags:

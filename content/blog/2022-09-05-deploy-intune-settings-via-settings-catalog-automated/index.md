@@ -11,7 +11,7 @@ tags:
     - Settings Catalog
     - Automation
     - PowerShell
-    - MEMPowered
+    - Microsoft IntunePowered
     - Backup
     - Settings Templates
 type: "regular" # available types: [featured/regular]

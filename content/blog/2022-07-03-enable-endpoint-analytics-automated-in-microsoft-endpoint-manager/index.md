@@ -10,8 +10,8 @@ categories:
     - Monitoring
 tags:
     - 'Azure virtual desktop'
-    - MEM
-    - MEMPowered
+    - Microsoft Intune
+    - Microsoft IntunePowered
     - Powershell
     - 'REST API'
 ---

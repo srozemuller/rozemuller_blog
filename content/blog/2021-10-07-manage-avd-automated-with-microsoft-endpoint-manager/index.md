@@ -11,7 +11,7 @@ tags:
     - Azure Virtual Desktop
     - 'azure virtual desktop'
     - 'Endpoint Management'
-    - MEM
+    - Microsoft Intune
     - North-Star
     - Powershell
     - 'REST API'

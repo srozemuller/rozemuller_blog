@@ -13,7 +13,7 @@ tags:
     - Automation
     - Azure Virtual Desktop
     - Microsoft Intune
-    - MEM
+    - Microsoft Intune
     - 'Microsoft Intune'
     - North-Star
     - Powershell

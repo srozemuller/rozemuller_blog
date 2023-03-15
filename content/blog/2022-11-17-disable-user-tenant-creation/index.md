@@ -9,7 +9,7 @@ categories:
 - Security
 tags:
     - Azure
-    - Identity
+    - Azure AD
 type: "regular"
 URL: disable-user-tenant-creation
 ---
