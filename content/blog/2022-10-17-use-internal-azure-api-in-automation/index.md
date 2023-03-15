@@ -52,7 +52,7 @@ $authHeader = @{
 ```
 
 ### Authenticate to main.iam.ad.ext.azure.com
-To use the hidden API you MUST log in with a user for the first time. After login and user_impersonation you receive a refresh token. The permissions are based on the user's role. The refresh token can be used to reauthenticate later interactively without providing credentials.
+To use the hidden API you MUST log in interactively as a user for the first time. After login and user_impersonation you receive a refresh token. The permissions are based on the user's role. The refresh token can be used to reauthenticate later interactively without providing credentials.
 Make sure you put the token in a safe place!! (Azure KeyVault for example).  
 A refresh token has a 90-day lifetime. If the token is used it refreshes (as the name says) to a new token that needs to be stored again.
 
@@ -60,6 +60,7 @@ A refresh token has a 90-day lifetime. If the token is used it refreshes (as the
 In this part, I will show the workflow on how to use the access_token and update the refresh tokens in automation tasks. The main components are the script (from above) and, an Azure Key Vault. The idea is to log in as a user for the first time and then write the refresh token to the Azure Key Vault. 
 
 ![hidden-api-usage](hidden-api-usage.png)
+
 
 After logging in, I use the starting variables below.
 
@@ -84,7 +85,19 @@ The first step is running the initial authentication process. The process needs 
 Inspired by [Jos Lieben`s script](https://www.lieben.nu/liebensraum/2020/04/calling-graph-and-other-apis-silently-for-an-mfa-enabled-account/), I created a script that creates an access token and the refresh token based on a device login and, writes the refresh token back to the Key Vault.
 The script is stored on my GitHub. https://github.com/srozemuller/Identity
 
-When running the script, on the screen a message returns like below.
+To log in interactively as a user, I use the code below. 
+
+```powershell
+$clientId= "1950a258-227b-4e31-a9cf-717495945fc2" # This is de Microsoft Azure Powershell application
+$tenantId = "tenantId"
+$resource = "https://main.iam.ad.ext.azure.com/"
+
+# Send the request to receive a device authentication URL
+$codeRequest = Invoke-RestMethod -Method POST -UseBasicParsing -Uri "https://login.microsoftonline.com/$tenantId/oauth2/devicecode" -Body "resource=$resource&client_id=$clientId"
+Write-Output "`n$($codeRequest.message)"
+```
+
+When running the code, on the screen a message returns like below. The response is returned to the ```$codeRequest``` variable.
 
 ![device-login-message](device-login-message.png)
 Follow the link and the wizard in the browser. Select the correct user, and fill in the code from the screen.
@@ -92,13 +105,59 @@ Follow the link and the wizard in the browser. Select the correct user, and fill
 ![azure-powershell-login](azure-powershell-login.png)
 ![device-login-browser](device-login-browser.png)
 
-Heading back to the PowerShell command box you see a response like below where all the authentication information is returned.
+Next, run the code below where the response device code is used to log in and receive a refresh token. 
+The code waits till the response is received. Thereafter, the refresh token is stored in the ```$refreshToken``` variable.
+```powershell
+# Create the body for the token request, where the device code from the previous request will be used in the call
+$tokenBody = @{
+  grant_type = "urn:ietf:params:oauth:grant-type:device_code"
+  code       = $codeRequest.device_code
+  client_id  = $clientId
+}
+
+# Get OAuth Token
+while ([string]::IsNullOrEmpty($tokenRequest.access_token)) {
+  $tokenRequest = try {
+      Invoke-RestMethod -Method POST -Uri "https://login.microsoftonline.com/$tenantId/oauth2/token" -Body $tokenBody
+  }
+  catch {
+      $errorMessage = $_.ErrorDetails.Message | ConvertFrom-Json
+      # If not waiting for auth, throw error
+      if ($errorMessage.error -ne "authorization_pending") {
+          throw "Authorization is pending."
+      }
+  }
+}
+
+# Printing the relevant information for tracability of the token and code
+Write-Output $($tokenRequest | Select-Object -Property token_type, scope, resource, access_token, refresh_token, id_token)
+$refreshToken = $tokenRequest.refresh_token
+```
+
 
 ![device-login-response](device-login-response.png)
 
 Considering the response the access_token and refresh_token are important. The access_token is used to get access. The 'normal' token as we know in the Graph and Azure management APIs uses the client_credentials login method. 
 
 The refresh_token is important in automation tasks. This is the token that must be used to log in without a user prompt and to receive an access_token.
+
+
+### Log in with the refresh token
+To log in with the refresh token I request the ```login.windows.net``` page and provide the refresh token. With the response, I create a header with an access_token. 
+I use the ```$tenant``` from above. The ```$clientId``` is the Microsoft Azure PowerShell id that was used in the initial script. 
+In the response also the new refresh token is provided. Use the code above to set the new refresh token in the key vault for later use. 
+
+```powershell
+$response = (Invoke-RestMethod "https://login.windows.net/$tenantId/oauth2/token" -Method POST -Body "resource=74658136-14ec-4630-ad9b-26e160ff0fc6&grant_type=refresh_token&refresh_token=$refreshToken&client_id=$clientId&scope=openid" -ErrorAction Stop)
+$resourceToken = $response.access_token
+$headers = @{
+    "Authorization"          = "Bearer " + $resourceToken
+    "Content-type"           = "application/json"
+    "X-Requested-With"       = "XMLHttpRequest"
+    "x-ms-client-request-id" = [guid]::NewGuid()
+    "x-ms-correlation-id"    = [guid]::NewGuid()
+}
+```
 
 ### Store refresh token in Azure Key Vault
 To store the refresh tokens for later use, I create an Azure Key Vault and write back the refresh token. 
@@ -217,22 +276,6 @@ $secret = Invoke-RestMethod @secretParameters
 $secret.value
 ```
 
-### Log in with the refresh token
-To log in with the refresh token I request the ```login.windows.net``` page and provide the refresh token. With the response, I create a header with an access_token. 
-I use the ```$tenant``` from above. The ```$clientId``` is the Microsoft Azure PowerShell id that was used in the initial script. 
-In the response also the new refresh token is provided. Use the code above to set the new refresh token in the key vault for later use. 
-
-```powershell
-$response = (Invoke-RestMethod "https://login.windows.net/$tenantId/oauth2/token" -Method POST -Body "resource=74658136-14ec-4630-ad9b-26e160ff0fc6&grant_type=refresh_token&refresh_token=$refreshToken&client_id=$clientId&scope=openid" -ErrorAction Stop)
-$resourceToken = $response.access_token
-$headers = @{
-    "Authorization"          = "Bearer " + $resourceToken
-    "Content-type"           = "application/json"
-    "X-Requested-With"       = "XMLHttpRequest"
-    "x-ms-client-request-id" = [guid]::NewGuid()
-    "x-ms-correlation-id"    = [guid]::NewGuid()
-}
-```
 For more information about how to set keys, check: https://learn.microsoft.com/en-us/rest/api/keyvault/secrets/set-secret
 
 ## Request main.iam.ad hiddden API
