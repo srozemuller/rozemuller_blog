@@ -61,24 +61,6 @@ In this part, I will show the workflow on how to use the access_token and update
 
 ![hidden-api-usage](hidden-api-usage.png)
 
-
-After logging in, I use the starting variables below.
-
-```powershell
-$mainUrl = "https://management.azure.com"
-$context = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile.DefaultContext
-$token = [Microsoft.Azure.Commands.Common.Authentication.AzureSession]::Instance.AuthenticationFactory.Authenticate($context.Account, $context.Environment, $context.Tenant.Id.ToString(), $null, [Microsoft.Azure.Commands.Common.Authentication.ShowDialog]::Never, $null, $mainUrl).AccessToken
-$subscriptionId = [Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]::Instance.Profile.DefaultContext.Subscription.Id
-$headers = @{
-    'Content-Type' = 'application/json'
-    Authorization  = 'Bearer ' + $token
-}
-$tenantId = $context.Tenant.Id
-$location = "WestEurope"
-$method = "PUT"
-```
-
-
 ## Authentication process
 The first step is running the initial authentication process. The process needs to run once to get a refresh token. You also get an access token but is not needed in this step. 
 
