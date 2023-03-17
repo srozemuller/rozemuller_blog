@@ -7,7 +7,7 @@ draft: false
 url: "protect-privileged-accounts-the-zero-trust-way-automated"
 categories:
 - Security
-- Identity
+- Azure AD
 - Zero Trust
 tags:
 - Automation
@@ -97,7 +97,7 @@ The scenarios are:
 |4|Force password change when admin roles are at medium risk.|Users|
 |5|Block access for admin roles that are at high risk. (the above policy is mandatory to make this work the right way), the break glass account is excluded. |Users|  
 
->To keep the break-glass account safe, monitoring of the account risk state is needed. This comes in a later post in this series. 
+>To keep the break-glass account safe, monitoring of the account risk state is needed. This is discussed in a later post in this series. 
 
 The files used in the code below are stored in my repository.  
 WARNING: The default states in the files are ```enabledForReportingButNotEnforced```. Just to be sure you don't lock yourself out after importing. Change the state to ```enabled``` or remove the complete line. 
