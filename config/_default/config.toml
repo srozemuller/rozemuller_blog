@@ -41,10 +41,12 @@ quality = 90
 canonifyURLs = true 
 
 ####################### Table of Contents ##########################
-[tableOfContents]
-    endLevel = 5
+  [markup.tableOfContents]
+    endLevel = 4
     ordered = false
-    startLevel = 0
+    startLevel = 2
+
+
 ############################## Links ###############################
 
 [permalinks]
