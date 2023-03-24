@@ -141,7 +141,7 @@ The minimal API needed permissions are:
 
 - Directory.Read.All or Group.Read.All
 
-For creating an application registration automated I used PowerShell. The application has a custom role at the subscription level. I copied the contributor role and added the <meta charset="utf-8"></meta>“Microsoft.Authorization/\*/Write” action. Actually, I removed the write rule from the notActions. Basically, only a subscription owner has these permissions. Due to security reasons, I created a Contributor Plus role. It is almost the same but then also with Authorization Write permissions.
+For creating an application registration automated I used PowerShell. The application has a custom role at the subscription level. I copied the contributor role and added the <meta charset="utf-8"></meta>“Microsoft.Authorization/\*/Write” action. Actually, I removed the write rule from the notActions. Only a subscription owner has these permissions. Due to security reasons, I created a Contributor Plus role. It is almost the same but then also with Authorization Write permissions.
 
 <mark>The application also has Group.ReadWrite.All permissions for reading groups via Terraform.</mark>
 
@@ -152,7 +152,7 @@ Suggestion: Make sure you first connect to Azure with Connect-AzAccount.
 ![image-43](image-43.png)
 ### Create initial VM for image
 
-Before creating resources with Terraform Cloud, I first created a virtual machine that is sysprepped and generalized. First I create a virtual machine with Terraform. Thereafter I ran a PowerShell command which will Sysprep the machine and generalize it. In the next Terreform workspace, I pick up that machine to create an image version.
+Before creating resources with Terraform Cloud, I first created a virtual machine that is sysprepped and generalized. First I create a virtual machine with Terraform. Thereafter I ran a PowerShell command which will Sysprep the machine and generalize it. In the next Terraform workspace, I pick up that machine to create an image version.
 
 <div class="wp-block-image"><figure class="aligncenter size-full">![](dutch-bloody-harry-background-createimage-1.png)
 </div>To start the initial VM workspace in Terraform, I used the following commands. I would suggest using the auto-apply value (default false). The auto-apply takes care of starting the workbook without user interaction. Besides the token, you also need a workspaceId. To find the workspaceId, check the workspace general settings.
@@ -516,15 +516,36 @@ If you install the native module with the AADJoin parameter you will get a messa
 
 After digging into the deployment I found the correct artifact URL.
 
-***https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration\_6-1-2021.zip***
+{{< avd-dsc-url >}}
 
-To deploy the AVD DSC extension in Terraform I used the resource block below. Make the settings part is in JSON string format. And, make sure the token is provided in the protected settings part. Otherwise will get this error:
+To deploy the AVD DSC extension in Terraform I used the resource block below. Make the settings part in JSON string format. And, make sure the token is provided in the protected settings part. Otherwise will get this error:
 
 ***Error: Provider produced inconsistent final plan***
 
 *When expanding the plan for azurerm\_virtual\_machine\_extension.AVDModule\[1\] to include new values learned so far during apply, provider “registry.terraform.io/hashicorp/azurerm” produced an invalid new value for .settings: inconsistent values for sensitive attribute. This is a bug in the provider, which should be reported in the provider’s own issue tracker.*
 
 ```powershell
+resource "azurerm_virtual_machine_extension" "AADLoginForWindows" {
+  count = var.avd_sessionhost_count
+  depends_on = [
+      azurerm_windows_virtual_machine.avd_sessionhost
+  ]
+
+  name                 = "AADLoginForWindows"
+  virtual_machine_id   = "${azurerm_resource_group.rg-avd.id}/providers/Microsoft.Compute/virtualMachines/${var.avd_sessionhost_prefix}-${count.index}"
+  publisher            = "Microsoft.Azure.ActiveDirectory"
+  type                 = "AADLoginForWindows"
+  type_handler_version = "1.0"
+  settings = <<SETTINGS
+    {
+      "mdmId": "0000000a-0000-0000-c000-000000000000"
+    }
+SETTINGS
+}
+locals {
+  registration_token = azurerm_virtual_desktop_host_pool.avd-hp.registration_info[0].token
+}
+
 resource "azurerm_virtual_machine_extension" "AVDModule" {
   count = var.avd_sessionhost_count
   depends_on = [
