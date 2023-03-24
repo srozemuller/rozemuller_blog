@@ -51,8 +51,7 @@ This cocktail reaches a sky-high level between two big clouds. It has a sweet ta
 
 ## Start with Terraform Cloud
 
-In this chapter, I will explain how to start with Terraform Cloud. I also explain how to create a Terraform workspace and connect it to GitHub. I will recommend cloning my [AVD GitHub repository ](https://github.com/srozemuller/AVD)to get all the needed files, also for the other cocktails.
-
+In this chapter, I will explain how to start with Terraform Cloud. I also explain how to create a Terraform workspace and connect it to GitHub. I will recommend cloning my [AVD GitHub repository ](https://github.com/srozemuller/AVD)to get all the needed files, also for the other cocktails. The Terraform files are stored at this [location](https://github.com/srozemuller/TF-AVD)
 First, we are going to set up a Terraform Cloud environment. In basics, Terraform Cloud looks a bit like Azure DevOps. We need an organization, connection to a tenant (in DevOps service connection) and, workbooks (in DevOps pipelines). One big difference between both is that Terraform is **<span style="text-decoration: underline;">only</span>** an infrastructure-as-a-code deployment platform. Where in Azure DevOps you also have the ability to run PowerShell tasks for example.
 
 ### Terraform Cloud organization
@@ -73,7 +72,7 @@ To provide a configuration, make sure you have a correct Terraform syntax file w
 ![image-17](image-17.png)
 ### Terraform Cloud Workspace Variables
 
-Due to security reasons, it is not recommended to store provider credentials into a Terraform file. To connect to an Azure tenant, it is recommended to use environment variables. Every cloud provider has its own variable names. Make sure you find the correct names. Setting these correct names as a variable allows Terraform to pick up the correct values. In the case of Azure, I need the following variable names.
+Due to security reasons, it is not recommended to store provider credentials in a Terraform file. To connect to an Azure tenant, it is recommended to use environment variables. Every cloud provider has its own variable names. Make sure you find the correct names. Setting these correct names as a variable allows Terraform to pick up the correct values. In the case of Azure, I need the following variable names.
 
 - ARM\_TENANT\_ID
 - ARM\_SUBSCRIPTION\_ID
