@@ -7,22 +7,25 @@ draft: false
 url: "configure-break-glass-accounts-infrastructure-automated"
 categories:
 - Security
-- Identity
+- Azure AD
 - Zero Trust
 tags:
 - Automation
 - Azure AD
 - Graph API
 - Zero to Zero Trust
+- Zero Trust Level 1
 ---
 Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.  
 
 This post is the start of my Zero to Zero Trust series. 
 Creating emergency accounts is the first step to a Zero Trust environment. The post explains how to create an emergency, aka break glass, user account including basic monitoring in an automated way.  
 
-*This blog post is part of the [Zero to Zero Trust series](http://rozemuller.com/tags/zero-to-zero-trust)*
+{{< zero-to-zerotrust >}}
 
 {{< toc >}}
+
+
 ## Account creation and permissions 
 Emergency access accounts are highly privileged, and they are not assigned to specific individuals. Emergency access accounts are limited to emergency or "break glass"' scenarios where normal administrative accounts can't be used. Think about a scenario where MFA is broken. 
 It is highly recommended that you maintain a goal of restricting emergency account use to only the times when it is absolutely necessary.

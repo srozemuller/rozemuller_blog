@@ -14,6 +14,7 @@ tags:
 - Azure AD
 - Graph API
 - Zero to Zero Trust
+- Zero Trust Level 1
 ---
 This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.
 
@@ -22,7 +23,15 @@ This is the 3rd step in the series Zero to Zero Trust in an automated way. In th
 {{< zero-to-zerotrust >}}
 
 {{< toc >}}
+## Introduction
+This blog post focuses on the red boxes. 
 
+![zero-trust-overview](zero-trust-overview.png)
+
+All blogs related to the Zero to Zero Trust journey are listed in the [Zero to Zero Trust](https://www.rozemuller.com//tags/zero-to-zero-trust/) overview.  
+All blogs related to level 1 Zero Trust are listed in the [Zero Trust Level 1](https://www.rozemuller.com//tags/zero-trust-level-1/) overview.
+
+The full Zero Trust plan is available [here](https://learn.microsoft.com/en-us/microsoft-365/security/microsoft-365-zero-trust?bc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fsecurity%2Fzero-trust%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fsecurity%2Fzero-trust%2Ftoc.json&view=o365-worldwide).
 ## Prerequisites
 Before using the Zero Trust identity and device access policies that are recommended, your tenant needs to meet prerequisites.
 The full prerequisites list is stored [here](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/identity-access-prerequisites?view=o365-worldwide#prerequisites).  
