@@ -53,6 +53,12 @@ name = "Security"
 url = "categories/security"
 weight = 5
 
+  [[main]]
+  parent = "Security"
+  name = "Zero to Zero Trust series"
+  url = "tags/zero-to-zero-trust/"
+  weight = 1
+
 [[main]]
 name = "Monitoring"
 url = "categories/monitoring"
