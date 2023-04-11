@@ -97,7 +97,7 @@ For the device code flow authentication, I created a PowerShell function that ca
 
 In the example below, I request an access token for the Microsoft Graph PowerShell application. The scope is DeviceManagementApps.ReadWrite.All. The function returns the access token in the variable $AuthHeader.
 ```powershell
-$AuthHeader = Get-AccessToken -TenantName "contoso.onmicrosoft.com" -ClientId "14d82eec-204b-4c2f-b7e8-296a70dab67e" -Scope "DeviceManagementApps.ReadWrite.All"
+$AuthHeader = .\graph.authentication.interactive.ps1 -TenantName "contoso.onmicrosoft.com" -ClientId "14d82eec-204b-4c2f-b7e8-296a70dab67e" -Scope "DeviceManagementApps.ReadWrite.All"
 ```
 
 After running the command, you will get a device code. Open a browser and navigate to https://microsoft.com/devicelogin.  
