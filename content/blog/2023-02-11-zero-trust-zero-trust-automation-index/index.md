@@ -59,6 +59,7 @@ The full overview is located [here](https://learn.microsoft.com/en-us/microsoft-
 Based on [Zero Trust guidance](https://learn.microsoft.com/en-us/security/zero-trust/deploy/identity?view=o365-worldwide) I created a list of blogs that will be published and are listed below.
 The model above returns in every blog and shows where we are at that time. Every blog helps you to deploy a Zero Trust infrastructure in an automated way. Every needed component is deployed and configured. 
 
+#### Zero Trust automation blog overview
 In the following table, the blogs are listed and the corresponding area is shown. The blogs are published in the order of the Zero Trust model. Some of the blogs are not published yet and more blogs are planned.
 
 |Area|Blog|
