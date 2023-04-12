@@ -174,8 +174,10 @@ $roleName = $role | Convertfrom-json
 az role assignment create --assignee $objectId --role $roleName.name --resource-group $resourceGroupName
 ```
 
-<figure class="wp-block-image size-large is-resized">![](image-70.png)<figcaption>Role output from Azure CLI</figcaption>
-<figure class="wp-block-image size-large is-resized">![](image-71-1024x75.png)
+![70](image-70.png)
+  
+Role output from Azure CLI
+[71](image-71.png)
 At last, we need to install the correct VM extension. I will discuss that point later in the session host deployment.
 
 ### AVD AAD join settings
