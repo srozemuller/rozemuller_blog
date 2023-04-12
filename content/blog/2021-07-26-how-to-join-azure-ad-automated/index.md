@@ -92,7 +92,7 @@ $vmName = "avd-1"
 $resourceGroupName = "rg-avd-demo"
 $location = 'westeurope' 
 
-$domainJoinName = "AADLoginForWindowsWithIntune"
+$domainJoinName = "AADLoginForWindows"
 $domainJoinSettings  = @{
     mdmId = "0000000a-0000-0000-c000-000000000000"
 }
@@ -180,7 +180,7 @@ At last, we need to install the correct VM extension. I will discuss that point 
 
 ### AVD AAD join settings
 
-To join an AVD session host to Azure AD you need different settings relating to native AD. The first thing to remember is the Desired State Config extension. The second thing which is different is the VM identity. A not AAD joined VM has no system assigned identity in the Azure AD.
+To join an AVD session host to Azure AD you need different settings relating to native AD. The first thing to remember is the Desired State Config extension. The second different thing is the VM identity. A not AAD joined VM has no system-assigned identity in the Azure AD.
 
 #### AVD Extension
 
