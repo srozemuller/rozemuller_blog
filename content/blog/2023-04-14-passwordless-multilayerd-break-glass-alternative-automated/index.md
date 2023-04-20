@@ -318,7 +318,7 @@ $content.Content | ConvertFrom-Json
 Everything is in place now. We have created an application with a certificate login. The application has permission to add users to the MFA exclusion group. 
 The exclusion group is added to the MFA CA Policy excluded groups. 
 
-Now what if the #$%@* hits the van?
+Now what to do when $%^&* hits the fan?
 
 We must log in with the service principal to add a user to the exclusion group. 
 In the upcoming part, I show how to log in using the service principal and add a user to the exclusion group. 
