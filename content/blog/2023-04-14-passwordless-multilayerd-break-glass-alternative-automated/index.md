@@ -451,4 +451,6 @@ Objects to store safely:
 - Application ID
 - Exclusion group ID
 
+The code I used is stored in a [script on my GitHub](https://github.com/srozemuller/Identity/blob/main/Authentication/create-breakglassPrincipal.ps1)
+
 {{< bye >}}
