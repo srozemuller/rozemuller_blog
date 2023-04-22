@@ -66,6 +66,7 @@ In the following table, the blogs are listed and the corresponding area is shown
 |---------     |---------|
 |---------|---------|                      
 |Identity|[Configure Break Glass Accounts Infrastructure Automated](../configure-break-glass-accounts-infrastructure-automated/)|
+|Identiy|[Passwordless, Multi-layered Break Glass Alternative Automated](../passwordless-multilayered-break-glass-alternative-automated/)|
 |Identity|[Protect Privileged Accounts Automated](../protect-privileged-accounts-the-zero-trust-way-automated/)|
 |Identity|[Common Identity and Device Access Protection](../zero-trust-common-identity-and-device-access-protection/)|
 |Identity|<i>Monitor privilegded account usage</i>|
