@@ -50,6 +50,7 @@ As said, the starting point is a scenario. In this post, I test the following sc
 
 The scenarios are each stored in a JSON file. The JSON file content is provided as a body to the evaulate endpoint in the automated check.
 
+The scenarios I used are stored at my [GitHub](https://github.com/srozemuller/Identity/tree/main/ZeroTrust/ConditionalAccessCheck)
 ### Automated check
 This is the part where the scenarios are checked one by one. This is simple done by the following PowerShell script. 
 First, the JSON file content is read. Next is sending a POST request to the evaluation API ```"https://main.iam.ad.ext.azure.com/api/WhatIf/Evaluate"```
@@ -68,15 +69,15 @@ policyId               : e3ffffd1-1220-4398-a098-46420a3e4cd1
 policyName             : CA004: Require multifactor authentication for all users
 unsatisfiedConditions  : {0}
 applied                : True
-controls               : @{controlsOr=True; blockAccess=False; challengeWithMfa=True; requireAuthStrength=; compliantDevice=False; 
+controls               : @{controlsOr=True; blockAccess=False; challengeWithMfa=True; requireAuthStrength=; compliantDevice=False;
                          domainJoinedDevice=False; approvedClientApp=False; claimProviderControlIds=System.Object[]; 
                          requireCompliantApp=False; requirePasswordChange=False; requiredFederatedAuthMethod=0}
 sessionControls        : @{appEnforced=False; cas=False; cloudAppSecuritySessionControlType=0; signInFrequencyTimeSpan=; 
-                         signInFrequency=0; persistentBrowserSessionMode=0; continuousAccessEvaluation=0; resiliencyDefaults=0; 
+                         signInFrequency=0; persistentBrowserSessionMode=0; continuousAccessEvaluation=0; resiliencyDefaults=0;
                          secureSignIn=False; secureApp=False; networkAccessSecurity=}
 baselineType           : 0
 policyState            : 2
-authenticationStrength : 
+authenticationStrength :
 filters                : @{actorAppAttributes=System.Object[]; actorAppFilterPresent=False; actorAppFilterProblem=False; 
                          targetAppAttributes=System.Object[]; targetAppFilterPresent=False; targetAppFilterProblem=False}
 ```
