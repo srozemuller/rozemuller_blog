@@ -15,8 +15,8 @@ tags:
 - Zero to Zero Trust
 - Zero Trust Level 2
 ---
-In earlier posts I created several conditional access policies in an automated way. During the time policies may change, users will be added to a specific Azure role, groups are added and so many more. 
-All those changes effect on how conditional access policies act. Because of that, it is recommended to check your conditional access policies environment so now and then. 
+In earlier posts I created several conditional access policies in an automated way. During the time policies may change, users will be added to a specific Azure role, groups are added and so many more.  
+All those changes effect on how conditional access policies act. Because of that, it is recommended to check your conditional access policies environment so now and then.  
 
 In this blog post, I show to test your conditional access enviroment in an automated way based on different scenario's.
 
