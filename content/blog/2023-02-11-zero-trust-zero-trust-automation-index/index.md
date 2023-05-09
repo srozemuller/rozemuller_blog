@@ -64,12 +64,13 @@ In the following table, the blogs are listed and the corresponding area is shown
 
 |Area|Blog|
 |---------     |---------|
-|---------|---------|                      
+|---------|---------|
 |Identity|[Configure Break Glass Accounts Infrastructure Automated](../configure-break-glass-accounts-infrastructure-automated/)|
 |Identiy|[Passwordless, Multi-layered Break Glass Alternative Automated](../passwordless-multilayered-break-glass-alternative-automated/)|
 |Identity|[Protect Privileged Accounts Automated](../protect-privileged-accounts-the-zero-trust-way-automated/)|
 |Identity|[Common Identity and Device Access Protection](../zero-trust-common-identity-and-device-access-protection/)|
 |Identity|<i>Monitor privilegded account usage</i>|
+|Identity|[Check Condtitional Access policy effects automated](../check-conditional-access-policy-effect-automated)|
 |Identity|<i>Monitor conditional access changes</i>|
 |Identity|<i>Configure Privileged Identity Management automated</i>|
 |Application & Data|[Zero Trust Data Protection Using App Protection Policies Automated](../zero-trust-data-protection-using-app-protection-policies-automated/)|
@@ -82,7 +83,7 @@ In the following table, the blogs are listed and the corresponding area is shown
 ### Zero Trust model for Azure (PAAS & IAAS)
 |Area|Blog|
 |---------     |---------|
-|---------|---------|    
+|---------|---------|
 |Azure PAAS|<i>Deploy Zero Trust for AVD automated</i>|
 
 
