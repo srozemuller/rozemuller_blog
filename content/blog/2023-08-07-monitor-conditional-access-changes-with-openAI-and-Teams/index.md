@@ -14,12 +14,13 @@ tags:
 - Graph API
 - Zero to Zero Trust
 ---
-{{< toc >}}
 
 Implementing conditional access policies have a huge impact on your identities and organisation. After implementation, there could be a situation conditional policies need changes. Think about the state, adding or excluding users, or adding a security strength for example. 
 
 Because changing policies also can have a huge impact, it is good to know if a policy is changed. 
 In this blog, I show a how to track changes and get notified when a conditional access policy is changed. If a policy is changed, a message is sent to a MS Teams channel.
+
+{{< toc >}}
 
 ## Overview
 The main idea is to get triggered by the Azure Monitor if a conditional access policy is changed. In the Azure Monitor an Alert Rule is configured that looks every n period into the Azure AD audit logs. If an alert occurred, the message is sent to an Azure Function. 
