@@ -417,7 +417,7 @@ In the end, the code is synchronised to Azure Functions. There after it is not p
 ## Azure monitor
 The last step glueing the diagnostics to Azure Functions by creating an alert group and monitor alert rule. The rule checks for conditional access changes in audit logs using Kusto Query Language (KQL). If there is a hit, the monitor rule sends the alert to an alert group.
 
-#### Alert group
+### Alert group
 The first step is creating an alert group that sends alerts to an Azure Function. Before an alert can be sent to a function, we need function information. The name and the HTTP trigger URL. The URL is the 'outside' of the function that accepts a JSON body to work with. 
 
 In the code below, I first request the function information that is needed and then create the Alert Group. I got the most function information already during the proces above. The only thing I need is the security key that completes the whole HTTP trigger URL. 
@@ -451,7 +451,7 @@ $actionGroup = Invoke-RestMethod -Uri $actionGroupUri -Method PUT -Headers $auth
 
 ![actiongroup](actiongroup.png)
 
-#### Azure monitor rule
+### Azure monitor rule
 The final step is creating an alert rule in an automated way. The rule checks every n period for audit logs in the conditional access category.
 
 This Kusto query is used to retrieve information from the "AuditLogs" table related to the "Update conditional access policy" operation. Let's break down the query step by step:
