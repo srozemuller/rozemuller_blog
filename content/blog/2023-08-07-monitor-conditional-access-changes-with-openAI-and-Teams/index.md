@@ -20,6 +20,8 @@ Implementing conditional access policies have a huge impact on your identities a
 Because changing policies also can have a huge impact, it is good to know if a policy is changed. 
 In this blog, I show a how to track changes and get notified when a conditional access policy is changed. If a policy is changed, a message is sent to a MS Teams channel.
 
+{{< zero-to-zerotrust >}}
+
 {{< toc >}}
 
 ## Overview
