@@ -35,10 +35,8 @@ Further in this blog multi-factor authentication (MFA) is configured. Imagine wh
 
 I've created a separate blog post about [creating break glass accounts in an automated way](https://rozemuller.com/configure-break-glass-accounts-infrastructure-automated/), this is the first step.
 
-## Introcuction
+## Introduction
 This blog post focuses on the red boxes. The first step is to create a break-glass account. This account is used to fix issues when MFA is not working. The second step is to configure conditional access policies to protect privileged accounts.
-
-![zero-trust-overview](zero-trust-overview.png)
 
 All blogs related to the Zero to Zero Trust journey are listed in the [Zero to Zero Trust](https://www.rozemuller.com//tags/zero-to-zero-trust/) overview.  
 All blogs related to level 1 Zero Trust are listed in the [Zero Trust Level 1](https://www.rozemuller.com//tags/zero-trust-level-1/) overview.  
