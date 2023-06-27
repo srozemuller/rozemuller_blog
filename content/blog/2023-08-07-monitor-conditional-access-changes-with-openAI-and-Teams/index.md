@@ -60,7 +60,7 @@ if ($diagSettings.value.properties.logs | Select-Object -Property * | Where-Obje
 
 This PowerShell code is requesting the URL representing the Azure Active Directory (AAD) diagnostic settings. Let's break it down step by step:
 
-1. The variable `$diagUrl` is assigned the value "[https://management.azure.com/providers/microsoft.aadiam/diagnosticSettings?api-version=2017-04-01-preview](https://management.azure.com/providers/microsoft.aadiam/diagnosticSettings?api-version=2017-04-01-preview)". This URL represents the endpoint for retrieving diagnostic settings for Azure Active Directory.
+1. The variable `$diagUrl` is assigned the value diagnostics API url. This URL represents the endpoint for retrieving diagnostic settings for Azure Active Directory.
 2. The `Invoke-RestMethod` cmdlet is used to send an HTTP GET request to the specified URL (`$diagUrl`). It retrieves the diagnostic settings for Azure Active Directory using the Azure Management API. The retrieved settings are stored in the variable `$diagSettings`.
 3. The code then checks the retrieved diagnostic settings using an `if` statement. It examines the value of the `properties.logs` property within `$diagSettings`.
 4. The `Select-Object -Property *` command is used to select all properties of the `properties.logs` object.
@@ -530,7 +530,7 @@ Invoke-RestMethod -Uri $alertRuleUri -Method PUT -Headers $authHeader -Body $ale
 ## Summary
 In this blog post, I showed how to monitor conditional access policy changes using Azure AD audit logs. If a policy change, a Alert Rule triggers an Azure Function to ask OpenAI what is changed. The explanation is sent to a MS Teams channel. 
 
-The deployment script is stored at: https://github.com/srozemuller/Monitoring/blob/main/ConditionalAccessChanges/deployment.ps1  
-The Azure Function script is stored at: https://github.com/srozemuller/Monitoring/tree/main/Security-ConditionalAccessChanges  
+The deployment script is stored [here](https://github.com/srozemuller/Monitoring/blob/main/ConditionalAccessChanges/deployment.ps1)  
+The Azure Function script is stored [here](https://github.com/srozemuller/Monitoring/tree/main/Security-ConditionalAccessChanges)  
 
 {{< bye >}}  
