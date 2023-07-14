@@ -120,6 +120,7 @@ The following table shows the client IDs that are used in this series.
 |Microsoft Graph PowerShell|14d82eec-204b-4c2f-b7e8-296a70dab67e|
 |Microsoft Intune PowerShell|d1ddf0e4-d672-4dae-b554-9d5bdfd93547|
 |Azure API Management|8602e328-9b72-4f2d-a4ae-1387d013a2b3|
+|Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
 
 ### Licensing
 During the series, I use some premium features that require licenses. The licenses are listed below.
