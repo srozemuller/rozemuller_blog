@@ -9,6 +9,7 @@ categories:
 - Open AI
 - Monitoring
 tags:
+- Privileged Identity Management
 - Automation
 - Conditional Access
 - Graph API
@@ -20,6 +21,7 @@ After implementing PIM you have left-overs of admins assign roles to identities 
 
 In this blog I show how to get PIM alerts using the PIM API backend and sent the information to MS Teams. To create a nice MS Teams card, I ask Azure Open AI.
 
+The code is stored at my [GitHub](https://github.com/srozemuller/Monitoring/tree/main/PIMAlerts)
 {{< toc >}}
 
 ## PIM Alerts
@@ -70,7 +72,7 @@ From there, we continue our journey.
 ### Generate adaptive card automated
 Getting an Open AI response that is also usable took some time. It is all in asking a question as complete as possible. To ask a strict question you narrow the outcome that helps to get the response better. 
 
-The question I asked is `"Generate a well formatted Microsoft Teams adaptive card. The body in de card must contain a list from the additionalData array. Items in the array must be formatted as a list in the card body. The list must contain, per item, the following objects: AssigneeDisplayName, AssigneeUserPrincipalName, RoleDisplayName and AssignmentActivatedDate. Every object name must start in bold text, the value is a normal font. Surround every object with **. The value must contain the value from the JSON content below. Please use the alert name as the card title. \" $($($result).Replace('"',"'")) \" At last, please show me how to correct the issue."`
+The question I asked is `"Generate a well formatted Microsoft Teams adaptive card. The body in de card must contain a list from the additionalData array. Items in the array must be formatted as a list in the card body. The list must contain, per item, the following objects: AssigneeDisplayName, AssigneeUserPrincipalName, RoleDisplayName and AssignmentActivatedDate. Every object name must start in bold text, the value is a normal font. Surround every object with **. The value must contain the value from the JSON content below. Please use the alert name as the card title. \" $($($result).Replace('"',"'")) \""`
 
 In the question I refer to the JSON content (`\" $($($result).Replace('"',"'")) \"`) that I provide at the end of the question. The JSON content that came from the PIM alert part. 
 
@@ -143,5 +145,7 @@ In the end, the card is sent to MS Teams
 
 ## Summary
 In the post I showed how to get alert out of the Privileged Identity Management system. Instead of receiving an e-mail, we use the content to create an adaptive card dynamically based on the content. The card is created by using OpenAI.
+
+The code is stored at my [GitHub](https://github.com/srozemuller/Monitoring/tree/main/PIMAlerts)
 
 {{ < bye > }}
