@@ -71,7 +71,7 @@ In the following table, the blogs are listed and the corresponding area is shown
 |Identity|[Common Identity and Device Access Protection](../zero-trust-common-identity-and-device-access-protection/)|
 |Identity|[Check Condtitional Access policy effects automated](../check-conditional-access-policy-effect-automated)|
 |Identity|[Monitor conditional access changes with OpenAI and Teams](../monitor-conditional-access-changes-using-openai-and-teams)|
-|Identity|<i>Configure Privileged Identity Management automated</i>|
+|Identity|[Monitor assigned roles outside PIM and sent to MS Teams using OpenAI](../monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai/)|
 |Application & Data|[Zero Trust Data Protection Using App Protection Policies Automated](../zero-trust-data-protection-using-app-protection-policies-automated/)|
 |Endpoints|<i>Monitor device risk and compliance to security baselines</i>|
 |Endpoints|<i>Configure Windows Hello for Business automated</i>|

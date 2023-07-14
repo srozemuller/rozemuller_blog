@@ -22,6 +22,9 @@ After implementing PIM you have left-overs of admins assign roles to identities 
 In this blog I show how to get PIM alerts using the PIM API backend and sent the information to MS Teams. To create a nice MS Teams card, I ask Azure Open AI.
 
 The code is stored at my [GitHub](https://github.com/srozemuller/Monitoring/tree/main/PIMAlerts)
+
+{{< zero-to-zerotrust >}}
+
 {{< toc >}}
 
 ## PIM Alerts
@@ -148,4 +151,4 @@ In the post I showed how to get alert out of the Privileged Identity Management 
 
 The code is stored at my [GitHub](https://github.com/srozemuller/Monitoring/tree/main/PIMAlerts)
 
-{{ < bye > }}
+{{< bye >}}
