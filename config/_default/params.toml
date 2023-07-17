@@ -34,7 +34,7 @@ featured_post_title = ""
 recent_post_title = ""
 # mainSections = ["blog"]
 # about widget content
-about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT (Enschede) as a Cloud Architect. I love to share my knowledge about automation in Azure and M365. </br>You can find me on the links below."
+about_widget_content = "Hi, I'm Sander Rozemuller. I work at Exite ICT as a Cloud Architect. I love to share my knowledge about automation in Identity, Azure and M365. </br>You can find me on the links below."
 # footer content
 footer_content = "Copyright © 2022 by Sander Rozemuller. All rights reserved. No part of the information on this web site may be reproduced or posted in any form or by any means without the prior written permission of the publisher. All post are written based on my own experience with no warranties, confers no rights and is not supported by the authors. "
 # copyright
@@ -85,7 +85,7 @@ button = "I Accept"
 
 ######################## sidebar widgets #########################
 [widgets]
-sidebar = ["az-avd","about","mvp","wpninjanl","adsense-square","adsense-square","categories","adsense-square"]
+sidebar = ["az-avd","about","mvp","avd-automation-cocktail","wpninjanl","adsense-square","adsense-square","categories","adsense-square"]
 # available widget : about,categories,newsletter,recent-post
 
 
