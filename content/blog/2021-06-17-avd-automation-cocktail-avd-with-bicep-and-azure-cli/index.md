@@ -419,9 +419,18 @@ $adminpassword = az KeyVault secret show --vault-name MintyBreezeKeyVault
 
 The value above are dynamic and/or secure values which are not recommended to save in a parameter files. I store these dynamic values into a variable which are added in the deployment command together with the Bicep template and parameter file.
 
+Default the executing below is creating a session host that is Hybrid Azure AD joined only.
 ```powershell
 az deployment group create --resource-group RG-ROZ-MINTYBREEZE-COCKTAIL --template-file .\Templates\AVD\deploy-avd-sessionhosts.bicep --parameters .\Parameters\avd-sessionhost.parameters.json administratorAccountPassword=$adminpassword hostpoolToken=$hostpoolToken
 ```
+
+If you want to deploy session hosts in a Azure AD joined environment, then use the command below.
+
+```powershell
+az deployment group create --resource-group RG-ROZ-MINTYBREEZE-COCKTAIL --template-file .\Templates\AVD\deploy-avd-sessionhosts.bicep --parameters .\Parameters\avd-sessionhost.parameters.json administratorAccountPassword=$adminpassword hostpoolToken=$hostpoolToken aadJoin=$true
+```
+
+If you also want to add the session hosts into Microsoft Intune, then use then also add `intune=$true` to the command.
 
 After the deployment the session hosts are created in the correct OU.
 
