@@ -44,4 +44,13 @@ Please make choice between really nice and fresh cocktails with different recipe
 - [Santa’s Tree Ride](https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/) (A festive cocktail with Azure DevOps, YAML and Az.Avd PowerShell module.)
 
 Enjoy your vacation 🌴 and this cocktail 🧉.
+
+
+## Extra flavours
+
+After you deployed Azure Virtual Desktop in basics with the blog post above can you add more flavours if you like. By adding the ingredients below your AVD environment will taste even beter.
+
+- [Screen Protection](https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/) (Secure your AVD environment by adding screen protection that avoids making screenshots or sharing your AVD session with others)
+- [AVD ShortPath](https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/) (By enabling AVD ShortPath the network performance highly increases)
+- [AVD fixed outbound IP](https://www.rozemuller.com/route-avd-traffic-static-wan-ip-with-azure-firewall-automated/) (By adding this configuration, your AVD environment always has the same outbound IP-address)
 {{< bye >}}
