@@ -1,8 +1,8 @@
 ---
-title: 'Enable RDP ShortPath for WVD on an image version automated'
+title: 'Enable RDP ShortPath for AVD on an image version automated'
 date: '2020-11-22T12:15:01+01:00'
 author: 'Sander Rozemuller'
-url: enable-rdp-shortpath-for-windows-virtual-desktop-on-an-image-version-automated
+url: enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated
 image: rdp-shortpath-connections.png
 categories:
     - Azure
@@ -13,18 +13,18 @@ tags:
     - 'RDP Shortpath'
 ---
 
-Since Windows Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the WVD client and latency improvements at the most of the regions.   
-Since 16 November 2020 a nice improvement has been added to the list, Windows Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in WVD with some automation tasks.
+Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.   
+Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.
 
 {{< toc >}}
 
 ### Introduction
 
-First some basic background information about Windows Virtual Desktop and default network connectivity. A Windows Virtual Desktop environment consists of host pools, session hosts, workspaces and application groups. If everything has been configured correctly you will be able to connect with a domain account to <https://rdweb.wvd.microsoft.com/arm/webclient/index.html>. After connecting you will able to connect workspaces and/or applications.   
+First some basic background information about Azure Virtual Desktop and default network connectivity. A Azure Virtual Desktop environment consists of host pools, session hosts, workspaces and application groups. If everything has been configured correctly you will be able to connect with a domain account to <https://rdweb.wvd.microsoft.com/arm/webclient/index.html>. After connecting you will able to connect workspaces and/or applications.   
   
-The user validation, securing and other connection needs will be handled by the Windows Virtual Desktop gateway and broker. Because I am an automation guy and not a networking guy I will stop talking about networking now :). For a complete networking overview please check the [Windows Virtual Desktop network connectivity page](https://docs.microsoft.com/en-us/azure/virtual-desktop/network-connectivity).
+The user validation, securing and other connection needs will be handled by the Azure Virtual Desktop gateway and broker. Because I am an automation guy and not a networking guy I will stop talking about networking now :). For a complete networking overview please check the [Azure Virtual Desktop network connectivity page](https://docs.microsoft.com/en-us/azure/virtual-desktop/network-connectivity).
 
-RDP Shortpath is a feature of Windows Virtual Desktop that establishes a direct UDP-based transport between Remote Desktop Client and Session host. RDP uses this transport to deliver Remote Desktop and RemoteApp while offering better reliability and consistent latency. For a complete overview please check the [Shortpath overview](https://docs.microsoft.com/en-us/azure/virtual-desktop/shortpath).
+RDP Shortpath is a feature of Azure Virtual Desktop that establishes a direct UDP-based transport between Remote Desktop Client and Session host. RDP uses this transport to deliver Remote Desktop and RemoteApp while offering better reliability and consistent latency. For a complete overview please check the [Shortpath overview](https://docs.microsoft.com/en-us/azure/virtual-desktop/shortpath).
 
 ### Prerequisites
 
@@ -38,15 +38,15 @@ Before continuing you will need:
 
 For enabling RDP ShortPath in a new image version you do the following steps:
 
-- [Create a new virtual machine based on the latest image version](#new-vm)
-- [Local tasks on the virtual machine](#local)
-- [Configure Network Security Group](#nsg)
-- [Finalizing the virtual machine](#finalize)
-- [Verify connection](#verify)
+- [Create new virtual machine](#create-new-virtual-machine)
+- [Local tasks on the virtual machine](#local-tasks-on-the-virtual-machine)
+  - [Configure Network Security Group](#configure-network-security-group)
+- [Finalizing the virtual machine](#finalizing-the-virtual-machine)
+- [Verify connection](#verify-connection)
 
 ## Create new virtual machine
 
-For creating a new virtual I worte a blogpost earlier. Please check my blogpost [Windows Virtual Desktop Image Management Automated – Part 1 – Create WVD image version based on existing config with PowerShell](https://www.rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/). In that post I will explain how to create a new virtual machine based on a existing sessionhost. The only thing you need know is the Windows Virtual Desktop hostpool.   
+For creating a new virtual I worte a blogpost earlier. Please check my blogpost [Azure Virtual Desktop Image Management Automated – Part 1 – Create AVD image version based on existing config with PowerShell](https://www.rozemuller.com/create-wvd-image-version-based-on-existing-config-with-powershell/). In that post I will explain how to create a new virtual machine based on a existing sessionhost. The only thing you need know is the Azure Virtual Desktop hostpool.   
 After following that post at the end you will have an output somthing like this:
 
 <figure class="wp-block-image size-large is-resized">![image-version-output](https://www.rozemuller.com/wp-content/uploads/2020/10/Image-1159.png)</figure>Use the information for the rest of this article.
@@ -188,9 +188,9 @@ add-firewallRule -NSG $NSG -port 3390 -Protocol "UDP" -Name "Allow-3390"
 
 ## Finalizing the virtual machine
 
-The second last step is Sysprep the virtual machine and create a new version into the Shared Image Gallery. I talked about how to Sysprep and create a new version automatically in [part 2 of Windows Virtual Desktop Image Management Automated](https://www.rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/).
+The second last step is Sysprep the virtual machine and create a new version into the Shared Image Gallery. I talked about how to Sysprep and create a new version automatically in [part 2 of Azure Virtual Desktop Image Management Automated](https://www.rozemuller.com/save-wvd-image-with-sysprep-as-image-gallery-version/).
 
-The very last step is adding the new virtual machines to the Windows Virtual Desktop hostpool. How to achieve that goal fully automatically please check [part 3 Create WVD sessionhosts on image version](https://www.rozemuller.com/windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
+The very last step is adding the new virtual machines to the Azure Virtual Desktop hostpool. How to achieve that goal fully automatically please check [part 3 Create AVD sessionhosts on image version](https://www.rozemuller.com/windows-virtual-desktop-image-management-automated-part-3-create-wvd-sessionhosts-based-on-shared-image-gallery-version-with-arm/)
 
 ## Verify connection
 
