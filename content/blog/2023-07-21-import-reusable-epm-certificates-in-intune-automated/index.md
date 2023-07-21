@@ -1,5 +1,5 @@
 ---
-title: "Import Reuseable EMP Certificates in Intune automated "
+title: "Import Reuseable EPM Certificates in Intune automated "
 author: Sander Rozemuller
 date: 2023-07-14T16:39:01+02:00
 image: image.jpg
