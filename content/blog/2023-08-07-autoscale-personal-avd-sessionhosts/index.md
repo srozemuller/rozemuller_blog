@@ -239,7 +239,7 @@ New-AvdScalingPlanSchedule -ScalingPlanName "test" -ResourceGroupName 'rg-avd-01
 
 
 In the demo below, I show how to create a schedule.
-{{< video src="create-schedule.mp4" autoplay="false" controls="true" loop="true" width="800" >}}
+{{< video src="create-schedule.mp4" autoplay="false" controls="true" >}}
 
 #### Assign and unassign AVD host pools to an AVD personal scaling plan
 There are 4 commands that help you assigning and unassigning host pools on a personal scaling plan. Two official commands and two aliasses.
@@ -254,12 +254,12 @@ Unpublish-AvdScalingPlan -Name 'ScalingPlan' -ResourceGroupName 'rg-avd-01' -Ass
 
 Also two aliasses are available, `Assign-AvdScalingPlan` and `Unassign-AvdScalingPlan`
 
-{{< video src="hostpoolassign.mp4" autoplay="false" controls="true" loop="true" width="800" >}}
+{{< video src="hostpoolassign.mp4" autoplay="false" controls="true" >}}
 #### Enable/disable host pool scaling plans
 
 The short demo below shows how to enable/disable the host pool assignments.
 
-{{< video src="disable-hostpool.mp4" autoplay="false" controls="true" loop="true" width="800" >}}
+{{< video src="disable-hostpool.mp4" autoplay="false" controls="true" >}}
 
 
 The commands used are:
