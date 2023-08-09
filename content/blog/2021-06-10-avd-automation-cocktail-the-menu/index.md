@@ -3,7 +3,7 @@ title: 'AVD Automation Cocktail - The Menu'
 date: '2021-06-10T20:21:49+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-the-menu
-image: avd-cocktail-menu.png
+image: automationcocktail.png
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'
@@ -42,7 +42,8 @@ Please make choice between really nice and fresh cocktails with different recipe
 - [Sweet Orange Sunset](https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-azure-cli/) (If you like orange and orange only with no other sidesteps like modules etc, then take this Azure CLI only cocktail)
 - [Dutch Bloody Harry](https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/) (An orange coloured cocktail with Terraform Cloud, GitHub and PowerShell. Also with automated assignements and custom role creation)
 - [Santa’s Tree Ride](https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/) (A festive cocktail with Azure DevOps, YAML and Az.Avd PowerShell module.)
-
+- Juicy Jungle Beats (A full automated deployment with Rest API, PowerShell with a Zero Trust configuration)
+  
 Enjoy your vacation 🌴 and this cocktail 🧉.
 
 
