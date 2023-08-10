@@ -32,7 +32,7 @@ img {
   border: 0;
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 video {
@@ -40,7 +40,7 @@ video {
   border: 0;
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .navbar-brand .img-fluid {
@@ -48,7 +48,7 @@ video {
 }
 
 .img-fluid {
-  border-radius:  5px;
+  border-radius:  0px;
 }
 
 a,
@@ -73,7 +73,7 @@ select {
 }
 
 .highlight {
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .section {
@@ -184,7 +184,7 @@ select {
 
     &:first-child .page-link,
     &:last-child .page-link {
-      border-radius: 5px;
+      border-radius: 0px;
       box-shadow: none;
     }
   }
@@ -196,7 +196,7 @@ select {
     line-height: 18px;
     color: $text-dark;
     border: 0;
-    border-radius: 50%;
+    border-radius: 0px;
     background: transparent;
     padding: 10px 15px;
 
@@ -212,7 +212,7 @@ select {
 .widget {
   text-align: center;
   border: 1px solid $border-color;
-  border-radius: 6px;
+  border-radius: 0px;
   padding: 30px 15px;
 
   @media (min-width: 1400px) {
@@ -336,7 +336,7 @@ select {
 
 .badge {
   padding: .1em .9em;
-  border-radius: 35px;
+  border-radius: 0px;
 }
 
 .badge-primary {
@@ -353,11 +353,11 @@ select {
 }
 
 .rounded {
-  border-radius: 6px !important;
+  border-radius: 0px !important;
 }
 
 .rounded-4 {
-  border-radius: 10px !important;
+  border-radius: 0px !important;
 }
 
 .left-xxl-80 {
@@ -424,7 +424,7 @@ select {
 
   blockquote {
     background-color: $light;
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 30px 105px;
     margin: 3em 0;
 
