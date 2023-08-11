@@ -43,11 +43,12 @@ Please make choice between really nice and fresh cocktails with different recipe
 - [Dutch Bloody Harry](https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/) (An orange coloured cocktail with Terraform Cloud, GitHub and PowerShell. Also with automated assignements and custom role creation)
 - [Santa’s Tree Ride](https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/) (A festive cocktail with Azure DevOps, YAML and Az.Avd PowerShell module.)
 - Juicy Jungle Beast (A full automated deployment with Rest API, PowerShell with a Zero Trust configuration)
-  
+
+
 Enjoy your vacation 🌴 and this cocktail 🧉.
 
 
-## Extra flavours
+## Cocktail ++, The AVD Enhancement Series
 
 After you deployed Azure Virtual Desktop in basics with the blog post above can you add more flavours if you like. By adding the ingredients below your AVD environment will taste even beter.
 
