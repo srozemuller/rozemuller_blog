@@ -23,9 +23,9 @@
           <!-- /image cdn -->
 
           <!-- image processing for multiple device -->
-
+         
           {{ with $image }}
-
+          
           {{ $imageFallback:= $image.Resize "1400x" }}
           {{ $imageXL:= $image.Resize "1400x webp" }}
           {{ $imageLG:= $image.Resize "1000x webp" }}
