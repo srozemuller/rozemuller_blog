@@ -1,543 +1,609 @@
 ---
-title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with PowerShell'
-date: '2021-06-28T11:28:00+02:00'
+title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with Bicep and Azure CLI'
+date: '2021-06-17T13:00:00+02:00'
 author: 'Sander Rozemuller'
-url: avd-automation-cocktail-avd-automated-with-powershell
-image: cocktail-coconut-party.png
+url: avd-automation-cocktail-avd-with-bicep-and-azure-cli
+image: minty.png
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'
 tags:
     - Automation
     - Azure Virtual Desktop
+    - 'Azure CLI'
+    - Bicep
     - Cocktail
-    - Powershell
+    - KeyVault
 ---
 
-Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Coconut Beach Party, I will show you how to deploy an AVD environment automated with PowerShell only.
+Welcome to the updated AVD Automation Cocktail. This cocktail is updated with all new Bicep and AVD features since september 2023.
+In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Fresh Minty Breeze, I will show you how to deploy an AVD environment automated with Bicep and Azure CLI.
 
 {{< toc >}}
 
-## Recipe
+### What is changed
+In this updated version, I optimized the automation and templates. I consolidated the Azure resource deployment templates, created a main.bicep and modules, and created one big parameter file. One parameter file results in no duplicate parameter settings anymore.
 
-In this “CoconutBeach”-deployment recipe I will deploy an AVD environment automated with PowerShell only. PowerShell is commonly used for automating the management of systems.
+Result of this optimization also is the deployment of the Azure Compute Gallery. In the previous version, the gallery was deployed first, then I created an image. From there I went back to create an image source and deploy an image version in a separate Bicep file.  
+
+In this deployment, I first create a generalized image source. From there, the whole environment is deployed at once. This results in no more back and forth with seperate gallery deployment templates and parameters anymore.
+
+At last it saves lots of extra deployment steps, since we have just one Bicep file and parameter file still.
+
+## Recipe
+In this “MintyBreeze”-deployment recipe I will deploy an AVD environment automated with Bicep and Azure CLI. Bicep is a fresh new coding language for deploying Azure resources. Bicep helps reduce the syntax complexity which ARM templates has. Because it is very new I like to show in this article how to deploy an AVD environment with Bicep. To give Azure CLI also a stage I thought this could be a really nice combination.
 
 ### Before to drink
+To start enrolling AVD automated with Bicep and Azure CLI you will need to install the Bicep CLI and Azure CLI software first. To download the Bicep installer go to the following URL, choose your favorite operating system and follow the instructions. <https://github.com/Azure/bicep/blob/main/docs/installing.md#install-the-bicep-cli-details>
 
-To start enrolling AVD automated with PowerShell you will need to install PowerShell on your system.
+After the installation of Bicep install the Azure CLI software by clicking this URL:[ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-<https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1>
+More information about Bicep or Azure CLI please check the following URLs:
 
-In automation variables are key. In the code snippets below you will notice I use variables in combination with hash tables a lot. After creating a hash table I will use the [splatting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7.1) technique. For me the most important reason of splatting parameters is it will keep my code short and clean.
+- <https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview>
+- <https://docs.microsoft.com/en-us/cli/azure/>
 
-![image-41](image-41.png)
-### List PowerShell of ingredients
+### List CLI of ingredients
+- [https://docs.microsoft.com/en-us/cli/azure/vm/run-command?view=azure-cli-latest#az\_vm\_run\_command\_invoke](https://docs.microsoft.com/en-us/cli/azure/vm/run-command?view=azure-cli-latest#az_vm_run_command_invoke) (VM Run command)
+- [https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az\_vm\_capture](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az_vm_capture) (VM Capture)
+- <https://docs.microsoft.com/en-us/azure/virtual-machines/image-version-vm-cli> (Image Version)
+- [https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az\_vm\_generalize](https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#az_vm_generalize) (VM Generalize)
+- [https://docs.microsoft.com/en-us/cli/azure/desktopvirtualization/hostpool?view=azure-cli-latest#az\_desktopvirtualization\_hostpool\_update](https://docs.microsoft.com/en-us/cli/azure/desktopvirtualization/hostpool?view=azure-cli-latest#az_desktopvirtualization_hostpool_update) (AVD Hostpool token)
+- <https://docs.microsoft.com/en-us/cli/azure/ad/signed-in-user?view=azure-cli-latest> (AD Signed in User)
+- [https://docs.microsoft.com/en-us/cli/azure/deployment/group?view=azure-cli-latest#az\_deployment\_group\_create](https://docs.microsoft.com/en-us/cli/azure/deployment/group?view=azure-cli-latest#az_deployment_group_create) (Deployment)
 
-To make PowerShell working without issues you will need to some PowerShell modules. For installing and importing modules use the code below. Change the module name with the modules in the list. At the start of every chapter I wrote down which module is needed to run the automation.
-
-```powershell
-Install-Module Az.Network
-Import-Module Az.Network
-```
-
-- Az.Network
-- Az.Resources
-- Az.Compute
-- Az.Avd
 
 ### Aftertaste
 
-This cocktail has a strong PowerShell taste with a coconut aftertaste. In the beginning the cocktail the cocktail starts a bit light when the taste gets stronger. At the end you will have an AVD environment in Azure deployed automated with PowerShell with all the needed resources. These are a hostpool, a workspace, an application group. Also there are some session hosts. These hosts have an underlying image from a shared image gallery.
+In the beginning this cocktail has a fresh taste with a lot Bicep and a pinch of Azure CLI. At the end you will have an AVD environment in Azure deployed with all the needed resources. These are a hostpool, a workspace, an application group. Also there are some session hosts. These hosts have an underlying image from a shared image gallery.
 
-## AVD automated with PowerShell only
+## AVD automated with Bicep en Azure CLI
 
-In this chapter I will explain how to deploy an AVD environment automated with PowerShell. If you are not that good in ARM, CLI or Bicep this cocktail can help you automating I will recommend to clone my [AVD GitHub repository ](https://github.com/srozemuller/AVD)to get all the needed files, also for the other cocktails.   
-For every purpose, in this case create an AVD environment with a SIG in basics.
+In this chapter I will explain how to deploy an AVD environment automated with Bicep and Azure CLI. I will recommend to clone my [AVD GitHub repository ](https://github.com/srozemuller/AVD)to get all the needed files, also for the other cocktails. I like to work with Bicep modules as much as I can. This will avoid you are repeating yourself in lines of code and will help you keeping your code nice and clean. You will notice that when looking back in the file structure I’ve setup in the repository.
 
-### Resource group
+For every purpose, in this case create an AVD environment with a default Windows 11 Multisession 22h2 image from the Microsoft Marketplace in basics, I will create a `main.bicep` file and will use modules in it. All the parameters are stored in the `parameters.json` file.
 
-The first step in our deployment is creating a new resource group. In this group I will deploy all the resources in this blog post. Needed module: Az.Resources
+The full deployment is the most basic environment and consists of the following components:
+- Resource Group
+- Virtual Network (VNET)
+- Azure Virtual Desktop Host Pool
+- Azure Virtual Desktop Application Group
+- Azure Virtual Desktop Workspace
+- Log Analytics Workspace
+
+### Bicep scopes
+In Bicep you have four levels to deploy to, also called scopes. The scopes are at `managementgroup`, `subscription`, `resource group` or `tenant` level.
+The deployment in this cocktail uses the subscription and resource group scope.
+
+## Prerequisites
+Using an image from a Compute Gallery is a best practice in AVD. Before deploying AVD and its components, we first need to create an image source first. The source is used later in the deployment.
+
+
+### Initial Image Version
+The next step in this MintyBreeze-deployment is creating an initial image version in the Compute Gallery. In basic, I do the following: I create an Windows 11 VM based on an image from the Microsoft marketplace, then I run a sysprep command. At last, I generalize the vm to make it possible to create a image version from it.
+
+In the first step I create a temporary resource group. There after I create a virtual machine with Bicep.
 
 ```powershell
-$resourceGroupName = "RG-ROZ-COCONUTBEACH-COCKTAIL"
-$location = "WestEurope"
-$parameters = @{
-        ResourceGroup = $resourceGroupName
-        Location = $location
-}
-New-AzResourceGroup @parameters
+az group create --name rg-initialImage --location westeurope
 ```
 
-![image-](image-50-1024x142.png)
+![create-resourcegroup-azcli](create-resourcegroup-azcli.png)
+
+```powershell
+az deployment group create --resource-group rg-initalImage --template-file .\Templates\VM\main.create_image.bicep --parameters .\Parameters\initial_image.parameters.json
+```
+
+![deploy-vm-bicep](deploy-vm-bicep.png)
+
+![vm-deploy-result](vm-deploy-result.png)
+
+![initial-deployment](initial-deployment.png)
+
+#### SysPrep
+
+First the VM must be generalized and Sysprepped. There are several options for running a script on a VM. Think about a Custom Script Extension or an Invoke-AzRunCommand in PowerShell. In this case I’m using the Azure CLI.
+
+```powershell
+az vm run-command invoke  --command-id RunPowerShellScript --name <vmName> -g rg-initalImage --scripts 'param([string]$sysprep,[string]$arg) Start-Process -FilePath $sysprep -ArgumentList $arg' --parameters "sysprep=C:\Windows\System32\Sysprep\Sysprep.exe" "arg=/generalize /oobe /shutdown /quiet /mode:vm"
+```
+
+Using the az vm run-command CLI comand gives me the option to skip creating an separate script first. In the –scripts part of the command is able to create a PowerShell on-the-fly. In the –parameters part I will send these parameters.
+When running the command, the VM will create a PowerShell file on the local machine. The provided –scripts content is stored in that local file.
+
+![runsysprep-azcli](runsysprep-azcli.png)
+
+When the command ran succesfully, the machine is in stopped state.
+
+![vm-stopped](vm-stopped.png)
+#### Generalize VM
+
+Next step beforce creating an image version is generalize and capture the virtual machine. To achieve that goal we are using the CLI again.
+
+```powershell
+az vm generalize -n efrrwpap2lce2-vm -g rg-initalImage
+```
+
+Check my [GitHub repository at this location](https://github.com/srozemuller/AVD/tree/main/Deployment/MintyBreeze/Bicep/Templates/VM) for the VM deployment file.
+
+
+## AVD Components
+As mention I created a `main.bicep` file where all the resources are deployed including the resource group itself.
+
+### Resource Group
+To deploy resources to a subscription, we need a resource group first. Deploying a resource group is at subscription level.
+In the `main.bicep` file I set the default scope at subscription level by adding `targetScope = 'subscription'` at the top of the file.
+
+Thereafter deploy the resource group by providing a name and location.
+
+```bicep
+targetScope = 'subscription'
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+  name: resourceGroupName
+  location: location
+}
+```
+![minty-resourcegroup](minty-resourcegroup.jpeg)
+
 ### Networking
+The base of every environment is networking. In this step the idea is to deploy a new virtual network (VNET) with one subnet. Because my goal is to deploy as much as I can from parameter files I’ve create an array into a parameter file. That array will be transformed to a Bicep array. The array is used to deploy the vnet.
 
-The second step of our “CoconutBeach”-deployment is deploying a VNET with a custom DNS (for our domain join), two subnets and a network security group. A network security group, or NSG, will help us protecting our network for unwanted traffic.
+The parameter snippet looks like the following:
 
-Needed module: Az.Network
+```json
+"vnetSubnets": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "DefaultSubnet",
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                ]
+            }
+        }
+```
+If you want to deploy more subnets just add a subnet object in the subnets array.
+```json
+"vnetSubnets": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "DefaultSubnet",
+                        "addressPrefix": "10.0.0.0/24"
+                    },
+                    {
+                        "name": "AvdSubnet",
+                        "addressPrefix": "10.0.0.1/24"
+                    }
+                ]
+            }
+        }
+```
+A dynamic array is created and inserted into the deployment. A dynamic array has its pros because now you are scale able within your parameter file. It doesn’t matter how many subnets are in the parameter file. If you need one extra just add it to the file.
 
-First I will deploy the NSG with the code below. The deployment will be stored into a variable. If you look into the variable you will get the deployment result output like a resourceId. Storing output in variables is very useful in for deployments further in the script.
+In the Bicep file `main.bicep` and the module file `deploy-vnet-with-subnet.bicep` I create a parameter with type object. Based on the object input, every subnet is formatted to a Bicep value and stored in the `subnets` variable. The variable is provided as input in the subnets object in the resource deployment.
 
 ```powershell
-$nsgParameters = @{
-    ResourceGroupName = $resourceGroupName 
-    Location = $location 
-    Name =  "nsg-coconut"
+param vnetSubnets object
+
+var subnets = [for item in vnetSubnets.subnets: {
+  name: item.name
+  properties: {
+    addressPrefix: item.addressPrefix
+  }
+}]
+
+resource vnet 'Microsoft.Network/virtualNetworks@2020-06-01' = {
+  name: vnetName
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        addressPrefix
+      ]
+    }
+    enableVmProtection: false
+    enableDdosProtection: false
+    subnets: subnets
+  }
 }
-$networkSecurityGroup = New-AzNetworkSecurityGroup @nsgParameters
 ```
 
-![image-26](image-26.png)
-The next step is configuring the subnets and assigning them to the recently created NSG. I created a hashtable with all the needed subnets and the NSG variable. It looks like a bit overkill creating an for each loop for two subnets but it is just a way of working I learned myself. Working with arrays will help you avoiding executing the same commands over and over.
+![subnet-object](subnet-object.png)
 
+Mention the format of the array. It must be the same format as the deployment code.
+At the parameter side (1) there is a vnetSubnets JSON array with a subnets object. In the object the subnets are defined. In the Bicep code (2) there is a loop searching in the vnetSubnets.subnets object for every subnet called `item`. There after the `subnets` variable in Bicep is filled with every subnet. At last, the `subnets` variable is provided in the resource deployment code (3).
+
+### Azure Compute Gallery
+
+In this step, we are going to create an Azure Compute Gallery including an image definition and version based on the generalize VM we created above.
+I created a template bicep file for creating a the Compute Gallery and other components. As you can see in the screenshot it will deploy three resources in sequence.
+
+In step 1 the Compute Gallery is deployed, step 2 deploys the image definition. By providing the parent resource you don't have to provide the gallery name again.
+At last (3), the image version is created and deployed in the image definition. The version name must be in x.x.x format. In the example below, I created a name based on the UTC date. I created the data using the utcNow Bicep function in the `main.bicep`.
 ```powershell
-$subnetParameters = @{
-    defaultSubnet = "10.0.1.0/24"
-    avdSubnet = "10.0.2.0/24"
-    NetworkSecurityGroup = $networkSecurityGroup
-}
-$subnets = $subnetParameters.GetEnumerator().ForEach({
-    New-AzVirtualNetworkSubnetConfig -Name $_.Name -AddressPrefix $_.Value -NetworkSecurityGroup $networkSecurityGroup
-})
+param utc string = utcNow('yyyy.MM.dd')
+var versionName = utc
 ```
 
-![image-29](image-29.png)
-After the NSG and the subnet config deployment we are creating the virtual network. To create a network I stored the subnets variable into the vnet parameters. I also stored a DNS server into the config. The 10.3.1.4 is my domain controller and DNS server.
+![deploy-image](gallery-deployment.png)
 
 ```powershell
-$vnetParameters = @{
-    name = "vnet-coconutbeach"
-    ResourceGroupName = $resourceGroupName
-    Location = $location
-    AddressPrefix = "10.0.0.0/16" 
-    Subnet = $subnets
-    DnsServer = "10.3.1.4"
-}
-$virtualNetwork = New-AzVirtualNetwork @vnetParameters 
-```
 
-![image-31](image-31.png)
-Subnet parameters stored in the vnet configuration</figcaption>
-At the end the virtual network is deployed with the correct settings.
-
-![image-32](image-32.png)
-### Shared Image Gallery
-
-The next part is creating a shared image gallery. In this gallery we are creating image versions. We going to use these versions to start AVD sessions host later in this article.
-
-Needed module: Az.Compute
-
-First, we are creating the gallery itself with the command below.
-
-```powershell
-$galleryParameters = @{
-    GalleryName = "CoconutBeachGallery"
-    ResourceGroupName = $resourceGroupName
-    Location = $location
-    Description = "Shared Image Gallery for my beach party"
-}
-$gallery = New-AzGallery @galleryParameters
-```
-
-The next step is assigning an Azure AD group to the gallery with contributor permissions.  
-Because I stored the gallery deployment into a variable, I’m now able to use that deployment in the next one. First I will create a new Azure AD Group called Gallery Contributor.
-
-```powershell
-$GalleryContributor = New-AzAdGroup -DisplayName "Gallery Contributor" -MailNickname "GalleryContributor" -Description "This group had shared image gallery contributor permissions"
-
-$galleryRoleParameters = @{
-    ObjectId = $GalleryContributor.Id
-    RoleDefinitionName = "contributor"
-    ResourceName = $gallery.Name
-    ResourceType = "Microsoft.Compute/galleries" 
-    ResourceGroupName = $gallery.ResourceGroupName
+//Create Azure Compute Gallery
+resource azg 'Microsoft.Compute/galleries@2022-03-03' = {
+  name: galleryName
+  location: location
 }
 
-New-AzRoleAssignment @galleryRoleParameters
-```
-
-![image-34](image-34.png)
-![image-35](image-35.png)
-A part of a gallery is the image gallery definition. This is a logical group of images with the same properties like os-type, system state (generalized, specialized) and VM generation.
-
-I’m creating a sysprepped Windows installation on a V2 generation. Again I’m able to reuse deployments from an earlier stadium.
-
-```powershell
-$imageDefinitionParameters = @{
-    GalleryName = $gallery.Name
-    ResourceGroupName = $gallery.ResourceGroupName
-    Location = $gallery.Location
-    Name = "CoconutDefinition"
-    OsState = "Generalized"
-    OsType = "Windows"
-    Publisher = "Coconut"
-    Offer = "Beach"
-    Sku = "Party"
-    HyperVGeneration= "V2"
+//Create Image definition
+resource galleryDefinition 'Microsoft.Compute/galleries/images@2022-03-03' = {
+  parent: azg
+  name: imageDefinitionName
+  location: location
+  properties: {
+    osState: osState
+    osType: osType
+    identifier: {
+      publisher: imagePublisher
+      offer: imageOffer
+      sku: imageSKU
+    }
+    hyperVGeneration: hyperVGeneration
+  }
 }
-$imageDefinition = New-AzGalleryImageDefinition @imageDefinitionParameters
-```
 
-![image-36](image-36.png)
-![image-37](image-37.png)
-
-### Initial image version
-
-It is time to create an initial image version. This version is the base of our AVD enviroment. Later on we are able to create new versions based on this one.
-
-Needed module: Az.Compute, Az.Network
-
-### Create a virtual machine
-
-The first step is creating a new Windows 10 Multi Session virtual machine. The VM has a custom OS disk size of 512 GB. Make a notice of the G2 image SKU. The G2 is the HyperV generation. This must be the same generation as the image definition HyperV generation.
-
-```powershell
-$VMLocalAdminUser = "LocalAdminUser"
-$VMLocalPassword = "V3rySecretP@ssw0rd"
-$VMLocalAdminSecurePassword = ConvertTo-SecureString $VMLocalPassword -AsPlainText -Force
-
-$VMName = "vm-coconut"
-$VMSize = "Standard_D2s_v3"
-$ImageSku = "21h1-evd-g2"
-$ImageOffer = "Windows-10"
-$ImagePublisher = "MicrosoftWindowsDesktop"
-$ComputerName = $VMName
-$DiskSizeGB = 512
-$nicName = "nic-$vmName"
-
-$NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $location -SubnetId ($virtualNetwork.Subnets | Where {$_.Name -eq "avdSubnet"}).Id
-$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
-
-$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
-$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
-$VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
-$VirtualMachine = Set-AzVMOSDisk -Windows -VM $VirtualMachine -CreateOption FromImage -DiskSizeInGB $DiskSizeGB
-$VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName $ImagePublisher -Offer $ImageOffer -Skus $ImageSku -Version latest
-
-$initialVM = New-AzVM -ResourceGroupName $ResourceGroupName -Location $Location -VM $VirtualMachine
-```
-
-![image-38](image-38.png)
-### Sysprep
-
-First, the VM must be generalized and Sysprepped. We are executing the sysprep command with the Invoke-AzRunCommand PowerShell command. This command allows you to run commands on Azure VMs remotely.
-
-Needed module: Az.Compute
-
-In comparison with Azure CLI PowerShell needs a script input where Azure CLI can handle commands as well. Because of that point I will create a script within my automation sequence. The script is stored at the current working directory.   
-Of course you are able to store it where you like. Make a notice about the “`” before the variables. Because $ is a special character we need to use escape characters. Otherwise PowerShell will acts the value as a variable.
-
-Another ‘trick’ is the -Wait parameter in this case. Using the -Wait switch parameter takes care that the PowerShell script will be opened till the Sysprep process is stopped.   
-If you skip the -Wait parameter the Invoke-AzVMRunCommand command will only execute the PowerShell and waits till the PowerShell script is stopped. If the script is stopped the VM will return a success before the actual process, sysprep.exe, is finished.
-
-```powershell
-$content = 
-@"
-    param (
-        `$sysprep,
-        `$arg
-    )
-    Start-Process -FilePath `$sysprep -ArgumentList `$arg -Wait
-"@
-
-Set-Content -Path .\sysprep.ps1 -Value $content
-```
-
-After the file has been created the we are able to execute the file on the virtual machine. Because the file accepts parameters I’m passing the variables in the -parameter command. Make a notice about storing the virtual machine object into a variable. This variable will be used in the next two commands.
-
-```powershell
-$vm = Get-AzVM -Name $VMName
-$vm | Invoke-AzVMRunCommand -CommandId "RunPowerShellScript" -ScriptPath .\sysprep.ps1 -Parameter @{sysprep = "C:\Windows\System32\Sysprep\Sysprep.exe";arg = "/generalize /oobe /shutdown /quiet /mode:vm"}
-```
-
-By using the /shutdown switch the will shutdown after the process is finished. The VM must have a stopped status before we are able to generalize the VM.
-
-![image-39](image-39.png)
-### Generalize
-
-Generalizing a virtual machine is the last step before we are able to create an image version. Generalizing a machine is done by one simple command.
-
-Needed module: Az.Compute
-
-```powershell
-$vm | Set-AzVm -Generalized
-```
-
-### Create image version
-
-The last step is creating a new image version into the gallery. As you can see I’m using information which I already know and has been stored into variables in the earlier steps. After the image has been deployed the next step is create AVD session hosts from this image.
-
-```powershell
-$imageVersionParameters = @{
-    GalleryImageDefinitionName = $imageDefinition.Name
-    GalleryImageVersionName    = (Get-Date -f "yyyy.MM.dd")
-    GalleryName                = $gallery.Name
-    ResourceGroupName          = $gallery.ResourceGroupName
-    Location                   = $gallery.Location
-    SourceImageId              = $vm.id.ToString()
+resource imageVersion 'Microsoft.Compute/galleries/images/versions@2022-03-03' = {
+  name: '${galleryName}/${imageDefinitionName}/${versionName}'
+  dependsOn: [
+    azg
+    galleryDefinition
+  ]
+  location: location
+  tags: {}
+  properties: {
+    publishingProfile: {
+      replicaCount: 1
+    }
+    storageProfile: {
+      source: {
+        id: imageSource
+      }
+      osDiskImage: {
+        hostCaching: 'ReadWrite'
+      }
+    }
+  }
 }
-$imageVersion = New-AzGalleryImageVersion @imageVersionParameters
 ```
 
-![image-](image-40.png)
-## Azure Virtual Desktop
 
-After the backend is prepared, it is time to deploy the AVD environment. This deployment differs a little in relation to other cocktails like [The Fresh Minty Breeze](https://www.rozemuller.com/avd-automation-cocktail-avd-with-bicep-and-azure-cli/#avd). In the cocktails where templates and parameter files are used I recommend creating single template files. These files are used for repeatable actions like deploying session host. This will make life easier and you code a lot more cleaner.
 
-In this case we only use code and we are in full control which commands we are using and when.
+### Monitoring
+As in every environment, we also like to monitor this environment. To monitor this environment we are going to use Log Analytics.
 
-### AVD Hostpool
+I used a template that deploys a LogAnalytics workspace. This will enable the provided logs for the AVD environment. In the Log Analytics Bicep deployment I write the workspace ID to the output to use later in the AVD Bicep deployment. After creating the workspace the diagnostic settings will be deployed in later steps.
 
-The first step in deploying an AVD enviroment automated with PowerShell is creating a hostpool. In this hostpool I also configuring the new StartVMOnConnect option. This option allows you to shutdown sessionhosts at the end of the day. When the first account is connecting the host will start automatically.
+![bicep-loganalytics-output](bicep-loganalytics-output.png)
 
-Needed module: Az.DesktopVirtualization
 
 ```powershell
-$hostpoolParameters = @{
-    Name = "CoconutBeach-Hostpool"
-    Description = "A nice coconut on a sunny beach"
-    ResourceGroupName = $resourceGroupName
-    Location = $location
-    HostpoolType = "Pooled"
-    LoadBalancerType = "BreadthFirst"
-    preferredAppGroupType = "Desktop"
-    ValidationEnvironment = $true
-    StartVMOnConnect = $true
+// Define Log Analytics parameters
+param workspaceName string
+param workspaceSku string
+param location string
+
+// Create Log Analytics Workspace
+resource avdla 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
+  name: workspaceName
+  location: location
+  properties: {
+    sku: {
+      name: workspaceSku
+    }
+  }
 }
-$avdHostpool = New-AzWvdHostPool @hostpoolParameters
+
+
+output workspaceId string = avdla.id
 ```
 
-### Start VM on Connect
+![bicep-avd-diagnostics](bicep-avd-diagnostics.jpeg)
 
-To save costs it is recommended to enable the Start VM on Connection feature. Enabling this feature allows you to shutdown all the hosts at the end of the day. If all hosts are down and a person is logging in a session host will start automatically.   
-To enable this feature you will need to create a custom role in the Azure AD and assign this role to the session host resourcegroup.
+### Azure Virtual Desktop
 
-To make this process easier [I wrote the PowerShell module Az.Avd](https://www.rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this module there is a command which allows you enabling the Start VM on Connect feature in one simple command. Because this is an initial deployment I need to provide a HostResourceGroup as well. This is the resource group where the session hosts are. In an existing environment you can skip the parameter. The module will find out itself.
+Now every needed component is in place it is time to deploy the the Azure Virtual Desktop environment with Bicep. In this deployment we are going to deploy a host pool. The next step is the application group. The last step is a workspace. I have chosen to create a separate Bicep file for the session host.I created two Bicep templates. The AVD backend part with the host pool, application group and workspace. The second template for the AVD session hosts.
 
-Needed module: Az.Avd
+![bicep-avd-template-deployment](bicep-avd-template-deployment.png)
+
+The template part below deploys the AVD backend. As you can see in the screenshot above, I reuse the resource deployment outputs into the next deploymenet. 
+At last I output the host pool token to create session hosts in the last step.
+
+The output is a bit changed because of a bug in the API and Bicep. See [this GitHub issue](https://github.com/Azure/bicep/issues/6105#issuecomment-1383119081).
 
 ```powershell
-$startVmParameters = @{
-    HostpoolName = $avdHostpool.Name
-    ResourceGroupName = $hostpoolParameters.resourceGroupName
-    HostResourceGroup = $hostpoolParameters.resourceGroupName
+//Create AVD Hostpool
+resource hp 'Microsoft.DesktopVirtualization/hostpools@2019-12-10-preview' = {
+  name: hostpoolName
+  location: avdlocation
+  properties: {
+    friendlyName: hostpoolFriendlyName
+    hostPoolType: hostPoolType
+    loadBalancerType: loadBalancerType
+    preferredAppGroupType: preferredAppGroupType
+  }
 }
-$startVmOnConnect = Enable-AvdStartVmOnConnect @startVmParameters
+
+//Create AVD AppGroup
+resource ag 'Microsoft.DesktopVirtualization/applicationgroups@2019-12-10-preview' = {
+  name: appgroupName
+  location: avdlocation
+  properties: {
+    friendlyName: appgroupNameFriendlyName
+    applicationGroupType: applicationgrouptype
+    hostPoolArmPath: hp.id
+  }
+}
+
+//Create AVD Workspace
+resource ws 'Microsoft.DesktopVirtualization/workspaces@2019-12-10-preview' = {
+  name: workspaceName
+  location: avdlocation
+  properties: {
+    friendlyName: workspaceNameFriendlyName
+    applicationGroupReferences: [
+      ag.id
+    ]
+  }
+}
+
+output hostpoolToken string = reference(hp.id, '2021-01-14-preview').registrationInfo.token
+
 ```
 
-![image-42](image-42.png)
-![image-43](image-43.png)
-### Application group
+![bicep-avd-deployment](bicep-avd-deployment.png)
 
-The application group is the place where to assign users/groups to the AVD environment. Also in this part I’m using variables from the previous deployment.
 
-![image-45](image-45.png)
-```powershell
-$applicationGroupParameters = @{
-    ResourceGroupName = $ResourceGroupName
-    Name = "CoconutBeachApplications"
-    Location = $location
-    FriendlyName = "Applications on the beach"
-    Description = "From the CoconutBeach-deployment"
-    HostPoolArmPath =  $avdHostpool.Id
-    ApplicationGroupType = "Desktop"
-}
-$applicationGroup = New-AzWvdApplicationGroup @applicationGroupParameters
-```
-
-![image-44](image-44.png)
-### Workspace
-
-The AVD workspace is the frontend of the AVD enviroment. This is the place where people subscribing to. Deploying the workspace is the last step before deploying the AVD session hosts. In the code below we are creating a new workspace and assign it to the recently created application group.
-
-```powershell
-$workSpaceParameters = @{
-    ResourceGroupName = $ResourceGroupName
-    Name = "Party-Workspace"
-    Location = $location
-    FriendlyName = "The party workspace"
-    ApplicationGroupReference = $applicationGroup.Id
-    Description = "This is the place to party"
-}
-$workSpace = New-AzWvdWorkspace @workSpaceParameters
-```
-
-Make sure, after deployment, you will assign the workspace to the correct users or groups.
-
-![image-46](image-46.png)
-![image-47](image-47.png)
-### AVD Session hosts
-
-The last step is deploying the session hosts into the AVD hostpool. Before deploying a session host I decided to deploy an Azure Key Vault first. Into the key vault I will store the administrator password for the domain join. In the later steps I will reference to this key vault secret in the template.
-
-Needed modules: Az.DesktopVirtualization, Az.KeyVault
-
-#### Azure Key vault
-
-In this step I will create an Azure Key Vault with PowerShell and store the administrator password in it. The password will be used later in the automation sequence.
-
-```powershell
-$keyVaultParameters = @{
-    Name = "CoconutKeyVault"
-    ResourceGroupName = $resourceGroupName
-    Location = $location
-}
-$keyVault = New-AzKeyVault @keyVaultParameters
-
-$secretString = "V3ryS3cretP4sswOrd!"
-$secretParameters = @{
-    VaultName = $keyVault.VaultName
-    Name= "vmjoinerPassword"
-    SecretValue = ConvertTo-SecureString -String $secretString -AsPlainText -Force
-}
-$secret = Set-AzKeyVaultSecret @secretParameters
-```
-
-![image-48](image-48.png)
 #### Create session host
+The next step is creating session hosts. Creating session hosts consists of several deployment steps. First we have to create a network card, the VM itself and deploy the AVD extensions.
+New in this deployment is the addition of the disk and nic deletion options. When removing the VM, other components are also deleted automatically.
 
-Finally it is time to create our first AVD session host with PowerShell. Before starting the deployment we need to create a hostpool registration token first. This token will be use to add the session host into the correct hostpool.
-
-Needed module: Az.Avd, Az.Compute
-
-First I set the needed parameters to deploy AVD session hosts.
+![deploy-avd-sessionhost-bicep](deploy-avd-sessionhost-bicep.png)
 
 ```powershell
-$sessionHostCount = 1
-$initialNumber = 1
-$VMLocalAdminUser = "LocalAdminUser"
-$VMLocalAdminSecurePassword = ConvertTo-SecureString (Get-AzKeyVaultSecret -VaultName $keyVault.Vaultname -Name $secret.Name ) -AsPlainText -Force
-$avdPrefix = "avd-"
-$VMSize = "Standard_D2s_v3"
-$DiskSizeGB = 512
-$domainUser = "joinaccount@domain.local"
-$domain = $domainUser.Split("@")[-1]
-$ouPath = "OU=Computers,OU=AVD,DC=domain,DC=local"
 
-$registrationToken = Update-AvdRegistrationToken -HostpoolName $avdHostpool.name $resourceGroupName
-$moduleLocation = "{{< avd-dsc-url >}}"
+resource nic 'Microsoft.Network/networkInterfaces@2023-04-01' = [for i in range(0, rdshNumberOfInstances): {
+  name: '${rdshPrefix}${(i + rdshInitialNumber)}-nic'
+  location: location
+  tags: networkInterfaceTags
+  properties: {
+    ipConfigurations: [
+      {
+        name: 'ipconfig'
+        properties: {
+          privateIPAllocationMethod: 'Dynamic'
+          subnet: {
+            id: subnetId
+          }
+        }
+      }
+    ]
+    enableAcceleratedNetworking: enableAcceleratedNetworking
+  }
+}]
+
+resource vm 'Microsoft.Compute/virtualMachines@2023-03-01' = [for i in range(0, rdshNumberOfInstances): {
+  name: '${rdshPrefix}${(i + rdshInitialNumber)}-vm'
+  location: location
+  tags: virtualMachineTags
+  identity: {
+    type: (aadJoin ? 'SystemAssigned' : 'None')
+  }
+  properties: {
+    hardwareProfile: {
+      vmSize: rdshVmSize
+    }
+    availabilitySet: ((availabilityOption == 'AvailabilitySet') ? vmAvailabilitySetResourceId : null)
+    osProfile: {
+      computerName: '${rdshPrefix}-${(i + rdshInitialNumber)}'
+      adminUsername: vmAdministratorAccountUsername
+      adminPassword: password
+    }
+    storageProfile: {
+      imageReference: {
+        id: imageResourceId
+      }
+      osDisk: {
+        createOption: 'FromImage'
+        deleteOption: 'Delete'
+        managedDisk: {
+          storageAccountType: rdshVMDiskType
+        }
+      }
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: resourceId('Microsoft.Network/networkInterfaces', '${rdshPrefix}${(i + rdshInitialNumber)}-nic')
+          properties: {
+            primary: true
+            deleteOption: 'Delete'
+          }
+        }
+      ]
+    }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: false
+      }
+    }
+    licenseType: 'Windows_Client'
+  }
+  zones: ((availabilityOption == 'AvailabilityZone') ? array(availabilityZone) : emptyArray)
+  dependsOn: [
+    nic
+  ]
+}]
+
+resource vm_DSC 'Microsoft.Compute/virtualMachines/extensions@2023-03-01' = [for i in range(0, rdshNumberOfInstances): {
+  name: '${rdshPrefix}${(i + rdshInitialNumber)}-vm/Microsoft.PowerShell.DSC'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Powershell'
+    type: 'DSC'
+    typeHandlerVersion: '2.73'
+    autoUpgradeMinorVersion: true
+    settings: {
+      modulesUrl: artifactsLocation
+      configurationFunction: 'Configuration.ps1\\AddSessionHost'
+      properties: {
+        hostPoolName: hostpoolName
+        registrationInfoToken: hostpoolToken
+        aadJoin: aadJoin
+      }
+    }
+  }
+  dependsOn: [
+    vm
+  ]
+}]
+
+resource vm_AADLoginForWindows 'Microsoft.Compute/virtualMachines/extensions@2023-03-01' = [for i in range(0, rdshNumberOfInstances): if (aadJoin && !intune) {
+  name: '${rdshPrefix}${(i + rdshInitialNumber)}-vm/AADLoginForWindows'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Azure.ActiveDirectory'
+    type: 'AADLoginForWindows'
+    typeHandlerVersion: '1.0'
+    autoUpgradeMinorVersion: true
+  }
+  dependsOn: [
+    vm_DSC
+  ]
+}]
+
+resource vm_AADLoginForWindowsWithIntune 'Microsoft.Compute/virtualMachines/extensions@2023-03-01' = [for i in range(0, rdshNumberOfInstances): if (aadJoin && intune) {
+  name: '${rdshPrefix}${(i + rdshInitialNumber)}-vm/AADLoginForWindowsWithIntune'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Azure.ActiveDirectory'
+    type: 'AADLoginForWindows'
+    typeHandlerVersion: '1.0'
+    autoUpgradeMinorVersion: true
+    settings: {
+      mdmId: '0000000a-0000-0000-c000-000000000000'
+    }
+  }
+  dependsOn: [
+    vm_DSC
+  ]
+}]
+
+output localPass string = password
 ```
 
-When using templates like ARM or Bicep the template and ARM engine takes care of looping through the machine count. If you deploy with only code you will need to create a loop by yourself. In this case I created an Do-While loop. It executes code as long the condition is not met.
+### Azure Key vault
+The last step is to create an Azure Key Vault with Bicep and store the session host administrator local password in it. The session host deployment output is used to send the password to the Key Vault.
 
-The condition is while the sessionHostCount is not 0. In the parameters above I set the count to 1. At the end of the “do”-part the counter will decrease with 1. Till the counter is not 0 the loop will execute.   
-First I will create a network card and a VM. After the resources are deployed I install the needed extensions for the AD domain join and the AVD agent.
+![keyvault-bicep-deployment](keyvault-bicep-deployment.png)
+
+The secret is added with the correct access policy.
+During deployment the Key Vault access is set to RBAC permissions where I provide my user ID to assign the Azure Key Vault Secrets User. The Azure Key Vault Secrets User built-in ID is: `4633458b-17de-408a-b874-0445c86b69e6`. (See: [Azure Built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#key-vault-secrets-user))
+
+In the code below, I first create a Key Vault and then add secrets to it.
+![bicep-keyvault-template](bicep-keyvault-template.png)
 
 ```powershell
-Do {
-    $VMName = $avdPrefix+"$initialNumber"
-    $ComputerName = $VMName
-    $nicName = "nic-$vmName"
-    $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $location -SubnetId ($virtualNetwork.Subnets | Where { $_.Name -eq "avdSubnet" }).Id
-    $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
-
-    $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
-    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
-    $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
-    $VirtualMachine = Set-AzVMOSDisk -Windows -VM $VirtualMachine -CreateOption FromImage -DiskSizeInGB $DiskSizeGB
-    $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -Id $imageVersion.id
-
-    $sessionHost = New-AzVM -ResourceGroupName $ResourceGroupName -Location $Location -VM $VirtualMachine
-
-    $initialNumber++
-    $sessionHostCount--
-    Write-Output "$VMName deployed"
+resource vault 'Microsoft.KeyVault/vaults@2023-02-01' = {
+  name: keyVaultName
+  location: location
+  tags: {
+    displayName: 'KeyVault'
+  }
+  properties: {
+    enabledForDeployment: enabledForDeployment
+    enabledForTemplateDeployment: enabledForTemplateDeployment
+    enabledForDiskEncryption: enabledForDiskEncryption
+    enableRbacAuthorization: true
+    tenantId: tenantId
+    accessPolicies: []
+    sku: {
+      name: skuName
+      family: 'A'
+    }
+    networkAcls: {
+      defaultAction: 'Allow'
+      bypass: 'AzureServices'
+    }
+  }
 }
-while ($sessionHostCount -ne 0) {
-    Write-Verbose "Session hosts are created"
-}
+
+resource secrets 'Microsoft.KeyVault/vaults/secrets@2018-02-14' = [for secret in secretsObject.secrets: {
+  name: '${vault.name}/${secret.secretName}'
+  properties: {
+    value: secret.secretValue
+  }
+}]
 ```
 
-#### Install AVD extensions with PowerShell
-
-To make a ‘normal’ vm a AVD session host we need to install two extensions. The ActiveDirectory domain join extension and the desired state config (DSC) extension. The DSC extension installs the AVD agent software and registers the host into the AVD hostpool.
-
-There are two separate commands available for deploying the specific extension types. More information about these types [Set-AzVmDscExtension](https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmdscextension?view=azps-6.1.0) and [Set-AzVMADDomainExtension](https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmaddomainextension?view=azps-6.1.0) check the Microsoft documentation. To keep my code as simple as possible I’ve chosen to use the [Set-AzVMExtension](https://docs.microsoft.com/en-us/powershell/module/az.compute/set-azvmextension?view=azps-6.1.0).
+After deployment, in step 3 & 4, I deploy a RBAC role assignment to the Azure Key Vault resource using Bicep. For the role resource based on the built-in ID.
+In the rbacAccess block, take a note of the scope. I use the `vault` resource above to assign the role assignment to.
 
 ```powershell
-        $domainJoinSettings = @{
-        Name                   = "joindomain"
-        Type                   = "JsonADDomainExtension" 
-        Publisher              = "Microsoft.Compute"
-        typeHandlerVersion     = "1.3"
-        SettingString          = '{
-            "name": "'+ $($domain) + '",
-            "ouPath": "'+ $($ouPath) + '",
-            "user": "'+ $($domainUser) + '",
-            "restart": "'+ $true + '",
-            "options": 3
-        }'
-        ProtectedSettingString = '{
-            "password":"' + $(Get-AzKeyVaultSecret -VaultName $keyVault.Vaultname -Name $secret.Name -AsPlainText) + '"}'
-        VMName                 = $VMName
-        ResourceGroupName      = $resourceGroupName
-        location               = $Location
-    }
-    Set-AzVMExtension @domainJoinSettings
-
-    $avdDscSettings = @{
-        Name               = "Microsoft.PowerShell.DSC"
-        Type               = "DSC" 
-        Publisher          = "Microsoft.Powershell"
-        typeHandlerVersion = "2.73"
-        SettingString      = "{
-            ""modulesUrl"":'$avdModuleLocation',
-            ""ConfigurationFunction"":""Configuration.ps1\\AddSessionHost"",
-            ""Properties"": {
-                ""hostPoolName"": ""$($fileParameters.avdSettings.avdHostpool.Name)"",
-                ""registrationInfoToken"": ""$($registrationToken.token)"",
-                ""aadJoin"": true
-            }
-        }"
-        VMName             = $VMName
-        ResourceGroupName  = $resourceGroupName
-        location           = $Location
-    }
-    Set-AzVMExtension @avdDscSettings   
-```
-
-Check the complete do-while loop at my [GitHub page](https://github.com/srozemuller/AVD/tree/main/Deployment/CoconutBeach).
-
-## Monitoring
-
-The next step in our sequence is the monitoring part. In this part we are going to install a Log Analytics Workspace and will enable diagnostic settings on the hostpool and the workspace.
-
-In the code below I’m creating a new Log Analytics Workspace with a fixed prefix and a random number. This because of a Log Analytics workspaces must be unique per resource group.
-
-```powershell
-$loganalyticsParameters = @{
-    Location = $Location 
-    Name = "log-analytics-avd-" + (Get-Random -Maximum 99999)
-    Sku = "Standard" 
-    ResourceGroupName = $resourceGroupName
+@description('the role deffinition is collected')
+resource roleDefinition 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview' existing = {
+  scope: resourceGroup()
+  name: roleDefinitionId
 }
 
-# Create the workspace
-$laws = New-AzOperationalInsightsWorkspace @loganalyticsParameters
+resource rbacAccess 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid('${vault.name}-${roleDefinitionId}-${principalId}')
+  scope: vault
+  properties: {
+    principalId: principalId
+    principalType: 'User'
+    roleDefinitionId: roleDefinition.id
+  }
+}
+
 ```
 
-![image-52](image-52.png)
-In the next part I’m connecting the workspace to the AVD diagnostics settings. Also in this situation I will use the deployment variable.
+![rbac-bicep-roleassignment](rbac-bicep-roleassignment.png)
 
-![image-51](image-51.png)
-Make a notice on the orange arrow. This variable was created in the [hostpool part of the AVD environment](#hostpool).
+## Deployment
+Before deploying anything we need to login first. To log in with Azure CLI use the `az login` command
+After running the command a browser opens and ask you to log in.
+There are more ways to login like using a service principal.
 
-![image-53](image-53.png)
-Enabling these settings are the basics for a good monitoring environment. If you like to configure advanced AVD monitoring automated please check my post about[ enabling AVD monitoring automated](https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/). I will recommend monitoring the AVD required URLs also. [Check my post about how to achieve that goal](https://www.rozemuller.com/monitor-windows-virtual-desktop-required-urls-with-log-analytics-workspace/).
+For more information about log in with Azure CLI please check [this Microsoft document](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli).
+
+After log in you get a screen like below.
+![azcli_loggedin](azcli_loggedin.png)
+
+Also make sure you have the correct subscription selected to deploy to. Check the current context by using the `az account show` command. Set the correct subscription using `az account set --subscription <subId>`
+When selected the correct context, use the command below to deploy Azure Virtual Desktop and all other components like a VNET, Compute Gallery and AVD Session hosts using Bicep and Azure CLI.
+
+```powershell
+az deployment sub create --template-file ./main.bicep --parameters ./Parameters/avd-environment.parameters.json imageSource='subscriptions/xxx/resourceGroups/RG-INITALIMAGE/providers/Microsoft.Compute/virtualMachines/EFRRWPAP2LCE2-VM' --location westeurope
+```
+
+The command deploys at subscription level ([See Azure CLI scopes](https://learn.microsoft.com/en-us/cli/azure/deployment/sub?view=azure-cli-latest#az-deployment-sub-create)). I provide the parameter file and additional de image source to create an image version in the Azure Compute Gallery.
+
+![complete-avd-bicep-deployment](complete-avd-bicep-deployment.png)
 
 ## Conclusion
+I’m very exited about the way how Bicep works. Bicep is well documented ([check the GitHub page](https://github.com/Azure/bicep)).
+But after all Bicep in basics is very useful can help a lot of people with less coding experience.
 
-PowerShell is my ‘mother’-language for automation. I’ve created a lot of scripts with PowerShell but must say, during writing this post, I’ve seen some new commands. I took some time to figure it out how these work the best. Especially the extension part took some time.
+I have chosen to keep it as simple as possible from my opinion.
+I’m also very surprised about Azure CLI. It feels very fast in relation to PowerShell, at least with deployment (or other ‘push’ tasks). As you read above I’m also querying some info which isn’t very fast. A big advantage in relation to PowerShell is that you don’t need modules.
+An another point is that you don’t have to remember use a lot different commands like get-avd, set-avd, update-avd. It all starts with the same context and then what you like to do, show, remove, update for example.
 
-The great of PowerShell is that it is community driven. This makes it possible to created modules to make life easier. For example the [Az.Avd module I wrote](https://www.rozemuller.com/launching-the-first-version-of-az-wvd-wvd-powershell-module/). In this post I use my own module and the native modules like Az.Resources or Az.Compute.
-
-All these modules are great and nasty at the same time. If you think you’re all set a new module dependency came up. So make sure you have install all the needed module.   
-If you are using this sequence in a DevOps pipeline for example, I would suggest to only install the needed modules. Installing all the Az\* module will take some time and is totally overkill.
-
-For me it was really fun creating a fully PowerShell driven deployment for AVD. Of course I prefer parameter files as well but in fact in the very beginning I just started with a location and a resource group name. From that perspective I’m able to deploy an AVD enviroment fully automated.. This will allow you to generate an AVD environment fully automated by just providing a location only.   
-And that’s what I like about PowerShell.
+Please keep in mind, the deployment above is an initial deployment for Azure Virtual Desktop.
 
 ## Thank you!
 
-I hope you liked the Coconut Beach Party 🧉 🏖 🥳 and got a bit inspired. Now you know deploy AVD automated with PowerShell is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
+I hope you liked the Fresh Minty Breeze 🍃💨 you are a bit inspired. Now you know deploy AVD automated with Bicep and Azure CLI is one of the options. If you like another cocktail feel free to stay and check the [AVD Automation Cocktail menu](https://www.rozemuller.com/avd-automation-cocktail-the-menu/).
 
 {{< bye >}}
