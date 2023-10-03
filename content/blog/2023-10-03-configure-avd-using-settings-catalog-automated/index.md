@@ -39,6 +39,7 @@ After enabling RDP shortpath you see the connection is running over UDP.
 ![rdp-shortpath-windows](rdp-shortpath-windows.png)
 
 RDP shortpath is only supported for the Windows remote desktop client. When using macOS, it still uses the TCP connection.
+
 ![connectioninfo-macos](connectioninfo-macos.png)
 
 ### RDP shortpath from unmanaged networks
