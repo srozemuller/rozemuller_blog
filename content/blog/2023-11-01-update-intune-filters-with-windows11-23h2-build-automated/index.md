@@ -13,7 +13,7 @@ tags:
   - PowerShell
   - Graph
 ---
-As you also may know is that using filters in Intune is a best practise. With the come of the Windows 11 22H2 build number it is a good idea 💡 to update your filters by adding the new 10.22631.x build number. In this blog post, I show how to update all Windows 11 filters with the new build number using PowerShell and the Graph API.
+As you also may know is that using filters in Intune is a best practise. With the come of the Windows 11 23H2 build number it is a good idea 💡 to update your filters by adding the new 10.22631.x build number. In this blog post, I show how to update all Windows 11 filters with the new build number using PowerShell and the Graph API.
 ## Hello Windows 11 23H2
 At 30 October 2023 Microsoft announced Windows 11 23H2 became available. As you properly know is that every Windows OS version has its own build number. In this situation there is nothing new. 
 The new build number for Windows 11 23H2 is **10.22631.x**. For a complete build number overview please check the [Windows 11 release information documentation](https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information#windows-11-current-versions)
