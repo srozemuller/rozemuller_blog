@@ -18,6 +18,8 @@ As you also may know is that using filters in Intune is a best practise. With th
 At 30 October 2023 Microsoft announced Windows 11 23H2 became available. As you properly know is that every Windows OS version has its own build number. In this situation there is nothing new. 
 The new build number for Windows 11 23H2 is **10.22631.x**. For a complete build number overview please check the [Windows 11 release information documentation](https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information#windows-11-current-versions)
 
+{{< toc >}}
+
 ## Intune Filters
 As mentioned in the introduction, using filters is an Intune best practice. 
 In basics: Filters has to do with targeting. When you create a policy, you can use filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy. 
@@ -109,7 +111,5 @@ At last, if the flag `$createNewFilter` is set to true, a new filter for only Wi
 ![new23h2filter](new23h2filter.jpeg)
 
 The complete script is stored at my [GitHub](https://github.com/srozemuller/MicrosoftEndpointManager/blob/main/Filters/update-win11filters.ps1)
-
-{{< toc >}}
 
 {{< bye >}}
