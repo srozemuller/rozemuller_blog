@@ -64,6 +64,11 @@ name = "Monitoring"
 url = "categories/monitoring"
 weight = 6
 
+[[main]]
+name = "IntuneCLI"
+url = "./IntuneCLI"
+weight = 7
+
 # sidebar menu
 [[sidebar]]
 name = "AVD Automation Cocktail"

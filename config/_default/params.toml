@@ -24,8 +24,8 @@ contact_form_action = "#" # contact form works with https://formspree.io
 search = true
 
 # Holidays
-christmas = false
-lights = false
+christmas = true
+lights = true
 fireworks = false
 snow = false
 
