@@ -41,6 +41,8 @@ Check the link on [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/cor
 ### Install dotnet 7 sdk macOS
 Check the link on [Mircosoft Learn](https://learn.microsoft.com/en-us/dotnet/core/install/macos)
 
+After installing dotnet, first *restart the termimal*. Otherwise the dotnet commands are not recognized.
+
 #### NuGet
 The recommended way to install this tool is with the use of the NuGet repository. Using the NuGet repository simplifies the download process. 
 By using the install command below the correct package is selected automatically.  
