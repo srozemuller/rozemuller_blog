@@ -12,8 +12,8 @@ tags:
     - 'azure virtual desktop'
     - 'Endpoint Management'
     - Microsoft Intune
-    - North-Star
-    - Powershell
+    - North Star
+    - PowerShell
     - 'REST API'
 ---
 

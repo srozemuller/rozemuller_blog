@@ -6,7 +6,7 @@ image: image.jpg
 draft: false
 url: "import-reusable-epm-certificates-in-intune-automated"
 categories:
-- Intune
+- Microsoft Intune
 - Elevated Permission Management
 tags:
 - Graph API

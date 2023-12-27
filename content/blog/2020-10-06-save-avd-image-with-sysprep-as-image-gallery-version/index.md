@@ -14,7 +14,7 @@ tags:
     - 'Disk management'
     - Disks
     - 'Image Gallery'
-    - Powershell
+    - PowerShell
 ---
 
 This is part two of a serie posts about AVD disk management. In this blogpost I will explain how to finish a disk with sysprep and deploy it as a version into the Azure Shared Image Gallery automated.

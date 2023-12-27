@@ -10,7 +10,7 @@ tags:
     - Automation
     - Microsoft Intune
     - 'Microsoft Intune'
-    - Powershell
+    - PowerShell
     - Win32
     - Win32Application
     - 'Windows Package Manager'

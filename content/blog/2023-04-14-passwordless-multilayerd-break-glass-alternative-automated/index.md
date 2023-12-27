@@ -7,11 +7,11 @@ draft: false
 url: "passwordless-multilayered-break-glass-alternative-automated"
 categories:
 - Security
-- Intune
+- Microsoft Intune
 - Zero Trust
 tags:
 - Automation
-- Intune
+- Microsoft Intune
 - Graph API
 - Zero to Zero Trust
 ---

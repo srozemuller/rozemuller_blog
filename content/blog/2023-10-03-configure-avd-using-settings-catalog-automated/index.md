@@ -12,7 +12,7 @@ categories:
   - Microsoft Intune
 tags:
   - Automation
-  - Intune
+  - Microsoft Intune
   - PowerShell
   - Performance
 ---

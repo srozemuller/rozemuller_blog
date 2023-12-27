@@ -5,12 +5,12 @@ author: 'Sander Rozemuller'
 image: image-1149.png
 categories:
     - Graph API
-    - Powershell
+    - PowerShell
 tags:
     - Application
     - Azure
     - 'Microsoft M365'
-    - Powershell
+    - PowerShell
     - 'REST API'
 url: how-to-use-rest-api-with-powershell
 ---

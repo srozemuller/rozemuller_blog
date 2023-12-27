@@ -12,7 +12,7 @@ tags:
     - Automation
     - Azure Virtual Desktop
     - DevOps
-    - Powershell
+    - PowerShell
 ---
 
 An Azure DevOps environment consists of projects. Before create anything in DevOps like a board, repositories or pipelines you first need a project. In this second part of the series Prepare Azure DevOps for Azure Virtual Desktop we are diving into that DevOps part, a project. At the end of this post you will be able to deploy WVD with DevOps automated.

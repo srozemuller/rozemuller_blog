@@ -10,7 +10,7 @@ categories:
 tags:
     - Azure
     - Monitoring
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

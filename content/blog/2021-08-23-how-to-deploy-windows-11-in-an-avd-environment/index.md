@@ -8,13 +8,13 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
     - Automation
     - Azure Virtual Desktop
     - 'azure virtual desktop'
     - 'Endpoint Management'
-    - Powershell
+    - PowerShell
     - W365
     - Windows11
 ---

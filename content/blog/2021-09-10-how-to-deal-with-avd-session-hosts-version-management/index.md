@@ -9,12 +9,12 @@ categories:
     - Azure
     - 'Azure Virtual Desktop'
     - 'Image Management'
-    - Powershell
+    - PowerShell
 tags:
     - Automation
     - Azure Virtual Desktop
-    - Az.Avd
-    - Powershell
+    
+    - PowerShell
 ---
 
 A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.   

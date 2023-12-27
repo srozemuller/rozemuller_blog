@@ -12,7 +12,7 @@ tags:
     - Azure
     - Disks
     - NSG
-    - Powershell
+    - PowerShell
     - Snapshots
 ---
 

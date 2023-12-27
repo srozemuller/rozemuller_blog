@@ -12,7 +12,7 @@ tags:
     - 'Azure virtual desktop'
     - Microsoft Intune
     - Microsoft IntunePowered
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

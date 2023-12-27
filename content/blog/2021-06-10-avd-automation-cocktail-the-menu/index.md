@@ -16,7 +16,7 @@ tags:
     - Cocktail
     - DevOps
     - JSON
-    - Powershell
+    - PowerShell
 ---
 
 Welcome to a fresh new series about deploying Azure Virtual Desktop environments automated called the “AVD Automation Cocktail”. In this series I will serve several cocktails and will take you along on the AVD automated deployment journey with different types of automation languages. Every type has its own pros and cons, deployment strategy, parameter structure and commands. In the series all of these items will pass and hopefully it will give you a good overview about the possibilities.

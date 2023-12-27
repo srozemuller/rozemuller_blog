@@ -14,7 +14,7 @@ tags:
     - M365
     - 'Microsoft M365'
     - Monitoring
-    - Powershell
+    - PowerShell
 ---
 
 You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.

@@ -7,7 +7,7 @@ url: microsoft-endpoint-manager-security-baselines-explained
 categories:
     - Graph API
     - 'Microsoft Intune'
-    - Powershell
+    - PowerShell
     - Security
 tags:
     - Automation

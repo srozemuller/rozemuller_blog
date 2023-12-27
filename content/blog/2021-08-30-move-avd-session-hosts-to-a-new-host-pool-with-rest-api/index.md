@@ -10,7 +10,7 @@ categories:
 tags:
     - Azure Virtual Desktop
     - Hostpool
-    - Powershell
+    - PowerShell
     - 'REST API'
     - SessionHost
 ---

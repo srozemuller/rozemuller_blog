@@ -7,11 +7,11 @@ draft: false
 url: "configure-break-glass-accounts-infrastructure-automated"
 categories:
 - Security
-- Azure AD
+- Entra ID
 - Zero Trust
 tags:
 - Automation
-- Azure AD
+- Entra ID
 - Graph API
 - Zero to Zero Trust
 - Zero Trust Level 1

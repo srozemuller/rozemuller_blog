@@ -8,13 +8,13 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
     - Azure Virtual Desktop
-    - Az.Avd
+    
     - AzureVirtualDesktop
     - Module
-    - Powershell
+    - PowerShell
     - PSGallery
 ---
 

@@ -11,7 +11,7 @@ tags:
     - Azure
     - 'Cost Management'
     - 'Microsoft M365'
-    - Powershell
+    - PowerShell
 ---
 
 The current situation, we have created new disks, snapshots, virtual machines, networks, images and session hosts. All the resources has been added to the existing AVD hostpool. Now it is time to cleanup the old resources, to keep everything nice and clean. In this part we will take care of removing components related to the old image version.

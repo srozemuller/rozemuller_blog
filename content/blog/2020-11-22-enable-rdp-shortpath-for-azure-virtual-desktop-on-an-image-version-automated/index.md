@@ -9,7 +9,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Automation
-    - Powershell
+    - PowerShell
     - 'RDP Shortpath'
 ---
 

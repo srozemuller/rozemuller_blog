@@ -7,7 +7,7 @@ image: image-16.png
 categories:
     - Automation
     - Azure
-    - Powershell
+    - PowerShell
 tags:
     - 'ARM templates'
     - 'Azure Storage'

@@ -11,7 +11,7 @@ tags:
     - Azure Virtual Desktop
     - 'azure virtual desktop'
     - Networking
-    - Powershell
+    - PowerShell
     - Security
     - VNET
 ---

@@ -8,15 +8,15 @@ categories:
     - 'Azure Virtual Desktop'
     - 'Microsoft Intune'
     - 'North Star'
-    - Powershell
+    - PowerShell
 tags:
     - Automation
     - Azure Virtual Desktop
     - Microsoft Intune
     - Microsoft Intune
     - 'Microsoft Intune'
-    - North-Star
-    - Powershell
+    - North Star
+    - PowerShell
     - 'REST API'
 ---
 

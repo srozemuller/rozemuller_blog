@@ -14,7 +14,7 @@ tags:
     - Azure Virtual Desktop
     - 'Disk management'
     - 'Image Gallery'
-    - Powershell
+    - PowerShell
 ---
 
 This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.

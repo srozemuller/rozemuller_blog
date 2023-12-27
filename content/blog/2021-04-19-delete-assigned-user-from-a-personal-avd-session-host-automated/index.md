@@ -6,11 +6,11 @@ url: delete-assigned-user-from-a-personal-avd-session-host-automated
 image: avd-recycle-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
-    - Azure AD
+    - Entra ID
 tags:
     - Azure Virtual Desktop
     - Hostpool
-    - Powershell
+    - PowerShell
     - SessionHost
     - UserManagement
 ---

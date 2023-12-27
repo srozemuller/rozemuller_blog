@@ -5,7 +5,7 @@ author: 'Sander Rozemuller'
 image: insights.jpeg
 categories:
     - Azure Virtual Desktop
-    - Az.Avd
+    
 tags:
     - Insights
     - Azure

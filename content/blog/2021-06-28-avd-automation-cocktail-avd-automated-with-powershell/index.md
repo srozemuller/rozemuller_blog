@@ -11,7 +11,7 @@ tags:
     - Automation
     - Azure Virtual Desktop
     - Cocktail
-    - Powershell
+    - PowerShell
 ---
 
 Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Coconut Beach Party, I will show you how to deploy an AVD environment automated with PowerShell only.
@@ -43,7 +43,7 @@ Import-Module Az.Network
 - Az.Network
 - Az.Resources
 - Az.Compute
-- Az.Avd
+
 
 ### Aftertaste
 

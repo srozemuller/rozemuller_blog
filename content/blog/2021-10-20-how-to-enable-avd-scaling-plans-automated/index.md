@@ -8,13 +8,13 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
     - Azure Virtual Desktop
-    - Az.Avd
+    
     - Azure
     - 'azure virtual desktop'
-    - Powershell
+    - PowerShell
 ---
 
 In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.

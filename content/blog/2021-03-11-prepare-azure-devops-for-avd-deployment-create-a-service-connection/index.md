@@ -9,7 +9,7 @@ categories:
     - DevOps
 tags:
     - DevOps
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

@@ -7,11 +7,11 @@ categories:
     - Graph API
     - Automation
     - 'Microsoft Intune'
-    - Powershell
+    - PowerShell
 tags:
     - Microsoft Intune
     - Microsoft IntunePowered
-    - Powershell
+    - PowerShell
     - 'REST API'
 type: "regular" # available types: [featured/regular]
 url: deploy-power-settings-automated-in-microsoft-endpoint-manager

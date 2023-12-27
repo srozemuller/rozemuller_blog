@@ -6,13 +6,13 @@ type: 'featured'
 image: identity-security-improvements.jpeg
 url: monitor-identity-secure-score-security-improvement-action-status
 categories:
-    - Azure AD
+    - Entra ID
     - Monitoring
     - Security
 tags:
     - Automation
     - AzureAD
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

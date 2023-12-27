@@ -11,7 +11,7 @@ tags:
     - Azure Virtual Desktop
     - 'Log Analytics'
     - 'Network Security Groups'
-    - Powershell
+    - PowerShell
 ---
 
 Microsoft has provided a list with URL’s which you need for running a Azure Virtual Desktop environment. In this blog post I will explain how to monitor any issues related to the AVD required URL’s. and how to setup the monitoring environment.

@@ -8,12 +8,12 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
     - Automation
     - Azure Virtual Desktop
     - 'azure virtual desktop'
-    - Powershell
+    - PowerShell
 ---
 
 In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.

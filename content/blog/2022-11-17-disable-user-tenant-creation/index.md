@@ -5,11 +5,11 @@ date: 2022-11-17T20:38:46+02:00
 author: 'Sander Rozemuller'
 image: user-create-tenant.png
 categories:
-- Azure AD
+- Entra ID
 - Security
 tags:
     - Azure
-    - Azure AD
+    - Entra ID
 type: "regular"
 URL: disable-user-tenant-creation
 ---

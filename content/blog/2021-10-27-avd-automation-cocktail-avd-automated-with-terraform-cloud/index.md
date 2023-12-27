@@ -16,7 +16,7 @@ tags:
     - Cocktail
     - HashiCorp
     - Monitoring
-    - Powershell
+    - PowerShell
     - Terraform
 ---
 

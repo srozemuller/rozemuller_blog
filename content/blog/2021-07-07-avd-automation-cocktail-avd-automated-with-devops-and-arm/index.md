@@ -14,7 +14,7 @@ tags:
     - Cocktail
     - DevOps
     - JSON
-    - Powershell
+    - PowerShell
 ---
 
 Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Strawberry Banana Mix, I will show you how to deploy an AVD environment automated with DevOps, ARM templates and a bit of PowerShell.

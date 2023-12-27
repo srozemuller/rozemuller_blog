@@ -10,11 +10,11 @@ categories:
     - 'Azure Virtual Desktop'
     - 'Microsoft Intune'
     - 'North Star'
-    - Powershell
+    - PowerShell
 tags:
     - Automation
     - OneDrive
-    - Powershell
+    - PowerShell
     - 'REST API'
     - Winget
 ---

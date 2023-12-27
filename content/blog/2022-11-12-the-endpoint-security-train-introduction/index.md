@@ -13,7 +13,7 @@ tags:
     - The Endpoint Security Train
     - Microsoft Intune
     - Azure
-    - Azure AD
+    - Entra ID
 type: "regular"
 URL: the-endpoint-security-train-introduction
 draft: true
@@ -51,7 +51,7 @@ With the zero-trust model in mind, I keep the following processes in mind: See, 
 ![see-plan-act-monitor.png](see-plan-act-monitor.png)
 
 To keep sight, I divided the environment into three parts, aka IAM. 
-- Azure AD: All that has to do with authentication and authorization. (MFA, Passwordless, CA policies)
+- Entra ID: All that has to do with authentication and authorization. (MFA, Passwordless, CA policies)
 - Azure: Azure-related components like AVD and to store logs at Log Analytics
 - M365: Microsoft Intune, security baselines, compliance policies and more. 
 

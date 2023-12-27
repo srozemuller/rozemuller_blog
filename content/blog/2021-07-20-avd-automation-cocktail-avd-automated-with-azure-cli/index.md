@@ -10,7 +10,7 @@ categories:
     - 'Azure CLI'
     - 'Azure Virtual Desktop'
 tags:
-    - AAD
+    - Entra ID
     - Automation
     - Azure Virtual Desktop
     - 'Azure CLI'

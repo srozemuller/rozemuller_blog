@@ -7,11 +7,11 @@ draft: false
 url: "zero-trust-common-identity-and-device-access-protection"
 categories:
 - Security
-- Azure AD
+- Entra ID
 - Zero Trust
 tags:
 - Automation
-- Azure AD
+- Entra ID
 - Graph API
 - Zero to Zero Trust
 - Zero Trust Level 1
@@ -80,7 +80,7 @@ For more information about password policies, check the [documentation about the
 
 ## Identity protection
 Most of the identity protection part is handled by conditional access policies. Check [my blog about securing privileged accounts automated](https://www.rozemuller.com/protect-privileged-accounts-the-zero-trust-way-automated/). 
-But more settings should be checked under the Azure AD - Security - identity protection blade.
+But more settings should be checked under the Azure AD - Security - Entra ID protection blade.
 Users at risk detected alerts and Weekly digest, which are default enabled by Microsoft could be disabled somehow. The commands below enable risk detection events and weekly digest notifications.
 
 We need to authenticate to the Graph API with the correct scope. I almost use the same token request where I changed the resource and scope.

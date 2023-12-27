@@ -6,7 +6,7 @@ image: image.png
 draft: false
 url: windows-store-app-not-supported-in-preview-in-Intune
 categories:
-  - Intune
+  - Microsoft Intune
   - Microsoft Intune
 tags:
   - Automation

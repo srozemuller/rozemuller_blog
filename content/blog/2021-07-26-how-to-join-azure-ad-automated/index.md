@@ -6,14 +6,13 @@ url: how-to-join-azure-ad-automated
 image: cloud-identity.png
 categories:
     - Automation
-    - Azure AD
-    - Powershell
+    - Entra ID
+    - PowerShell
 tags:
     - Azure Virtual Desktop
     - 'Azure CLI'
-    - 'Azure Virtual Desktop'
-    - Azure AD
-    - Powershell
+    - Entra ID
+    - PowerShell
 ---
 
 In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.
@@ -124,7 +123,7 @@ After creating the virtual machines (or session hosts) it is time to prepare the
 
 To connect to an Azure AD joined virtual machine the client PC must meet one of the following conditions.
 
-- Azure AD-joined to the same Azure AD tenant as the session host
+- Entra ID-joined to the same Azure AD tenant as the session host
 - Hybrid Azure AD-joined to the same Azure AD tenant as the session host
 - Running Windows 10, version 2004 and later and Azure AD registered to the same Azure AD tenant as the session host  
       

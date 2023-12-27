@@ -10,7 +10,7 @@ categories:
 tags:
     - 'ARM templates'
     - Deployment
-    - Powershell
+    - PowerShell
     - Security
 ---
 

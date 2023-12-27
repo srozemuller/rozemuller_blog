@@ -7,13 +7,13 @@ image: backup.png
 categories:
     - Automation
     - Azure
-    - Powershell
+    - PowerShell
 tags:
     - 'ARM templates'
     - 'Azure Functions'
     - Backup
     - KeyVault
-    - Powershell
+    - PowerShell
     - Restore
 ---
 

@@ -8,7 +8,7 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Azure Virtual Desktop
-    - Azure AD
+    - Entra ID
     - 'Graph API'
     - 'REST API'
     - Roles

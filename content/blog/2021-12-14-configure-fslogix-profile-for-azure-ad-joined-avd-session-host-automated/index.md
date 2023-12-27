@@ -8,14 +8,14 @@ categories:
     - Automation
     - Azure
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
-    - AAD
+    - Entra ID
     - Automation
     - Azure Virtual Desktop
     - 'Azure AD'
     - fslogix
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

@@ -7,15 +7,14 @@ image: remote-monitoring-and-alerting.jpg
 url: monitor-and-get-alerts-from-microsoft-endpoint-manager
 categories:
     - Azure
-    - 'Microsoft Intune'
+    - Microsoft Intune
     - Monitoring
 tags:
     - Automation
     - Azure
     - Microsoft Intune
-    - Microsoft IntunePowered
     - Monitoring
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 
@@ -330,3 +329,12 @@ https://docs.microsoft.com/en-us/mem/intune/fundamentals/review-logs-using-azure
 Thank you for reading this blog about how to monitor and get alerts for Microsoft Intune with Log Analytics automated. I hope you got a bit inspired.
 
 Enjoy your day and happy automating 👋
+
+
+
+{
+    "error": {
+        "code": "AuthorizationFailed",
+        "message": "The client '4b7191c7-46af-469d-a23f-bf363843e149' with object id '4b7191c7-46af-469d-a23f-bf363843e149' does not have authorization to perform action 'microsoft.intune/diagnosticSettings/write' over scope '/providers/microsoft.intune/diagnosticSettings/IntuneMon' or the scope is invalid. If access was recently granted, please refresh your credentials."
+    }
+}

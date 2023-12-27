@@ -11,7 +11,7 @@ tags:
     - Azure Virtual Desktop
     - Azure
     - Monitoring
-    - Powershell
+    - PowerShell
 ---
 
 Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.

@@ -10,7 +10,7 @@ categories:
 - Zero Trust
 tags:
 - Zero to Zero Trust
-- Azure AD
+- Entra ID
 - Endpoint
 ---
 Welcome to the Zero to Zero Trust series automated and to this automation index. In this series, I will show the process from a zero security configuration to Zero Trust in the Microsoft public cloud. The series passes all the important items and show how to configure the components automated if applicable.
@@ -46,7 +46,7 @@ Microsoft has published two Zero Trust models. The first one is the Zero Trust m
 
 ### Zero Trust model for Microsoft 365
 The Zero Trust model for Microsoft 365 focuses on the following areas:
-- Identity
+- Entra ID
 - Endpoints
 - Data
 - Applications
@@ -124,7 +124,7 @@ The following table shows the client IDs that are used in this series.
 
 ### Licensing
 During the series, I use some premium features that require licenses. The licenses are listed below.
-- Azure AD Premium P2
+- Entra ID Premium P2
 - Mircosoft 365 E3 with E5 Security Add-On Mircosoft 365 E5
 
 ### Code, scripts and templates

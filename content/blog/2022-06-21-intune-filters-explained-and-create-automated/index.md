@@ -11,7 +11,7 @@ tags:
     - Filters
     - Microsoft Intune
     - Microsoft IntunePowered
-    - Powershell
+    - PowerShell
     - 'REST API'
 ---
 

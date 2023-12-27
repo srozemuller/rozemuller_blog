@@ -4,8 +4,8 @@ date: '2023-01-10T01:28:14+02:00'
 author: 'Sander Rozemuller'
 image: light-dark.jpg
 categories:
-    - Azure AD
-    - Identity
+    - Entra ID
+    - Entra ID
 tags:
     - Sign In
     - Graph API
@@ -262,8 +262,8 @@ If you like to use multiple themes, automation is key. Create different configur
 
 ## Keep in mind
 To use the company branding feature you must have one of the following licenses
-- Azure AD Premium 1
-- Azure AD Premium 2
+- Entra ID Premium 1
+- Entra ID Premium 2
 - Office 365 (for Office apps)
 
 ## Summary

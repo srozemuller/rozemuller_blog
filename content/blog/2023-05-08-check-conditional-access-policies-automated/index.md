@@ -10,7 +10,7 @@ categories:
 tags:
 - Automation
 - Conditional Access
-- Azure AD
+- Entra ID
 - Graph API
 - Zero to Zero Trust
 - Zero Trust Level 2

@@ -8,12 +8,12 @@ categories:
     - Graph API
     - Automation
     - 'Azure Virtual Desktop'
-    - Powershell
+    - PowerShell
 tags:
     - Application
-    - Azure AD
+    - Entra ID
     - DevOps
-    - Powershell
+    - PowerShell
     - 'Service Principal'
 ---
 

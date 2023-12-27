@@ -10,11 +10,11 @@ categories:
     - 'Azure Virtual Desktop'
 tags:
     - Azure Virtual Desktop
-    - Az.Avd
+    
     - Azure
     - Cocktail
     - DevOps
-    - Powershell
+    - PowerShell
 ---
 
 Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.Avd PowerShell module.
@@ -31,7 +31,7 @@ To start enrolling AVD automated with DevOps and Az.Avd you need to have a DevOp
 
 ### List DevOps of ingredients
 
-- Az.Avd PowerShell Module
+ PowerShell Module
 - Azure DevOps
 - Yaml
 

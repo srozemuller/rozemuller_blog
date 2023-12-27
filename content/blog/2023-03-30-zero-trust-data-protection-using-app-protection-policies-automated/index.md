@@ -12,7 +12,7 @@ categories:
 tags:
 - Automation
 - Data Protection
-- Azure AD
+- Entra ID
 - Graph API
 - Zero to Zero Trust
 - Zero Trust Level 1

@@ -10,7 +10,7 @@ categories:
 tags:
     - 'ARM templates'
     - KeyVault
-    - Powershell
+    - PowerShell
 ---
 
 At October 14, 2020 Mircosoft [announced](https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI) the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.
