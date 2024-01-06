@@ -8,6 +8,6 @@ url: "{{.Name}}"
 categories:
 tags:
 ---
-{{< toc >}}
+
 
 {{< bye >}}
