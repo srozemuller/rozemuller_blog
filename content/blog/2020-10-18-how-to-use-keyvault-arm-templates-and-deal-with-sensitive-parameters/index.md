@@ -3,7 +3,8 @@ title: 'How to use Key Vault ARM templates and deal with sensitive parameters'
 date: '2020-10-18T18:19:13+02:00'
 author: 'Sander Rozemuller'
 url: how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters
-image: arm-with-keyvault.png
+images:
+- arm-with-keyvault.png
 categories:
     - Azure
     - Security
