@@ -3,7 +3,8 @@ title: 'Monitor active M365 ServiceHealth services only with PowerShell'
 date: '2020-09-29T11:55:44+02:00'
 author: 'Sander Rozemuller'
 url: monitor-active-m365-servicehealth-services-only-with-powershell
-image: image-1146.png
+images:
+- image-1146.png
 categories:
     - 'Microsoft 365'
     - Monitoring

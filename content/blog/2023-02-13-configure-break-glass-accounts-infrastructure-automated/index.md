@@ -2,7 +2,8 @@
 title: "Configure Break Glass Accounts Infrastructure Automated"
 author: Sander Rozemuller
 date: 2023-02-13T08:30:15+01:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "configure-break-glass-accounts-infrastructure-automated"
 categories:

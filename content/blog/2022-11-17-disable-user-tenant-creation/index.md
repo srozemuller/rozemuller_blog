@@ -3,7 +3,8 @@ title: 'Disable user tenant creation'
 description: In this short blog I show how to disable tenant creation for end users. This new option is enabled by default. 
 date: 2022-11-17T20:38:46+02:00
 author: 'Sander Rozemuller'
-image: user-create-tenant.png
+images:
+- user-create-tenant.png
 categories:
 - Entra ID
 - Security

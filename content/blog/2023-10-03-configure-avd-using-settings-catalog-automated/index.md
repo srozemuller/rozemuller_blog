@@ -2,7 +2,8 @@
 title: Configure AVD using settings catalog automated
 author: Sander Rozemuller
 date: 2023-10-02T20:14:59+01:00
-image: image.png
+images:
+- image.png
 draft: false
 url: configure-avd-using-settings-catalog-automated
 categories:

@@ -3,7 +3,8 @@ title: 'AVD Automation Cocktail - The Menu'
 date: '2021-06-10T20:21:49+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-the-menu
-image: automationcocktail.jpg
+images:
+- automationcocktail.jpg
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'

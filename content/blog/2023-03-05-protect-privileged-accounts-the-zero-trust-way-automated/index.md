@@ -2,7 +2,8 @@
 title: "Protect Privileged Accounts the Zero Trust Way Automated"
 author: Sander Rozemuller
 date: 2023-03-05T09:17:14+01:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "protect-privileged-accounts-the-zero-trust-way-automated"
 categories:

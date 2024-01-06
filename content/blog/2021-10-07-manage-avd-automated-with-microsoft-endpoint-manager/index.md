@@ -3,7 +3,8 @@ title: 'Manage AVD automated with Microsoft Intune'
 date: '2021-10-07T14:11:01+02:00'
 author: 'Sander Rozemuller'
 url: manage-avd-automated-with-microsoft-endpoint-manager
-image: Image-2029.png
+images:
+- Image-2029.png
 categories:
     - 'Azure Virtual Desktop'
     - 'Microsoft Intune'

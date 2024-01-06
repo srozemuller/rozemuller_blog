@@ -2,7 +2,8 @@
 title: 'Route own Intune data to Log Analytics using custom logs'
 date: '2022-11-30T09:28:48+02:00'
 author: 'Sander Rozemuller'
-image: wired.jpeg
+images:
+- wired.jpeg
 categories:
     - Log Analytics
     - 'Microsoft Intune'

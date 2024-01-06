@@ -2,7 +2,8 @@
 title: 'Distribute OneDrive with Winget and OneDrive best practices automated'
 date: '2021-12-03T14:13:27+01:00'
 author: 'Sander Rozemuller'
-image: onedrive.jpg
+images:
+- onedrive.jpg
 url: distribute-onedrive-with-winget-and-onedrive-best-practices-automated
 categories:
     - Automation

@@ -3,7 +3,8 @@ title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with Bicep and
 date: '2021-06-17T13:00:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-with-bicep-and-azure-cli
-image: minty.png
+images:
+- minty.png
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'

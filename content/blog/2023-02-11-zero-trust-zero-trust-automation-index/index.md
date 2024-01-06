@@ -2,7 +2,8 @@
 title: "Zero to Zero Trust Automation Index"
 author: Sander Rozemuller
 date: 2023-02-11T12:43:32+01:00
-image: image.png
+images:
+- image.png
 draft: false
 url: "zero-to-zero-trust-automation-index"
 categories:

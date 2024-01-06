@@ -66,7 +66,7 @@ weight = 6
 
 [[main]]
 name = "IntuneCLI"
-url = "./IntuneCLI"
+url = "IntuneCLI"
 weight = 7
 
 # sidebar menu
@@ -109,4 +109,11 @@ weight = 1
 name = "Tags"
 url = "/tags"
 weight = 2
-
+[[footer]]
+name = "Az.Avd"
+url = "https://www.powershellgallery.com/packages/Az.Avd"
+weight = 3
+[[footer]]
+name = "IntuneCLI"
+url = "https://www.nuget.org/packages/IntuneCLI/"
+weight = 4

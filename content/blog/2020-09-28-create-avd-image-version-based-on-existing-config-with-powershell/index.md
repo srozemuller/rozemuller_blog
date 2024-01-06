@@ -3,7 +3,8 @@ title: 'AVD Image Management Automated - Part 1 Create an AVD image version base
 date: '2020-09-28T19:45:17+02:00'
 author: 'Sander Rozemuller'
 url: create-avd-image-version-based-on-existing-config-with-powershell
-image: building-blocks.jpg
+images:
+- building-blocks.jpg
 categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'

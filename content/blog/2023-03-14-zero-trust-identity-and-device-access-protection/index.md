@@ -2,7 +2,8 @@
 title: "Zero Trust Common Identity and Device Access Protection"
 author: Sander Rozemuller
 date: 2023-03-14T13:53:14+01:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "zero-trust-common-identity-and-device-access-protection"
 categories:

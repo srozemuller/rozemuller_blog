@@ -2,7 +2,8 @@
 title: Windows Store (winget) App Not Supported in Preview in Intune
 author: Sander Rozemuller
 date: 2023-10-20T07:32:45+02:00
-image: image.png
+images: 
+- image.png
 draft: false
 url: windows-store-app-not-supported-in-preview-in-Intune
 categories:

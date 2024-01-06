@@ -3,7 +3,8 @@ title: 'Disaster recovery plan for Azure Key Vault using tags, PowerShell and Az
 date: '2020-11-17T05:37:00+01:00'
 author: 'Sander Rozemuller'
 url: disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function
-image: backup.png
+images:
+- backup.png
 categories:
     - Automation
     - Azure

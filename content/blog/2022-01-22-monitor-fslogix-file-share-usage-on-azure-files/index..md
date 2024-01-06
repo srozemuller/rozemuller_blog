@@ -3,7 +3,8 @@ title: 'Monitor FSLogix file share usage on Azure Files'
 date: '2022-01-22T07:44:28+01:00'
 author: 'Sander Rozemuller'
 url: monitor-fslogix-file-share-usage-on-azure-files
-image: monitoring-real.jpg
+images:
+- monitoring-real.jpg
 categories:
     - Azure
     - Monitoring

@@ -3,7 +3,8 @@ title: 'Automatically backup Azure resources to an Azure Storage Account in JSON
 date: '2020-12-21T08:04:04+01:00'
 author: 'Sander Rozemuller'
 url: automatically-backup-azure-resources-to-an-azure-storage-account-in-json
-image: image-16.png
+images:
+- image-16.png
 categories:
     - Automation
     - Azure

@@ -1,7 +1,8 @@
 ---
 title: "Move from WordPress to Azure Static Web App with Hugo and GitHub"
 description: "In this blog, I show how I migrated from WordPress to an Azure Static Web App based on Hugo. I show the process I went through and how to enroll the Azure Static Web App in an automated way."
-image: "movement.jpeg"
+images:
+- "movement.jpeg"
 date: 2022-08-26T16:09:25+06:00
 categories:
 - "Static Web App"

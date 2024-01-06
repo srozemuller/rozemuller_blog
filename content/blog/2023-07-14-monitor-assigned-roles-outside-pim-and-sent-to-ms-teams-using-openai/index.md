@@ -2,7 +2,8 @@
 title: "Monitor assigned roles outside PIM and sent to MS Teams using OpenAI"
 author: Sander Rozemuller
 date: 2023-07-14T16:39:01+02:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai"
 categories:

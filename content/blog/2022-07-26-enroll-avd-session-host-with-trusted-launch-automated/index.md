@@ -1,7 +1,8 @@
 ---
 title: "Enroll AVD session host with Trusted Launch automated"
 description: "meta description"
-image: "computer-lock.png"
+images:
+- "computer-lock.png"
 date: 2022-07-26T18:19:25+06:00
 categories:
     - "Identity"

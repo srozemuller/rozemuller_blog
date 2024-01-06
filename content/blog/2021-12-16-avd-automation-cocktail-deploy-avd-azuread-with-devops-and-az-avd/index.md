@@ -2,7 +2,8 @@
 title: 'AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd'
 date: '2021-12-16T10:16:18+01:00'
 author: 'Sander Rozemuller'
-image: cocktail-bar-automation-avd-santas-ride.png
+images:
+- cocktail-bar-automation-avd-santas-ride.png
 url: avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd
 categories:
     - 'AVD Cocktail'

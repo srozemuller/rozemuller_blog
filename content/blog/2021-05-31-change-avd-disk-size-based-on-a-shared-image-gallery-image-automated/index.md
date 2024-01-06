@@ -4,7 +4,8 @@ date: '2021-05-31T11:10:58+02:00'
 lastUpdate: '2021-12-01T11:10:58+02:00'
 author: 'Sander Rozemuller'
 url: change-avd-disk-size-based-on-a-shared-image-gallery-image-automated
-image: floppy.png
+images:
+- floppy.png
 categories:
     - 'Azure Virtual Desktop'
 tags:

@@ -2,7 +2,8 @@
 title: 'Deploy power settings automated in Microsoft Intune'
 date: '2022-03-07T16:23:52+01:00'
 author: 'Sander Rozemuller'
-image: green-it.jpg
+images:
+- green-it.jpg
 categories:
     - Graph API
     - Automation

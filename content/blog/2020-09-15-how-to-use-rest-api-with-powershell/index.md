@@ -2,7 +2,8 @@
 title: 'How to use REST API with Powershell'
 date: '2020-09-15T11:57:34+02:00'
 author: 'Sander Rozemuller'
-image: image-1149.png
+images:
+- image-1149.png
 categories:
     - Graph API
     - PowerShell

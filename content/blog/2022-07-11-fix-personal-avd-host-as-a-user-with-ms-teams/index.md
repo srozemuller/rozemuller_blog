@@ -1,7 +1,8 @@
 ---
 title: 'Fix personal AVD host as a user with MS Teams'
 description: 'In this blog, I explain how to monitor the session host’s state. And send a message to the end-user with the ability to restart the session host via Teams. Of course, I show how to deploy all the needs in an automated way.'
-image: "fix-hardware.png"
+images:
+- "fix-hardware.png"
 date: '2022-07-11T21:01:14+02:00'
 url: fix-personal-avd-host-as-a-user-with-ms-teams
 categories:

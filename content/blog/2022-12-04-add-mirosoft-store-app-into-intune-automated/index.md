@@ -2,7 +2,8 @@
 title: 'Add Microsoft Store (WinGet) app with icon into Intune automated'
 date: '2022-12-04T01:28:14+02:00'
 author: 'Sander Rozemuller'
-image: store-trolley.jpeg
+images:
+- store-trolley.jpeg
 categories:
     - Microsoft Intune
     - WinGet

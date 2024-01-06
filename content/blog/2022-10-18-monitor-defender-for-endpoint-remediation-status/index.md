@@ -3,7 +3,8 @@ title: 'Deploy and monitor conditional access authentication strength automated'
 description: In this blog I show how to use the Azure hidden API to deploy and monitor the new conditional access authentication strength in an automated way.
 date: 2022-10-06T11:46:12+02:00
 author: 'Sander Rozemuller'
-image: fingerprint-thumbnail.png
+images:
+- fingerprint-thumbnail.png
 categories:
     - "Azure AD"
     - Security

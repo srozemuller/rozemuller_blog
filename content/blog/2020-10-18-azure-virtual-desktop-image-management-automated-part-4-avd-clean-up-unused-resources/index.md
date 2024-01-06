@@ -3,7 +3,8 @@ title: 'Azure Virtual Desktop Image Management Automated – Part 4 AVD Clean up
 date: '2020-10-18T20:08:27+02:00'
 author: 'Sander Rozemuller'
 url: avd-clean-up-unused-resources
-image: compute-single-vm.png
+images:
+- compute-single-vm.png
 categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'

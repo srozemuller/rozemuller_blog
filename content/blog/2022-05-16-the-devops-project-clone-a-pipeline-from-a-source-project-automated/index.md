@@ -4,7 +4,8 @@ title: 'The DevOps Project Clone a pipeline from a source project automated'
 date: '2022-05-16T20:41:00+02:00'
 author: 'Sander Rozemuller'
 type: 'featured'
-image: slices.png
+images:
+- slices.png
 url: the-devops-project-clone-a-pipeline-from-a-source-project-automated
 categories:
     - Azure

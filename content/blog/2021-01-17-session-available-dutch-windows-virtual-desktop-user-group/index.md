@@ -3,7 +3,8 @@ title: 'Session available Dutch Azure Virtual Desktop User Group'
 date: '2021-01-17T13:03:05+01:00'
 author: 'Sander Rozemuller'
 url: session-available-dutch-windows-virtual-desktop-user-group
-image: dutch-avd-community.jpg
+images:
+- dutch-avd-community.jpg
 categories:
     - Azure
 ---

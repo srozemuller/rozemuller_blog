@@ -2,7 +2,8 @@
 title: "Get Intune Device Management Scripts Content using Graph"
 author: Sander Rozemuller
 date: 2023-02-09T14:55:00+01:00
-image: image.jpeg
+images:
+- image.jpeg
 url: "get-intune-device-management-scripts-content-using-graph"
 categories:
 - Microsoft Intune

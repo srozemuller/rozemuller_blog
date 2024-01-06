@@ -2,7 +2,8 @@
 title: 'Schedule image update Azure Virtual Desktop host pool'
 date: '2022-12-01T01:28:14+02:00'
 author: 'Sander Rozemuller'
-image: timer.png
+images:
+- timer.png
 categories:
     - Azure
 draft: true

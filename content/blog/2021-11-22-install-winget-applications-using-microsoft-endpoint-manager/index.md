@@ -3,7 +3,8 @@ title: 'Install Winget applications using Microsoft Intune'
 date: '2021-11-22T09:14:22+01:00'
 author: 'Sander Rozemuller'
 url: install-winget-applications-using-microsoft-endpoint-manager
-image: Image-2273.png
+images:
+- Image-2273.png
 categories:
     - 'Microsoft Intune'
 tags:

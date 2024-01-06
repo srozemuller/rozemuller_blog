@@ -3,7 +3,8 @@ title: 'Configure Azure Firewall Premium features for AVD automated'
 date: '2021-02-26T17:02:43+01:00'
 author: 'Sander Rozemuller'
 url: configure-azure-firewall-premium-features-for-avd-automated
-image: azure-security.jpg
+images:
+- azure-security.jpg
 categories:
     - 'Azure Virtual Desktop'
     - Security

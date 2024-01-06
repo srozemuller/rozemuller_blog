@@ -3,7 +3,8 @@ title: 'Launching the first version of Az.Avd WVD PowerShell module'
 date: '2021-04-29T13:21:30+02:00'
 author: 'Sander Rozemuller'
 url: launching-the-first-version-of-az-avd-powershell-module
-image: azavd-module.jpg
+images:
+- azavd-module.jpg
 categories:
     - Automation
     - Azure

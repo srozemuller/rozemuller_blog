@@ -2,7 +2,8 @@
 title: Update Intune filters with Windows 11 23H2 build automated
 author: Sander Rozemuller
 date: 2023-11-01T07:44:02+01:00
-image: image.png
+images: 
+    - image.png
 draft: false
 url: update-intune-filters-with-windows11-23h2-build-automated
 categories:
@@ -12,6 +13,7 @@ tags:
   - Automation
   - PowerShell
   - Graph
+search_keyword: "gethugothemes"
 ---
 As you also may know is that using filters in Intune is a best practise. With the come of the Windows 11 23H2 build number it is a good idea 💡 to update your filters by adding the new 10.22631.x build number. In this blog post, I show how to update all Windows 11 filters with the new build number using PowerShell and the Graph API.
 ## Hello Windows 11 23H2

@@ -2,7 +2,8 @@
 title: 'Azure file share usage monitoring with Logic Apps'
 date: '2022-02-08T21:14:53+01:00'
 author: 'Sander Rozemuller'
-image: monitoring.jpg
+images:
+- monitoring.jpg
 url: azure-file-share-usage-monitoring-with-logic-apps
 categories:
     - Azure

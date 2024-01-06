@@ -3,7 +3,8 @@ title: 'How to deal with AVD session hosts version management'
 date: '2021-09-10T12:20:00+02:00'
 author: 'Sander Rozemuller'
 url: how-to-deal-with-avd-session-hosts-version-management
-image: new-version.png
+images:
+- new-version.png
 categories:
     - Automation
     - Azure

@@ -2,7 +2,8 @@
 title: 'Automate user sign-in experience with company branding'
 date: '2023-01-10T01:28:14+02:00'
 author: 'Sander Rozemuller'
-image: light-dark.jpg
+images:
+- light-dark.jpg
 categories:
     - Entra ID
     - Entra ID

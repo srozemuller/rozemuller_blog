@@ -3,7 +3,8 @@ title: 'Enable RDP ShortPath for AVD on an image version automated'
 date: '2020-11-22T12:15:01+01:00'
 author: 'Sander Rozemuller'
 url: enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated
-image: rdp-shortpath-connections.png
+images:
+- rdp-shortpath-connections.png
 categories:
     - Azure
     - 'Azure Virtual Desktop'

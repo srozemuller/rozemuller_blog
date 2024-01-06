@@ -3,7 +3,8 @@ title: 'Delete assigned user from a personal AVD session host automated'
 date: '2021-04-19T13:18:21+02:00'
 author: 'Sander Rozemuller'
 url: delete-assigned-user-from-a-personal-avd-session-host-automated
-image: avd-recycle-scaled.jpg
+images:
+- avd-recycle-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
     - Entra ID

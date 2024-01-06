@@ -3,7 +3,8 @@ title: 'Prepare Azure DevOps for Azure Virtual Desktop deployment - App registra
 date: '2021-01-03T10:40:04+01:00'
 author: 'Sander Rozemuller'
 url: prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration
-image: devops.png
+images:
+- devops.png
 categories:
     - Graph API
     - Automation

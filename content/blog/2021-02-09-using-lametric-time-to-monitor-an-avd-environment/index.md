@@ -3,7 +3,8 @@ title: 'Using LaMetric Time to monitor an AVD environment'
 date: '2021-02-09T16:38:36+01:00'
 author: 'Sander Rozemuller'
 url: using-lametric-time-to-monitor-an-avd-environment
-image: IMG_1665.jpg
+images:
+- IMG_1665.jpg
 categories:
     - 'Azure Virtual Desktop'
     - Monitoring

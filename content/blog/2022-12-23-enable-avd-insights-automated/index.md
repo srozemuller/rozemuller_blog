@@ -2,7 +2,8 @@
 title: 'Enable Azure Virtual Desktop Insights automated'
 date: '2022-12-23T01:28:14+02:00'
 author: 'Sander Rozemuller'
-image: insights.jpeg
+images:
+- insights.jpeg
 categories:
     - Azure Virtual Desktop
     

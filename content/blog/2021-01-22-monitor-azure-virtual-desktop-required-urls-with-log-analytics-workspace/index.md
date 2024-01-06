@@ -3,7 +3,8 @@ title: 'Monitor Azure Virtual Desktop required URL&#8217;s with Log Analytics Wo
 date: '2021-01-22T10:42:08+01:00'
 author: 'Sander Rozemuller'
 url: monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace
-image: monitoring-required-urls.png
+images:
+- monitoring-required-urls.png
 categories:
     - 'Azure Virtual Desktop'
     - Monitoring

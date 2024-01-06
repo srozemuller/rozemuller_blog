@@ -3,7 +3,8 @@ title: 'Prepare Azure DevOps for Azure Virtual Desktop deployment – Create Dev
 date: '2021-01-15T16:02:21+01:00'
 author: 'Sander Rozemuller'
 url: prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project
-image: man_working-scaled.jpg
+images:
+- man_working-scaled.jpg
 categories:
     - Graph API
     - 'Azure Virtual Desktop'

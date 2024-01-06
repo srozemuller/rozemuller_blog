@@ -2,7 +2,8 @@
 title: The IntuneCLI for automated Intune management
 author: Sander Rozemuller
 date: 2023-11-13T02:44:02+01:00
-image: theintuneCLI.png
+images: 
+- theintuneCLI.png
 draft: false
 url: the-intunecli-for-automated-intune-management
 categories:
@@ -10,6 +11,7 @@ categories:
 tags:
   - Automation
   - CLI
+type: "featured" # available type (regular or featured)
 ---
 Managing Intune can be challenging, especially when having multiple Microsoft Intune environments. Because of that, I started project IntuneAssistant. A part of the project is a CLI tool that can run as a daemon in your own environment. 
 In this small blog, I explain how to use the CLI and what are my thoughts for the future. 

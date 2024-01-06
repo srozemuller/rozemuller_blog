@@ -2,7 +2,8 @@
 title: 'Win32LOB intunewin file upload process explained for automation'
 date: '2022-12-09T01:28:14+02:00'
 author: 'Sander Rozemuller'
-image: upload.jpeg
+images:
+- upload.jpeg
 categories:
     - Microsoft Intune
     - WinGet

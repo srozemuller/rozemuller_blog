@@ -3,7 +3,8 @@ title: 'How to deploy Windows 11 in an AVD environment'
 date: '2021-08-23T12:36:21+02:00'
 author: 'Sander Rozemuller'
 url: how-to-deploy-windows-11-in-an-avd-environment
-image: win-11.png
+images:
+- win-11.png
 categories:
     - Automation
     - Azure

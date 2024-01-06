@@ -3,7 +3,8 @@ title: 'Azure Virtual Desktop Image Management Automated – Part 5 Monitor Imag
 date: '2020-10-28T13:05:59+01:00'
 author: 'Sander Rozemuller'
 url: azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor
-image: azure-monitor.png
+images:
+- azure-monitor.png
 categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'

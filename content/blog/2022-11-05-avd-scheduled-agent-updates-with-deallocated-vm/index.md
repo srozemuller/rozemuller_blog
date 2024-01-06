@@ -3,7 +3,8 @@ title: 'Update deallocated AVD session hosts with scheduled agents updates featu
 description: I show in this blog how to handle AVD scheduled agents updates with deallocated machines. If AVD session hosts are deallocated the agent will be not installed. 
 date: 2022-11-30T06:02:46+02:00
 author: 'Sander Rozemuller'
-image: schedule.png
+images:
+- schedule.png
 images: ['schedule.png']
 categories:
 - "AVD"

@@ -2,7 +2,8 @@
 title: 'Configure FSLogix profile for Azure AD joined AVD session host automated'
 date: '2021-12-14T14:34:21+01:00'
 author: 'Sander Rozemuller'
-image: fslogix-login.png
+images:
+- fslogix-login.png
 url: configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated
 categories:
     - Automation

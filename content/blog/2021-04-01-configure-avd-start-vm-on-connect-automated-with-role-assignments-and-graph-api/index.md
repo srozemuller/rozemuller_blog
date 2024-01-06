@@ -3,7 +3,8 @@ title: 'Configure AVD Start VM on Connect automated with role assignments and Gr
 date: '2021-04-01T15:46:08+02:00'
 author: 'Sander Rozemuller'
 url: configure-avd-start-vm-on-connect-automated-with-role-assignments-and-graph-api
-image: connecting-vm-scaled.jpg
+images:
+- connecting-vm-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
 tags:

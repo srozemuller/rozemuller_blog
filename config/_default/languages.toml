@@ -1,0 +1,9 @@
+################################### English language #####################################
+[en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content"
+weight = 1
+# footer content
+[en.params]
+footer_content = "All post are written based on my own experience with no warranties, confers no rights and is not supported by the authors."

@@ -2,7 +2,8 @@
 title: "Check Conditional Access Policy Effect Automated"
 author: Sander Rozemuller
 date: 2023-05-08T20:40:49+02:00
-image: image.jpg
+images:
+- image.jpg
 url: "check-conditional-access-policy-effect-automated"
 categories:
 - Security

@@ -3,7 +3,8 @@ title: 'Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams
 description: I show in this blog how to monitor Intune using Azure Functions, PowerShell and Graph API. I explain why using Azure Functions, how to get information from the Graph API and how to send alerts.
 date: 2022-09-28T09:12:46+02:00
 author: 'Sander Rozemuller'
-image: monitor-graph-thumbnail.png
+images:
+- monitor-graph-thumbnail.png
 categories:
 - "Microsoft Intune"
 - 'Monitoring'

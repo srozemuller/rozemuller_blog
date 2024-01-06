@@ -3,7 +3,8 @@ title: 'Secure and optimize AVD and CloudPC using Microsoft Intune'
 date: '2022-01-12T12:39:42+01:00'
 author: 'Sander Rozemuller'
 url: secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager
-image: standards.jpg
+images:
+- standards.jpg
 categories:
     - Azure
     - 'Azure Virtual Desktop'

@@ -3,7 +3,8 @@ title: 'Monitor Identity Secure Score security improvement action status'
 date: '2022-05-29T10:23:54+02:00'
 author: 'Sander Rozemuller'
 type: 'featured'
-image: identity-security-improvements.jpeg
+images:
+- identity-security-improvements.jpeg
 url: monitor-identity-secure-score-security-improvement-action-status
 categories:
     - Entra ID

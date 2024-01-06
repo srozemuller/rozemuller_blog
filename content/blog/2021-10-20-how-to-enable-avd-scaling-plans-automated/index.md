@@ -2,7 +2,8 @@
 title: 'How to enable AVD scaling plans automated'
 date: '2021-10-20T17:58:45+02:00'
 author: 'Sander Rozemuller'
-image: avd-scaling-startup.png
+images:
+- avd-scaling-startup.png
 url: how-to-enable-avd-scaling-plans-automated
 categories:
     - Automation

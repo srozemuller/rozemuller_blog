@@ -3,7 +3,8 @@ title: 'Enable Screen Capture Protection for Azure Virtual Desktop Automated'
 date: '2020-12-16T13:02:03+01:00'
 author: 'Sander Rozemuller'
 url: enable-screen-capture-protection-for-azure-virtual-desktop-automated
-image: image-1368.png
+images:
+- image-1368.png
 categories:
     - 'Azure Virtual Desktop'
     - Security

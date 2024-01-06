@@ -2,7 +2,8 @@
 title: "Zero Trust Data Protection Using App Protection Policies Automated"
 author: Sander Rozemuller
 date: 2023-03-30T20:40:49+02:00
-image: image.png
+images:
+- image.png
 draft: false
 url: "zero-trust-data-protection-using-app-protection-policies-automated"
 categories:

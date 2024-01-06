@@ -3,7 +3,8 @@ title: 'Resize AVD session host via Azure Monitor Alerts'
 description: I show in this blog how to configure an external static WAN IP for AVD in an automated way with the use of an Azure Firewall.
 date: 2022-09-01T07:55:46+02:00
 author: 'Sander Rozemuller'
-image: traffic-above.jpg
+images:
+- traffic-above.jpg
 categories:
 - "Azure Virtual Desktop"
 - 'Network'

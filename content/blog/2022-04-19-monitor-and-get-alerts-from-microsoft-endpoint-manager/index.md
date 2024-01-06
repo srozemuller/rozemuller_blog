@@ -3,7 +3,8 @@ title: 'Monitor and get alerts from Microsoft Intune'
 date: '2022-04-19T11:14:54+02:00'
 author: 'Sander Rozemuller'
 type: 'featured'
-image: remote-monitoring-and-alerting.jpg
+images:
+- remote-monitoring-and-alerting.jpg
 url: monitor-and-get-alerts-from-microsoft-endpoint-manager
 categories:
     - Azure

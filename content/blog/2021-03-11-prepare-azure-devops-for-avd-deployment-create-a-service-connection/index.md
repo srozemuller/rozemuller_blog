@@ -3,7 +3,8 @@ title: 'Prepare Azure DevOps for AVD deployment – Create a Service Connection 
 date: '2021-03-11T11:28:00+01:00'
 author: 'Sander Rozemuller'
 url: prepare-azure-devops-for-avd-deployment-create-a-service-connection
-image: slices.png
+images:
+- slices.png
 categories:
     - 'Azure Virtual Desktop'
     - DevOps

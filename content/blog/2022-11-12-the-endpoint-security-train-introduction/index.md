@@ -3,7 +3,8 @@ title: 'The Endpoint Security Train - Introduction'
 description: Welcome to The Endpoint Security Train, aka TEST, blog series. I show different aspects of security and modern endpoints based on zero-trust. I show how to enroll an zero-trust environment to help to secure modern workplace endpoints in an automated way. 
 date: 2022-11-20T07:38:46+02:00
 author: 'Sander Rozemuller'
-image: security-train.png
+images:
+- security-train.png
 categories:
 - Endpoint
 - Security

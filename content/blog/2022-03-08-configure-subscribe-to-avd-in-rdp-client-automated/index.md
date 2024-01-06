@@ -2,7 +2,8 @@
 title: 'Configure subscribe to AVD in RDP Client automated'
 date: '2022-03-08T11:45:40+01:00'
 author: 'Sander Rozemuller'
-image: subscribe-now.jpeg
+images:
+- subscribe-now.jpeg
 url: configure-subscribe-to-avd-in-rdp-client-automated
 categories:
     - Graph API

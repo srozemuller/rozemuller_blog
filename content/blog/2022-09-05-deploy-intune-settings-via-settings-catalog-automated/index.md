@@ -3,7 +3,8 @@ title: "Deploy Intune settings catalog automated from scratch with Graph API"
 description: "I show in this blog how to create a device configuration profile with settings from the settings catalog in Intune. I show how to build settings templates from an existing profile to reuse in the next scenario."
 date: 2022-09-11T07:55:46+02:00
 author: 'Sander Rozemuller'
-image: "catalog-thumbnail.png"
+images:
+- "catalog-thumbnail.png"
 categories:
 - "Microsoft Intune"
 - "Graph API"

@@ -3,7 +3,8 @@ title: 'Deploy Azure Bastion host in AVD environment automated'
 description: I show in this blog how to deploy an Azure Bastion host into an existing AVD environment. Azure Bastion is a secure way to connect directly to virtual machines (session hosts). 
 date: 2022-11-11T06:02:46+02:00
 author: 'Sander Rozemuller'
-image: gate-closed.png
+images:
+- gate-closed.png
 categories:
 - Azure Virtual Desktop
 - Security

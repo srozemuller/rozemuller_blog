@@ -2,7 +2,8 @@
 title: 'Manage Windows Updates for AVD using Microsoft Intune'
 date: '2021-10-14T22:44:52+02:00'
 url: manage-windows-updates-for-avd-using-microsoft-endpoint-manager
-image: update-progress.png
+images:
+- update-progress.png
 categories:
     - Automation
     - 'Azure Virtual Desktop'

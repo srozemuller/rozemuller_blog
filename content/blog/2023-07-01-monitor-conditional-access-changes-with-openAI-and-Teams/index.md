@@ -2,7 +2,8 @@
 title: "Monitor Conditional Access changes using OpenAI and MS Teams"
 author: Sander Rozemuller
 date: 2023-06-08T16:39:01+02:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "monitor-conditional-access-changes-using-openai-and-teams"
 categories:

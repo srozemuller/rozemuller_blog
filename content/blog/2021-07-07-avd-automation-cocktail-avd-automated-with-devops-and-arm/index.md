@@ -3,7 +3,8 @@ title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps an
 date: '2021-07-07T15:13:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-devops-and-arm
-image: cocktail-strawberry-banana.png
+images:
+- cocktail-strawberry-banana.png
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'

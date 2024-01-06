@@ -3,7 +3,8 @@ title: 'How to configure dynamic recipients in DevOps environments'
 date: '2021-03-24T15:33:57+01:00'
 author: 'Sander Rozemuller'
 url: how-to-configure-dynamic-recipients-in-devops-environments
-image: ms-teams-laptop-scaled.jpg
+images:
+- ms-teams-laptop-scaled.jpg
 categories:
     - 'Azure Virtual Desktop'
     - DevOps

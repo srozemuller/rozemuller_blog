@@ -3,7 +3,8 @@ title: 'AVD Automation Cocktail - Azure Virtual Desktop automated with PowerShel
 date: '2021-06-28T11:28:00+02:00'
 author: 'Sander Rozemuller'
 url: avd-automation-cocktail-avd-automated-with-powershell
-image: cocktail-coconut-party.png
+images:
+- cocktail-coconut-party.png
 categories:
     - 'AVD Cocktail'
     - 'Azure Virtual Desktop'

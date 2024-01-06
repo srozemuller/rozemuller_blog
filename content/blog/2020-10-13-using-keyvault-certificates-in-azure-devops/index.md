@@ -3,7 +3,8 @@ title: 'Using KeyVault certificates in Azure DevOps'
 date: '2020-10-13T10:07:16+02:00'
 author: 'Sander Rozemuller'
 url: using-keyvault-certificates-in-azure-devops
-image: arm-with-keyvault.png
+images:
+- arm-with-keyvault.png
 categories:
     - 'Microsoft 365'
 tags:

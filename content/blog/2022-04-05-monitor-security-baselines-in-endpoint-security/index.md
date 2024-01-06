@@ -2,7 +2,8 @@
 title: 'Monitor security baselines in Endpoint Security'
 date: '2022-04-05T08:58:35+02:00'
 author: 'Sander Rozemuller'
-image: monitoring-security.jpg
+images:
+- monitoring-security.jpg
 url: monitor-security-baselines-in-endpoint-security
 categories:
     - 'Microsoft Intune'

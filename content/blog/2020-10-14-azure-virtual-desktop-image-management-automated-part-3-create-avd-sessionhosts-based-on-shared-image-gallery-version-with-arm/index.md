@@ -3,7 +3,8 @@ title: 'Azure Virtual Desktop  Image Management Automated - Part 3 Create AVD se
 date: '2020-10-14T12:05:45+02:00'
 author: 'Sander Rozemuller'
 url: create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm
-image: azure-virtual-desktop.jpg
+images:
+- azure-virtual-desktop.jpg
 categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'

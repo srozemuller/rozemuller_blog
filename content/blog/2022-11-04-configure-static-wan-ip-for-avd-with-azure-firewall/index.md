@@ -3,7 +3,8 @@ title: 'Route AVD traffic through static WAN IP with Azure Firewall automated'
 description: I show in this blog how to configure an external static WAN IP for AVD in an automated way with the use of an Azure Firewall. 
 date: 2022-11-04T07:55:46+02:00
 author: 'Sander Rozemuller'
-image: traffic-above.png
+images:
+- traffic-above.png
 categories:
 - "Azure Virtual Desktop"
 - 'Network'

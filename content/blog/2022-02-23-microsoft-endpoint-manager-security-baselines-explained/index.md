@@ -2,7 +2,8 @@
 title: 'Microsoft Intune security baselines explained'
 date: '2022-02-23T16:09:00+01:00'
 author: 'Sander Rozemuller'
-image: lock-fence-security.jpg
+images:
+- lock-fence-security.jpg
 url: microsoft-endpoint-manager-security-baselines-explained
 categories:
     - Graph API

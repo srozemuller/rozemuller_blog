@@ -2,7 +2,8 @@
 title: "Configure autoscaling for personal AVD host pools automated"
 author: Sander Rozemuller
 date: 2023-08-06T20:14:59+01:00
-image: image.png
+images:
+- image.png
 draft: false
 url: "configure-autoscaling-for-personal-avd-host-pools-automated"
 categories:

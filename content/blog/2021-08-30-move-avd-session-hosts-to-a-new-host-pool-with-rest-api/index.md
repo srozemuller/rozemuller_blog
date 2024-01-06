@@ -3,7 +3,8 @@ title: 'Move AVD session hosts to a new host pool with REST API'
 date: '2021-08-30T08:35:00+02:00'
 author: 'Sander Rozemuller'
 url: move-avd-session-hosts-to-a-new-host-pool-with-rest-api
-image: we-have-moved.png
+images:
+- we-have-moved.png
 categories:
     - Azure
     - 'Azure Virtual Desktop'

@@ -3,7 +3,8 @@ title: 'Deploy Azure Monitor for AVD automated'
 date: '2020-12-04T14:32:19+01:00'
 author: 'Sander Rozemuller'
 url: deploy-azure-monitor-for-windows-virtual-desktop-automated
-image: monitoring-real.jpg
+images:
+- monitoring-real.jpg
 categories:
     - 'Azure Virtual Desktop'
     - Monitoring

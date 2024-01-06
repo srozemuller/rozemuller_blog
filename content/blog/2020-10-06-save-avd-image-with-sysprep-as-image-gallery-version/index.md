@@ -3,7 +3,8 @@ title: 'Azure Virtual Desktop Image Management Automated - Part 2 Save AVD image
 date: '2020-10-06T19:57:10+02:00'
 author: 'Sander Rozemuller'
 url: save-avd-image-with-sysprep-as-image-gallery-version
-image: shared-image-gallery.png
+images:
+- shared-image-gallery.png
 categories:
     - 'Azure Virtual Desktop'
     - 'Image Management'

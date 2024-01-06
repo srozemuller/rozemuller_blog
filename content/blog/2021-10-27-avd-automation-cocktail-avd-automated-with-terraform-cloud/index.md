@@ -3,7 +3,8 @@
 title: 'AVD Automation Cocktail – Deploy AVD with Terraform Cloud'
 date: '2021-10-27T10:41:34+02:00'
 author: 'Sander Rozemuller'
-image: cocktail-bar-automation-avd-bloody-harry.png
+images:
+- cocktail-bar-automation-avd-bloody-harry.png
 url: avd-automation-cocktail-avd-automated-with-terraform-cloud
 categories:
     - 'AVD Cocktail'

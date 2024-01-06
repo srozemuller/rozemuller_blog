@@ -3,7 +3,8 @@ title: 'Intune filters explained create automated and assignments'
 date: '2022-06-21T15:36:16+02:00'
 author: 'Sander Rozemuller'
 type: 'featured'
-image: filters-coffee-e1646681551213.jpeg
+images:
+- filters-coffee-e1646681551213.jpeg
 url: intune-filters-explained-and-create-automated
 categories:
     - 'Microsoft Intune'

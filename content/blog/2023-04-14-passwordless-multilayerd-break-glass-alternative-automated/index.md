@@ -2,7 +2,8 @@
 title: "Passwordless, Multi-layered Break Glass Alternative Automated"
 author: Sander Rozemuller
 date: 2023-04-14T09:15:27+02:00
-image: image.jpg
+images:
+- image.jpg
 draft: false
 url: "passwordless-multilayered-break-glass-alternative-automated"
 categories:
