@@ -12,8 +12,8 @@ tags:
   - Azure API
 type: "regular"
 ---
-Recently I saw a question on X (Twitter) where someone was looking for a way to filter for a specific Azure Virtual Desktop assigned user using the Azure management API. For some reason, the filter option is not working is this API. Where in the end it was not possible to find the correct user directly from an API request.
-In this post, I show a different way, much more efficient way, to find the correct user assigned to an Azure Virtual Desktop session host.
+Recently I saw a question on X (Twitter) where someone was looking for a way to filter for a specific Azure Virtual Desktop assigned user using the Azure management API. For some reason, the filter option is not working in this API. Where in the end it was not possible to find the correct user directly from an API request.
+In this post, I show a different, also more efficient way, to find the correct user assigned to an Azure Virtual Desktop session host.
 
 {{< toc >}}
 
@@ -41,7 +41,7 @@ Luckily, there are more ways to Rome ;), and there are more Azure Management API
 ```basic
 https://management.azure.com/providers/Microsoft.ResourceGraph/resources?api-version=2021-03-01
 ```
-A big advantage of this endpoint is that it is Azure globally available. What I mean with that it is resource independend. So no subscriptionId, resource group or specific resourceId is needed. That means this is extremely suitable for finding resources in Azure.
+A big advantage of this endpoint is that the endpoint is Azure globally available. The means the endpoint is resource independend. So no subscriptionId, resource group or specific resourceId is needed. That means this is extremely suitable for finding resources in Azure.
 
 ## Azure Resource Graph API
 The Azure Microsoft.Resources API endpoint accepts a `POST` request with in the body a JSON content. The content consists of a Kusto Query. It is the same as the resource graph in the Azure portal.
