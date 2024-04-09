@@ -1,5 +1,5 @@
 ---
-title: 'Monitor Security Baseline Recommendations'
+title: 'Monitor Security Baseline Insights Recommendations'
 date: '2024-04-07T16:28:14+02:00'
 author: 'Sander Rozemuller'
 images:
@@ -12,7 +12,7 @@ tags:
   - PowerShell
   - Security
 type: "regular"
-url: monitor-security-baseline-recommendations
+url: monitor-security-baseline-insights-recommendations
 ---
 Microsoft has updated their security baselines in Microsoft Intune which you can read in the [What is new in Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2). A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft's recommendation.
 
@@ -301,4 +301,6 @@ The setting instance of a security profile looks like below:
 ```
 
 ![security-baseline-response](security-baseline-response.png)
+
+The script is also available in my [GitHub repository](https://github.com/srozemuller/MicrosoftEndpointManager/tree/main/SecurityBaselines).
 {{< bye >}}
