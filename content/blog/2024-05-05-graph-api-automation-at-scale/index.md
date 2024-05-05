@@ -17,7 +17,7 @@ Maybe you heard of it before, Graph API. It is the platform where many Microsoft
 Every specific resource in a service has its own endpoint. Think about users, devices, Intune resources, mailboxes, SharePoint sites.
 All together makes the Graph API.
 The platform can handle many many requests at a time.
-But, also the Graph API has its limits. When requesting the Graphp API at scale you have seen a 429 request for sure.
+But, also the Graph API has its limits. When requesting the Graph API at scale you have seen a 429 request for sure.
 The 429 response means you requesting the platform that much it holds you for a time. This is called throttling.
 
 In this post I show how to handle with this and also show how to automate at scale using Graph API Batch.
