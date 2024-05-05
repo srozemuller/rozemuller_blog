@@ -9,7 +9,6 @@ categories:
     - Autoamation
 tags:
   - PowerShell
-  - C#
 type: "regular"
 url: graph-api-in-automation-at-scale
 ---
