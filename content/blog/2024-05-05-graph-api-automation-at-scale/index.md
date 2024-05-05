@@ -103,7 +103,13 @@ When using the batch endpoint, you have to send information to the platform. Sen
 A POST request always need a body. The body looks like below.
 I send two requests at a single time. One for all managed devices and one for a specific configuration policy with assignments in Intune.
 
+In the basic a body needs an id, a method and the url. These are required.
+The id is needed to recognized the response based on the same id.
+The method tells what the call does, GET in the example below.
+
 The url object accepts the inner endpoints, you dont need the `https://graph.microsoft.com` part.
+
+
 ```json
 {
   "requests": [
@@ -120,6 +126,7 @@ The url object accepts the inner endpoints, you dont need the `https://graph.mic
   ]
 }
 ```
+For more information check the [body explanation at Microsoft Learn](https://learn.microsoft.com/en-us/graph/json-batching#explanation-of-a-batch-request-format).
 
 ### Graph Batch response
 The response from the call above looks like below.
