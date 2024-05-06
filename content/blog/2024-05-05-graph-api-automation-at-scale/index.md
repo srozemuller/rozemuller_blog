@@ -60,7 +60,7 @@ Good to know that every service has its own limit. To see all the limit values f
 With the above in mind, use can use the PowerShell code below to send API requests and including the 429 check.
 I filled the `$authHeader` based on this blog post: https://rozemuller.com/how-to-use-rest-api-with-powershell/
 
-I created a do until loop where the request status code is checked for 429. If the response is 429, the loop start at value 0 and tries again after the secondes + 1 returned in the retry-after object. 
+I created a do until loop where the response status code is checked for 429. If the response is 429, the loop start at value 0 and tries again after the secondes + 1 returned in the retry-after object. 
 This till the max of 3.
 
 I have added a max retries to avoid a infinite loop.
@@ -83,7 +83,7 @@ do {
 until (($request.StatusCode -ne 429) -and ($i -lt 3))
 ```
 Make a note for the `-SkipHttpErrorCheck` flag. You will need this, otherwise you just get the error message returned instead of the 429 code.
-I look for the code 429 especialy because this is a HTTP request standard, where the response message is free to fill in by the API developer.
+I look for the code 429 especialy because this is a HTTP response standard, where the response message is free to fill in by the API developer.
 
 For more information about throttling check the [Microsoft Learn about Graph API throttling](https://learn.microsoft.com/en-us/graph/throttling).
 
