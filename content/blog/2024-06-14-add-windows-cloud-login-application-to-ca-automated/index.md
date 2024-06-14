@@ -1,6 +1,6 @@
 ---
 title: 'Add Windows Cloud Login application to Conditional Access automated'
-date: '2024-06-14T11:28:14+02:00'
+date: '2024-06-14T09:28:14+02:00'
 author: 'Sander Rozemuller'
 images:
 - image.png
