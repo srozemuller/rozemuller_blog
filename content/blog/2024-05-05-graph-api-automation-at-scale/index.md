@@ -6,7 +6,7 @@ images:
 - image.png
 categories:
     - Graph API
-    - Autoamation
+    - Automation
 tags:
   - PowerShell
 type: "regular"
