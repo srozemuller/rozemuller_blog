@@ -91,7 +91,7 @@ The available settings are.
             "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "From end user client to session host",
             "description": "Only allow text and image to session host",
-            "value": "<![CDATA[<enabled/><data id=\"TS_CS_CLIPBOARD_RESTRICTION\" value=\"2\"/>]]>"
+            "value": "<![CDATA[<enabled/><data id=\"TS_CS_CLIPBOARD_RESTRICTION_Text\" value=\"2\"/>]]>"
         }
     ]
 }
