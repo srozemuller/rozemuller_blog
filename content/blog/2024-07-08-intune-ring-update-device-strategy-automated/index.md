@@ -15,14 +15,14 @@ tags:
 type: "regular"
 url: automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell
 ---
-Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Update Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group). 
+Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Deployment Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group). 
 In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on 
 a user group. Let's call it dynamic device group management.
 
 {{< toc >}}
 
 ## Introduction
-Besides Update Rings, more and more device-based settings become available in Microsoft Intune. To test settings granularly, it is a good idea to scope new configurations to select a group of devices. 
+Besides Update Rings, more and more device-based settings become available in Microsoft Intune. To test settings granularly, it is a good idea to scope new configurations to select a group of devices and use Deployment Rings. 
 
 So far so good, but what about managing those device groups? Because, it is a user that tests the settings, but the settings are applied to a device. In this blog post, I will show you how to manage a device group in an automated way for your update rings based on a user group.
 This blog post solves the problem that you have to manually manage the device group for your update rings. 
@@ -279,5 +279,7 @@ More about batching, take a look a [my blog post about Graph API at scale](https
 Oke, the main goal of this blog post is to show you how to dynamically manage device groups that you can use for Update Rings in Intune. All in an automated way based on a user group. The automation script is written in PowerShell and uses the Graph API to manage the device groups. The script has three phases. The first phase is to get the user and device group including the members. The second phase is fetching the owned devices per user and backing up the current device group members. The last phase is requesting the owned devices and adding them to the device group.
 
 You can find the PowerShell script on my [GitHub](https://github.com/srozemuller/Identity/tree/main/Devices)
+
+If you want more information about deployment rings, check [Joost Gelijsteen his blog about using Deployment Rings](https://joostgelijsteen.com/deployment-rings/)
 
 {{< bye >}}
