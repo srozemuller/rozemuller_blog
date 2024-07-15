@@ -15,7 +15,7 @@ tags:
 type: "regular"
 url: automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell
 ---
-Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Update Rings for this. In the base of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group). 
+Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Update Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group). 
 In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on 
 a user group. Let's call it dynamic device group management.
 
@@ -25,10 +25,11 @@ a user group. Let's call it dynamic device group management.
 Besides Update Rings, more and more device-based settings become available in Microsoft Intune. To test settings granularly, it is a good idea to scope new configurations to select a group of devices. 
 
 So far so good, but what about managing those device groups? Because, it is a user that tests the settings, but the settings are applied to a device. In this blog post, I will show you how to manage a device group in an automated way for your update rings based on a user group.
-This blog post solves the problem that you have to manually manage the device group for your update rings. The solution is a PowerShell script that automatically manages the device group based on a user group.
+This blog post solves the problem that you have to manually manage the device group for your update rings. 
 
 ## The idea
-The idea is to create a device group based on a user group. The device group is filled with devices that are owned by the user group. You can run the script on a scheduled basis manually. 
+The idea is to create a device group based on a user group. The device group is filled with devices that are owned by the user. You can run the script on a scheduled basis manually. 
+
 Two scenarios are possible: 
 - remove all members from a device group first, and add owned devices from a user to a device group.
 - add owned devices from a user to a device group.
@@ -65,7 +66,7 @@ $deviceGroupMembers = Invoke-MgGraphRequest -Method GET -Uri "beta/groups/$($dev
 
 ### Fetching owned devices per user (and backup current device group members)
 The second phase of the script is fetching the owned devices per user. Based on the `$userGroupMembers` value, I create a list of API URLs for later use. I also do this for the device group members.
-Later I create a list of URLs needed for my batch request. First, I filter the members from the user group that are actually users. This is to avoid also selecting other objects like applications or devices that are in the group.
+Later I create a list of URLs needed for my batch request. First, I filter the members from the user group that are users. This is to avoid also selecting other objects like applications or devices that are in the group.
 
 > I have to filter is afterwards because the Graph API does not support filtering on the member request.
 
@@ -79,7 +80,6 @@ Later I create a list of URLs needed for my batch request. First, I filter the m
     $deviceGroupMembers.value | Where-Object {$_.'@odata.type' -eq '#microsoft.graph.device'}  | ForEach-Object {
         $member = $_
         $memberList.Add("https://graph.microsoft.com/beta/directoryObjects/$($member.id)")
-    }
     }
 ```
 In between the phases, I create a backup of the device group members. This is done because I want to restore the members if something goes wrong. The backup is a JSON file that contains the members of the device group. 
@@ -121,7 +121,7 @@ As you can see, I created also member batches. This is because it is also possib
 For more information about adding members in batch check the [Microsoft documentation about adding multiple users to a group in a single request](https://learn.microsoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&tabs=http#example-2-add-multiple-members-to-a-group-in-a-single-request)
 
 ### Requesting the owned devices and adding them to the device group
-In the past phase, I created a list of API URLs for the owned devices. That means I have created a request URL for every user. The request URL looks like this: `/users/8c287fa3-6d4a-4d0b-a2d8-ef1ddef936ad/ownedDevices`. This URL is accepted by the Graph API batch endpoint. 
+In the previous phase, I created a list of API URLs for the owned devices. That means I have created a request URL for every user. The request URL looks like this: `/users/8c287fa3-6d4a-4d0b-a2d8-ef1ddef936ad/ownedDevices`. This URL is accepted by the Graph API batch endpoint. 
 In this phase, I create a batch list from the ownedDevicesUrlList. The list looks like this:
 ```json
 {
@@ -177,7 +177,8 @@ PS> .\Set-DeviceGroupForUpdate.ps1 -UserGroupName "Ring1Users" -DeviceGroupName 
 ```
 ## Backup and restore
 When using the script, a backup is automatically made of the members of a device group. While executing a JSON file is default created at the same location as the script. If you want to change the location add the `-BackupPath {path}` parameters. The JSON file has content like below. 
-Based on the total number of members, the members are divided into chunks of 20. This is because the Microsoft Graph API has a limit of 20 members per batch. The JSON file looks like this:
+Based on the total number of members, the members are divided into chunks of 20. This is because the Microsoft Graph API has a limit of 20 members per batch. 
+The JSON file looks like this:
 
 ```json
 {
@@ -204,7 +205,8 @@ Based on the total number of members, the members are divided into chunks of 20.
   ]
 }
 ```
-Based on the JSON content, you can restore the members to the device group. The following PowerShell snippet can be used to restore the members to the device group:
+Based on the JSON content, you can restore the members to the device group. 
+The following PowerShell snippet can be used to restore the members to the device group:
 
 ```powershell
 $batches = get-content ./membersBackup.json | ConvertFrom-Json
@@ -223,8 +225,10 @@ When looking more deeply into the backend, Microsoft is moving to use Graph Batc
 
 Also, this script uses batch requests and even it batches the device objects into chunks. I use the `Create-UrlListBatchOutput` command several times. Also, I use the `Create-BodyList` command to chunk the devices into batches.
 
-Both commands have their own purpose. The `Create-UrlListBatchOutput` command creates a batch request body based on a list of URLs. The list is divided into chunks of 20 requests per request object. This can be used for fetching data from the Graph API.
-The example below is an output of the `Create-UrlListBatchOutput` command. The provided list is for requesting the current device group members to delete them. 
+Both commands have their purpose. The `Create-UrlListBatchOutput` command creates a batch request body based on a list of URLs. The list is divided into chunks of 20 requests per request object. This can be used for fetching data from the Graph API.
+The example below is an output of the `Create-UrlListBatchOutput` command. 
+
+The provided list is for requesting the current device group members to delete them. 
 The list is divided into two request objects because there were more than 20 users. There is a request for 20 and a request for 6. 
 To keep it readable I removed parts of the content. I think this makes sense to you.
 
