@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apps on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/apps/</link><description>Recent content in Apps on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/apps/index.xml" rel="self" type="application/rss+xml"/><item><title>Win32LOB intunewin file upload process explained for automation</title><link>https://www.rozemuller.com/win32lob-intunewin-file-upload-process-explained-for-automation/</link><pubDate>Fri, 09 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/win32lob-intunewin-file-upload-process-explained-for-automation/</guid><description>&lt;details class="table-of-content">
+ &lt;summary>Table Of Contents&lt;/summary>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#create-win32lob-app-portal-process">Create Win32LOB App portal process&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#create-win32lob-app-in-intune">Create Win32LOB App in Intune&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#request-intunewin-file-version">Request intunewin file version&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#upload-and-commit-intunewin-file-to-azure-storage-blob">Upload and commit intunewin file to Azure Storage Blob&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#create-win32lob-app-in-automation">Create Win32LOB App in automation&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#create-win32lob-app-in-intune-automated">Create Win32LOB App in Intune automated&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#request-intunewin-file-version-1">Request intunewin file version&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#create-place-holder-for-intunewin-file-version-automated">Create place holder for intunewin file version automated&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#upload-file-to-win32-lob-app-automated">Upload file to Win32 LOB App automated&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#summary">Summary&lt;/a>&lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/details>
+
+&lt;p>A few days ago a question reached me about creating Win32Lob applications including the &lt;code>intunewin&lt;/code> file upload using the REST API. The &lt;code>create&lt;/code> Win32Lob Graph API has no object available to store a file in, and &lt;a href="https://learn.microsoft.com/en-us/graph/api/intune-apps-win32lobapp-create?view=graph-rest-beta"
+
+
+
+
+ target="_blank"
+ 
+
+
+>the documentation&lt;/a>
+ doesn&amp;rsquo;t explain how to upload files while creating Win32Lob applications automated.&lt;br>
+That decided me to look into the file upload process and write this blog.&lt;/p></description></item><item><title>Add Microsoft Store (WinGet) app with icon into Intune automated</title><link>https://www.rozemuller.com/add-microsoft-store-app-with-icon-into-intune-automated/</link><pubDate>Sun, 04 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/add-microsoft-store-app-with-icon-into-intune-automated/</guid><description>&lt;p>In the week of November 28, 2022, Microsoft released the new Microsoft Store which is implemented in Intune using the Windows Packager Manager. This is because the Microsoft Store for Business will be deprecated in the first quarter of 2023.&lt;br>
+It is a great feature that helps distribute applications in a very simple way.&lt;/p></description></item></channel></rss>

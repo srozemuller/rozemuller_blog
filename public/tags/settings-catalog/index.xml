@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Settings Catalog on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/settings-catalog/</link><description>Recent content in Settings Catalog on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 Apr 2024 11:07:48 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/settings-catalog/index.xml" rel="self" type="application/rss+xml"/><item><title>Monitor Security Baseline Insights Recommendations</title><link>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</link><pubDate>Sun, 07 Apr 2024 16:28:14 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</guid><description>&lt;p>Microsoft has updated their security baselines in Microsoft Intune which you can read in the &lt;a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2"
+
+
+
+
+ target="_blank"
+ 
+
+
+>What is new in Intune&lt;/a>
+. A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft&amp;rsquo;s recommendation.&lt;/p></description></item><item><title>Deploy Intune settings catalog automated from scratch with Graph API</title><link>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link><pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid><description>&lt;p>I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href="https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/"
+
+
+
+
+ target="_blank"
+ 
+
+
+> created a profile with power settings and deployed the profile to all devices including a filter&lt;/a>
+.&lt;/p></description></item></channel></rss>

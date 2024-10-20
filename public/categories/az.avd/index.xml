@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Az.Avd on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
+    <link>http://localhost:1313/categories/az.avd/</link>
+    <description>Recent content in Az.Avd on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Feb 2023 10:12:21 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/az.avd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Azure Virtual Desktop Insights automated</title>
+      <link>http://localhost:1313/enable-avd-insights-automated/</link>
+      <pubDate>Fri, 23 Dec 2022 01:28:14 +0200</pubDate>
+      <guid>http://localhost:1313/enable-avd-insights-automated/</guid>
+      <description>Azure Virtual Desktop (AVD) Insights is a way to get sight into your AVD environment. In short (from Microsoft), Azure Virtual Desktop Insights is a dashboard built on Azure Monitor Workbooks that helps IT professionals understand their Azure Virtual Desktop environments.</description>
+    </item>
+  </channel>
+</rss>

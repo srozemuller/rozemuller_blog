@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/cloud/</link><description>Recent content in Cloud on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/cloud/index.xml" rel="self" type="application/rss+xml"/><item><title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link><pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid><description>&lt;p>Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href="https://www.rozemuller.com/avd-automation-cocktail-the-menu"
+
+
+
+
+ target="_blank"
+ 
+
+
+>cocktail series&lt;/a>
+, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p></description></item></channel></rss>

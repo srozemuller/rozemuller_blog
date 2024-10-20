@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Az.Avd on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
+    <link>http://localhost:1313/tags/az.avd/</link>
+    <description>Recent content in Az.Avd on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2023 15:17:14 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/az.avd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd</title>
+      <link>http://localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</link>
+      <pubDate>Thu, 16 Dec 2021 10:16:18 +0100</pubDate>
+      <guid>http://localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</guid>
+      <description>Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.</description>
+    </item>
+    <item>
+      <title>How to enable AVD scaling plans automated</title>
+      <link>http://localhost:1313/how-to-enable-avd-scaling-plans-automated/</link>
+      <pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate>
+      <guid>http://localhost:1313/how-to-enable-avd-scaling-plans-automated/</guid>
+      <description>In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD.</description>
+    </item>
+    <item>
+      <title>How to deal with AVD session hosts version management</title>
+      <link>http://localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</link>
+      <pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate>
+      <guid>http://localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</guid>
+      <description>A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast.</description>
+    </item>
+    <item>
+      <title>Launching the first version of Az.Avd WVD PowerShell module</title>
+      <link>http://localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</link>
+      <pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate>
+      <guid>http://localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</guid>
+      <description>During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits.</description>
+    </item>
+  </channel>
+</rss>

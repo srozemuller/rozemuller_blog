@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AAD on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
+    <link>http://localhost:1313/tags/aad/</link>
+    <description>Recent content in AAD on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2023 15:17:14 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/aad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>http://localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>http://localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – AVD automated with Azure CLI</title>
+      <link>http://localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</link>
+      <pubDate>Tue, 20 Jul 2021 14:59:39 +0200</pubDate>
+      <guid>http://localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</guid>
+      <description>Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI.</description>
+    </item>
+  </channel>
+</rss>

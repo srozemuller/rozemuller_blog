@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/network/</link><description>Recent content in Network on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/network/index.xml" rel="self" type="application/rss+xml"/><item><title>Route AVD traffic through static WAN IP with Azure Firewall automated</title><link>https://www.rozemuller.com/route-avd-traffic-static-wan-ip-with-azure-firewall-automated/</link><pubDate>Fri, 04 Nov 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/route-avd-traffic-static-wan-ip-with-azure-firewall-automated/</guid><description>&lt;p>Recently I had a situation where a customer asked me how to make sure the AVD environment always has the same WAN IP. To give Azure Virtual Desktop a fixed external IP, some options are available. Think about a NAT gateway or an Azure Firewall. In this blog post, I show how to configure a static WAN IP for AVD with the use of the Azure Firewall in an automated way.&lt;/p></description></item><item><title>Resize AVD session host via Azure Monitor Alerts</title><link>https://www.rozemuller.com/resize-avd-sessionhost-based-on-performance/</link><pubDate>Thu, 01 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/resize-avd-sessionhost-based-on-performance/</guid><description>&lt;details class="table-of-content">
+ &lt;summary>Table Of Contents&lt;/summary>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#session-host-insights-via-azure-monitor">Session host insights via Azure Monitor&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#create-alert-rule-from-the-logs">Create alert rule from the logs&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#action-group-triggers-function-app">Action group triggers function app&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#function-app-that-resizes-the-session-host">Function app that resizes the session host&lt;/a>&lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/details>
+
+&lt;h2 id="session-host-insights-via-azure-monitor">Session host insights via Azure Monitor&lt;/h2>
+&lt;p>Enable insights creates a data collection rule under Azure Monitor Settings. This rule captures performance log data and sends the data to a log analytics workspace.&lt;/p></description></item></channel></rss>

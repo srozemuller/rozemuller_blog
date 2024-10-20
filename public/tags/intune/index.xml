@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
+    <link>http://localhost:1313/tags/intune/</link>
+    <description>Recent content in Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Oct 2024 21:40:49 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/intune/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Intune Configuration for Universal Print Automated</title>
+      <link>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
+      <pubDate>Sat, 19 Oct 2024 21:40:49 +0200</pubDate>
+      <guid>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
+      <description>Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.</description>
+    </item>
+    <item>
+      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
+      <link>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
+      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
+      <guid>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
+      <description>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts.</description>
+    </item>
+    <item>
+      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
+      <link>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
+      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
+      <guid>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
+      <description>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts.</description>
+    </item>
+    <item>
+      <title>Zero Trust Endpoint Privileged Management</title>
+      <link>http://localhost:1313/zero-trust-endpoint-privileged-management/</link>
+      <pubDate>Sun, 26 Mar 2023 09:28:51 +0200</pubDate>
+      <guid>http://localhost:1313/zero-trust-endpoint-privileged-management/</guid>
+      <description>In this blog post, I explain the Endpoint Privileged Management (EPM) feature. I will explain how to implement this feature with Microsoft Intune and Graph API.</description>
+    </item>
+  </channel>
+</rss>

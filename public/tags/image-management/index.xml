@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Image Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/image-management/</link><description>Recent content in Image Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/image-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Change AVD disk size based on the Azure Compute Gallery image automated</title><link>https://www.rozemuller.com/change-avd-disk-size-based-on-a-shared-image-gallery-image-automated/</link><pubDate>Mon, 31 May 2021 11:10:58 +0200</pubDate><guid>https://www.rozemuller.com/change-avd-disk-size-based-on-a-shared-image-gallery-image-automated/</guid><description>&lt;p>It is very common to use a golden image in Azure Virtual Desktop environments. Some are using Azure images, others are using a Shared Image Gallery. A great advantage of using preconfigured images is that you just have to create a new session host from that image and you’re all set.&lt;br>
+The &lt;a href="https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/"
+
+
+
+
+ target="_blank"
+ 
+
+
+>change process&lt;/a>
+ for an image version is very simple, you will start a virtual machine from the version and you will make the changes. But what if you need to change the OS disk size of the golden image? In this article, I will explain how to change an Azure Virtual Desktop disk size when using a golden image based on the existing environment automated.&lt;/p></description></item></channel></rss>
