@@ -149,6 +149,7 @@ sidebar = [
   "about-me",
   "adsense-square",
   "wpninjanl",
+  "intuneasistant",
   "mvp",
   "categories",
   "adsense-square",
@@ -161,8 +162,8 @@ sidebar = [
 
 [[social]]
 title = "twitter"
-icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
-link = "https://twitter.com/sanderozemuller"
+icon = "fab fa-bluesky" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "https://bsky.app/profile/srozemuller.bsky.social"
 
 [[social]]
 title = "github"
