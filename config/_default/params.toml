@@ -161,7 +161,7 @@ sidebar = [
 ############################# social site ########################
 
 [[social]]
-title = "twitter"
+title = "bluesky"
 icon = "fab fa-bluesky" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "https://bsky.app/profile/srozemuller.bsky.social"
 
