@@ -23,7 +23,7 @@ Intune Assistant is the web-based tool that helps you to get insights into your 
 In the meantime the tool is growing and more features are added. You can find the it [here](https://intuneassistant.cloud).
 
 ## How does it work?
-As mentioned, Intune Assistant is the webinterface. Behind the scenes al lot is happening. The whole platform consistts of multiple layers. The main layers are:
+As mentioned, Intune Assistant is the webinterface. Behind the scenes al lot is happening. The whole platform consists of multiple layers. The main layers are:
 - The webinterface Intune Assistant ([IntuneAssistant.cloud](https://intuneassistant.cloud))
 - The Intune Assistant API
 - The Microsoft Graph API
@@ -44,7 +44,7 @@ The onboarding process is quite simple, at the (onboarding page)[https://intunea
 
 ![Intune Assistant Onboarding](onboarding-card.png)
 
-After succesful onboarding you will be redrected to the Intune Assistant application. From there you can start using the application.
+After succesful onboarding you will be redirected to the Intune Assistant application. From there you can start using the application.
 
 For more information about the onboarding process, please visit the [documentation page](https://intuneassistant.cloud/docs/web/getting-started/onboarding).
 
@@ -68,7 +68,7 @@ The second important thing is that the Intune Assistant does not store any sensi
 All the information is presented in your browser. The data is only stored is the session of the user that is logged in at client side. When the user logs out the data is removed from the session.
 
 ### Authentication
-When a user logs in to the Intune Assistant Web interface, the user is authenticates with the Intune Assistant application. The Intune Assistant application has permissions to use the API application. The API application is responsible for getting the data from the Microsoft Graph API. 
+When a user logs in to the Intune Assistant Web interface, the user authenticates with the Intune Assistant application. The Intune Assistant application has permissions to use the API application. The API application is responsible for getting the data from the Microsoft Graph API. 
 When a user goes to a page in the Intune Assistant Web interface, the Intune Assistant Web interface interacts with Intune Assistant API.
 From there the IntuneAssistant API uses the Microsoft Graph API to read the data from your tenant.
 
