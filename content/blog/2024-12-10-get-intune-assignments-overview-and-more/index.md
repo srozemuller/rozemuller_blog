@@ -28,7 +28,7 @@ As mentioned, Intune Assistant is the webinterface. Behind the scenes al lot is 
 - The Intune Assistant API
 - The Microsoft Graph API
 
-[![Intune Assistant](/intuneassistant-global-overview.jpg)]
+![Intune Assistant](/intuneassistant-global-overview.jpg)
 
 ### Components
 The webinterface is the place where you can find all the information. This is a react page where all the information is presented at.
@@ -42,11 +42,11 @@ These are the Intune Assistant application and the Intune Assistant API applicat
 ### Onboarding
 The onboarding process is quite simple, at the (onboarding page)[https://intuneassistant.cloud/onboarding/] you are asked for a tenant ID and tenant domain. From there you will be redirected to your tenant and asked to consent the IntuneAssistant application. After consenting the application two enterprise applications are added to your tenant. The Intune Assistant application (0f0f930f-a5c7-4da2-a985-8464d1ff51d0) and the Intune Assistant API application (6317a049-4e55-464f-80a1-0896b8309fec).
 
-[![Intune Assistant Onboarding](/onboarding-card.png)]
+![Intune Assistant Onboarding](/onboarding-card.png)
 
 After succesful onboarding you will be redrected to the Intune Assistant application. From there you can start using the application.
 
-For more information about the onboarding process, please visit the [documentation page](http://localhost:4321/docs/web/getting-started/onboarding).
+For more information about the onboarding process, please visit the [documentation page](https://intuneassistant.cloud/docs/web/getting-started/onboarding).
 
 ### Permissions
 Before onboarding the Intune Assistant application, it is important to know what permissions are needed.
@@ -82,8 +82,8 @@ Currently the following features are available already in the Intune Assistant:
 - Configuration policy settings overview
 - Conditional access policy overview including assignments
 
-[!Intune Assistant Assignments](/intune-assistant-assignments.png)
-[!Intune Assistant Configuration Policy Settings overview](intuneassistant-policy-setting-overview.png)
+![Intune Assistant Assignments](/intune-assistant-assignments.png)
+![Intune Assistant Configuration Policy Settings overview](intuneassistant-policy-setting-overview.png)
 
 For more information about Intune Assistant please check the [documentation](https://intuneassistant.cloud/docs/general/authentication/).
 
