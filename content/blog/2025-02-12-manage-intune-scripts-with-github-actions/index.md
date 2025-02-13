@@ -19,7 +19,7 @@ Microsoft Intune allows the use of scripts for various purposes, with the most c
 
 A remediation package typically consists of a detection script and a remediation script. The detection script checks for a specific condition that requires remediation, such as identifying devices with battery health issues. In some cases, only a detection script is needed.
 
-{{ toc }}
+{{< toc >}}
 
 ## Scripts in Intune
 Currently, Intune does not provide built-in versioning for scripts. This means that when a script is updated, the previous version is lost. In this blog, I will demonstrate how to implement version control and automate script updates in Intune using GitHub Actions. The main goal is to automatically update scripts in Intune whenever they are modified and committed to a GitHub repository.
@@ -274,5 +274,6 @@ jobs:
 
 ![github-results](github-results.png)
 
-You can find the script and the action in my repository: https://github.com/srozemuller/IntuneAutomation
-{{ bye }}
+You can find the script and the action in my repository: https://github.com/srozemuller/IntuneAutomation.
+
+{{< bye >}}

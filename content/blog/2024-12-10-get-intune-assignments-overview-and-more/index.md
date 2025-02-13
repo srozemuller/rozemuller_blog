@@ -17,6 +17,7 @@ Microsoft Intune becomes more and more important in the modern workplace. It is 
 To get more insights into Microsoft Intune assignments, the configured settings and more, I created a tool to help you with this. The tool is called Intune Assistant. 
 In this blog post, I will show you what Intune Assistant is and how it can help you with your daily work.
 
+{{< toc >}}
 
 ## What is Intune Assistant?
 Intune Assistant is the web-based tool that helps you to get insights into your Microsoft Intune environment. The main idea behind Intune Assistant is to get an overview of all assignments in your Intune environment. This includes all assignments for configuration profiles, compliance policies, and more.
