@@ -139,10 +139,10 @@ Of course, this is for every OS type.
 In the next steps, we will walk through the automation logic how to make sure your OS build numbers are updated automatically in your policies.
 
 ### Automation philosophy
-The main idea of this automation is that compliance policies and device platform restriction policies with buildnumbers are updated with the n -1 and n -2 build numbers based on your devices inventory. 
-The most ideal scenario is to fetch buildnumbers from the internet directly from the vendors. That will be the next step in a other blog. 
+The main idea of this automation is that the policies with build numbers are updated with the n -1 and n -2 build numbers based on your devices inventory. 
+The most ideal scenario is to fetch build numbers from the internet directly from the vendors. That will be the next step in a other blog. 
 
-That means that the automation task searches for all OS platform types, and per type the n -1 latests build calculates. The reason why n -1 is because of the most update strategies do not update all devices at once. When updating policies based on the latest OS build, only the first ring is compliant. 
+That means that the automation task searches for all OS platform types, and per type the n -1 latest's build calculates. The reason why n -1 is because of the most update strategies do not update all devices at once. When updating policies based on the latest OS build, only the first ring is compliant. 
 
 {{< notice "note" >}}
 This automation task only works when having your update proces in place. That means you have configured your update strategy in Intune. 
@@ -154,14 +154,13 @@ When NOT having your updates in place, it could cause non-compliant devices.
 
 ### Automation
 In the examples below, I use the Microsoft.Graph.Authentication PowerShell module.
-
 Install the module using the command below.
 ```powershell
 Install-Module Microsoft.Graph.Authentication -Repository psgallery    
 ```
 
 ### Get OS build numbers per device
-To keep the blog post as short a possible we only will walk through the Windows plaform. All other platforms work in the same way.  
+To keep the blog post as short a possible we only will walk through the Windows platform. All other platforms work in the same way.  
 
 The first step is to fetch all devices per OS type and calculate the n -1 and n -2 latest builds. To fetch all devices deviced by type, use the `/deviceManagement/managedDevices` endpoint.  
 Use `?$filter=operatingSystem eq 'Windows'&$select=id,operatingSystem,deviceType,osVersion` to fetch the correct devices for every context.  
@@ -200,8 +199,9 @@ while ($results.'@odata.nextLink')
 ```
 
 Now we have a list with all devices in the `$devices` variable we can calculate the n -1 build version. 
-To find the second highest value in the list, we select the $devices.osVersion property. This selects all the osVersion values in the list. 
-The command below sorts all the os version with the highest above. Then it selects all unique values. That results in a smaller list representing unique OS versions. At last it selects the second value in the whole list. 
+To find the second-highest value in the list, we select the `$devices.osVersion` property.  
+This selects all the `osVersion` values in the list. 
+The command below sorts all the os version with the highest above. Then it selects all unique values. That results in a smaller list representing unique OS versions. At last, it selects the second value in the whole list. 
 
 The reason why sorting in descending way it is make sure the highest value is always on top of the list. You don't know how long a list is at the end. The only thing you know there is a list.
 Example: if you have a list with 10 OS version and want to select row `[9]` but if the list is 1000 then select `[999]`. If you sort descending than you always can select `[1]`. 
@@ -224,15 +224,43 @@ This is also a good example when NOT selecting the n -1 value and not having you
 When having a situation like above, you could choose to use n -x.
 Then change the `[1]` to `[x]` where x represents a higher value. 
 
-### Get device compliance policies
-Now we have the correct version numbers, it is time to update the compliance policies where buildnumbers are in. In this case lets search for the compliance policies. To fetch the policies you need the endpoint `/deviceManagement/deviceCompliancePolicies`. Just as mentioned above. As also mentioned, you need to provide the correct type to create a correct compliance policy. This is also happening when fetching the policies.
+## Compliance policies
+The next step is to update the compliance policies with the correct build numbers. In this case, we only update the Windows compliance policies.
+A little background information about the strategy. An Intune configuration can have multiple compliance policies per platform.  
+The strategy is to have two compliance policies per platform with build numbers. One policy with a grace period and one without a grace period. The grace period is a period where a device is marked as non-compliant but still has access to the resources. The non-grace period is a period where a device is marked as non-compliant and has no access to the resources.
+These two policies are a kind of general policies that holds the device properties. 
 
-So, just requesting all the compliance policies results in a list with all policy types. In this case we ONLY need to update the Windows policies. That means we need to fetch only that type. 
-Now, back to the earlier mentioned `@odata.type`. Instead of provding the correct type, we now filter on that type using the URL below.
+On top of that you add more policies for Defender, Device Health and other security related policies.
+The policy with the device properties and hold the build numbers are the policies we are after at. 
+
+### It's all about the filters
+The most important thing in this strategy is the filters. Especially for the Windows platform. This is because for the Intune background is does not matter if it is a Windows 10 or Windows 11 device when it comes to compliance. But there is a big different regarding build numbers.  
+Both compliance policies are the same and relies on the same platform type `Windows10AndLater`.  
+
+I have seen many situations having a mixed fleet, where Windows 10 and Windows 11 devices are in the same environment. 
+To avoid non-compliant Windows 10 devices after updating build numbers, you should have two policies per OS version (10 and 11). In total makes that four policies. Then it all comes down to good targeting. In basic, the four policies are targeted to the same group where the filter differs.  
+
+> You should have two specific filters, for Windows 10 and Windows 11. Make sure that a filter only have the build numbers in it for that particular OS.  
+> So, don't mix the build numbers in one policy.
+
+Example filter rules for Windows 10 and Windows 11:
+
+- Windows 10 filter rule: `(device.osVersion -startsWith "10.0.19")` This handles all build numbers starting with 10.0.19 which represents Windows 10.
+- Windows 11 filter rule: `(device.osVersion -startsWith "10.0.20")` This handles all build numbers starting with 10.0.20 which represents Windows 11.
+
+Check all the build information at the [Windows release information](https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information) page at Microsoft Learn.
+
+What I did is created those filters, created the four compliance policies. In the Windows 10 policy I added the minimum OS build as also in the Windows 11 policies. Both are targeted to the same group but with a different filter.
+
+### Get device compliance policies
+Now we have the correct version numbers, it is time to update the compliance policies where build numbers are in. In this case we search for the compliance policies. To fetch the policies you need the endpoint `/deviceManagement/deviceCompliancePolicies`. Just as mentioned above. As also mentioned, you need to provide the correct type to create a correct compliance policy. This is also happening when fetching the policies.
+
+So, just requesting all the compliance policies results in a list with all policy types. In this case we ONLY need to update the correct (in this example Windows) platform policies. That means we need to fetch only that type. 
+Now, back to the earlier mentioned `@odata.type`. Instead of providing the correct type, we now filter on that type using the URL below.
 
 `https://graph.microsoft.com/beta/deviceManagement/deviceCompliancePolicies?$filter=(isof('microsoft.graph.windows10CompliancePolicy'))`  
 
-Then the next thing is that we have two compliancy policies, one with grace period and one without grace period. 
+Then the next thing is that we have two compliance policies, one with grace period and one without grace period. 
 To fetch that information as well we need to expand some extra properties. 
 
 `https://graph.microsoft.com/beta/deviceManagement/deviceCompliancePolicies?$filter=(isof('microsoft.graph.windows10CompliancePolicy'))&expand=assignments,scheduledActionsForRule($expand=scheduledActionConfigurations)`
@@ -241,7 +269,7 @@ Now we have all Windows compliance policies with their actions and assignments.
 
 ![compliance-policy-with-expand](./compliance-policy-with-expand.png)
 
-When having an optimized environment you should have two policies. The one that has a greace period and the one without grace period.
+When having an optimized environment you should have two policies. The one that has a grace period and the one without grace period.
 
 In PowerShell the code looks like this.
 
@@ -263,7 +291,7 @@ When looking to the Graph response, the configuration looks like this.
 
 ![graph-rule-config](./graph-rule-config.png)
 
-As you can see, there are two objects. Take a look at the mark non compliant setting and template Id GUID. This is an empty GUID. Which means it has no message template available. 
+As you can see, there are two objects. Take a look at the mark non-compliant setting and template ID GUID. This is an empty GUID. Which means it has no message template available. 
 This is the object we need in the next check. 
 
 When looking at the PowerShell command below. I search in the `compliancePolicies` object for a policy that has a `osMinimumVersion` filled in, `assignments` count is higher than 0 (which means there are assignments), and is must have a `gracePeriodHours` greater then 0 (otherwise immediately) including also a `notificationTemplateId` with the empty GUID (and emtpy GUID is always `00000000-0000-0000-0000-000000000000`).
@@ -278,7 +306,9 @@ $n1Policy = $compliancePolicies.value.Where({
 })
 ```
 
-The policy fetching with the code above is the compliance policy you need for the n -1 scenario. For the n -2 scenario, you only have to change the code `-and ($_.assignments.Count -gt 0)` into `-and ($_.assignments.Count -eq 0)` (gt changes into eq).
+The policy fetching with the code above is the compliance policy you need for the n -1 scenario.  
+
+For the n -2 scenario, you only have to change the code `-and ($_.scheduledActionsForRule.scheduledActionConfigurations.gracePeriodHours -gt 0)` into `-and ($_.scheduledActionsForRule.scheduledActionConfigurations.gracePeriodHours -eq 0)` (gt changes into eq).
 
 ### Update device compliance policy
 The PowerShell code above stores the correct policy into `$n1Policy` variable. The only thing we need to do now is using the `$n1Policy.id` and send an update request (PATCH request) with the correct `osMinimumVersion` value and ofcourse the policy type. 
@@ -293,32 +323,131 @@ Invoke-MgGraphRequest -Method PATCH -URI $url -Body $body
 ```
 
 ## Device platform restriction
-This one is a bit more simple because, normally (assumption) you only have one platform restriction per type (Windows, iOS, Android and macOS). Where macOS is not supported yet. 
+This part is a bit more complex than the compliance policies. The reason is that the device platform restriction policies are not directly linked to the devices. The device platform restriction policies are linked to device OS types like Windows, iOS or Android.
+Updating build numbers in this kind of policy has dependencies. 
 
-So the only thing we need to do is to find those restrictions and update the OS build number. 
+Sorry for saying but yes, it all depends 🤷🏼.
 
-**Or not ?!?!**
+I have seen configurations where the default policy has a restriction for all personal devices and allows a very low minimum build. For example when enrolling Cloud PC based on a marketplace image than can have a lower build.  
+But also I have seen configurations where the default policy has a restriction for all personal devices and allows a very high minimum build because of security reasons or there are no older builds involved.
+
+And, both is fine. In fact a platform restriction is the front door of your environment. It is the first thing a device sees when enrolling. The most important thing using this policy is that users only can enroll devices that are known by the tenant.
+But, it is good to know that you are aware of the configured build numbers, so it is good to know what is configured.
+
+### Houston???
+Yes, we have a problem.  
+
+As you can read above, it is not that necessary to update the device platform restriction policies in an automated way. And, I'm glad about that, because it is not possible to update the device platform restriction policies in an automated way 🤯.
+Yes, I am right, it is only possible to fetch the policies using Graph API. 
 
 ![platform-restriction-error](platform-restriction-error.png)
 
-Unfortenately, it is only possible to fetch the policies. but **NOT** to update the policies using aan app registration or a managed identity in basic. This has to do with tenant wide settings and RBAC in the backend. 
+It is **NOT** possible to update the policies using an app registration or a managed identity in basic. This has to do with tenant wide settings and RBAC in the backend. 
 
 The error when updating, or creating, device platform restriction in Intune is:
 
 `Tenant is not Global Admin or Intune Service Admin. Operation is restricted`
 
 So, you are able to update the restriction policy only using an interactive script. Yes, there are other options but due complexity reasons I will write another blog for that specific item. 
-For now, you can use the code below to update, but as said, only using it in an interactive way. That means when the script run, you will get a login popup.
 
-I use this endpoint to fectch the enrollment configurations: `/deviceManagement/deviceEnrollmentConfigurations?$expand=assignments`. This will result in different enrollment restriction types like `device limit` and `device enrollment`. In this scenario we need the device enrollment policies.  
-Due Graph API inconsistancy, we need to use another way to filter the correct resource. The `(isof... )` filter does not work here.  
+### Get the device platform restriction policies
+As mentioned before, we are able to fetch the policies using a service principal. That is where this paragraph is focussing on.
+You can use the code below to fetch the device platform restriction policies. 
 
-To filter the correct device enrollment configuration types, I used this endpoint `/deviceManagement/deviceEnrollmentConfigurations?$filter=deviceEnrollmentConfigurationType eq 'platformRestrictions'`
+I use this endpoint to fetch the enrollment configurations: `/deviceManagement/deviceEnrollmentConfigurations?$expand=assignments`. This will result in different enrollment restriction types like `device limit` and `device enrollment`. In this scenario we need the device enrollment policies.  
+We need to use another way to filter the correct resource. The `(isof... )` filter does not work here.  
 
+To filter the correct device enrollment configuration types, I used this endpoint `/deviceManagement/deviceEnrollmentConfigurations?$filter=deviceEnrollmentConfigurationType eq 'singlePlatformRestriction'`
+The filter fetches all device enrollment configurations that are platform restrictions or single platform restrictions.
+The policy with the `platformRestrictions` type is the default policy.  
 
+![platform-restriction-policy](platform-restriction-policy.png)
+
+The policy with the `singlePlatformRestriction` type is a policy that is created by the user and specific for a platform.
+
+![single-platform](single-platform.png)
+To get both policy types, use the PowerShell command below. This results in all platform restriction policies of every platform type. 
 
 ```powershell
+$url = "https://graph.microsoft.com/beta/deviceManagement/deviceEnrollmentConfigurations?`$filter=deviceEnrollmentConfigurationType eq 'singlePlatformRestriction'"
+$restrictionPolicies = Invoke-MgGraphRequest -Method GET -URI $url -OutputType PSObject
+$restrictionPolicies.value | Select-Object displayName, platformType,  @{Name="osMinimumVersion"; Expression={$_.platformRestriction.osMinimumVersion}},  @{Name="osMaximumVersion"; Expression={$_.platformRestriction.osMaximumVersion}}
+```
 
+```basic
+displayName                    platformType   osMinimumVersion osMaximumVersion
+-----------                    ------------   ---------------- ----------------
+All users and all devices                                      
+iOS n2 restriction             ios            18.2.1           
+Windows Enrollment restriction windows        22621.4037       
+Android restriction policy     android        14.0.0           
+Android restriction policy     androidForWork     
+```
+
+## Bringing all parts together
+In the above parts, I have explained how to fetch the correct devices and policies. Now it is time to bring all parts together using PowerShell.
+The idea behind the script is to log in to the Graph API interactive (when no access token is provided), fetch all devices, calculate the n -1 and n -2 build numbers, fetch the correct compliance policies, update the policies. For the device platform restriction policies a warning is shown when build numbers are old but not updated.
+
+When an access token is provided, that token will be used. This is very useful when running the script in a GitHub environment or in Azure (Automation or Function) as a managed identity.
+
+### Resources parts
+The first part in the script is the resources part. This part is used to load the resources, devices, filters and compliance policies. And, calculated the n -1 and n -2 build numbers. 
+
+```powershell
+#region resources
+
+# Find the devices
+$devices = GetDevices -platform $platform
+
+# Finding OS Build numbers second highest
+$secondHighest = ($devices.value.osVersion | Sort-Object -Descending | Select-Object -Unique)[1]
+$thirdHighest = ($devices.value.osVersion | Sort-Object -Descending | Select-Object -Unique)[2]
+
+# Find the specific filter
+$platformFilter = GetFilters -platform $platform
+
+# Find device compliance policy by platform
+$compliancePolicies = GetCompliancePolicies -platform $platform
+
+# Find platform restriction policy by platform
+$restrictionPolicies = GetCompliancePolicies -platform $platform
+#endregion 
+```
+
+### Update compliance policies
+The next part is the update compliance policies part. This part is used to update the compliance policies with the correct build numbers. 
+In the snippet below, you see the N -1 policy.
+```powershell
+ #region compliance policy updates
+##### N -1 policy handling with grace period
+# This is the policy that allows not that old machine having a grace period
+$n1Policy = $compliancePolicies.value.Where({ 
+    ($null -ne $_.osMinimumVersion) `
+    -and ($_.assignments.Count -gt 0) `
+    -and (($_.scheduledActionsForRule.scheduledActionConfigurations.gracePeriodHours -gt 0) `
+    -and $_.scheduledActionsForRule.scheduledActionConfigurations.notificationTemplateId -eq "00000000-0000-0000-0000-000000000000") `
+    -and $_.assignments.target.deviceAndAppManagementAssignmentFilterId -eq $platformFilter.id
+})
+if ($n1Policy.Count -gt 1) {
+    Throw "There are multiple $platform compliance policies that are holding an OS build number, have a grace period and is assigned to the same filter, $($n1Policy.displayName). Consider using just one policy for OS build handling"
+}
+$body = @{
+    '@odata.type' = $n1Policy.'@odata.type'
+    osMinimumVersion = $secondHighest
+} | ConvertTo-Json
+$url = "https://graph.microsoft.com/beta/deviceManagement/deviceCompliancePolicies/{0}" -f $n1Policy.id
+Invoke-MgGraphRequest -Method PATCH -URI $url -Body $body
+#endregion
+```
+### Checking restriction policies
+The last region is to check the restriction policies. This part is used to check the restriction policies and show a warning when the build numbers are not updated. 
+
+```powershell
+#region Device restriction policies
+$restrictionPolicies | Foreach({
+    Write-Warning "Check restriction policy $($_.displayName) because it has a build number configured"
+})
+#endregion
 ```
 
 {{< bye >}} 
