@@ -450,4 +450,5 @@ $restrictionPolicies | Foreach({
 #endregion
 ```
 
+You can find the script at my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/GovernOsBuildNumbers)
 {{< bye >}} 
