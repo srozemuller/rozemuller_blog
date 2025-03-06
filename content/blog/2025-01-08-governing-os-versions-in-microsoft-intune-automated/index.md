@@ -15,7 +15,7 @@ tags:
 ---
 
 ## Govern OS Versions in Microsoft Intune
-This article is based on a post of my good friend Kenneth van Surksum. He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune. 
+This article is based on a [post of my good friend Kenneth van Surksum](https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/). He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune. 
 
 In Microsoft Intune there is a good way to avoid old OS versions in your environment.
 Kenneth's article describes how to setup those ways using the portal, in this article, I explain how to deploy those settings but also how to maintain those settings in an automated way. 
@@ -240,8 +240,10 @@ Both compliance policies are the same and relies on the same platform type `Wind
 I have seen many situations having a mixed fleet, where Windows 10 and Windows 11 devices are in the same environment. 
 To avoid non-compliant Windows 10 devices after updating build numbers, you should have two policies per OS version (10 and 11). In total makes that four policies. Then it all comes down to good targeting. In basic, the four policies are targeted to the same group where the filter differs.  
 
-> You should have two specific filters, for Windows 10 and Windows 11. Make sure that a filter only have the build numbers in it for that particular OS.  
-> So, don't mix the build numbers in one policy.
+{{< notice "info" >}}
+You should have two specific filters, for Windows 10 and Windows 11. Make sure that a filter only have the build numbers in it for that particular OS.  
+So, don't mix the build numbers in one policy.
+{{< /notice >}}
 
 Example filter rules for Windows 10 and Windows 11:
 
