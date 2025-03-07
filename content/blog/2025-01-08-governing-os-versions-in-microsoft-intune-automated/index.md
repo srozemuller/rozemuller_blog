@@ -18,12 +18,12 @@ tags:
 This article is based on a [post of my good friend Kenneth van Surksum](https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/). He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune. 
 
 In Microsoft Intune there is a good way to avoid old OS versions in your environment.
-Kenneth's article describes how to setup those ways using the portal, in this article, I explain how to deploy those settings but also how to maintain those settings in an automated way. 
+Kenneth's article describes how to set up those ways using the portal, in this article, I explain how to deploy those settings but also how to maintain those settings in an automated way. 
 
 {{< notice "info" >}}
-This article asumes that your update strategy is in place and updates the devices. Another thing in this kind of automation is that your environment is clean and ready for optimization. In this case, that means you have two assigned compliance policies per type that handles compliance checks for OS build numbers. Of course you can have more other compliance policies per type. 
+This article assumes that your update strategy is in place and updates the devices. Another thing in this kind of automation is that your environment is clean and ready for optimization. In this case, that means you have two assigned compliance policies per type that handles compliance checks for OS build numbers. Of course, you can have more other compliance policies per type. 
 
-The rest of the article asuming you have this in place. 
+The rest of the article assuming you have this in place. 
 {{< /notice >}}
 
 ## Components
@@ -36,33 +36,33 @@ The main difference between those two are that compliance policy works for devic
 In the upcoming parts we first take a look how to implement these components in an automated way. To do this I use the Graph API in the first place. 
 
 ### Create Intune compliance policies automated
-Creating compliance policies is a bit strange thing in Intune using the Graph API. This is because compliance policies are devided in multiple types, Windows, Android, iOS, macOS but all use the same endpoint. That means that based on the provided body, Graph knows what policy type it is. 
+Creating compliance policies is a bit strange thing in Intune using the Graph API. This is because compliance policies are categorized in multiple types, Windows, Android, iOS, macOS but all use the same endpoint. That means that based on the provided body, Graph knows what policy type it is. 
 
-A widely used configuration is having two compliance policies per platform. The first one is marking non-compliant after a grace period (14, 30 days) and one marking non-compliant imediately. 
-For the grace period policy, we use the buildnumber n -1 and imediately n -2. All based on your current devices inventory. 
+A widely used configuration is having two compliance policies per platform. The first one is marking non-compliant after a grace period (14, 30 days) and one marking non-compliant immediately. 
+For the grace period policy, we use the buildnumber n -1 and immediately n -2. All based on your current devices inventory. 
 
 ![compliance-policy-os-types](./compliance-policy-os-types.png)
 
 To create Intune compliance policies in an automated way you need the `/deviceManagement/deviceCompliancePolicies` endpoint. 
-Because this is an global endpoint for all device compliance policies you have to specify the correct policy type. Currently the following policy types are available:
+Because this is a global endpoint for all device compliance policies you have to specify the correct policy type. Currently, the following policy types are available:
 
-|Type   | Platform   |   Platform type|
-|---|---|---|
-|#microsoft.graph.windows10CompliancePolicy|Windows 10 and later|Windows 10/11 compliance policy |
-|#microsoft.graph.androidDeviceOwnerCompliancePolicy|Android Enterprice|Fully managed, dedicated, and corporate-owned work profile|
-|#microsoft.graph.androidWorkProfileCompliancePolicy|Android Enterprice|Personally-owned work profile|
-|#microsoft.graph.iosCompliancePolicy|iOS/iPadOs|iOS compliance policy|
-|#microsoft.graph.macOSCompliancePolicy|macOS|Mac compliance policy|
+| Type                                                | Platform             | Platform type                                              |
+|-----------------------------------------------------|----------------------|------------------------------------------------------------|
+| #microsoft.graph.windows10CompliancePolicy          | Windows 10 and later | Windows 10/11 compliance policy                            |
+| #microsoft.graph.androidDeviceOwnerCompliancePolicy | Android Enterprise   | Fully managed, dedicated, and corporate-owned work profile |
+| #microsoft.graph.androidWorkProfileCompliancePolicy | Android Enterprise   | Personally-owned work profile                              |
+| #microsoft.graph.iosCompliancePolicy                | iOS/iPadOs           | iOS compliance policy                                      |
+| #microsoft.graph.macOSCompliancePolicy              | macOS                | Mac compliance policy                                      |
 
->I have skipped the Android Device Administrator part, since it is deprectated since 1 January 2025.
+>I have skipped the Android Device Administrator part, since it is deprecated since 1 January 2025.
 
 ![android-device-administrator](./android-device-administrator.png)
 
-So, the `@odata.type`, the property that tells Graph which kind of resource it is, must be provided in the body. Otherwise you will get an error like below.
+So, the `@odata.type`, the property that tells Graph which kind of resource it is, must be provided in the body. Otherwise, you will get an error like below.
 
 ![odata-error](./odata-error.png)
 
-The errorcode is `ModelValidationFailure` with the message `Cannot create an abstract class.`
+The error code is `ModelValidationFailure` with the message `Cannot create an abstract class.`
 
 With the code below you are able to create compliance policies with the OS minimum version in it. To make things clear, the code only sets the OS minimum version. To set the OS version, the `osMinimumVersion` property is used. This `osMinimumVersion` is a property that is available in every kind of policy. 
 
@@ -101,7 +101,7 @@ Just change the `@odata.type` to the correct policy type and you're all set.
 ![compliance-policy-created](./compliance-policy-created.png)
 
 ### Create device platform restriction policy automated
-To create a device platform restriction policies automated, we need a another Graph API endpoint. The endpoint you need for device platform restrictions is `/deviceManagement/deviceEnrollmentConfigurations`. When requesting this endpoint you will notice you get more policies than only the platform restriction policies. Also policies for Windows Hello for Business or Device Limit restrictions came up.
+To create a device platform restriction policies automated, we need another Graph API endpoint. The endpoint you need for device platform restrictions is `/deviceManagement/deviceEnrollmentConfigurations`. When requesting this endpoint you will notice you get more policies than only the platform restriction policies. Also, policies for Windows Hello for Business or Device Limit restrictions came up.
 
 Well, also in this case, we have to provide the correct `@odata.type`. When not adding the `@odata.type` you will get the same error as mentioned above. 
 
@@ -128,9 +128,9 @@ The example above is for the Windows platform. There are four platform types wit
 
 
 ## Govern OS version in an automated way
-Providers like Microsoft, Apple or Android continue improve their operating systems. If a new version comes out the build number changes. Buildnumers are internally used numbers and represents a specific OS version. That could result in numbers that do not followup by 1. In the basic a build number does not tell how old a specific OS is. So it is crucial to govern OS build numbers in your environment and make sure build number configurations are growing with the device environment.
+Providers like Microsoft, Apple or Android continue to improve their operating systems. If a new version comes out the build number changes. Build numbers are internally used numbers and represents a specific OS version. That could result in numbers that do not follow up by 1. In the basic a build number does not tell how old a specific OS is. So it is crucial to govern OS build numbers in your environment and make sure build number configurations are growing with the device environment.
 
-Example, we have a Windows 11 environment. In meantime (at moment of writing) Windows 11 has three buildnumbers: `22621.4602` (22H2), `22631.4602` (23H2) and `26100.2605` (24H2). Buildnumber `22621.4602` is available since 2022-09-20 which is more than two years old from now. Looking at the number itself it does not tell how old it is. But you want to avoid this buildnumber is entring your environment in the first place and make sure your current environment is up-to-date as well. 
+Example, we have a Windows 11 environment. In meantime (at moment of writing) Windows 11 has three build numbers: `22621.4602` (22H2), `22631.4602` (23H2) and `26100.2605` (24H2). Buildnumber `22621.4602` is available since 2022-09-20 which is more than two years old from now. Looking at the number itself it does not tell how old it is. But you want to avoid this buildnumber is entering your environment in the first place and make sure your current environment is up-to-date as well. 
 
 Source I used: https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information
 
@@ -140,12 +140,12 @@ In the next steps, we will walk through the automation logic how to make sure yo
 
 ### Automation philosophy
 The main idea of this automation is that the policies with build numbers are updated with the n -1 and n -2 build numbers based on your devices inventory. 
-The most ideal scenario is to fetch build numbers from the internet directly from the vendors. That will be the next step in a other blog. 
+The most ideal scenario is to fetch build numbers from the internet directly from the vendors. That will be the next step in another blog. 
 
 That means that the automation task searches for all OS platform types, and per type the n -1 latest's build calculates. The reason why n -1 is because of the most update strategies do not update all devices at once. When updating policies based on the latest OS build, only the first ring is compliant. 
 
 {{< notice "note" >}}
-This automation task only works when having your update proces in place. That means you have configured your update strategy in Intune. 
+This automation task only works when having your update process in place. That means you have configured your update strategy in Intune. 
 {{< /notice >}}
 
 {{< notice "warning" >}}
@@ -162,7 +162,7 @@ Install-Module Microsoft.Graph.Authentication -Repository psgallery
 ### Get OS build numbers per device
 To keep the blog post as short a possible we only will walk through the Windows platform. All other platforms work in the same way.  
 
-The first step is to fetch all devices per OS type and calculate the n -1 and n -2 latest builds. To fetch all devices deviced by type, use the `/deviceManagement/managedDevices` endpoint.  
+The first step is to fetch all devices per OS type and calculate the n -1 and n -2 latest builds. To fetch all devices categorized by type, use the `/deviceManagement/managedDevices` endpoint.  
 Use `?$filter=operatingSystem eq 'Windows'&$select=id,operatingSystem,deviceType,osVersion` to fetch the correct devices for every context.  
 
 The whole endpoint make then:  
@@ -215,11 +215,11 @@ $thirdHighest = ($devices.osVersion | Sort-Object -Descending | Select-Object -U
 
 In the screenshot below I showed the result of the above command, as the unique list.  
 
-![osversion-list](./osversion-list.png)
+![version-list](./osversion-list.png)
 
 When sending a GET request to this endpoint all compliance policies are returned.
 
-This is also a good example when NOT selecting the n -1 value and not having your update strategy in place. A lot of build numbers are there. When updating the policies to n -1 based on this list will result in lot of non-compliant devices. So make sure you have a patched your environment in a proper way. 
+This is also a good example when NOT selecting the n -1 value and not having your update strategy in place. A lot of build numbers are there. When updating the policies to n -1 based on this list will result in a lot of non-compliant devices. So make sure you have a patched your environment in a proper way. 
 
 When having a situation like above, you could choose to use n -x.
 Then change the `[1]` to `[x]` where x represents a higher value. 
@@ -234,7 +234,7 @@ On top of that you add more policies for Defender, Device Health and other secur
 The policy with the device properties and hold the build numbers are the policies we are after at. 
 
 ### It's all about the filters
-The most important thing in this strategy is the filters. Especially for the Windows platform. This is because for the Intune background is does not matter if it is a Windows 10 or Windows 11 device when it comes to compliance. But there is a big different regarding build numbers.  
+The most important thing in this strategy is the filters. Especially for the Windows platform. This is because for the Intune background it does not matter if it is a Windows 10 or Windows 11 device when it comes to compliance. But there is a big different regarding build numbers.  
 Both compliance policies are the same and relies on the same platform type `Windows10AndLater`.  
 
 I have seen many situations having a mixed fleet, where Windows 10 and Windows 11 devices are in the same environment. 
@@ -285,7 +285,7 @@ The next step is to update the compliance policies. To update the correct we hav
 First select the policy with the grace period.
 
 To find out the grace period configuration it is good to know how the rule configuration works.
-In the screenhost below, I show a policy that has a greace period configured and also a send email configuration. 
+In the screenshot below, I show a policy that has a grace period configured and also a send email configuration. 
 
 ![non-compliant-actions](./non-compliant-actions.png)
 
@@ -296,7 +296,7 @@ When looking to the Graph response, the configuration looks like this.
 As you can see, there are two objects. Take a look at the mark non-compliant setting and template ID GUID. This is an empty GUID. Which means it has no message template available. 
 This is the object we need in the next check. 
 
-When looking at the PowerShell command below. I search in the `compliancePolicies` object for a policy that has a `osMinimumVersion` filled in, `assignments` count is higher than 0 (which means there are assignments), and is must have a `gracePeriodHours` greater then 0 (otherwise immediately) including also a `notificationTemplateId` with the empty GUID (and emtpy GUID is always `00000000-0000-0000-0000-000000000000`).
+When looking at the PowerShell command below. I search in the `compliancePolicies` object for a policy that has a `osMinimumVersion` filled in, `assignments` count is higher than 0 (which means there are assignments), and is must have a `gracePeriodHours` greater than 0 (otherwise immediately) including also a `notificationTemplateId` with the empty GUID (and empty GUID is always `00000000-0000-0000-0000-000000000000`).
 
 The reason why we look for the empty GUID as well is because all the objects also have a `gracePeriodHours` object where you can put something in. So only the combination `gracePeriodHours` and empty GUID makes that specific rule. 
 
@@ -313,7 +313,7 @@ The policy fetching with the code above is the compliance policy you need for th
 For the n -2 scenario, you only have to change the code `-and ($_.scheduledActionsForRule.scheduledActionConfigurations.gracePeriodHours -gt 0)` into `-and ($_.scheduledActionsForRule.scheduledActionConfigurations.gracePeriodHours -eq 0)` (gt changes into eq).
 
 ### Update device compliance policy
-The PowerShell code above stores the correct policy into `$n1Policy` variable. The only thing we need to do now is using the `$n1Policy.id` and send an update request (PATCH request) with the correct `osMinimumVersion` value and ofcourse the policy type. 
+The PowerShell code above stores the correct policy into `$n1Policy` variable. The only thing we need to do now is using the `$n1Policy.id` and send an update request (PATCH request) with the correct `osMinimumVersion` value and of course the policy type. 
 
 ```powershell
 $body = @{
@@ -328,7 +328,7 @@ Invoke-MgGraphRequest -Method PATCH -URI $url -Body $body
 This part is a bit more complex than the compliance policies. The reason is that the device platform restriction policies are not directly linked to the devices. The device platform restriction policies are linked to device OS types like Windows, iOS or Android.
 Updating build numbers in this kind of policy has dependencies. 
 
-Sorry for saying but yes, it all depends 🤷🏼.
+Sorry for saying but yes, it depends 🤷🏼.
 
 I have seen configurations where the default policy has a restriction for all personal devices and allows a very low minimum build. For example when enrolling Cloud PC based on a marketplace image than can have a lower build.  
 But also I have seen configurations where the default policy has a restriction for all personal devices and allows a very high minimum build because of security reasons or there are no older builds involved.
