@@ -100,33 +100,6 @@ Just change the `@odata.type` to the correct policy type and you're all set.
 
 ![compliance-policy-created](./compliance-policy-created.png)
 
-### Create device platform restriction policy automated
-To create a device platform restriction policies automated, we need another Graph API endpoint. The endpoint you need for device platform restrictions is `/deviceManagement/deviceEnrollmentConfigurations`. When requesting this endpoint you will notice you get more policies than only the platform restriction policies. Also, policies for Windows Hello for Business or Device Limit restrictions came up.
-
-Well, also in this case, we have to provide the correct `@odata.type`. When not adding the `@odata.type` you will get the same error as mentioned above. 
-
-The JSON body needed for creating a device platform restriction policy should be the code below
-```json
-{
-    "@odata.type": "#microsoft.graph.deviceEnrollmentPlatformRestrictionConfiguration",
-    "displayName": "Windows platform device restriction",
-    "description": "",
-    "roleScopeTagIds": [
-        "0"
-    ],
-    "platformType": "windows",
-    "platformRestriction": {
-        "platformBlocked": false,
-        "personalDeviceEnrollmentBlocked": true,
-        "osMinimumVersion": "10.0",
-        "osMaximumVersion": "",
-        "blockedManufacturers": []
-    }
-}
-```
-The example above is for the Windows platform. There are four platform types with all the same body. The only thing that change is the `platformType` property. This can be `Windows`, `iOS`, `androidForWork` and `mac`. For last one, you can create a policy but platform restriction is not supported.
-
-
 ## Govern OS version in an automated way
 Providers like Microsoft, Apple or Android continue to improve their operating systems. If a new version comes out the build number changes. Build numbers are internally used numbers and represents a specific OS version. That could result in numbers that do not follow up by 1. In the basic a build number does not tell how old a specific OS is. So it is crucial to govern OS build numbers in your environment and make sure build number configurations are growing with the device environment.
 
@@ -451,6 +424,10 @@ $restrictionPolicies | Foreach({
 })
 #endregion
 ```
+
+### How to use the script
+You can use the script in two ways. The first way is to use the script in an interactive way. The second way is to use the script in an automated way. Keep in mind the automation mode only changes the compliance policies. The device platform restriction policies are not updated but you will get notified.
+
 
 You can find the script at my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/GovernOsBuildNumbers)
 {{< bye >}} 
