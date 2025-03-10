@@ -428,6 +428,15 @@ $restrictionPolicies | Foreach({
 ### How to use the script
 You can use the script in two ways. The first way is to use the script in an interactive way. The second way is to use the script in an automated way. Keep in mind the automation mode only changes the compliance policies. The device platform restriction policies are not updated but you will get notified.
 
+The interactive way is to run the script without any parameters. The script will pop up an interactive login window using MSAL. From there just log in and let the magic happen. 
 
+When the script is running in an automated way, you have to provide an access token. This is useful when having a GitHub Action, Azure Function, Azure Automation or other automation pipelines running already.. 
+Then request a Graph API token and provide it to the script.
+
+
+
+
+
+```powershell
 You can find the script at my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/GovernOsBuildNumbers)
 {{< bye >}} 
