@@ -21,7 +21,11 @@ In Microsoft Intune there is a good way to avoid old OS versions in your environ
 Kenneth's article describes how to set up those ways using the portal, in this article, I explain how to deploy those settings but also how to maintain those settings in an automated way. 
 
 {{< notice "info" >}}
-This article assumes that your update strategy is in place and updates the devices. Another thing in this kind of automation is that your environment is clean and ready for optimization. In this case, that means you have two assigned compliance policies per type that handles compliance checks for OS build numbers. Of course, you can have more other compliance policies per type. 
+This article assumes that your update strategy is in place and updates the devices. 
+Another thing in this kind of automation is that your environment is clean and ready for optimization.  
+In this case, that means you have two assigned compliance policies per operating system.  
+That means Windows 10, Windows 11, Android etc. That handles compliance checks for OS build numbers. Of course, you can have more other compliance policies per operating system. 
+
 
 The rest of the article assuming you have this in place. 
 {{< /notice >}}
@@ -199,8 +203,8 @@ Then change the `[1]` to `[x]` where x represents a higher value.
 
 ## Compliance policies
 The next step is to update the compliance policies with the correct build numbers. In this case, we only update the Windows compliance policies.
-A little background information about the strategy. An Intune configuration can have multiple compliance policies per platform.  
-The strategy is to have two compliance policies per platform with build numbers. One policy with a grace period and one without a grace period. The grace period is a period where a device is marked as non-compliant but still has access to the resources. The non-grace period is a period where a device is marked as non-compliant and has no access to the resources.
+A little background information about the strategy. An Intune configuration can have multiple compliance policies per operating system (OS).  
+The strategy is to have two compliance policies per OS that handles build numbers. One policy with a grace period of n-days and one with a 0-day grace period. The grace period is a period where a device is marked as non-compliant but still has access to the resources. The non-grace period is a period where a device is marked as non-compliant and has no access to the resources.
 These two policies are a kind of general policies that holds the device properties. 
 
 On top of that you add more policies for Defender, Device Health and other security related policies.
@@ -221,7 +225,7 @@ So, don't mix the build numbers in one policy.
 Example filter rules for Windows 10 and Windows 11:
 
 - Windows 10 filter rule: `(device.osVersion -startsWith "10.0.19")` This handles all build numbers starting with 10.0.19 which represents Windows 10.
-- Windows 11 filter rule: `(device.osVersion -startsWith "10.0.20")` This handles all build numbers starting with 10.0.20 which represents Windows 11.
+- Windows 11 filter rule: `(device.osVersion -startsWith "10.0.2")` This handles all build numbers starting with 10.0.2 which represents Windows 11 (e.g. 10.22xx and 10.26xx)
 
 Check all the build information at the [Windows release information](https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information) page at Microsoft Learn.
 
