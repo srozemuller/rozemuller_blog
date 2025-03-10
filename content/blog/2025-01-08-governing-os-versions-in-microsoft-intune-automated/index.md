@@ -23,8 +23,10 @@ Kenneth's article describes how to set up those ways using the portal, in this a
 {{< notice "info" >}}
 This article assumes that your update strategy is in place and updates the devices. 
 Another thing in this kind of automation is that your environment is clean and ready for optimization.  
-In this case, that means you have two assigned compliance policies per operating system.  
-That means Windows 10, Windows 11, Android etc. That handles compliance checks for OS build numbers. Of course, you can have more other compliance policies per operating system. 
+
+In this case, that means you have two assigned compliance policies per operating system (Windows 10, Windows 11, Android). Those two policies per OS handles compliance checks for OS build numbers.   
+
+Of course, you can have more other compliance policies per operating system. 
 
 
 The rest of the article assuming you have this in place. 
