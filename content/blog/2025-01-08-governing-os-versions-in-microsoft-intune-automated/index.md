@@ -1,7 +1,7 @@
 ---
 title: "Governing OS Versions in Microsoft Intune automated"
 author: Sander Rozemuller
-date: 2025-01-08T11:30:49+02:00
+date: 2025-03-14T11:30:49+02:00
 images: 
   - image.png
 url: "governing-os-versions-in-microsoft-intune-automated"
@@ -14,7 +14,6 @@ tags:
 - Intune
 ---
 
-## Govern OS Versions in Microsoft Intune
 This article is based on a [post of my good friend Kenneth van Surksum](https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/). He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune. 
 
 In Microsoft Intune there is a good way to avoid old OS versions in your environment.
