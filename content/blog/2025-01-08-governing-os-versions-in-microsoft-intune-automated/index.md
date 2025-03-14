@@ -21,7 +21,7 @@ In Microsoft Intune there is a good way to avoid old OS versions in your environ
 Kenneth's article describes how to set up those ways using the portal, in this article, I explain how to deploy those settings but also how to maintain those settings in an automated way. 
 
 {{< notice "info" >}}
-In this blog I made the assumption that you have two assigned compliance policies per operating system (Windows 10, Windows 11, Android). Those two policies per OS handles compliance handles the checks for OS build numbers.
+This blog moving point is that you have two assigned compliance policies per operating system (Windows 10, Windows 11, Android). Those two policies per OS handles compliance handles the checks for OS build numbers. The build numbers are already filled in.
 Of course, you can have more other compliance policies per operating system.
 {{< /notice >}}
 
@@ -53,7 +53,7 @@ Because this is a global endpoint for all device compliance policies you have to
 | #microsoft.graph.iosCompliancePolicy                | iOS/iPadOs           | iOS compliance policy                                      |
 | #microsoft.graph.macOSCompliancePolicy              | macOS                | Mac compliance policy                                      |
 
->I have skipped the Android Device Administrator part, since it is deprecated since 1 January 2025.
+**I have skipped the Android Device Administrator part, since it is deprecated since 1 January 2025.**
 
 ![android-device-administrator](./android-device-administrator.png)
 
@@ -112,17 +112,20 @@ In the next steps, we will walk through the automation logic how to make sure yo
 
 ### Automation philosophy
 The main idea of this automation is that the policies with build numbers are updated with the n -1 and n -2 build numbers based on your devices inventory. 
-The most ideal scenario is to fetch build numbers from the internet directly from the vendors. That will be the next step in another blog. 
 
-That means that the automation task searches for all OS platform types, and per type the n -1 latest's build calculates. The reason why n -1 is because of the most update strategies do not update all devices at once. When updating policies based on the latest OS build, only the first ring is compliant. 
+That means that the automation task searches for all OS platform types first, and then, per type it calculates the n -1 latest's build numbers. 
+The reason why n -1 is because of the most update strategies do not update all devices at once. When updating policies based on the latest OS build, only the first ring is compliant. 
+
+After that, the automation task fetches all compliance policies based on the platform and searches for the correct compliance policies. Then it updates the policies with the correct build numbers. 
+
+Considering the device's platform is Windows 11. 
+The process searches for all Windows10 (yeah) policies, picking those where a filter is configured for Windows 11, where a grace period is configured and where a build number is configured.
+The n-1 policy is the policy that has a grace period. The n-2 policy is the policy that has grace period of 0 days.
 
 {{< notice "note" >}}
-This automation task only works when having your update process in place. That means you have configured your update strategy in Intune. 
+This automation task only works when having your update process in place. That means you have configured your update strategy in Intune that updates the devices. That means build numbers are changing all the time. 
 {{< /notice >}}
 
-{{< notice "warning" >}}
-When NOT having your updates in place, it could cause non-compliant devices.
-{{< /notice >}}
 
 ### Automation
 In the examples below, I use the Microsoft.Graph.Authentication PowerShell module.
@@ -432,10 +435,12 @@ The interactive way is to run the script without any parameters. The script will
 When the script is running in an automated way, you have to provide an access token. This is useful when having a GitHub Action, Azure Function, Azure Automation or other automation pipelines running already.. 
 Then request a Graph API token and provide it to the script.
 
-
-
-
-
 ```powershell
+./govern-buildnumbers.ps1 -Platforms @("Windows11") -graphToken $graphtoken
+```
+
+The result of the script is shown in the screenshot below.
+![powershell-result](powershell-result.png)
+
 You can find the script at my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/GovernOsBuildNumbers)
 {{< bye >}} 
