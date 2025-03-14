@@ -3,7 +3,7 @@ title: "Governing OS Versions in Microsoft Intune automated"
 author: Sander Rozemuller
 date: 2025-01-08T11:30:49+02:00
 images: 
-  - intune-assistant-landing.png
+  - image.png
 url: "governing-os-versions-in-microsoft-intune-automated"
 categories:
 - Intune
