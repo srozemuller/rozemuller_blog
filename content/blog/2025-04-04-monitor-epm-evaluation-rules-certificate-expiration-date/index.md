@@ -4,15 +4,17 @@ author: Sander Rozemuller
 date: 2025-04-04T15:45:49+02:00
 images: 
   - image.jpeg
-url: "manage-intune-scripts-with-github-actions"
+url: "monitor-epm-evaluation-rules-certificate-expiration"
 categories:
 - Intune
-- Management
+- EPM
 tags:
 - Automation
+- Monitoring
 - Graph API
 - Intune
-- GitHub
+- Security
+- Certificates
 ---
 
 In the world of IT security, Endpoint Privilege Management (EPM) within Microsoft Intune plays a crucial role in ensuring that applications requesting elevated permissions are properly vetted. A key mechanism for this is the use of digital certificates in evaluation rules, which validate whether an application should be granted elevated access.
