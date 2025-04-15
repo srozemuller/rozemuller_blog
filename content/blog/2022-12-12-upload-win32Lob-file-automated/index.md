@@ -293,6 +293,7 @@ for ($Chunk = 0; $Chunk -lt $ChunkCount; $Chunk++) {
     $EncodedBytes = $ISOEncoding.GetString($Bytes)
     $Headers = @{
         "x-ms-blob-type" = "BlockBlob"
+        "content-type" = "text/plain; charset=iso-8859-1"
     }
     $UploadResponse = Invoke-WebRequest $Uri -Method "Put" -Headers $Headers -Body $EncodedBytes -UseBasicParsing -ErrorAction Stop
 }
@@ -306,7 +307,7 @@ foreach ($Chunk in $ChunkID) {
 }
 $XML += '</BlockList>'
 
-Invoke-RestMethod -Uri $finalChunkUri -Method "Put" -Body $XML -ErrorAction Stop
+Invoke-RestMethod -Uri $finalChunkUri -Method "Put" -Body $XML -ErrorAction Stop -ContentType 'text/plain;charset=UTF-8'
 $BinaryReader.Close()
 $BinaryReader.Dispose()
 ```
@@ -324,7 +325,7 @@ $Win32FileEncryptionInfo = @{
         "macKey"               = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.macKey
         "initializationVector" = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.initializationVector
         "mac"                  = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.mac
-        "profileIdentifier"    = "ProfileVersion1"
+        "profileIdentifier"    = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.ProfileIdentifier
         "fileDigest"           = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.fileDigest
         "fileDigestAlgorithm"  = $DetectionXMLContent.ApplicationInfo.EncryptionInfo.fileDigestAlgorithm
     }
