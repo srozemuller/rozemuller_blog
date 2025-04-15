@@ -3,7 +3,7 @@ title: "Run Proactive Remediation Scripts During Microsoft Intune Enrollment"
 author: Sander Rozemuller
 date: 2025-04-04T15:45:49+02:00
 images: 
-  - image.jpeg
+  - image.jpg
 url: "run-proactive-remediation-scripts-during-intune-enrollment"
 categories:
 - Intune
