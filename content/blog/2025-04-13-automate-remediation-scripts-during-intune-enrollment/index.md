@@ -12,8 +12,6 @@ tags:
 - Automation
 - Graph API
 ---
-
-## Automate Remediation Scripts During Microsoft Intune Autopilot
 If you've ever tried to run proactive remediation scripts automatically during the Windows Autopilot enrollment process in Microsoft Intune, you've likely noticed that the Enrollment Status Page (ESP) doesn't support this by default. Today, we'll explore how to work around this limitation using Azure Functions, making your Autopilot deployments even smoother.
 
 {{< toc >}}
