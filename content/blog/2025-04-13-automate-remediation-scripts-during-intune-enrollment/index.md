@@ -17,14 +17,25 @@ If you've ever tried to run proactive remediation scripts automatically during t
 {{< toc >}}
 
 ## Why this approach
-Recently, I had a situation where devices badly relies on specific configuration. To set that configuration, remediation scripts execute by a PowerShell script. Unfortunatly, scripts are not part of the enrolment status page so had to figure something out. Something that forces to run the script during enrollment besided the default schedule. Because I am an automation guy and not a packager, I want to avoid packaging apps. 
-Another big thing are:
+Recently, I had a situation where devices badly relies on specific configuration. To set that configuration, remediation scripts execute by a PowerShell script. Unfortunatly, scripts are not part of the enrolment status page so had to figure something out. Something that forces to run the script during enrollment besided the default schedule. 
+
+### Schedule context
+A bit more about the schedule we use. I had a good offline chat with my buddy Rudy Ooms where we discussed that scripts are running during ESP. But that only applies when running scripts with a hourly schedule. 
+Read more about that at Rudy's blog [Are Proactive Remediations run during Autopilot?](https://call4cloud.nl/proactive-remediations-autopilot/)
+
+Because we use a schedule once a day base the ESP proces does not check if the script has ran the past hour. 
+The reason why we use a daily base schedule in stead of hourly is because we don't want to run 20k scripts every hour. When planning at hourly based once 24 hours, the Intune backend plans the scripts somewhere at a certain time on a day. In that case you don't have control when scripts run.
+
+So the main goal is that we want to know for sure a script runs at the time we want. 
+
+### Why not using a Win32 app then? 
+First, I am an automation guy and not a packager, I want to avoid packaging apps. 
+Another things are:
 - When using apps, you don't have any sight anymore what is going on in that script if packaged;
 - You don't have (full) control on when the script is running after enrollment;
-- When using apps and scripts, you have to maintain two different resources with the same aproach, one at remediation level, and one at application level. This is not scalable. 
+- Duplication, when using apps and scripts, you have to maintain two different resources with the same aproach, one at remediation level, and one at application level. This is not scalable. 
 
 So, I want to use the native scripting platform.
-
 
 ## What is Proactive Remediation in Intune?
 As said, the native platform is the proactive remediation platform in Intune. 
