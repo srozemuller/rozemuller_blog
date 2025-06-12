@@ -39,12 +39,20 @@
 
 
 <!-- Purge CSS in Production -->
-{{ if and hugo.IsProduction site.Params.purge_css }}
-  {{ $styles = $styles | resources.PostCSS | fingerprint "sha256" }}
-  {{ $styles = $styles | resources.PostProcess }}
+{{ if hugo.IsProduction }}
+  {{ if site.Params.purge_css }}
+    {{ $styles = $styles | css.PostCSS | minify | fingerprint "sha512" }}
+  {{ else }}
+    {{ $styles = $styles | resources.Minify | fingerprint "sha512" }}
+  {{ end }}
+{{ else }}
+  {{ $styles = $styles | resources.Minify }}
 {{ end }}
 
 
-<!-- <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />  -->
-
-<style type="text/css">{{$styles.Content | safeCSS}}</style>
+<!-- <link rel="stylesheet" href="{{ $styles.RelPermalink }}" /> -->
+<link
+  rel="stylesheet"
+  href="{{ $styles.RelPermalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
+  crossorigin="anonymous" />

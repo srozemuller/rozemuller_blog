@@ -9,7 +9,6 @@
 <!-- theme meta -->
 <meta name="theme-name" content="logbook-hugo" />
 
-
 <!-- favicon -->
 {{ partialCached "favicon" . }}
 
@@ -31,7 +30,9 @@
 
 
 <!-- google analytics -->
-{{ template "_internal/google_analytics.html" . }}
+{{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
 
 
 <!-- google tag manager -->
@@ -60,14 +61,3 @@
 
 <!-- Search Index -->
 {{ partial "search-index.html" . }}
-
-<script>
-  const themeContainer = document.querySelector(".theme-selection");
-  var theme = localStorage.getItem("darkSwitch");
-  console.log(theme);
-  if (theme == "dark") {
-      themeContainer.classList.add("dark");
-  } else if (theme == "light") {
-      themeContainer.classList.remove("dark");
-  }
-</script>

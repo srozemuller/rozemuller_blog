@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Restore on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/restore/</link><description>Recent content in Restore on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/restore/index.xml" rel="self" type="application/rss+xml"/><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Restore on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/restore/</link>
+    <description>Recent content in Restore on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Nov 2020 05:37:00 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/restore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

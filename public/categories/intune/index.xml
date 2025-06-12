@@ -1,1 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/intune/</link><description>Recent content in Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 31 Mar 2024 18:56:33 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/intune/index.xml" rel="self" type="application/rss+xml"/><item><title>Delete AAD and Intune devices based on CSV and Graph API</title><link>https://www.rozemuller.com/delete-aad-intune-devices-based-on-csv-and-graph-api/</link><pubDate>Sat, 28 Jan 2023 10:52:11 +0100</pubDate><guid>https://www.rozemuller.com/delete-aad-intune-devices-based-on-csv-and-graph-api/</guid><description>&lt;p>The power of community is to collaborate and help others achieve goals. In this case, I got a question from a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/intune/</link>
+    <description>Recent content in Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jun 2025 10:25:12 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/intune/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy initial start menu during Intune enrollment without files</title>
+      <link>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</link>
+      <pubDate>Sun, 01 Jun 2025 10:25:12 +0200</pubDate>
+      <guid>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</guid>
+      <description>&lt;p&gt;A while ago, I got asked to preconfigure an start menu for end users.&lt;br&gt;&#xA;My first approach was deploying a start menu using the settings catalog in Intune. This works great but disadvantage using the settings catalog is that a user has no option to create an own start menu.&lt;br&gt;&#xA;The start menu will be overwritten by the Intune policy. That was not the goal for our project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Run Proactive Remediation Scripts During Microsoft Intune Enrollment</title>
+      <link>//localhost:1313/run-proactive-remediation-scripts-during-intune-enrollment/</link>
+      <pubDate>Fri, 04 Apr 2025 15:45:49 +0200</pubDate>
+      <guid>//localhost:1313/run-proactive-remediation-scripts-during-intune-enrollment/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve ever tried to run proactive remediation scripts automatically during the Windows Autopilot enrollment process in Microsoft Intune, you&amp;rsquo;ve likely noticed that the Enrollment Status Page (ESP) doesn&amp;rsquo;t support this by default. Today, we&amp;rsquo;ll explore how to work around this limitation using Azure Functions, making your Autopilot deployments even smoother.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Governing OS Versions in Microsoft Intune automated</title>
+      <link>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</link>
+      <pubDate>Fri, 14 Mar 2025 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</guid>
+      <description>&lt;p&gt;This article is based on a &lt;a href=&#34;https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;post of my good friend Kenneth van Surksum&lt;/a&gt;. He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Intune Scripts With GitHub Actions</title>
+      <link>//localhost:1313/manage-intune-scripts-with-github-actions/</link>
+      <pubDate>Wed, 12 Feb 2025 15:45:49 +0200</pubDate>
+      <guid>//localhost:1313/manage-intune-scripts-with-github-actions/</guid>
+      <description>&lt;p&gt;Microsoft Intune allows the use of scripts for various purposes, with the most common being detection and remediation scripts. These scripts can be found under the Scripts and Remediations blade in Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Get Microsoft Intune assignments overview and more</title>
+      <link>//localhost:1313/get-intune-assignments-overview-and-more/</link>
+      <pubDate>Tue, 10 Dec 2024 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/get-intune-assignments-overview-and-more/</guid>
+      <description>&lt;p&gt;Microsoft Intune becomes more and more important in the modern workplace. It is used to manage devices, applications, and users. More and more resources are available in Intune. To make resources work, you need to assign them. Finding assignments in Intune is a hard job. Another thing is that resources consist of settings, think about configuration profiles, compliance policies, and more.&#xA;To get more insights into Microsoft Intune assignments, the configured settings and more, I created a tool to help you with this. The tool is called Intune Assistant.&#xA;In this blog post, I will show you what Intune Assistant is and how it can help you with your daily work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create Intune Configuration for Universal Print Automated</title>
+      <link>//localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
+      <pubDate>Sat, 19 Oct 2024 21:40:49 +0200</pubDate>
+      <guid>//localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
+      <description>&lt;p&gt;Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, I show how to create Intune configuration policies based on Universal Print in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete AAD and Intune devices based on CSV and Graph API</title>
+      <link>//localhost:1313/delete-aad-intune-devices-based-on-csv-and-graph-api/</link>
+      <pubDate>Sat, 28 Jan 2023 10:52:11 +0100</pubDate>
+      <guid>//localhost:1313/delete-aad-intune-devices-based-on-csv-and-graph-api/</guid>
+      <description>&lt;p&gt;The power of community is to collaborate and help others achieve goals. In this case, I got a question from a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

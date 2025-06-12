@@ -1,20 +1,18 @@
-{{ "<!-- categories -->" | safeHTML }}
-<div class="widget">
-  <h5 class="widget-title"><span>{{ i18n "categories" }}</span></h5>
-  {{- if isset site.Taxonomies "categories" }}
-    {{- if not (eq (len site.Taxonomies.categories) 0) }}
+<!-- categories -->
+{{ if isset site.Taxonomies "categories" }}
+  {{ if not (eq (len site.Taxonomies.categories) 0) }}
+    <div class="widget">
+      <h5 class="widget-title"><span>{{ i18n "categories" }}</span></h5>
       <ul class="list-unstyled widget-list">
-        {{- range $name, $items := site.Taxonomies.categories }}
+        {{ range $name, $items := site.Taxonomies.categories }}
           <li>
-            <a
-              href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/"
-              class="d-flex"
-              >{{ $name | humanize }}
+            <a href="{{ .Page.RelPermalink }}" class="d-flex"
+              >{{ .Page.Title }}
               <small class="ms-auto">({{ len $items }})</small></a
             >
           </li>
-        {{- end }}
+        {{ end }}
       </ul>
-    {{- end }}
-  {{- end }}
-</div>
+    </div>
+  {{ end }}
+{{ end }}

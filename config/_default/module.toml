@@ -1,12 +1,18 @@
 [hugoVersion]
 extended = true
-min = "0.115.1"
+min = "0.145.0"
 
 [[imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/search"
+
+[[imports]]
+path = "github.com/gethugothemes/hugo-modules/accordion"
+
+[[imports]]
+path = "github.com/gethugothemes/hugo-modules/tab"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/components/preloader"
@@ -42,22 +48,16 @@ path = "github.com/gethugothemes/hugo-modules/images"
 path = "github.com/gethugothemes/hugo-modules/gallery-slider"
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/buttons"
+path = "github.com/gethugothemes/hugo-modules/shortcodes/button"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/codepen"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/collapse"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/notice"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/video"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/shortcodes/tabs"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/shortcodes/gallery"
@@ -97,3 +97,6 @@ path = "github.com/gethugothemes/hugo-modules/gzip-caching"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/adsense"
+
+[[imports]]
+path = "github.com/gethugothemes/hugo-modules/components/valine-comment"

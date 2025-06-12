@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/api/</link><description>Recent content in API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/api/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Store (winget) App Not Supported in Preview in Intune</title><link>https://www.rozemuller.com/windows-store-app-not-supported-in-preview-in-Intune/</link><pubDate>Fri, 20 Oct 2023 07:32:45 +0200</pubDate><guid>https://www.rozemuller.com/windows-store-app-not-supported-in-preview-in-Intune/</guid><description>&lt;p>The new Windows Store App feature (aka WinGet installation) becomes more popular. However, this feature is still in preview. That means that not all is working as expected. Adding these applications using the portal has dependencies. One of those things is that an applications needs a valid version. Something not every application has.
-The results in an error like:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/api/</link>
+    <description>Recent content in API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Oct 2023 07:32:45 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Store (winget) App Not Supported in Preview in Intune</title>
+      <link>//localhost:1313/windows-store-app-not-supported-in-preview-in-Intune/</link>
+      <pubDate>Fri, 20 Oct 2023 07:32:45 +0200</pubDate>
+      <guid>//localhost:1313/windows-store-app-not-supported-in-preview-in-Intune/</guid>
+      <description>&lt;p&gt;The new Windows Store App feature (aka WinGet installation) becomes more popular. However, this feature is still in preview. That means that not all is working as expected. Adding these applications using the portal has dependencies. One of those things is that an applications needs a valid version. Something not every application has.&#xA;The results in an error like:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RDP Shortpath on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/rdp-shortpath/</link><description>Recent content in RDP Shortpath on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/rdp-shortpath/index.xml" rel="self" type="application/rss+xml"/><item><title>Enable RDP ShortPath for AVD on an image version automated</title><link>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link><pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate><guid>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid><description>&lt;p>Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br>
-Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDP Shortpath on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/rdp-shortpath/</link>
+    <description>Recent content in RDP Shortpath on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Nov 2020 12:15:01 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rdp-shortpath/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable RDP ShortPath for AVD on an image version automated</title>
+      <link>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link>
+      <pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate>
+      <guid>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid>
+      <description>&lt;p&gt;Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br&gt;&#xA;Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,13 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AVD on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/avd/</link><description>Recent content in AVD on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/avd/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure AVD using settings catalog automated</title><link>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</link><pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</guid><description>&lt;p>Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p></description></item><item><title>Configure autoscaling for personal AVD host pools automated</title><link>https://www.rozemuller.com/configure-autoscaling-for-personal-avd-host-pools-automated/</link><pubDate>Sun, 06 Aug 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-autoscaling-for-personal-avd-host-pools-automated/</guid><description>&lt;p>Autoscaling for pooled AVD host pools is GA for a while now. Since 18 July 2023 a new autoscale mechanism became in Public Preview for AVD &lt;strong>personal&lt;/strong> host pools.
-Currently it is only supported to configure autoscale for personal host pools by using the portal. There are no API&amp;rsquo;s or PowerShell modules available (yet) to automate the creation or mutating personal scaling plans or schedules.&lt;/p></description></item><item><title>Update deallocated AVD session hosts with scheduled agents updates feature</title><link>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</link><pubDate>Wed, 30 Nov 2022 06:02:46 +0200</pubDate><guid>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</guid><description>&lt;p>Recently, a question passed my screen if &lt;a href="https://learn.microsoft.com/en-us/azure/virtual-desktop/scheduled-agent-updates"
-
-
-
-
- target="_blank"
- 
-
-
->the AVD scheduled agent feature&lt;/a>
- supports deallocated machines. The answer is short, no. Also when not enabling the feature, Microsoft does not start deallocated machines.
-So, how do we make sure when a new agent becomes available also deallocated machines are updated?&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AVD on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/avd/</link>
+    <description>Recent content in AVD on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Oct 2023 20:14:59 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/avd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure AVD using settings catalog automated</title>
+      <link>//localhost:1313/configure-avd-using-settings-catalog-automated/</link>
+      <pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-avd-using-settings-catalog-automated/</guid>
+      <description>&lt;p&gt;Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure autoscaling for personal AVD host pools automated</title>
+      <link>//localhost:1313/configure-autoscaling-for-personal-avd-host-pools-automated/</link>
+      <pubDate>Sun, 06 Aug 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-autoscaling-for-personal-avd-host-pools-automated/</guid>
+      <description>&lt;p&gt;Autoscaling for pooled AVD host pools is GA for a while now. Since 18 July 2023 a new autoscale mechanism became in Public Preview for AVD &lt;strong&gt;personal&lt;/strong&gt; host pools.&#xA;Currently it is only supported to configure autoscale for personal host pools by using the portal. There are no API&amp;rsquo;s or PowerShell modules available (yet) to automate the creation or mutating personal scaling plans or schedules.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

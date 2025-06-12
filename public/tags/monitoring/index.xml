@@ -1,24 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitoring on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/monitoring/</link><description>Recent content in Monitoring on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/monitoring/index.xml" rel="self" type="application/rss+xml"/><item><title>Use internal main.iam.ad API with Logic Apps</title><link>https://www.rozemuller.com/use-internal-azure-api-with-logic-apps/</link><pubDate>Mon, 24 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/use-internal-azure-api-with-logic-apps/</guid><description>&lt;p>This blog post is a follow-up to &lt;a href="https://www.rozemuller.com/use-internal-azure-api-in-automation/"
-
-
-
-
- target="_blank"
- 
-
-
->my post about using the hidden API in automation&lt;/a>
-. In that post, I explained how to authenticate to the &lt;code>https://main.iam.ad.ext.azure.com/api/&lt;/code> endpoint and, how to get information from it. If you haven&amp;rsquo;t already, I would suggest reading that post first.
-I used Azure Functions to run the automation tasks.&lt;/p></description></item><item><title>Use internal main.iam.ad API in automation</title><link>https://www.rozemuller.com/use-internal-azure-api-in-automation/</link><pubDate>Mon, 17 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/use-internal-azure-api-in-automation/</guid><description>&lt;p>We all know the Graph API, graph.microsoft.com, and the Azure management API, management.azure.com. Both APIs are used very often and lots of automation tasks depend on those APIs. Also, most PowerShell modules rely on them and, the Graph and Azure management APIs are well documented.&lt;/p></description></item><item><title>Deploy and monitor conditional access authentication strength automated</title><link>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</link><pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</guid><description>&lt;p>Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.
-In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p></description></item><item><title>Deploy and monitor conditional access authentication strength automated</title><link>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</link><pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</guid><description>&lt;p>Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.
-In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Azure file share usage monitoring with Logic Apps</title><link>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</link><pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate><guid>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</guid><description>&lt;p>Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p></description></item><item><title>Monitor FSLogix file share usage on Azure Files</title><link>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</link><pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate><guid>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</guid><description>&lt;p>In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p></description></item><item><title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link><pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid><description>&lt;p>Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href="https://www.rozemuller.com/avd-automation-cocktail-the-menu"
-
-
-
-
- target="_blank"
- 
-
-
->cocktail series&lt;/a>
-, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p></description></item><item><title>AVD Automation Cocktail – AVD automated with Azure CLI</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-azure-cli/</link><pubDate>Tue, 20 Jul 2021 14:59:39 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-azure-cli/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI. Great new feature in this cocktail is the Azure AAD Join feature.&lt;/p></description></item><item><title>Using LaMetric Time to monitor an AVD environment</title><link>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</link><pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate><guid>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</guid><description>&lt;p>A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p></description></item><item><title>Deploy Azure Monitor for AVD automated</title><link>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link><pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate><guid>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid><description>&lt;p>Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title><link>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link><pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate><guid>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid><description>&lt;p>When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p></description></item><item><title>Monitor active M365 ServiceHealth services only with PowerShell</title><link>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</link><pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate><guid>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</guid><description>&lt;p>You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Oct 2022 11:46:12 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use internal main.iam.ad API with Logic Apps</title>
+      <link>//localhost:1313/use-internal-azure-api-with-logic-apps/</link>
+      <pubDate>Mon, 24 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/use-internal-azure-api-with-logic-apps/</guid>
+      <description>&lt;p&gt;This blog post is a follow-up to &lt;a href=&#34;https://www.rozemuller.com/use-internal-azure-api-in-automation/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;my post about using the hidden API in automation&lt;/a&gt;. In that post, I explained how to authenticate to the &lt;code&gt;https://main.iam.ad.ext.azure.com/api/&lt;/code&gt; endpoint and, how to get information from it. If you haven&amp;rsquo;t already, I would suggest reading that post first.&#xA;I used Azure Functions to run the automation tasks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use internal main.iam.ad API in automation</title>
+      <link>//localhost:1313/use-internal-azure-api-in-automation/</link>
+      <pubDate>Mon, 17 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/use-internal-azure-api-in-automation/</guid>
+      <description>&lt;p&gt;We all know the Graph API, graph.microsoft.com, and the Azure management API, management.azure.com. Both APIs are used very often and lots of automation tasks depend on those APIs. Also, most PowerShell modules rely on them and, the Graph and Azure management APIs are well documented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy and monitor conditional access authentication strength automated</title>
+      <link>//localhost:1313/deploy-monitor-conditional-access-require-authentication-strength/</link>
+      <pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/deploy-monitor-conditional-access-require-authentication-strength/</guid>
+      <description>&lt;p&gt;Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.&#xA;In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure file share usage monitoring with Logic Apps</title>
+      <link>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</link>
+      <pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate>
+      <guid>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</guid>
+      <description>&lt;p&gt;Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor FSLogix file share usage on Azure Files</title>
+      <link>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</link>
+      <pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate>
+      <guid>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</guid>
+      <description>&lt;p&gt;In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link>
+      <pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid>
+      <description>&lt;p&gt;Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href=&#34;https://www.rozemuller.com/avd-automation-cocktail-the-menu&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;cocktail series&lt;/a&gt;, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – AVD automated with Azure CLI</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</link>
+      <pubDate>Tue, 20 Jul 2021 14:59:39 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI. Great new feature in this cocktail is the Azure AAD Join feature.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using LaMetric Time to monitor an AVD environment</title>
+      <link>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</link>
+      <pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate>
+      <guid>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</guid>
+      <description>&lt;p&gt;A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy Azure Monitor for AVD automated</title>
+      <link>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link>
+      <pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate>
+      <guid>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title>
+      <link>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link>
+      <pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate>
+      <guid>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid>
+      <description>&lt;p&gt;When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor active M365 ServiceHealth services only with PowerShell</title>
+      <link>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</link>
+      <pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate>
+      <guid>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</guid>
+      <description>&lt;p&gt;You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;mark&gt;Logging in &lt;/mark&gt;at the&lt;mark&gt; customers portal isn’t a very efficient way.&lt;/mark&gt; &lt;mark&gt;Microsoft provides a lot of API’s which can be used for monitoring.&lt;/mark&gt; By combining some of them you are able to do some really nice and smart things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Printing on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
-    <link>http://localhost:1313/categories/printing/</link>
-    <description>Recent content in Printing on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <title>Printing on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/printing/</link>
+    <description>Recent content in Printing on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Oct 2024 21:40:49 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/printing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/printing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Intune Configuration for Universal Print Automated</title>
-      <link>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
+      <link>//localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
       <pubDate>Sat, 19 Oct 2024 21:40:49 +0200</pubDate>
-      <guid>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
-      <description>Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.</description>
+      <guid>//localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
+      <description>&lt;p&gt;Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, I show how to create Intune configuration policies based on Universal Print in an automated way.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

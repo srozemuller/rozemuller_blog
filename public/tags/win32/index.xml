@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Win32 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/win32/</link><description>Recent content in Win32 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/win32/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Winget applications using Microsoft Intune</title><link>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</link><pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate><guid>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Win32 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/win32/</link>
+    <description>Recent content in Win32 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Nov 2021 09:14:22 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/win32/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Winget applications using Microsoft Intune</title>
+      <link>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate>
+      <guid>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

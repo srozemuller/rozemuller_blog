@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Log Analytics on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/log-analytics/</link><description>Recent content in Log Analytics on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/log-analytics/index.xml" rel="self" type="application/rss+xml"/><item><title>Route own Intune data to Log Analytics using custom logs</title><link>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</link><pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate><guid>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</guid><description>&lt;p>I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br>
-In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log Analytics on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/log-analytics/</link>
+    <description>Recent content in Log Analytics on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Nov 2022 09:28:48 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/log-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Route own Intune data to Log Analytics using custom logs</title>
+      <link>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</link>
+      <pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate>
+      <guid>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</guid>
+      <description>&lt;p&gt;I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br&gt;&#xA;In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

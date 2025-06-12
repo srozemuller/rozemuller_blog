@@ -1,4 +1,0 @@
-baseURL = 'https://rozemuller.com'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "logbook-hugo"

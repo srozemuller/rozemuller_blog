@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AzureVirtualDesktop on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/azurevirtualdesktop/</link><description>Recent content in AzureVirtualDesktop on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/azurevirtualdesktop/index.xml" rel="self" type="application/rss+xml"/><item><title>Launching the first version of Az.Avd WVD PowerShell module</title><link>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</link><pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate><guid>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</guid><description>&lt;p>During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AzureVirtualDesktop on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/azurevirtualdesktop/</link>
+    <description>Recent content in AzureVirtualDesktop on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Apr 2021 13:21:30 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/azurevirtualdesktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Launching the first version of Az.Avd WVD PowerShell module</title>
+      <link>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</link>
+      <pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate>
+      <guid>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</guid>
+      <description>&lt;p&gt;During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

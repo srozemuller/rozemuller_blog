@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>North Star on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/north-star/</link><description>Recent content in North Star on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/north-star/index.xml" rel="self" type="application/rss+xml"/><item><title>Secure and optimize AVD and CloudPC using Microsoft Intune</title><link>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link><pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate><guid>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p></description></item><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>North Star on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/north-star/</link>
+    <description>Recent content in North Star on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jan 2022 12:39:42 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/north-star/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure and optimize AVD and CloudPC using Microsoft Intune</title>
+      <link>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link>
+      <pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate>
+      <guid>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

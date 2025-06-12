@@ -573,3 +573,28 @@
     padding: 0 !important;
   }
 }
+
+// tab module
+.tab {
+  border: 1px solid $border-color;
+  &-nav-item {
+    color: $text-dark;
+    font-weight: 600;
+  }
+}
+
+// accordion module
+.accordion {
+  margin-bottom: 10px;
+  border: 1px solid $border-color !important;
+  &-header {
+    background-color: $body-bg;
+    border: 0;
+    padding-bottom: 0 !important;
+    font-weight: normal !important;
+  }
+  &-content {
+    margin-bottom: 10px !important;
+    margin-top: 5px !important;
+  }
+}

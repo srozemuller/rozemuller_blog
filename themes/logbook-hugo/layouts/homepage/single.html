@@ -3,7 +3,7 @@
   {{ $hasbar:= or (eq $sidebar `left`) (eq $sidebar `right`) }}
   {{ $layout:= .Params.post_layout }}
   {{ $widget:= site.Params.widgets.sidebar }}
-  {{ $permalink := .Permalink }}
+
   {{ if site.Params.featured_post }}
     {{ partialCached "featured-post.html" . }}
   {{ end }}
@@ -33,6 +33,7 @@
             <!-- list article -->
             {{ range where site.RegularPages "Section" "in" site.Params.mainSections }}
               <article class="row mb-5">
+                {{ $permalink := .RelPermalink }}
                 {{ with .Params.images }}
                   <div class="col-md-4 mb-4 mb-md-0">
                     {{ if gt (len .) 1 }}
@@ -57,17 +58,17 @@
                       </div>
                     {{ else }}
                       <div class="post-slider slider-sm h-100">
-                        {{ with index . 0 }}
-                        {{ $imageUrl := relLangURL . }}
-                        {{ $imagePath := printf "%s%s" $permalink $imageUrl }}
+                        {{ range . }}
                           <a href="{{ $permalink }}">
-                            {{ partial "image.html" (dict "Src" $imagePath "Alt" "post-thumb" "Class" `w-100 h-100`) }}
+                            {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `w-100 h-100`) }}
                           </a>
                         {{ end }}
                       </div>
                     {{ end }}
                   </div>
                 {{ end }}
+
+
                 <div
                   class="{{ if .Params.Images }}
                     col-md-8

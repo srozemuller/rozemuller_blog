@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microsoft 365 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/microsoft-365/</link><description>Recent content in Microsoft 365 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/microsoft-365/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure Virtual Desktop Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title><link>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link><pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid><description>&lt;p>This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p></description></item><item><title>Using KeyVault certificates in Azure DevOps</title><link>https://www.rozemuller.com/using-keyvault-certificates-in-azure-devops/</link><pubDate>Tue, 13 Oct 2020 10:07:16 +0200</pubDate><guid>https://www.rozemuller.com/using-keyvault-certificates-in-azure-devops/</guid><description>&lt;p>Azure KeyVault is the security key management system in Azure where you can store keys, secrets and certificates. From that place you can use the items everywhere you like.&lt;/p></description></item><item><title>Monitor active M365 ServiceHealth services only with PowerShell</title><link>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</link><pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate><guid>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</guid><description>&lt;p>You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft 365 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/microsoft-365/</link>
+    <description>Recent content in Microsoft 365 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Oct 2020 12:05:45 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/microsoft-365/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Virtual Desktop  Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title>
+      <link>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link>
+      <pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid>
+      <description>&lt;p&gt;This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using KeyVault certificates in Azure DevOps</title>
+      <link>//localhost:1313/using-keyvault-certificates-in-azure-devops/</link>
+      <pubDate>Tue, 13 Oct 2020 10:07:16 +0200</pubDate>
+      <guid>//localhost:1313/using-keyvault-certificates-in-azure-devops/</guid>
+      <description>&lt;p&gt;Azure KeyVault is the security key management system in Azure where you can store keys, secrets and certificates. From that place you can use the items everywhere you like.&lt;/p&gt;&#xA;&lt;details class=&#34;table-of-content&#34;&gt;&#xA;  &lt;summary&gt;Table Of Contents&lt;/summary&gt;&#xA;  &lt;nav id=&#34;TableOfContents&#34;&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&#xA;      &lt;ul&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#the-main-idea&#34;&gt;The main idea&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#why-using-certificates&#34;&gt;Why using certificates?&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#download-certificates-from-keyvault&#34;&gt;Download certificates from KeyVault&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#the-foreach-loop&#34;&gt;The foreach loop&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#devops&#34;&gt;DevOps&lt;/a&gt;&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/nav&gt;&#xA;&lt;/details&gt;&#xA;&#xA;&lt;h3 id=&#34;the-main-idea&#34;&gt;The main idea&lt;/h3&gt;&#xA;&lt;p&gt;We using the certificates thumbprint for connecting to an Azure AD. While logged in we like to change application permissions based on a JSON file input. After changing that file the continuous integration (CI) proces in DevOps will take care about the application permission change at all of our customers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor active M365 ServiceHealth services only with PowerShell</title>
+      <link>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</link>
+      <pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate>
+      <guid>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</guid>
+      <description>&lt;p&gt;You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;mark&gt;Logging in &lt;/mark&gt;at the&lt;mark&gt; customers portal isn’t a very efficient way.&lt;/mark&gt; &lt;mark&gt;Microsoft provides a lot of API’s which can be used for monitoring.&lt;/mark&gt; By combining some of them you are able to do some really nice and smart things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

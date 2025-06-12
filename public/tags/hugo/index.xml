@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/hugo/</link><description>Recent content in Hugo on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Move from WordPress to Azure Static Web App with Hugo and GitHub</title><link>https://www.rozemuller.com/move-from-wordpress-to-azure-static-app-hugo/</link><pubDate>Fri, 26 Aug 2022 16:09:25 +0600</pubDate><guid>https://www.rozemuller.com/move-from-wordpress-to-azure-static-app-hugo/</guid><description>&lt;p>We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough. Now a few years later it became more a frustration than a pleasure to keep my website up and running. In this blog, I explain why and how I changed my website into a static webpage.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Aug 2022 16:09:25 +0600</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Move from WordPress to Azure Static Web App with Hugo and GitHub</title>
+      <link>//localhost:1313/move-from-wordpress-to-azure-static-app-hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 16:09:25 +0600</pubDate>
+      <guid>//localhost:1313/move-from-wordpress-to-azure-static-app-hugo/</guid>
+      <description>&lt;p&gt;We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough. Now a few years later it became more a frustration than a pleasure to keep my website up and running. In this blog, I explain why and how I changed my website into a static webpage.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

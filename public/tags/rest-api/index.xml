@@ -1,13 +1,159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>REST API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/rest-api/</link><description>Recent content in REST API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/rest-api/index.xml" rel="self" type="application/rss+xml"/><item><title>Route own Intune data to Log Analytics using custom logs</title><link>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</link><pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate><guid>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</guid><description>&lt;p>I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br>
-In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p></description></item><item><title>Enable Endpoint Analytics automated in Microsoft Intune</title><link>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link><pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate><guid>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p></description></item><item><title>Intune filters explained create automated and assignments</title><link>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</link><pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate><guid>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</guid><description>&lt;p>Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p></description></item><item><title>Monitor Identity Secure Score security improvement action status</title><link>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</link><pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</guid><description>&lt;p>An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Configure subscribe to AVD in RDP Client automated</title><link>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</link><pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate><guid>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p></description></item><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item><item><title>Azure file share usage monitoring with Logic Apps</title><link>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</link><pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate><guid>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</guid><description>&lt;p>Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p></description></item><item><title>Monitor FSLogix file share usage on Azure Files</title><link>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</link><pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate><guid>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</guid><description>&lt;p>In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p></description></item><item><title>Secure and optimize AVD and CloudPC using Microsoft Intune</title><link>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link><pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate><guid>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p></description></item><item><title>Configure FSLogix profile for Azure AD joined AVD session host automated</title><link>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link><pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate><guid>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid><description>&lt;p>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p></description></item><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item><item><title>Manage AVD automated with Microsoft Intune</title><link>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</link><pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate><guid>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</guid><description>&lt;p>Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p></description></item><item><title>Move AVD session hosts to a new host pool with REST API</title><link>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link><pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate><guid>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid><description>&lt;p>Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p></description></item><item><title>AVD Automation Cocktail - Azure Virtual Desktop automated with REST API</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-rest-api/</link><pubDate>Tue, 13 Jul 2021 16:10:50 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-rest-api/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Pineapple Citrus Splash, I will show you how to deploy an AVD environment automated with REST API, and JSON executed with PowerShell.&lt;/p></description></item><item><title>Configure AVD Start VM on Connect automated with role assignments and Graph API</title><link>https://www.rozemuller.com/configure-avd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/</link><pubDate>Thu, 01 Apr 2021 15:46:08 +0200</pubDate><guid>https://www.rozemuller.com/configure-avd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/</guid><description>&lt;p>Costs are a topic of an Azure conversation very often. As we all know you pay for usage, if it is storage, CPU or bandwidth usage, (almost) every resource has its price. For Windows Virtual Desktop it means you have to pay for CPU usage, for example. It is important then to keep this usage as low as possible. Now there is an option to keep these usage as low as possible with AVD Start VM on Connect.&lt;/p></description></item><item><title>Prepare Azure DevOps for AVD deployment – Create a Service Connection Automated</title><link>https://www.rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</link><pubDate>Thu, 11 Mar 2021 11:28:00 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Windows Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. In post I will explain how to create a DevOps Service Connection the automated way.&lt;/p></description></item><item><title>How to use REST API with Powershell</title><link>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</link><pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</guid><description>&lt;p>The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br>
-As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href="https://www.postman.com/"
-
-
-
-
- target="_blank"
- 
-
-
->Postman&lt;/a>
-.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/rest-api/</link>
+    <description>Recent content in REST API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Nov 2022 09:28:48 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Route own Intune data to Log Analytics using custom logs</title>
+      <link>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</link>
+      <pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate>
+      <guid>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</guid>
+      <description>&lt;p&gt;I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br&gt;&#xA;In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Endpoint Analytics automated in Microsoft Intune</title>
+      <link>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate>
+      <guid>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intune filters explained create automated and assignments</title>
+      <link>//localhost:1313/intune-filters-explained-and-create-automated/</link>
+      <pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate>
+      <guid>//localhost:1313/intune-filters-explained-and-create-automated/</guid>
+      <description>&lt;p&gt;Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Identity Secure Score security improvement action status</title>
+      <link>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</link>
+      <pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</guid>
+      <description>&lt;p&gt;An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure subscribe to AVD in RDP Client automated</title>
+      <link>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</link>
+      <pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate>
+      <guid>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure file share usage monitoring with Logic Apps</title>
+      <link>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</link>
+      <pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate>
+      <guid>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</guid>
+      <description>&lt;p&gt;Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor FSLogix file share usage on Azure Files</title>
+      <link>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</link>
+      <pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate>
+      <guid>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</guid>
+      <description>&lt;p&gt;In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure and optimize AVD and CloudPC using Microsoft Intune</title>
+      <link>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link>
+      <pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate>
+      <guid>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage AVD automated with Microsoft Intune</title>
+      <link>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate>
+      <guid>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Move AVD session hosts to a new host pool with REST API</title>
+      <link>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link>
+      <pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate>
+      <guid>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail - Azure Virtual Desktop automated with REST API</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-rest-api/</link>
+      <pubDate>Tue, 13 Jul 2021 16:10:50 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-rest-api/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Pineapple Citrus Splash, I will show you how to deploy an AVD environment automated with REST API, and JSON executed with PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure AVD Start VM on Connect automated with role assignments and Graph API</title>
+      <link>//localhost:1313/configure-avd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/</link>
+      <pubDate>Thu, 01 Apr 2021 15:46:08 +0200</pubDate>
+      <guid>//localhost:1313/configure-avd-start-vm-on-connect-automated-with-role-assignments-and-graph-api/</guid>
+      <description>&lt;p&gt;Costs are a topic of an Azure conversation very often. As we all know you pay for usage, if it is storage, CPU or bandwidth usage, (almost) every resource has its price. For Windows Virtual Desktop it means you have to pay for CPU usage, for example. It is important then to keep this usage as low as possible. Now there is an option to keep these usage as low as possible with AVD Start VM on Connect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for AVD deployment – Create a Service Connection Automated</title>
+      <link>//localhost:1313/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</link>
+      <pubDate>Thu, 11 Mar 2021 11:28:00 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Windows Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. In post I will explain how to create a DevOps Service Connection the automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use REST API with Powershell</title>
+      <link>//localhost:1313/how-to-use-rest-api-with-powershell/</link>
+      <pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-rest-api-with-powershell/</guid>
+      <description>&lt;p&gt;The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br&gt;&#xA;As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href=&#34;https://www.postman.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Postman&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

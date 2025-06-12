@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sign In on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/sign-in/</link><description>Recent content in Sign In on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/sign-in/index.xml" rel="self" type="application/rss+xml"/><item><title>Automate user sign-in experience with company branding</title><link>https://www.rozemuller.com/automated-user-sign-in-experience-with-company-branding/</link><pubDate>Tue, 10 Jan 2023 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/automated-user-sign-in-experience-with-company-branding/</guid><description>&lt;p>Recently Microsoft redesigned the company branding functionality. That means you have more flexibility in the main layout, full-screen background image for example. But also the ability to change the header, footer and even link relating to self-service password reset, privacy &amp;amp; cookies or Terms of Use.
-Also, there is an option to upload a CSS style sheet to change colors, buttons, and more.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sign In on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/sign-in/</link>
+    <description>Recent content in Sign In on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jan 2023 01:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/sign-in/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate user sign-in experience with company branding</title>
+      <link>//localhost:1313/automated-user-sign-in-experience-with-company-branding/</link>
+      <pubDate>Tue, 10 Jan 2023 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/automated-user-sign-in-experience-with-company-branding/</guid>
+      <description>&lt;p&gt;Recently Microsoft redesigned the company branding functionality. That means you have more flexibility in the main layout, full-screen background image for example. But also the ability to change the header, footer and even link relating to self-service password reset, privacy &amp;amp; cookies or Terms of Use.&#xA;Also, there is an option to upload a CSS style sheet to change colors, buttons, and more.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

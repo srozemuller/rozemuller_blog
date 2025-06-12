@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>North Star on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/north-star/</link><description>Recent content in North Star on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/north-star/index.xml" rel="self" type="application/rss+xml"/><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item><item><title>Manage AVD automated with Microsoft Intune</title><link>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</link><pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate><guid>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</guid><description>&lt;p>Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>North Star on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/north-star/</link>
+    <description>Recent content in North Star on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Oct 2021 22:44:52 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/north-star/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage AVD automated with Microsoft Intune</title>
+      <link>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate>
+      <guid>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -19,16 +19,9 @@ hasChildren = true
   weight = 1
 
 [[main]]
-name = "M365"
-url = "m365/"
-weight = 3
-hasChildren = true
-
-  [[main]]
-  parent = "M365"
-  name = "Microsoft Intune"
-  url = "tags/microsoft-intune"
-  weight = 1
+name = "Intune"
+url = "tags/microsoft-intune"
+weight = 1
 
 [[main]]
 name = "Identity"
@@ -38,7 +31,7 @@ hasChildren = true
 
   [[main]]
   parent = "Identity"
-  name = "Azure AD"
+  name = "Entra ID"
   url = "categories/azure-ad/"
   weight = 1
 
@@ -65,8 +58,8 @@ url = "categories/monitoring"
 weight = 6
 
 [[main]]
-name = "IntuneCLI"
-url = "IntuneCLI"
+name = "Intune Assistant"
+url = "https://intuneassistant.cloud"
 weight = 7
 
 # sidebar menu
@@ -86,8 +79,8 @@ url = "tags/azure-functions/"
 weight = 3
 
 [[sidebar]]
-name = "Endpoint Management"
-url = "tags/mem/"
+name = "Intune"
+url = "tags/microsoft intune/"
 weight = 4
 
 [[sidebar]]
@@ -114,6 +107,6 @@ name = "Az.Avd"
 url = "https://www.powershellgallery.com/packages/Az.Avd"
 weight = 3
 [[footer]]
-name = "IntuneCLI"
-url = "https://www.nuget.org/packages/IntuneCLI/"
+name = "Intune Assistant"
+url = "https://intuneassistant.cloud"
 weight = 4

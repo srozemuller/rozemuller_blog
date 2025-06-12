@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deployment on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/deployment/</link><description>Recent content in Deployment on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/deployment/index.xml" rel="self" type="application/rss+xml"/><item><title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title><link>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link><pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate><guid>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid><description>&lt;p>Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/deployment/</link>
+    <description>Recent content in Deployment on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Dec 2020 13:02:03 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title>
+      <link>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link>
+      <pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate>
+      <guid>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

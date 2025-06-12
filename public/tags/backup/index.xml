@@ -1,12 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backup on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/backup/</link><description>Recent content in Backup on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/backup/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy Intune settings catalog automated from scratch with Graph API</title><link>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link><pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid><description>&lt;p>I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href="https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/"
-
-
-
-
- target="_blank"
- 
-
-
-> created a profile with power settings and deployed the profile to all devices including a filter&lt;/a>
-.&lt;/p></description></item><item><title>Automatically backup Azure resources to an Azure Storage Account in JSON</title><link>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link><pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate><guid>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid><description>&lt;p>In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p></description></item><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backup on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/backup/</link>
+    <description>Recent content in Backup on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Sep 2022 07:55:46 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy Intune settings catalog automated from scratch with Graph API</title>
+      <link>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link>
+      <pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate>
+      <guid>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid>
+      <description>&lt;p&gt;I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href=&#34;https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt; created a profile with power settings and deployed the profile to all devices including a filter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automatically backup Azure resources to an Azure Storage Account in JSON</title>
+      <link>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link>
+      <pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate>
+      <guid>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid>
+      <description>&lt;p&gt;In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

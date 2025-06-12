@@ -1,2 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Zero Trust Level 1 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/zero-trust-level-1/</link><description>Recent content in Zero Trust Level 1 on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/zero-trust-level-1/index.xml" rel="self" type="application/rss+xml"/><item><title>Zero Trust Data Protection Using App Protection Policies Automated</title><link>https://www.rozemuller.com/zero-trust-data-protection-using-app-protection-policies-automated/</link><pubDate>Thu, 30 Mar 2023 20:40:49 +0200</pubDate><guid>https://www.rozemuller.com/zero-trust-data-protection-using-app-protection-policies-automated/</guid><description>&lt;p>In earlier steps, I explained how to control identity and devices to connect to your environment. Now people are connected to your environment safely, the next step is to make sure your data won&amp;rsquo;t walk out.&lt;br>
-In this step of the Zero to Zero Trust journey we will look at the first step of how to keep your data safe. In this blog, I show how to automate the creation of App Protection Policies. Intune App Protection policies help protect corporate data even if a device itself is not managed.&lt;/p></description></item><item><title>Zero Trust Common Identity and Device Access Protection</title><link>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</link><pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate><guid>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</guid><description>&lt;p>This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p></description></item><item><title>Configure Break Glass Accounts Infrastructure Automated</title><link>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</link><pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate><guid>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</guid><description>&lt;p>Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zero Trust Level 1 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/zero-trust-level-1/</link>
+    <description>Recent content in Zero Trust Level 1 on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Mar 2023 20:40:49 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/zero-trust-level-1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero Trust Data Protection Using App Protection Policies Automated</title>
+      <link>//localhost:1313/zero-trust-data-protection-using-app-protection-policies-automated/</link>
+      <pubDate>Thu, 30 Mar 2023 20:40:49 +0200</pubDate>
+      <guid>//localhost:1313/zero-trust-data-protection-using-app-protection-policies-automated/</guid>
+      <description>&lt;p&gt;In earlier steps, I explained how to control identity and devices to connect to your environment. Now people are connected to your environment safely, the next step is to make sure your data won&amp;rsquo;t walk out.&lt;br&gt;&#xA;In this step of the Zero to Zero Trust journey we will look at the first step of how to keep your data safe. In this blog, I show how to automate the creation of App Protection Policies. Intune App Protection policies help protect corporate data even if a device itself is not managed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero Trust Common Identity and Device Access Protection</title>
+      <link>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</link>
+      <pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate>
+      <guid>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</guid>
+      <description>&lt;p&gt;This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Break Glass Accounts Infrastructure Automated</title>
+      <link>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</link>
+      <pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate>
+      <guid>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</guid>
+      <description>&lt;p&gt;Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

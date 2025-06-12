@@ -91,4 +91,39 @@
       swiper: product_silder_pagination,
     },
   });
+
+  const searchForm = header_search_panel.querySelector("form");
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const searchQuery = this.querySelector('input[name="s"]').value.trim();
+      if (searchQuery) {
+        const searchUrl = `${this.action}?s=${encodeURIComponent(
+          searchQuery
+        )}&init=1`;
+        window.location.href = searchUrl;
+      }
+    });
+  }
+
+  if (window.location.pathname.includes("/search")) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get("s");
+    const isInitialSearch = urlParams.get("init");
+
+    if (searchQuery) {
+      const searchInput = document.getElementById("search-input");
+      if (searchInput) {
+        searchInput.value = searchQuery;
+
+        if (isInitialSearch) {
+          urlParams.delete("init");
+          const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+          history.replaceState(null, "", newUrl);
+
+          searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      }
+    }
+  }
 })();

@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JSON on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/json/</link><description>Recent content in JSON on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/json/index.xml" rel="self" type="application/rss+xml"/><item><title>AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps and ARM</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-devops-and-arm/</link><pubDate>Wed, 07 Jul 2021 15:13:00 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-devops-and-arm/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Strawberry Banana Mix, I will show you how to deploy an AVD environment automated with DevOps, ARM templates and a bit of PowerShell.&lt;/p></description></item><item><title>AVD Automation Cocktail - The Menu</title><link>https://www.rozemuller.com/avd-automation-cocktail-the-menu/</link><pubDate>Thu, 10 Jun 2021 20:21:49 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-the-menu/</guid><description>&lt;p>Welcome to a fresh new series about deploying Azure Virtual Desktop environments automated called the “AVD Automation Cocktail”. In this series I will serve several cocktails and will take you along on the AVD automated deployment journey with different types of automation languages. Every type has its own pros and cons, deployment strategy, parameter structure and commands. In the series all of these items will pass and hopefully it will give you a good overview about the possibilities.&lt;/p></description></item><item><title>Automatically backup Azure resources to an Azure Storage Account in JSON</title><link>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link><pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate><guid>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid><description>&lt;p>In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JSON on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/json/</link>
+    <description>Recent content in JSON on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Jul 2021 15:13:00 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps and ARM</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-devops-and-arm/</link>
+      <pubDate>Wed, 07 Jul 2021 15:13:00 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-devops-and-arm/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Strawberry Banana Mix, I will show you how to deploy an AVD environment automated with DevOps, ARM templates and a bit of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail - The Menu</title>
+      <link>//localhost:1313/avd-automation-cocktail-the-menu/</link>
+      <pubDate>Thu, 10 Jun 2021 20:21:49 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-the-menu/</guid>
+      <description>&lt;p&gt;Welcome to a fresh new series about deploying Azure Virtual Desktop environments automated called the “AVD Automation Cocktail”. In this series I will serve several cocktails and will take you along on the AVD automated deployment journey with different types of automation languages. Every type has its own pros and cons, deployment strategy, parameter structure and commands. In the series all of these items will pass and hopefully it will give you a good overview about the possibilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automatically backup Azure resources to an Azure Storage Account in JSON</title>
+      <link>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link>
+      <pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate>
+      <guid>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid>
+      <description>&lt;p&gt;In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

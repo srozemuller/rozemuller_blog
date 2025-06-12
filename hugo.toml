@@ -8,8 +8,7 @@
 ######################### site variables ##############################
 # customize your color and font from here.
 [params.variables]
-color_primary = "#5b6d92"
-color_secondary = "#001111"
+color_primary = "#1183C2"
 body_color = "#fff"
 text_color = "#696c6d"
 text_dark = "#1c1d1f"
@@ -38,9 +37,9 @@ font_scale = "1.2" # default is "minorThird": 1.2
 
 # example: "Open Sans:wght@400;500;600"
 font_primary = "Open Sans:wght@400"
-font_primary_type = "sans-serif" # [serif/sans-serif]
+font_primary_type = "sans-serif"       # [serif/sans-serif]
 font_secondary = "Montserrat:wght@400"
-font_secondary_type = "sans-serif" # [serif/sans-serif]
+font_secondary_type = "sans-serif"     # [serif/sans-serif]
 font_icon = "Font Awesome 6 Free"
 
 
@@ -59,8 +58,6 @@ link = "plugins/font-awesome/v6/regular.css"
 link = "plugins/font-awesome/v6/solid.css"
 [[params.plugins.css]]
 link = "plugins/glightbox/glightbox.css"
-[[params.plugins.css]]
-link = "plugins/dark-light/dark.css"
 
 # JS Plugins
 [[params.plugins.js]]
@@ -82,3 +79,7 @@ attributes = "async"
 link = "plugins/glightbox/glightbox.js"
 [[params.plugins.js]]
 link = "js/gallery-slider.js"
+[[params.plugins.js]]
+link = "js/tab.js"
+[[params.plugins.js]]
+link = "js/accordion.js"

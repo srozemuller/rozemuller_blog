@@ -14,19 +14,16 @@ page_not_found_image = "images/404.png" # 404 error page image
 logo_webp = true
 
 # logo text will only show when logo is missing.
-# logo_text = "rozemuller.com"
-
-# purgeCSS
-purge_css = true
+logo_text = "rozemuller.com"
 
 # Main Sections
-mainSections = ["blog"]
+mainSections = ["post"]
 
 # featured post
-featured_post = false
+featured_post = true
 
 # layout
-post_layout = "list" # layout value (full, grid or list)
+post_layout = "full" # layout value (full, grid or list)
 # Sidebar
 sidebar = "right" # sidebar value (left, right or false)
 
@@ -41,24 +38,24 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 custom_script = ""
 
 # copyright
-theme_copyright = false
-copyright = "Copyright © 2024 by Sander Rozemuller. All rights reserved."
+theme_copyright = true
+copyright = "Copyright © 2025 by Sander Rozemuller. All rights reserved."
 
 # Preloader
 [preloader]
-enable = false
+enable = true
 preloader = "" # use jpg, png, svg or gif format.
 
 [search]
 enable = true
 primary_color = "#5b6d92"
-include_sections = ["blog"] # if `include_sections` is empty, then section's will come from `mainSections`
+include_sections = ["post"] # if `include_sections` is empty, then section's will come from `mainSections`
 show_image = true
-show_description = false
+show_description = true
 show_tags = true
 show_categories = true
 
-input_placeholder = "Type something to search.." # i18n is `search_input_placeholder`
+input_placeholder = "Search .." # i18n is `search_input_placeholder`
 empty_results_placeholder = "Type something to search.." # i18n is `empty_search_results_placeholder`
 
 # contact info
@@ -74,6 +71,12 @@ enable = false
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
 
+# snipcart for shop
+[snipcart]
+enable = true
+# snipcart public api key
+snipcart_api = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
+currency = "$"
 
 # promotion
 [promotion]
@@ -83,6 +86,11 @@ image = "images/promotion.jpg"
 button_label = "Get Started"
 button_link = "https://themefisher.com/"
 
+# Crisp Chat
+[crisp_chat]
+enable = false
+crisp_website_id = "9aa449e1-9999-422a-938f-8567982eec6d" # replace this code with yours
+# Check this video tutorial to get your crisp website ID - https://www.youtube.com/watch?v=nW5UX6iVdFc
 
 # Valine Comment
 [valine_comment]
@@ -105,6 +113,7 @@ keywords = ["Cloud", "Automation", "Graph API", "PowerShell","Microsoft Intune",
 description = "All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security"
 author = "srozemuller"
 image = "images/favicon.png"      # this image will be used as fallback if a page has no image of its own
+
 
 # matomo tracking: see https://matomo.org/
 [matomo]
@@ -137,7 +146,7 @@ mastodon = "" # Your verification code
 
 # cookies
 [cookies]
-enable = true
+enable = false
 expire_days = 2
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 button = "I Accept"
@@ -147,14 +156,15 @@ button = "I Accept"
 sidebar = [
   "search",
   "about-me",
-  "adsense-square",
-  "wpninjanl",
-  "intuneassistant",
   "mvp",
-  "categories",
+  "wpninjanl",
   "adsense-square",
-  "az-avd",
-  "tags"
+  "promotion",
+  "categories",
+  "recent-post",
+  "adsense-square",
+  "tags",
+  "social",
 ]
 # available widget : search,about-me,categories,tags,recent-post,social,promotion,subscription
 

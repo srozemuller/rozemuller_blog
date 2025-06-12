@@ -1,11 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Elevated Permission Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/elevated-permission-management/</link><description>Recent content in Elevated Permission Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/elevated-permission-management/index.xml" rel="self" type="application/rss+xml"/><item><title>Import Reuseable EPM Certificates in Intune automated</title><link>https://www.rozemuller.com/import-reusable-epm-certificates-in-intune-automated/</link><pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate><guid>https://www.rozemuller.com/import-reusable-epm-certificates-in-intune-automated/</guid><description>&lt;p>As you may know there is a &lt;a href="https://discord.com/invite/msems"
-
-
-
-
- target="_blank"
- 
-
-
->Microsoft EMS Community&lt;/a>
- Discord channel where we help out eachother. Recently there was a question about how to import certificate file as reusable setting in Endpoint Privilege Management using the Graph API. Together with Steven van Beek we answered that question on how to bulk import certificates using the Graph API. To also help others I like to share the solution.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elevated Permission Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/elevated-permission-management/</link>
+    <description>Recent content in Elevated Permission Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jul 2023 16:39:01 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/elevated-permission-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Import Reuseable EPM Certificates in Intune automated </title>
+      <link>//localhost:1313/import-reusable-epm-certificates-in-intune-automated/</link>
+      <pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate>
+      <guid>//localhost:1313/import-reusable-epm-certificates-in-intune-automated/</guid>
+      <description>&lt;p&gt;As you may know there is a &lt;a href=&#34;https://discord.com/invite/msems&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Microsoft EMS Community&lt;/a&gt; Discord channel where we help out eachother. Recently there was a question about how to import certificate file as reusable setting in Endpoint Privilege Management using the Graph API. Together with Steven van Beek we answered that question on how to bulk import certificates using the Graph API. To also help others I like to share the solution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

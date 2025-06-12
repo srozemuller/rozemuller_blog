@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Endpoint on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/endpoint/</link><description>Recent content in Endpoint on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/endpoint/index.xml" rel="self" type="application/rss+xml"/><item><title>Zero to Zero Trust Automation Index</title><link>https://www.rozemuller.com/zero-to-zero-trust-automation-index/</link><pubDate>Sat, 11 Feb 2023 12:43:32 +0100</pubDate><guid>https://www.rozemuller.com/zero-to-zero-trust-automation-index/</guid><description>&lt;p>Welcome to the Zero to Zero Trust series automated and to this automation index. In this series, I will show the process from a zero security configuration to Zero Trust in the Microsoft public cloud. The series passes all the important items and show how to configure the components automated if applicable.&lt;/p></description></item><item><title>The Endpoint Security Train - Introduction</title><link>https://www.rozemuller.com/the-endpoint-security-train-introduction/</link><pubDate>Sun, 20 Nov 2022 07:38:46 +0200</pubDate><guid>https://www.rozemuller.com/the-endpoint-security-train-introduction/</guid><description>&lt;p>The IT landscape is changing. Private becomes public, local resources are moving to the public cloud. More and more workloads return to the local endpoint. Cloud endpoints (AVD, W365) are mostly used to run legacy software.
-With all those movements, it could be challenging to keep the herd in the pasture. Devices are everywhere and what about security?&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Endpoint on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/endpoint/</link>
+    <description>Recent content in Endpoint on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Feb 2023 12:43:32 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/endpoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero to Zero Trust Automation Index</title>
+      <link>//localhost:1313/zero-to-zero-trust-automation-index/</link>
+      <pubDate>Sat, 11 Feb 2023 12:43:32 +0100</pubDate>
+      <guid>//localhost:1313/zero-to-zero-trust-automation-index/</guid>
+      <description>&lt;p&gt;Welcome to the Zero to Zero Trust series automated and to this automation index. In this series, I will show the process from a zero security configuration to Zero Trust in the Microsoft public cloud. The series passes all the important items and show how to configure the components automated if applicable.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

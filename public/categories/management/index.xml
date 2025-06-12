@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/management/</link>
+    <description>Recent content in Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Mar 2025 11:30:49 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Governing OS Versions in Microsoft Intune automated</title>
+      <link>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</link>
+      <pubDate>Fri, 14 Mar 2025 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</guid>
+      <description>&lt;p&gt;This article is based on a &lt;a href=&#34;https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;post of my good friend Kenneth van Surksum&lt;/a&gt;. He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Intune Scripts With GitHub Actions</title>
+      <link>//localhost:1313/manage-intune-scripts-with-github-actions/</link>
+      <pubDate>Wed, 12 Feb 2025 15:45:49 +0200</pubDate>
+      <guid>//localhost:1313/manage-intune-scripts-with-github-actions/</guid>
+      <description>&lt;p&gt;Microsoft Intune allows the use of scripts for various purposes, with the most common being detection and remediation scripts. These scripts can be found under the Scripts and Remediations blade in Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Get Microsoft Intune assignments overview and more</title>
+      <link>//localhost:1313/get-intune-assignments-overview-and-more/</link>
+      <pubDate>Tue, 10 Dec 2024 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/get-intune-assignments-overview-and-more/</guid>
+      <description>&lt;p&gt;Microsoft Intune becomes more and more important in the modern workplace. It is used to manage devices, applications, and users. More and more resources are available in Intune. To make resources work, you need to assign them. Finding assignments in Intune is a hard job. Another thing is that resources consist of settings, think about configuration profiles, compliance policies, and more.&#xA;To get more insights into Microsoft Intune assignments, the configured settings and more, I created a tool to help you with this. The tool is called Intune Assistant.&#xA;In this blog post, I will show you what Intune Assistant is and how it can help you with your daily work.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NSG on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/nsg/</link><description>Recent content in NSG on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/nsg/index.xml" rel="self" type="application/rss+xml"/><item><title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title><link>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</link><pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</guid><description>&lt;p>This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NSG on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/nsg/</link>
+    <description>Recent content in NSG on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Sep 2020 19:45:17 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/nsg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title>
+      <link>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</link>
+      <pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</guid>
+      <description>&lt;p&gt;This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
