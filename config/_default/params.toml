@@ -80,11 +80,11 @@ currency = "$"
 
 # promotion
 [promotion]
-title = "Create Stunning Website!!"
-content = "Lorem ipsum dolor sit amet, consectetur sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit ornare."
-image = "images/promotion.jpg"
+title = "IntuneAssistant"
+content = "For fast Intune insights"
+image = "images/promo_intuneassistant.png"
 button_label = "Get Started"
-button_link = "https://themefisher.com/"
+button_link = "https://intuneassistant.cloud/"
 
 # Crisp Chat
 [crisp_chat]
