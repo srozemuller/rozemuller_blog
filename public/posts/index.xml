@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>posts on LogBook | Hugo Personal Blog Template</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in posts on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jun 2025 10:25:12 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy initial start menu during Intune enrollment without files</title>
+      <link>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</link>
+      <pubDate>Sun, 01 Jun 2025 10:25:12 +0200</pubDate>
+      <guid>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</guid>
+      <description>&lt;p&gt;A while ago, I got asked to preconfigure an start menu for end users.&lt;br&gt;&#xA;My first approach was deploying a start menu using the settings catalog in Intune. This works great but disadvantage using the settings catalog is that a user has no option to create an own start menu.&lt;br&gt;&#xA;The start menu will be overwritten by the Intune policy. That was not the goal for our project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OneDrive on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/onedrive/</link><description>Recent content in OneDrive on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/onedrive/index.xml" rel="self" type="application/rss+xml"/><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OneDrive on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/onedrive/</link>
+    <description>Recent content in OneDrive on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Dec 2021 14:13:27 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/onedrive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

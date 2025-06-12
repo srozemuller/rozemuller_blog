@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Users on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/users/</link><description>Recent content in Users on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Jul 2024 13:07:19 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/users/index.xml" rel="self" type="application/rss+xml"/><item><title>Automated Device Group Management for Microsoft Intune Update Rings Using PowerShell</title><link>https://www.rozemuller.com/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</link><pubDate>Wed, 10 Jul 2024 09:28:14 +0200</pubDate><guid>https://www.rozemuller.com/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</guid><description>&lt;p>Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Deployment Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group).
-In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on
-a user group. Let&amp;rsquo;s call it dynamic device group management.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Users on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/users/</link>
+    <description>Recent content in Users on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jul 2024 09:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/users/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automated Device Group Management for Microsoft Intune Update Rings Using PowerShell</title>
+      <link>//localhost:1313/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</link>
+      <pubDate>Wed, 10 Jul 2024 09:28:14 +0200</pubDate>
+      <guid>//localhost:1313/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</guid>
+      <description>&lt;p&gt;Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Deployment Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group).&#xA;In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on&#xA;a user group. Let&amp;rsquo;s call it dynamic device group management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

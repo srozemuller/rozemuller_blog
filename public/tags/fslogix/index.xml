@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fslogix on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/fslogix/</link><description>Recent content in Fslogix on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/fslogix/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure FSLogix profile for Azure AD joined AVD session host automated</title><link>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link><pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate><guid>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid><description>&lt;p>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fslogix on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/fslogix/</link>
+    <description>Recent content in fslogix on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Dec 2021 14:34:21 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/fslogix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

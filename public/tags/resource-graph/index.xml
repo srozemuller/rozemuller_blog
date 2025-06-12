@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Resource Graph on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/resource-graph/</link><description>Recent content in Resource Graph on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/resource-graph/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title><link>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link><pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate><guid>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid><description>&lt;p>When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resource Graph on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/resource-graph/</link>
+    <description>Recent content in Resource Graph on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Oct 2020 13:05:59 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/resource-graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title>
+      <link>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link>
+      <pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate>
+      <guid>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid>
+      <description>&lt;p&gt;When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

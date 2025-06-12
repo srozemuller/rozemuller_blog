@@ -1,11 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microsoft IntunePowered on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/microsoft-intunepowered/</link><description>Recent content in Microsoft IntunePowered on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/microsoft-intunepowered/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy Intune settings catalog automated from scratch with Graph API</title><link>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link><pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid><description>&lt;p>I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href="https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/"
-
-
-
-
- target="_blank"
- 
-
-
-> created a profile with power settings and deployed the profile to all devices including a filter&lt;/a>
-.&lt;/p></description></item><item><title>Enable Endpoint Analytics automated in Microsoft Intune</title><link>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link><pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate><guid>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p></description></item><item><title>Intune filters explained create automated and assignments</title><link>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</link><pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate><guid>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</guid><description>&lt;p>Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Configure subscribe to AVD in RDP Client automated</title><link>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</link><pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate><guid>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p></description></item><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft IntunePowered on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/microsoft-intunepowered/</link>
+    <description>Recent content in Microsoft IntunePowered on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Sep 2022 07:55:46 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/microsoft-intunepowered/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy Intune settings catalog automated from scratch with Graph API</title>
+      <link>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link>
+      <pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate>
+      <guid>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid>
+      <description>&lt;p&gt;I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href=&#34;https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt; created a profile with power settings and deployed the profile to all devices including a filter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Endpoint Analytics automated in Microsoft Intune</title>
+      <link>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate>
+      <guid>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intune filters explained create automated and assignments</title>
+      <link>//localhost:1313/intune-filters-explained-and-create-automated/</link>
+      <pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate>
+      <guid>//localhost:1313/intune-filters-explained-and-create-automated/</guid>
+      <description>&lt;p&gt;Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure subscribe to AVD in RDP Client automated</title>
+      <link>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</link>
+      <pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate>
+      <guid>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

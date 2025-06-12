@@ -1,43 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure Functions on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/azure-functions/</link><description>Recent content in Azure Functions on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/azure-functions/index.xml" rel="self" type="application/rss+xml"/><item><title>Update deallocated AVD session hosts with scheduled agents updates feature</title><link>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</link><pubDate>Wed, 30 Nov 2022 06:02:46 +0200</pubDate><guid>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</guid><description>&lt;p>Recently, a question passed my screen if &lt;a href="https://learn.microsoft.com/en-us/azure/virtual-desktop/scheduled-agent-updates"
-
-
-
-
- target="_blank"
- 
-
-
->the AVD scheduled agent feature&lt;/a>
- supports deallocated machines. The answer is short, no. Also when not enabling the feature, Microsoft does not start deallocated machines.
-So, how do we make sure when a new agent becomes available also deallocated machines are updated?&lt;/p></description></item><item><title>Enroll Defender For Endpoint automated</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>&lt;a href="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure"
-
-
-
-
- target="_blank"
- 
-
-
->https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure&lt;/a>
-&lt;/p>
-&lt;h2 id="microsoft-intune-connection---on">Microsoft Intune Connection -&amp;gt; On&lt;/h2>
-&lt;p>Find the if there is a connector already. Otherwise, create one.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://graph.microsoft.com/beta/deviceManagement/mobileThreatDefenseConnectors/fc780465-2017-40d4-a0c5-307022471b92&amp;#34;&lt;/span> &lt;span style="color:#75715e">#/fc780465-2017-40d4-a0c5-307022471b92&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request = Invoke-RestMethod -Uri $url -Method Get -Headers $authHeader
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request.value | ConvertTo-Json -Depth &lt;span style="color:#ae81ff">9&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$body = @{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnsupportedOsVersionBlocked = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> windowsEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnresponsivenessThresholdInDays = &lt;span style="color:#ae81ff">6&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} | ConvertTo-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest = Invoke-RestMethod -Uri $url -Method Patch -Headers $authHeader -Body $body
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img alt="available-dfe-connector.png" src="https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/available-dfe-connector.png">&lt;/p></description></item><item><title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
-In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p></description></item><item><title>Using LaMetric Time to monitor an AVD environment</title><link>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</link><pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate><guid>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</guid><description>&lt;p>A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p></description></item><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item><item><title>Monitor active M365 ServiceHealth services only with PowerShell</title><link>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</link><pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate><guid>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</guid><description>&lt;p>You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Functions on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/azure-functions/</link>
+    <description>Recent content in Azure Functions on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Sep 2022 09:12:46 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title>
+      <link>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</link>
+      <pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate>
+      <guid>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid>
+      <description>&lt;p&gt;Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.&#xA;In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using LaMetric Time to monitor an AVD environment</title>
+      <link>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</link>
+      <pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate>
+      <guid>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</guid>
+      <description>&lt;p&gt;A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor active M365 ServiceHealth services only with PowerShell</title>
+      <link>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</link>
+      <pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate>
+      <guid>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</guid>
+      <description>&lt;p&gt;You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;mark&gt;Logging in &lt;/mark&gt;at the&lt;mark&gt; customers portal isn’t a very efficient way.&lt;/mark&gt; &lt;mark&gt;Microsoft provides a lot of API’s which can be used for monitoring.&lt;/mark&gt; By combining some of them you are able to do some really nice and smart things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,136 +1,397 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PowerShell on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/powershell/</link><description>Recent content in PowerShell on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Jun 2024 17:08:11 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/powershell/index.xml" rel="self" type="application/rss+xml"/><item><title>Graph API in automation at scale</title><link>https://www.rozemuller.com/graph-api-in-automation-at-scale/</link><pubDate>Sun, 05 May 2024 11:28:14 +0200</pubDate><guid>https://www.rozemuller.com/graph-api-in-automation-at-scale/</guid><description>&lt;p>Maybe you heard of it before, Graph API. It is the platform where many Microsoft Services are connected to. Think about Entra ID, Microsoft Intune, SharePoint and many more. If you want to automate things regarding these services, it’s the way to talk against the Graph API.&lt;/p></description></item><item><title>Monitor Security Baseline Insights Recommendations</title><link>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</link><pubDate>Sun, 07 Apr 2024 16:28:14 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</guid><description>&lt;p>Microsoft has updated their security baselines in Microsoft Intune which you can read in the &lt;a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2"
-
-
-
-
- target="_blank"
- 
-
-
->What is new in Intune&lt;/a>
-. A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft&amp;rsquo;s recommendation.&lt;/p></description></item><item><title>Configure AVD clipboard transfer direction automated</title><link>https://www.rozemuller.com/configure-avd-clipboard-transfer-direction-automated/</link><pubDate>Fri, 08 Mar 2024 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/configure-avd-clipboard-transfer-direction-automated/</guid><description>&lt;p>Using the clipboard between Azure Virtual Desktop and the users client is a great way to send data back and forth. But it is also could big leak into the system. So maybe you want to limit the use of the clipboard or get more control on how the clipboard could be used between the user and the Azure Virtual Desktop enviroment.&lt;/p></description></item><item><title>Schedule image update Azure Virtual Desktop host pool</title><link>https://www.rozemuller.com/blog/2024-02-20-schedule-image-update-avd-hostpool/</link><pubDate>Tue, 20 Feb 2024 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/blog/2024-02-20-schedule-image-update-avd-hostpool/</guid><description>&lt;p>When you want to update session hosts in a host pool with automated management, you use session host update. Session host update enables you to update the underlying virtual machine (VM) image, size, disk type, and other configuration properties. It does this by deleting or deallocating the existing virtual machine and creating a new one with the updated configuration stored in the session host configuration.
-I&amp;rsquo;m realy exited abou this new feature.
-In this blog, I explain this new feature in how it works, where to think of when using it and, how to manage this (in an automated way).&lt;/p></description></item><item><title>Update Intune filters with Windows 11 23H2 build automated</title><link>https://www.rozemuller.com/update-intune-filters-with-windows11-23h2-build-automated/</link><pubDate>Wed, 01 Nov 2023 07:44:02 +0100</pubDate><guid>https://www.rozemuller.com/update-intune-filters-with-windows11-23h2-build-automated/</guid><description>&lt;p>As you also may know is that using filters in Intune is a best practise. With the come of the Windows 11 23H2 build number it is a good idea 💡 to update your filters by adding the new 10.22631.x build number. In this blog post, I show how to update all Windows 11 filters with the new build number using PowerShell and the Graph API.&lt;/p></description></item><item><title>Configure AVD using settings catalog automated</title><link>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</link><pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</guid><description>&lt;p>Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p></description></item><item><title>Delete AAD and Intune devices based on CSV and Graph API</title><link>https://www.rozemuller.com/delete-aad-intune-devices-based-on-csv-and-graph-api/</link><pubDate>Sat, 28 Jan 2023 10:52:11 +0100</pubDate><guid>https://www.rozemuller.com/delete-aad-intune-devices-based-on-csv-and-graph-api/</guid><description>&lt;p>The power of community is to collaborate and help others achieve goals. In this case, I got a question from a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.&lt;/p></description></item><item><title>Enable Azure Virtual Desktop Insights automated</title><link>https://www.rozemuller.com/enable-avd-insights-automated/</link><pubDate>Fri, 23 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/enable-avd-insights-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) Insights is a way to get sight into your AVD environment. In short (from Microsoft), Azure Virtual Desktop Insights is a dashboard built on Azure Monitor Workbooks that helps IT professionals understand their Azure Virtual Desktop environments.&lt;/p></description></item><item><title>Win32LOB intunewin file upload process explained for automation</title><link>https://www.rozemuller.com/win32lob-intunewin-file-upload-process-explained-for-automation/</link><pubDate>Fri, 09 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/win32lob-intunewin-file-upload-process-explained-for-automation/</guid><description>&lt;details class="table-of-content">
- &lt;summary>Table Of Contents&lt;/summary>
- &lt;nav id="TableOfContents">
- &lt;ul>
- &lt;li>&lt;a href="#create-win32lob-app-portal-process">Create Win32LOB App portal process&lt;/a>
- &lt;ul>
- &lt;li>&lt;a href="#create-win32lob-app-in-intune">Create Win32LOB App in Intune&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#request-intunewin-file-version">Request intunewin file version&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#upload-and-commit-intunewin-file-to-azure-storage-blob">Upload and commit intunewin file to Azure Storage Blob&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
- &lt;li>&lt;a href="#create-win32lob-app-in-automation">Create Win32LOB App in automation&lt;/a>
- &lt;ul>
- &lt;li>&lt;a href="#create-win32lob-app-in-intune-automated">Create Win32LOB App in Intune automated&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#request-intunewin-file-version-1">Request intunewin file version&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#create-place-holder-for-intunewin-file-version-automated">Create place holder for intunewin file version automated&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#upload-file-to-win32-lob-app-automated">Upload file to Win32 LOB App automated&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
- &lt;li>&lt;a href="#summary">Summary&lt;/a>&lt;/li>
- &lt;/ul>
-&lt;/nav>
-&lt;/details>
-
-&lt;p>A few days ago a question reached me about creating Win32Lob applications including the &lt;code>intunewin&lt;/code> file upload using the REST API. The &lt;code>create&lt;/code> Win32Lob Graph API has no object available to store a file in, and &lt;a href="https://learn.microsoft.com/en-us/graph/api/intune-apps-win32lobapp-create?view=graph-rest-beta"
-
-
-
-
- target="_blank"
- 
-
-
->the documentation&lt;/a>
- doesn&amp;rsquo;t explain how to upload files while creating Win32Lob applications automated.&lt;br>
-That decided me to look into the file upload process and write this blog.&lt;/p></description></item><item><title>Add Microsoft Store (WinGet) app with icon into Intune automated</title><link>https://www.rozemuller.com/add-microsoft-store-app-with-icon-into-intune-automated/</link><pubDate>Sun, 04 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/add-microsoft-store-app-with-icon-into-intune-automated/</guid><description>&lt;p>In the week of November 28, 2022, Microsoft released the new Microsoft Store which is implemented in Intune using the Windows Packager Manager. This is because the Microsoft Store for Business will be deprecated in the first quarter of 2023.&lt;br>
-It is a great feature that helps distribute applications in a very simple way.&lt;/p></description></item><item><title>Route own Intune data to Log Analytics using custom logs</title><link>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</link><pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate><guid>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</guid><description>&lt;p>I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br>
-In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p></description></item><item><title>Update deallocated AVD session hosts with scheduled agents updates feature</title><link>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</link><pubDate>Wed, 30 Nov 2022 06:02:46 +0200</pubDate><guid>https://www.rozemuller.com/update-deallocated-AVD-session-hosts-with-scheduled-agents-updates-feature/</guid><description>&lt;p>Recently, a question passed my screen if &lt;a href="https://learn.microsoft.com/en-us/azure/virtual-desktop/scheduled-agent-updates"
-
-
-
-
- target="_blank"
- 
-
-
->the AVD scheduled agent feature&lt;/a>
- supports deallocated machines. The answer is short, no. Also when not enabling the feature, Microsoft does not start deallocated machines.
-So, how do we make sure when a new agent becomes available also deallocated machines are updated?&lt;/p></description></item><item><title>Deploy Azure Bastion host in AVD environment automated</title><link>https://www.rozemuller.com/deploy-azure-bastion-host-in-AVD-environment-automated/</link><pubDate>Fri, 11 Nov 2022 06:02:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-azure-bastion-host-in-AVD-environment-automated/</guid><description>&lt;p>The IT landscape is changing. Hardware takes place for serverless and resources are moving to public cloud platforms. With that, also the IT processes are changing. In this blog post, I show how to make one of the most common processes more secure in the public cloud. Manage a client endpoint with remote control.&lt;/p></description></item><item><title>Enroll Defender For Endpoint automated</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>&lt;a href="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure"
-
-
-
-
- target="_blank"
- 
-
-
->https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure&lt;/a>
-&lt;/p>
-&lt;h2 id="microsoft-intune-connection---on">Microsoft Intune Connection -&amp;gt; On&lt;/h2>
-&lt;p>Find the if there is a connector already. Otherwise, create one.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://graph.microsoft.com/beta/deviceManagement/mobileThreatDefenseConnectors/fc780465-2017-40d4-a0c5-307022471b92&amp;#34;&lt;/span> &lt;span style="color:#75715e">#/fc780465-2017-40d4-a0c5-307022471b92&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request = Invoke-RestMethod -Uri $url -Method Get -Headers $authHeader
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request.value | ConvertTo-Json -Depth &lt;span style="color:#ae81ff">9&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$body = @{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnsupportedOsVersionBlocked = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> windowsEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnresponsivenessThresholdInDays = &lt;span style="color:#ae81ff">6&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} | ConvertTo-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest = Invoke-RestMethod -Uri $url -Method Patch -Headers $authHeader -Body $body
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img alt="available-dfe-connector.png" src="https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/available-dfe-connector.png">&lt;/p></description></item><item><title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
-In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p></description></item><item><title>Deploy Intune settings catalog automated from scratch with Graph API</title><link>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link><pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid><description>&lt;p>I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href="https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/"
-
-
-
-
- target="_blank"
- 
-
-
-> created a profile with power settings and deployed the profile to all devices including a filter&lt;/a>
-.&lt;/p></description></item><item><title>Enable Endpoint Analytics automated in Microsoft Intune</title><link>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link><pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate><guid>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p></description></item><item><title>Intune filters explained create automated and assignments</title><link>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</link><pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate><guid>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</guid><description>&lt;p>Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p></description></item><item><title>Monitor Identity Secure Score security improvement action status</title><link>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</link><pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</guid><description>&lt;p>An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Configure subscribe to AVD in RDP Client automated</title><link>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</link><pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate><guid>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p></description></item><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Monitor FSLogix file share usage on Azure Files</title><link>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</link><pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate><guid>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</guid><description>&lt;p>In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p></description></item><item><title>AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd</title><link>https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</link><pubDate>Thu, 16 Dec 2021 10:16:18 +0100</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.Avd PowerShell module.&lt;/p></description></item><item><title>Configure FSLogix profile for Azure AD joined AVD session host automated</title><link>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link><pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate><guid>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid><description>&lt;p>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p></description></item><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item><item><title>Install Winget applications using Microsoft Intune</title><link>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</link><pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate><guid>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p></description></item><item><title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link><pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid><description>&lt;p>Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href="https://www.rozemuller.com/avd-automation-cocktail-the-menu"
-
-
-
-
- target="_blank"
- 
-
-
->cocktail series&lt;/a>
-, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p></description></item><item><title>How to enable AVD scaling plans automated</title><link>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</link><pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate><guid>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</guid><description>&lt;p>In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p></description></item><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item><item><title>Manage AVD automated with Microsoft Intune</title><link>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</link><pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate><guid>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</guid><description>&lt;p>Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p></description></item><item><title>Using VM templates for AVD sessionhost automation</title><link>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</link><pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate><guid>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</guid><description>&lt;p>In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p></description></item><item><title>How to deal with AVD session hosts version management</title><link>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</link><pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</guid><description>&lt;p>A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br>
-In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p></description></item><item><title>Move AVD session hosts to a new host pool with REST API</title><link>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link><pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate><guid>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid><description>&lt;p>Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p></description></item><item><title>How to deploy Windows 11 in an AVD environment</title><link>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</link><pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</guid><description>&lt;p>After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p></description></item><item><title>How to join Azure AD automated</title><link>https://www.rozemuller.com/how-to-join-azure-ad-automated/</link><pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate><guid>https://www.rozemuller.com/how-to-join-azure-ad-automated/</guid><description>&lt;p>In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p></description></item><item><title>AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps and ARM</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-devops-and-arm/</link><pubDate>Wed, 07 Jul 2021 15:13:00 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-devops-and-arm/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Strawberry Banana Mix, I will show you how to deploy an AVD environment automated with DevOps, ARM templates and a bit of PowerShell.&lt;/p></description></item><item><title>AVD Automation Cocktail - Azure Virtual Desktop automated with PowerShell</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-powershell/</link><pubDate>Mon, 28 Jun 2021 11:28:00 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-powershell/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Coconut Beach Party, I will show you how to deploy an AVD environment automated with PowerShell only.&lt;/p></description></item><item><title>AVD Automation Cocktail - The Menu</title><link>https://www.rozemuller.com/avd-automation-cocktail-the-menu/</link><pubDate>Thu, 10 Jun 2021 20:21:49 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-the-menu/</guid><description>&lt;p>Welcome to a fresh new series about deploying Azure Virtual Desktop environments automated called the “AVD Automation Cocktail”. In this series I will serve several cocktails and will take you along on the AVD automated deployment journey with different types of automation languages. Every type has its own pros and cons, deployment strategy, parameter structure and commands. In the series all of these items will pass and hopefully it will give you a good overview about the possibilities.&lt;/p></description></item><item><title>Launching the first version of Az.Avd WVD PowerShell module</title><link>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</link><pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate><guid>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</guid><description>&lt;p>During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p></description></item><item><title>Delete assigned user from a personal AVD session host automated</title><link>https://www.rozemuller.com/delete-assigned-user-from-a-personal-avd-session-host-automated/</link><pubDate>Mon, 19 Apr 2021 13:18:21 +0200</pubDate><guid>https://www.rozemuller.com/delete-assigned-user-from-a-personal-avd-session-host-automated/</guid><description>&lt;p>An Azure Virtual Desktop environment has two types of host pools, a pooled and a personal type. The main difference between them is the user assignment. In this article I will show how to deal with personal assigned session hosts and how to delete the assigned user and will save work.&lt;/p></description></item><item><title>Prepare Azure DevOps for AVD deployment – Create a Service Connection Automated</title><link>https://www.rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</link><pubDate>Thu, 11 Mar 2021 11:28:00 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Windows Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. In post I will explain how to create a DevOps Service Connection the automated way.&lt;/p></description></item><item><title>Configure Azure Firewall Premium features for AVD automated</title><link>https://www.rozemuller.com/configure-azure-firewall-premium-features-for-avd-automated/</link><pubDate>Fri, 26 Feb 2021 17:02:43 +0100</pubDate><guid>https://www.rozemuller.com/configure-azure-firewall-premium-features-for-avd-automated/</guid><description>&lt;p>Security became important more and more. It is recommend, now the days arrived where the most people work from home and IT is moving to the public cloud, to use a good firewall with less complexity as possible. In case of AVD within the current situation an IT environment can be complex. In this article I will explain how configure an Azure Firewall for AVD automated with premium options, which came in public preview at 16 February 2021. At the end I will show how to deploy an Azure Firewall specially for a AVD environment with all the needed steps automated.&lt;/p></description></item><item><title>Monitor Azure Virtual Desktop required URL&amp;#8217;s with Log Analytics Workspace</title><link>https://www.rozemuller.com/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</link><pubDate>Fri, 22 Jan 2021 10:42:08 +0100</pubDate><guid>https://www.rozemuller.com/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</guid><description>&lt;p>Microsoft has provided a list with URL’s which you need for running a Azure Virtual Desktop environment. In this blog post I will explain how to monitor any issues related to the AVD required URL’s. and how to setup the monitoring environment.&lt;/p></description></item><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment – Create DevOps project</title><link>https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</link><pubDate>Fri, 15 Jan 2021 16:02:21 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</guid><description>&lt;p>An Azure DevOps environment consists of projects. Before create anything in DevOps like a board, repositories or pipelines you first need a project. In this second part of the series Prepare Azure DevOps for Azure Virtual Desktop we are diving into that DevOps part, a project. At the end of this post you will be able to deploy WVD with DevOps automated.&lt;/p></description></item><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title><link>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link><pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br>
-In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p></description></item><item><title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title><link>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link><pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate><guid>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid><description>&lt;p>Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p></description></item><item><title>Deploy Azure Monitor for AVD automated</title><link>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link><pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate><guid>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid><description>&lt;p>Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p></description></item><item><title>Enable RDP ShortPath for AVD on an image version automated</title><link>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link><pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate><guid>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid><description>&lt;p>Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br>
-Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p></description></item><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated – Part 4 AVD Clean up unused resources</title><link>https://www.rozemuller.com/avd-clean-up-unused-resources/</link><pubDate>Sun, 18 Oct 2020 20:08:27 +0200</pubDate><guid>https://www.rozemuller.com/avd-clean-up-unused-resources/</guid><description>&lt;p>The current situation, we have created new disks, snapshots, virtual machines, networks, images and session hosts. All the resources has been added to the existing AVD hostpool. Now it is time to cleanup the old resources, to keep everything nice and clean. In this part we will take care of removing components related to the old image version.&lt;/p></description></item><item><title>How to use Key Vault ARM templates and deal with sensitive parameters</title><link>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link><pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid><description>&lt;p>At October 14, 2020 Mircosoft &lt;a href="https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI"
-
-
-
-
- target="_blank"
- 
-
-
->announced&lt;/a>
- the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title><link>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link><pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid><description>&lt;p>This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated - Part 2 Save AVD image with Sysprep as Image Gallery version</title><link>https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/</link><pubDate>Tue, 06 Oct 2020 19:57:10 +0200</pubDate><guid>https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/</guid><description>&lt;p>This is part two of a serie posts about AVD disk management. In this blogpost I will explain how to finish a disk with sysprep and deploy it as a version into the Azure Shared Image Gallery automated.&lt;/p></description></item><item><title>Monitor active M365 ServiceHealth services only with PowerShell</title><link>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</link><pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate><guid>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</guid><description>&lt;p>You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p></description></item><item><title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title><link>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</link><pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</guid><description>&lt;p>This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p></description></item><item><title>How to use REST API with Powershell</title><link>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</link><pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</guid><description>&lt;p>The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br>
-As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href="https://www.postman.com/"
-
-
-
-
- target="_blank"
- 
-
-
->Postman&lt;/a>
-.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/powershell/</link>
+    <description>Recent content in PowerShell on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jun 2025 10:25:12 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy initial start menu during Intune enrollment without files</title>
+      <link>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</link>
+      <pubDate>Sun, 01 Jun 2025 10:25:12 +0200</pubDate>
+      <guid>//localhost:1313/deploy-initial-start-menu-during-Intune-enrollment-without-files/</guid>
+      <description>&lt;p&gt;A while ago, I got asked to preconfigure an start menu for end users.&lt;br&gt;&#xA;My first approach was deploying a start menu using the settings catalog in Intune. This works great but disadvantage using the settings catalog is that a user has no option to create an own start menu.&lt;br&gt;&#xA;The start menu will be overwritten by the Intune policy. That was not the goal for our project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create Intune Configuration for Universal Print Automated</title>
+      <link>//localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
+      <pubDate>Sat, 19 Oct 2024 21:40:49 +0200</pubDate>
+      <guid>//localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
+      <description>&lt;p&gt;Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, I show how to create Intune configuration policies based on Universal Print in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Graph API in automation at scale</title>
+      <link>//localhost:1313/graph-api-in-automation-at-scale/</link>
+      <pubDate>Sun, 05 May 2024 11:28:14 +0200</pubDate>
+      <guid>//localhost:1313/graph-api-in-automation-at-scale/</guid>
+      <description>&lt;p&gt;Maybe you heard of it before, Graph API. It is the platform where many Microsoft Services are connected to. Think about Entra ID, Microsoft Intune, SharePoint and many more. If you want to automate things regarding these services, it’s the way to talk against the Graph API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Security Baseline Insights Recommendations</title>
+      <link>//localhost:1313/monitor-security-baseline-insights-recommendations/</link>
+      <pubDate>Sun, 07 Apr 2024 16:28:14 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baseline-insights-recommendations/</guid>
+      <description>&lt;p&gt;Microsoft has updated their security baselines in Microsoft Intune which you can read in the &lt;a href=&#34;https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;What is new in Intune&lt;/a&gt;. A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft&amp;rsquo;s recommendation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure AVD clipboard transfer direction automated</title>
+      <link>//localhost:1313/configure-avd-clipboard-transfer-direction-automated/</link>
+      <pubDate>Fri, 08 Mar 2024 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/configure-avd-clipboard-transfer-direction-automated/</guid>
+      <description>&lt;p&gt;Using the clipboard between Azure Virtual Desktop and the users client is a great way to send data back and forth. But it is also could big leak into the system. So maybe you want to limit the use of the clipboard or get more control on how the clipboard could be used between the user and the Azure Virtual Desktop enviroment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Update Intune filters with Windows 11 23H2 build automated</title>
+      <link>//localhost:1313/update-intune-filters-with-windows11-23h2-build-automated/</link>
+      <pubDate>Wed, 01 Nov 2023 07:44:02 +0100</pubDate>
+      <guid>//localhost:1313/update-intune-filters-with-windows11-23h2-build-automated/</guid>
+      <description>&lt;p&gt;As you also may know is that using filters in Intune is a best practise. With the come of the Windows 11 23H2 build number it is a good idea 💡 to update your filters by adding the new 10.22631.x build number. In this blog post, I show how to update all Windows 11 filters with the new build number using PowerShell and the Graph API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure AVD using settings catalog automated</title>
+      <link>//localhost:1313/configure-avd-using-settings-catalog-automated/</link>
+      <pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-avd-using-settings-catalog-automated/</guid>
+      <description>&lt;p&gt;Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete AAD and Intune devices based on CSV and Graph API</title>
+      <link>//localhost:1313/delete-aad-intune-devices-based-on-csv-and-graph-api/</link>
+      <pubDate>Sat, 28 Jan 2023 10:52:11 +0100</pubDate>
+      <guid>//localhost:1313/delete-aad-intune-devices-based-on-csv-and-graph-api/</guid>
+      <description>&lt;p&gt;The power of community is to collaborate and help others achieve goals. In this case, I got a question from a good community friend to help write a script that removes over 6000 devices from Intune and Azure Active Directory. The base is a CSV file filled with Intune devices IDs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Azure Virtual Desktop Insights automated</title>
+      <link>//localhost:1313/enable-avd-insights-automated/</link>
+      <pubDate>Fri, 23 Dec 2022 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/enable-avd-insights-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) Insights is a way to get sight into your AVD environment. In short (from Microsoft), Azure Virtual Desktop Insights is a dashboard built on Azure Monitor Workbooks that helps IT professionals understand their Azure Virtual Desktop environments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Win32LOB intunewin file upload process explained for automation</title>
+      <link>//localhost:1313/win32lob-intunewin-file-upload-process-explained-for-automation/</link>
+      <pubDate>Fri, 09 Dec 2022 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/win32lob-intunewin-file-upload-process-explained-for-automation/</guid>
+      <description>&lt;details class=&#34;table-of-content&#34;&gt;&#xA;  &lt;summary&gt;Table Of Contents&lt;/summary&gt;&#xA;  &lt;nav id=&#34;TableOfContents&#34;&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#create-win32lob-app-portal-process&#34;&gt;Create Win32LOB App portal process&lt;/a&gt;&#xA;      &lt;ul&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#create-win32lob-app-in-intune&#34;&gt;Create Win32LOB App in Intune&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#request-intunewin-file-version&#34;&gt;Request intunewin file version&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#upload-and-commit-intunewin-file-to-azure-storage-blob&#34;&gt;Upload and commit intunewin file to Azure Storage Blob&lt;/a&gt;&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#create-win32lob-app-in-automation&#34;&gt;Create Win32LOB App in automation&lt;/a&gt;&#xA;      &lt;ul&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#create-win32lob-app-in-intune-automated&#34;&gt;Create Win32LOB App in Intune automated&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#request-intunewin-file-version-1&#34;&gt;Request intunewin file version&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#create-place-holder-for-intunewin-file-version-automated&#34;&gt;Create place holder for intunewin file version automated&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#upload-file-to-win32-lob-app-automated&#34;&gt;Upload file to Win32 LOB App automated&lt;/a&gt;&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/li&gt;&#xA;    &lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/nav&gt;&#xA;&lt;/details&gt;&#xA;&#xA;&lt;p&gt;A few days ago a question reached me about creating Win32Lob applications including the &lt;code&gt;intunewin&lt;/code&gt; file upload using the REST API. The &lt;code&gt;create&lt;/code&gt; Win32Lob Graph API has no object available to store a file in, and &lt;a href=&#34;https://learn.microsoft.com/en-us/graph/api/intune-apps-win32lobapp-create?view=graph-rest-beta&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;the documentation&lt;/a&gt; doesn&amp;rsquo;t explain how to upload files while creating Win32Lob applications automated.&lt;br&gt;&#xA;That decided me to look into the file upload process and write this blog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Add Microsoft Store (WinGet) app with icon into Intune automated</title>
+      <link>//localhost:1313/add-microsoft-store-app-with-icon-into-intune-automated/</link>
+      <pubDate>Sun, 04 Dec 2022 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/add-microsoft-store-app-with-icon-into-intune-automated/</guid>
+      <description>&lt;p&gt;In the week of November 28, 2022, Microsoft released the new Microsoft Store which is implemented in Intune using the Windows Packager Manager. This is because the Microsoft Store for Business will be deprecated in the first quarter of 2023.&lt;br&gt;&#xA;It is a great feature that helps distribute applications in a very simple way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Route own Intune data to Log Analytics using custom logs</title>
+      <link>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</link>
+      <pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate>
+      <guid>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</guid>
+      <description>&lt;p&gt;I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br&gt;&#xA;In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title>
+      <link>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</link>
+      <pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate>
+      <guid>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid>
+      <description>&lt;p&gt;Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.&#xA;In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy Intune settings catalog automated from scratch with Graph API</title>
+      <link>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link>
+      <pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate>
+      <guid>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid>
+      <description>&lt;p&gt;I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href=&#34;https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt; created a profile with power settings and deployed the profile to all devices including a filter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Endpoint Analytics automated in Microsoft Intune</title>
+      <link>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate>
+      <guid>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intune filters explained create automated and assignments</title>
+      <link>//localhost:1313/intune-filters-explained-and-create-automated/</link>
+      <pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate>
+      <guid>//localhost:1313/intune-filters-explained-and-create-automated/</guid>
+      <description>&lt;p&gt;Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Identity Secure Score security improvement action status</title>
+      <link>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</link>
+      <pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</guid>
+      <description>&lt;p&gt;An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure subscribe to AVD in RDP Client automated</title>
+      <link>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</link>
+      <pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate>
+      <guid>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor FSLogix file share usage on Azure Files</title>
+      <link>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</link>
+      <pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate>
+      <guid>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</guid>
+      <description>&lt;p&gt;In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd</title>
+      <link>//localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</link>
+      <pubDate>Thu, 16 Dec 2021 10:16:18 +0100</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.Avd PowerShell module.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Winget applications using Microsoft Intune</title>
+      <link>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate>
+      <guid>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link>
+      <pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid>
+      <description>&lt;p&gt;Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href=&#34;https://www.rozemuller.com/avd-automation-cocktail-the-menu&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;cocktail series&lt;/a&gt;, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to enable AVD scaling plans automated</title>
+      <link>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</link>
+      <pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate>
+      <guid>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage AVD automated with Microsoft Intune</title>
+      <link>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate>
+      <guid>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using VM templates for AVD sessionhost automation</title>
+      <link>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</link>
+      <pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate>
+      <guid>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</guid>
+      <description>&lt;p&gt;In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deal with AVD session hosts version management</title>
+      <link>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</link>
+      <pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</guid>
+      <description>&lt;p&gt;A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br&gt;&#xA;In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Move AVD session hosts to a new host pool with REST API</title>
+      <link>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link>
+      <pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate>
+      <guid>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deploy Windows 11 in an AVD environment</title>
+      <link>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</link>
+      <pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</guid>
+      <description>&lt;p&gt;After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to join Azure AD  automated</title>
+      <link>//localhost:1313/how-to-join-azure-ad-automated/</link>
+      <pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate>
+      <guid>//localhost:1313/how-to-join-azure-ad-automated/</guid>
+      <description>&lt;p&gt;In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail - Azure Virtual Desktop automated with DevOps and ARM</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-devops-and-arm/</link>
+      <pubDate>Wed, 07 Jul 2021 15:13:00 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-devops-and-arm/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Strawberry Banana Mix, I will show you how to deploy an AVD environment automated with DevOps, ARM templates and a bit of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail - Azure Virtual Desktop automated with PowerShell</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-powershell/</link>
+      <pubDate>Mon, 28 Jun 2021 11:28:00 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-powershell/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, the Coconut Beach Party, I will show you how to deploy an AVD environment automated with PowerShell only.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail - The Menu</title>
+      <link>//localhost:1313/avd-automation-cocktail-the-menu/</link>
+      <pubDate>Thu, 10 Jun 2021 20:21:49 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-the-menu/</guid>
+      <description>&lt;p&gt;Welcome to a fresh new series about deploying Azure Virtual Desktop environments automated called the “AVD Automation Cocktail”. In this series I will serve several cocktails and will take you along on the AVD automated deployment journey with different types of automation languages. Every type has its own pros and cons, deployment strategy, parameter structure and commands. In the series all of these items will pass and hopefully it will give you a good overview about the possibilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Launching the first version of Az.Avd WVD PowerShell module</title>
+      <link>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</link>
+      <pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate>
+      <guid>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</guid>
+      <description>&lt;p&gt;During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete assigned user from a personal AVD session host automated</title>
+      <link>//localhost:1313/delete-assigned-user-from-a-personal-avd-session-host-automated/</link>
+      <pubDate>Mon, 19 Apr 2021 13:18:21 +0200</pubDate>
+      <guid>//localhost:1313/delete-assigned-user-from-a-personal-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;An Azure Virtual Desktop environment has two types of host pools, a pooled and a personal type. The main difference between them is the user assignment. In this article I will show how to deal with personal assigned session hosts and how to delete the assigned user and will save work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for AVD deployment – Create a Service Connection Automated</title>
+      <link>//localhost:1313/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</link>
+      <pubDate>Thu, 11 Mar 2021 11:28:00 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-avd-deployment-create-a-service-connection/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Windows Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. In post I will explain how to create a DevOps Service Connection the automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Azure Firewall Premium features for AVD automated</title>
+      <link>//localhost:1313/configure-azure-firewall-premium-features-for-avd-automated/</link>
+      <pubDate>Fri, 26 Feb 2021 17:02:43 +0100</pubDate>
+      <guid>//localhost:1313/configure-azure-firewall-premium-features-for-avd-automated/</guid>
+      <description>&lt;p&gt;Security became important more and more. It is recommend, now the days arrived where the most people work from home and IT is moving to the public cloud, to use a good firewall with less complexity as possible. In case of AVD within the current situation an IT environment can be complex. In this article I will explain how configure an Azure Firewall for AVD automated with premium options, which came in public preview at 16 February 2021. At the end I will show how to deploy an Azure Firewall specially for a AVD environment with all the needed steps automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Azure Virtual Desktop required URL&amp;#8217;s with Log Analytics Workspace</title>
+      <link>//localhost:1313/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</link>
+      <pubDate>Fri, 22 Jan 2021 10:42:08 +0100</pubDate>
+      <guid>//localhost:1313/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</guid>
+      <description>&lt;p&gt;Microsoft has provided a list with URL’s which you need for running a Azure Virtual Desktop environment. In this blog post I will explain how to monitor any issues related to the AVD required URL’s. and how to setup the monitoring environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment – Create DevOps project</title>
+      <link>//localhost:1313/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</link>
+      <pubDate>Fri, 15 Jan 2021 16:02:21 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</guid>
+      <description>&lt;p&gt;An Azure DevOps environment consists of projects. Before create anything in DevOps like a board, repositories or pipelines you first need a project. In this second part of the series Prepare Azure DevOps for Azure Virtual Desktop we are diving into that DevOps part, a project. At the end of this post you will be able to deploy WVD with DevOps automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title>
+      <link>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link>
+      <pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br&gt;&#xA;In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title>
+      <link>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link>
+      <pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate>
+      <guid>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy Azure Monitor for AVD automated</title>
+      <link>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link>
+      <pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate>
+      <guid>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable RDP ShortPath for AVD on an image version automated</title>
+      <link>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link>
+      <pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate>
+      <guid>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid>
+      <description>&lt;p&gt;Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br&gt;&#xA;Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 4 AVD Clean up unused resources</title>
+      <link>//localhost:1313/avd-clean-up-unused-resources/</link>
+      <pubDate>Sun, 18 Oct 2020 20:08:27 +0200</pubDate>
+      <guid>//localhost:1313/avd-clean-up-unused-resources/</guid>
+      <description>&lt;p&gt;The current situation, we have created new disks, snapshots, virtual machines, networks, images and session hosts. All the resources has been added to the existing AVD hostpool. Now it is time to cleanup the old resources, to keep everything nice and clean. In this part we will take care of removing components related to the old image version.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use Key Vault ARM templates and deal with sensitive parameters</title>
+      <link>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link>
+      <pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid>
+      <description>&lt;p&gt;At October 14, 2020 Mircosoft &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;announced&lt;/a&gt; the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop  Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title>
+      <link>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link>
+      <pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid>
+      <description>&lt;p&gt;This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated - Part 2 Save AVD image with Sysprep as Image Gallery version</title>
+      <link>//localhost:1313/save-avd-image-with-sysprep-as-image-gallery-version/</link>
+      <pubDate>Tue, 06 Oct 2020 19:57:10 +0200</pubDate>
+      <guid>//localhost:1313/save-avd-image-with-sysprep-as-image-gallery-version/</guid>
+      <description>&lt;p&gt;This is part two of a serie posts about AVD disk management. In this blogpost I will explain how to finish a disk with sysprep and deploy it as a version into the Azure Shared Image Gallery automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor active M365 ServiceHealth services only with PowerShell</title>
+      <link>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</link>
+      <pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate>
+      <guid>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</guid>
+      <description>&lt;p&gt;You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;mark&gt;Logging in &lt;/mark&gt;at the&lt;mark&gt; customers portal isn’t a very efficient way.&lt;/mark&gt; &lt;mark&gt;Microsoft provides a lot of API’s which can be used for monitoring.&lt;/mark&gt; By combining some of them you are able to do some really nice and smart things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title>
+      <link>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</link>
+      <pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</guid>
+      <description>&lt;p&gt;This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use REST API with Powershell</title>
+      <link>//localhost:1313/how-to-use-rest-api-with-powershell/</link>
+      <pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-rest-api-with-powershell/</guid>
+      <description>&lt;p&gt;The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br&gt;&#xA;As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href=&#34;https://www.postman.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Postman&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

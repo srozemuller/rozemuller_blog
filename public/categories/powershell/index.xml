@@ -1,15 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PowerShell on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/powershell/</link><description>Recent content in PowerShell on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/powershell/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item><item><title>Configure FSLogix profile for Azure AD joined AVD session host automated</title><link>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link><pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate><guid>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid><description>&lt;p>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p></description></item><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item><item><title>How to enable AVD scaling plans automated</title><link>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</link><pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate><guid>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</guid><description>&lt;p>In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p></description></item><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item><item><title>Using VM templates for AVD sessionhost automation</title><link>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</link><pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate><guid>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</guid><description>&lt;p>In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p></description></item><item><title>How to deal with AVD session hosts version management</title><link>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</link><pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</guid><description>&lt;p>A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br>
-In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p></description></item><item><title>How to deploy Windows 11 in an AVD environment</title><link>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</link><pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</guid><description>&lt;p>After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p></description></item><item><title>How to join Azure AD automated</title><link>https://www.rozemuller.com/how-to-join-azure-ad-automated/</link><pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate><guid>https://www.rozemuller.com/how-to-join-azure-ad-automated/</guid><description>&lt;p>In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p></description></item><item><title>Launching the first version of Az.Avd WVD PowerShell module</title><link>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</link><pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate><guid>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</guid><description>&lt;p>During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p></description></item><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title><link>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link><pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br>
-In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p></description></item><item><title>Automatically backup Azure resources to an Azure Storage Account in JSON</title><link>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link><pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate><guid>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid><description>&lt;p>In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p></description></item><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item><item><title>How to use REST API with Powershell</title><link>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</link><pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</guid><description>&lt;p>The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br>
-As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href="https://www.postman.com/"
-
-
-
-
- target="_blank"
- 
-
-
->Postman&lt;/a>
-.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/powershell/</link>
+    <description>Recent content in PowerShell on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Mar 2022 16:23:52 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to enable AVD scaling plans automated</title>
+      <link>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</link>
+      <pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate>
+      <guid>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using VM templates for AVD sessionhost automation</title>
+      <link>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</link>
+      <pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate>
+      <guid>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</guid>
+      <description>&lt;p&gt;In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deal with AVD session hosts version management</title>
+      <link>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</link>
+      <pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</guid>
+      <description>&lt;p&gt;A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br&gt;&#xA;In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deploy Windows 11 in an AVD environment</title>
+      <link>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</link>
+      <pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</guid>
+      <description>&lt;p&gt;After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to join Azure AD  automated</title>
+      <link>//localhost:1313/how-to-join-azure-ad-automated/</link>
+      <pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate>
+      <guid>//localhost:1313/how-to-join-azure-ad-automated/</guid>
+      <description>&lt;p&gt;In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Launching the first version of Az.Avd WVD PowerShell module</title>
+      <link>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</link>
+      <pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate>
+      <guid>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</guid>
+      <description>&lt;p&gt;During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title>
+      <link>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link>
+      <pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br&gt;&#xA;In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automatically backup Azure resources to an Azure Storage Account in JSON</title>
+      <link>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link>
+      <pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate>
+      <guid>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid>
+      <description>&lt;p&gt;In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use REST API with Powershell</title>
+      <link>//localhost:1313/how-to-use-rest-api-with-powershell/</link>
+      <pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-rest-api-with-powershell/</guid>
+      <description>&lt;p&gt;The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br&gt;&#xA;As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href=&#34;https://www.postman.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Postman&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

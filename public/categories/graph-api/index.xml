@@ -1,34 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graph API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/graph-api/</link><description>Recent content in Graph API on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 14 Jun 2024 10:30:41 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/graph-api/index.xml" rel="self" type="application/rss+xml"/><item><title>Graph API in automation at scale</title><link>https://www.rozemuller.com/graph-api-in-automation-at-scale/</link><pubDate>Sun, 05 May 2024 11:28:14 +0200</pubDate><guid>https://www.rozemuller.com/graph-api-in-automation-at-scale/</guid><description>&lt;p>Maybe you heard of it before, Graph API. It is the platform where many Microsoft Services are connected to. Think about Entra ID, Microsoft Intune, SharePoint and many more. If you want to automate things regarding these services, it’s the way to talk against the Graph API.&lt;/p></description></item><item><title>Use internal main.iam.ad API with Logic Apps</title><link>https://www.rozemuller.com/use-internal-azure-api-with-logic-apps/</link><pubDate>Mon, 24 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/use-internal-azure-api-with-logic-apps/</guid><description>&lt;p>This blog post is a follow-up to &lt;a href="https://www.rozemuller.com/use-internal-azure-api-in-automation/"
-
-
-
-
- target="_blank"
- 
-
-
->my post about using the hidden API in automation&lt;/a>
-. In that post, I explained how to authenticate to the &lt;code>https://main.iam.ad.ext.azure.com/api/&lt;/code> endpoint and, how to get information from it. If you haven&amp;rsquo;t already, I would suggest reading that post first.
-I used Azure Functions to run the automation tasks.&lt;/p></description></item><item><title>Use internal main.iam.ad API in automation</title><link>https://www.rozemuller.com/use-internal-azure-api-in-automation/</link><pubDate>Mon, 17 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/use-internal-azure-api-in-automation/</guid><description>&lt;p>We all know the Graph API, graph.microsoft.com, and the Azure management API, management.azure.com. Both APIs are used very often and lots of automation tasks depend on those APIs. Also, most PowerShell modules rely on them and, the Graph and Azure management APIs are well documented.&lt;/p></description></item><item><title>Deploy Intune settings catalog automated from scratch with Graph API</title><link>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link><pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid><description>&lt;p>I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href="https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/"
-
-
-
-
- target="_blank"
- 
-
-
-> created a profile with power settings and deployed the profile to all devices including a filter&lt;/a>
-.&lt;/p></description></item><item><title>Configure subscribe to AVD in RDP Client automated</title><link>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</link><pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate><guid>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p></description></item><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment – Create DevOps project</title><link>https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</link><pubDate>Fri, 15 Jan 2021 16:02:21 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</guid><description>&lt;p>An Azure DevOps environment consists of projects. Before create anything in DevOps like a board, repositories or pipelines you first need a project. In this second part of the series Prepare Azure DevOps for Azure Virtual Desktop we are diving into that DevOps part, a project. At the end of this post you will be able to deploy WVD with DevOps automated.&lt;/p></description></item><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title><link>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link><pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br>
-In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p></description></item><item><title>How to use REST API with Powershell</title><link>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</link><pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</guid><description>&lt;p>The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br>
-As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href="https://www.postman.com/"
-
-
-
-
- target="_blank"
- 
-
-
->Postman&lt;/a>
-.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/graph-api/</link>
+    <description>Recent content in Graph API on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 May 2024 11:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/graph-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graph API in automation at scale</title>
+      <link>//localhost:1313/graph-api-in-automation-at-scale/</link>
+      <pubDate>Sun, 05 May 2024 11:28:14 +0200</pubDate>
+      <guid>//localhost:1313/graph-api-in-automation-at-scale/</guid>
+      <description>&lt;p&gt;Maybe you heard of it before, Graph API. It is the platform where many Microsoft Services are connected to. Think about Entra ID, Microsoft Intune, SharePoint and many more. If you want to automate things regarding these services, it’s the way to talk against the Graph API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use internal main.iam.ad API with Logic Apps</title>
+      <link>//localhost:1313/use-internal-azure-api-with-logic-apps/</link>
+      <pubDate>Mon, 24 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/use-internal-azure-api-with-logic-apps/</guid>
+      <description>&lt;p&gt;This blog post is a follow-up to &lt;a href=&#34;https://www.rozemuller.com/use-internal-azure-api-in-automation/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;my post about using the hidden API in automation&lt;/a&gt;. In that post, I explained how to authenticate to the &lt;code&gt;https://main.iam.ad.ext.azure.com/api/&lt;/code&gt; endpoint and, how to get information from it. If you haven&amp;rsquo;t already, I would suggest reading that post first.&#xA;I used Azure Functions to run the automation tasks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use internal main.iam.ad API in automation</title>
+      <link>//localhost:1313/use-internal-azure-api-in-automation/</link>
+      <pubDate>Mon, 17 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/use-internal-azure-api-in-automation/</guid>
+      <description>&lt;p&gt;We all know the Graph API, graph.microsoft.com, and the Azure management API, management.azure.com. Both APIs are used very often and lots of automation tasks depend on those APIs. Also, most PowerShell modules rely on them and, the Graph and Azure management APIs are well documented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy Intune settings catalog automated from scratch with Graph API</title>
+      <link>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</link>
+      <pubDate>Sun, 11 Sep 2022 07:55:46 +0200</pubDate>
+      <guid>//localhost:1313/deploy-intune-settings-catalog-automated-from-scratch-with-graph-api/</guid>
+      <description>&lt;p&gt;I show in this blog how to create a device configuration profile based on the settings catalog in Intune. A while ago I&lt;a href=&#34;https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt; created a profile with power settings and deployed the profile to all devices including a filter&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure subscribe to AVD in RDP Client automated</title>
+      <link>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</link>
+      <pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate>
+      <guid>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment – Create DevOps project</title>
+      <link>//localhost:1313/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</link>
+      <pubDate>Fri, 15 Jan 2021 16:02:21 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-azure-virtual-desktop-deployment-create-devops-project/</guid>
+      <description>&lt;p&gt;An Azure DevOps environment consists of projects. Before create anything in DevOps like a board, repositories or pipelines you first need a project. In this second part of the series Prepare Azure DevOps for Azure Virtual Desktop we are diving into that DevOps part, a project. At the end of this post you will be able to deploy WVD with DevOps automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title>
+      <link>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link>
+      <pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br&gt;&#xA;In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use REST API with Powershell</title>
+      <link>//localhost:1313/how-to-use-rest-api-with-powershell/</link>
+      <pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-rest-api-with-powershell/</guid>
+      <description>&lt;p&gt;The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br&gt;&#xA;As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href=&#34;https://www.postman.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Postman&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

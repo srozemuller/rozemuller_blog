@@ -1,42 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monitoring on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/monitoring/</link><description>Recent content in Monitoring on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 Apr 2024 11:07:48 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/monitoring/index.xml" rel="self" type="application/rss+xml"/><item><title>Monitor Security Baseline Insights Recommendations</title><link>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</link><pubDate>Sun, 07 Apr 2024 16:28:14 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baseline-insights-recommendations/</guid><description>&lt;p>Microsoft has updated their security baselines in Microsoft Intune which you can read in the &lt;a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2"
-
-
-
-
- target="_blank"
- 
-
-
->What is new in Intune&lt;/a>
-. A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft&amp;rsquo;s recommendation.&lt;/p></description></item><item><title>Monitor assigned roles outside PIM and sent to MS Teams using OpenAI</title><link>https://www.rozemuller.com/monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai/</link><pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate><guid>https://www.rozemuller.com/monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai/</guid><description>&lt;p>Another big helper in implementing a Zero Trust environment is the use of Privileged Identity Management, aka PIM. It is a best practice assigning the least permissions as needed for the shortest amount of time. PIM helps you with that.
-After implementing PIM you have left-overs of admins assign roles to identities without PIM. In that case there is a mechanism that check if there are roles assign outside PIM.&lt;/p></description></item><item><title>Monitor Conditional Access changes using OpenAI and MS Teams</title><link>https://www.rozemuller.com/monitor-conditional-access-changes-using-openai-and-teams/</link><pubDate>Thu, 08 Jun 2023 16:39:01 +0200</pubDate><guid>https://www.rozemuller.com/monitor-conditional-access-changes-using-openai-and-teams/</guid><description>&lt;p>Implementing conditional access policies have a huge impact on your identities and organisation. After implementation, there could be a situation conditional policies need changes. Think about the state, adding or excluding users, or adding a security strength for example.&lt;/p></description></item><item><title>Enroll Defender For Endpoint automated</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>&lt;a href="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure"
-
-
-
-
- target="_blank"
- 
-
-
->https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure&lt;/a>
-&lt;/p>
-&lt;h2 id="microsoft-intune-connection---on">Microsoft Intune Connection -&amp;gt; On&lt;/h2>
-&lt;p>Find the if there is a connector already. Otherwise, create one.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://graph.microsoft.com/beta/deviceManagement/mobileThreatDefenseConnectors/fc780465-2017-40d4-a0c5-307022471b92&amp;#34;&lt;/span> &lt;span style="color:#75715e">#/fc780465-2017-40d4-a0c5-307022471b92&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request = Invoke-RestMethod -Uri $url -Method Get -Headers $authHeader
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request.value | ConvertTo-Json -Depth &lt;span style="color:#ae81ff">9&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$body = @{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnsupportedOsVersionBlocked = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> windowsEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnresponsivenessThresholdInDays = &lt;span style="color:#ae81ff">6&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} | ConvertTo-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest = Invoke-RestMethod -Uri $url -Method Patch -Headers $authHeader -Body $body
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img alt="available-dfe-connector.png" src="https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/available-dfe-connector.png">&lt;/p></description></item><item><title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
-In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p></description></item><item><title>Fix personal AVD host as a user with MS Teams</title><link>https://www.rozemuller.com/fix-personal-avd-host-as-a-user-with-ms-teams/</link><pubDate>Mon, 11 Jul 2022 21:01:14 +0200</pubDate><guid>https://www.rozemuller.com/fix-personal-avd-host-as-a-user-with-ms-teams/</guid><description>&lt;p>In this post, I show how to make it possible to fix a personal AVD host as a user. There could be a situation where your AVD session host becomes unresponsive. In that case, you want to try to restart the host but are not able to log in to the host. Also, you can&amp;rsquo;t restart the host in the web portal / RD client.&lt;/p></description></item><item><title>Enable Endpoint Analytics automated in Microsoft Intune</title><link>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link><pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate><guid>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p></description></item><item><title>Monitor Identity Secure Score security improvement action status</title><link>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</link><pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</guid><description>&lt;p>An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Azure file share usage monitoring with Logic Apps</title><link>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</link><pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate><guid>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</guid><description>&lt;p>Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p></description></item><item><title>Monitor FSLogix file share usage on Azure Files</title><link>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</link><pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate><guid>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</guid><description>&lt;p>In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p></description></item><item><title>Using LaMetric Time to monitor an AVD environment</title><link>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</link><pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate><guid>https://www.rozemuller.com/using-lametric-time-to-monitor-an-avd-environment/</guid><description>&lt;p>A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p></description></item><item><title>Monitor Azure Virtual Desktop required URL&amp;#8217;s with Log Analytics Workspace</title><link>https://www.rozemuller.com/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</link><pubDate>Fri, 22 Jan 2021 10:42:08 +0100</pubDate><guid>https://www.rozemuller.com/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</guid><description>&lt;p>Microsoft has provided a list with URL’s which you need for running a Azure Virtual Desktop environment. In this blog post I will explain how to monitor any issues related to the AVD required URL’s. and how to setup the monitoring environment.&lt;/p></description></item><item><title>Deploy Azure Monitor for AVD automated</title><link>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link><pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate><guid>https://www.rozemuller.com/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid><description>&lt;p>Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title><link>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link><pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate><guid>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid><description>&lt;p>When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p></description></item><item><title>Monitor active M365 ServiceHealth services only with PowerShell</title><link>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</link><pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate><guid>https://www.rozemuller.com/monitor-active-m365-servicehealth-services-only-with-powershell/</guid><description>&lt;p>You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/monitoring/</link>
+    <description>Recent content in Monitoring on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Apr 2024 16:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitor Security Baseline Insights Recommendations</title>
+      <link>//localhost:1313/monitor-security-baseline-insights-recommendations/</link>
+      <pubDate>Sun, 07 Apr 2024 16:28:14 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baseline-insights-recommendations/</guid>
+      <description>&lt;p&gt;Microsoft has updated their security baselines in Microsoft Intune which you can read in the &lt;a href=&#34;https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new#updated-security-baseline-for-windows-version-23h2&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;What is new in Intune&lt;/a&gt;. A part of the updates is that Microsoft has added recommended settings based on your organisation. In this blog post, I show how to monitor these recommendations that are part of the security baseline and generate a response when a setting does not met Microsoft&amp;rsquo;s recommendation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor assigned roles outside PIM and sent to MS Teams using OpenAI</title>
+      <link>//localhost:1313/monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai/</link>
+      <pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate>
+      <guid>//localhost:1313/monitor-assigned-roles-outside-pim-and-sent-to-ms-teams-using-openai/</guid>
+      <description>&lt;p&gt;Another big helper in implementing a Zero Trust environment is the use of Privileged Identity Management, aka PIM. It is a best practice assigning the least permissions as needed for the shortest amount of time. PIM helps you with that.&#xA;After implementing PIM you have left-overs of admins assign roles to identities without PIM. In that case there is a mechanism that check if there are roles assign outside PIM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Conditional Access changes using OpenAI and MS Teams</title>
+      <link>//localhost:1313/monitor-conditional-access-changes-using-openai-and-teams/</link>
+      <pubDate>Thu, 08 Jun 2023 16:39:01 +0200</pubDate>
+      <guid>//localhost:1313/monitor-conditional-access-changes-using-openai-and-teams/</guid>
+      <description>&lt;p&gt;Implementing conditional access policies have a huge impact on your identities and organisation. After implementation, there could be a situation conditional policies need changes. Think about the state, adding or excluding users, or adding a security strength for example.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title>
+      <link>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</link>
+      <pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate>
+      <guid>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid>
+      <description>&lt;p&gt;Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.&#xA;In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fix personal AVD host as a user with MS Teams</title>
+      <link>//localhost:1313/fix-personal-avd-host-as-a-user-with-ms-teams/</link>
+      <pubDate>Mon, 11 Jul 2022 21:01:14 +0200</pubDate>
+      <guid>//localhost:1313/fix-personal-avd-host-as-a-user-with-ms-teams/</guid>
+      <description>&lt;p&gt;In this post, I show how to make it possible to fix a personal AVD host as a user. There could be a situation where your  AVD session host becomes unresponsive. In that case, you want to try to restart the host but are not able to log in to the host. Also, you can&amp;rsquo;t restart the host in the web portal / RD client.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Endpoint Analytics automated in Microsoft Intune</title>
+      <link>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate>
+      <guid>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Identity Secure Score security improvement action status</title>
+      <link>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</link>
+      <pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</guid>
+      <description>&lt;p&gt;An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure file share usage monitoring with Logic Apps</title>
+      <link>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</link>
+      <pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate>
+      <guid>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</guid>
+      <description>&lt;p&gt;Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor FSLogix file share usage on Azure Files</title>
+      <link>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</link>
+      <pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate>
+      <guid>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</guid>
+      <description>&lt;p&gt;In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using LaMetric Time to monitor an AVD environment</title>
+      <link>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</link>
+      <pubDate>Tue, 09 Feb 2021 16:38:36 +0100</pubDate>
+      <guid>//localhost:1313/using-lametric-time-to-monitor-an-avd-environment/</guid>
+      <description>&lt;p&gt;A lot of people in the Microsoft community are using a fancy gadget called LaMetric Time. It is a smart clock which can show time, receiving notifications from a lot of different environments and more. In this blog I will show how to use LaMetric Time to monitor a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Azure Virtual Desktop required URL&amp;#8217;s with Log Analytics Workspace</title>
+      <link>//localhost:1313/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</link>
+      <pubDate>Fri, 22 Jan 2021 10:42:08 +0100</pubDate>
+      <guid>//localhost:1313/monitor-azure-virtual-desktop-required-urls-with-log-analytics-workspace/</guid>
+      <description>&lt;p&gt;Microsoft has provided a list with URL’s which you need for running a Azure Virtual Desktop environment. In this blog post I will explain how to monitor any issues related to the AVD required URL’s. and how to setup the monitoring environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy Azure Monitor for AVD automated</title>
+      <link>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</link>
+      <pubDate>Fri, 04 Dec 2020 14:32:19 +0100</pubDate>
+      <guid>//localhost:1313/deploy-azure-monitor-for-windows-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Monitoring user environments will help you get sight of what is going on and will help you solve problems. An Azure Virtual Desktop environment isn’t an exception. It is recommended to configure a monitoring environment. In this post, I will show how to deploy Azure Monitor for AVD fully automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title>
+      <link>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link>
+      <pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate>
+      <guid>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid>
+      <description>&lt;p&gt;When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor active M365 ServiceHealth services only with PowerShell</title>
+      <link>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</link>
+      <pubDate>Tue, 29 Sep 2020 11:55:44 +0200</pubDate>
+      <guid>//localhost:1313/monitor-active-m365-servicehealth-services-only-with-powershell/</guid>
+      <description>&lt;p&gt;You have some Microsoft 365 (M365) customers which you like to monitor. Every day you are looking at the customer specific M365 portal looking for Microsoft event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;mark&gt;Logging in &lt;/mark&gt;at the&lt;mark&gt; customers portal isn’t a very efficient way.&lt;/mark&gt; &lt;mark&gt;Microsoft provides a lot of API’s which can be used for monitoring.&lt;/mark&gt; By combining some of them you are able to do some really nice and smart things.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

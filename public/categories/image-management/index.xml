@@ -1,2 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Image Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/image-management/</link><description>Recent content in Image Management on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/image-management/index.xml" rel="self" type="application/rss+xml"/><item><title>How to deal with AVD session hosts version management</title><link>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</link><pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</guid><description>&lt;p>A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br>
-In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title><link>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link><pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate><guid>https://www.rozemuller.com/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid><description>&lt;p>When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated – Part 4 AVD Clean up unused resources</title><link>https://www.rozemuller.com/avd-clean-up-unused-resources/</link><pubDate>Sun, 18 Oct 2020 20:08:27 +0200</pubDate><guid>https://www.rozemuller.com/avd-clean-up-unused-resources/</guid><description>&lt;p>The current situation, we have created new disks, snapshots, virtual machines, networks, images and session hosts. All the resources has been added to the existing AVD hostpool. Now it is time to cleanup the old resources, to keep everything nice and clean. In this part we will take care of removing components related to the old image version.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title><link>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link><pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid><description>&lt;p>This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p></description></item><item><title>Azure Virtual Desktop Image Management Automated - Part 2 Save AVD image with Sysprep as Image Gallery version</title><link>https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/</link><pubDate>Tue, 06 Oct 2020 19:57:10 +0200</pubDate><guid>https://www.rozemuller.com/save-avd-image-with-sysprep-as-image-gallery-version/</guid><description>&lt;p>This is part two of a serie posts about AVD disk management. In this blogpost I will explain how to finish a disk with sysprep and deploy it as a version into the Azure Shared Image Gallery automated.&lt;/p></description></item><item><title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title><link>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</link><pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate><guid>https://www.rozemuller.com/create-avd-image-version-based-on-existing-config-with-powershell/</guid><description>&lt;p>This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/image-management/</link>
+    <description>Recent content in Image Management on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 12:20:00 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/image-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to deal with AVD session hosts version management</title>
+      <link>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</link>
+      <pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</guid>
+      <description>&lt;p&gt;A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br&gt;&#xA;In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 5 Monitor Image versions with Azure Monitor</title>
+      <link>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</link>
+      <pubDate>Wed, 28 Oct 2020 13:05:59 +0100</pubDate>
+      <guid>//localhost:1313/azure-virtual-desktop-image-management-automated-part-5-monitor-image-versions-with-azure-monitor/</guid>
+      <description>&lt;p&gt;When using the Azure Virtual Desktop for a longer time and created images several times you will noticed you are not able to remove old images directly when a new version has been deployed. Or in case of a MSP when you need to manage more then one image after some time you will lose sight on images and versions. An image overview would be nice to have. In this article I will show how to do some image version control on a AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated – Part 4 AVD Clean up unused resources</title>
+      <link>//localhost:1313/avd-clean-up-unused-resources/</link>
+      <pubDate>Sun, 18 Oct 2020 20:08:27 +0200</pubDate>
+      <guid>//localhost:1313/avd-clean-up-unused-resources/</guid>
+      <description>&lt;p&gt;The current situation, we have created new disks, snapshots, virtual machines, networks, images and session hosts. All the resources has been added to the existing AVD hostpool. Now it is time to cleanup the old resources, to keep everything nice and clean. In this part we will take care of removing components related to the old image version.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop  Image Management Automated - Part 3 Create AVD sessionhosts on image version with ARM</title>
+      <link>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</link>
+      <pubDate>Wed, 14 Oct 2020 12:05:45 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-sessionhosts-based-on-shared-image-gallery-version-with-arm/</guid>
+      <description>&lt;p&gt;This article is serie of posts about AVD Image Management Automated. In this part we are going to add new sessionhosts to an existing AVD hostpool based on a ARM template.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Virtual Desktop Image Management Automated - Part 2 Save AVD image with Sysprep as Image Gallery version</title>
+      <link>//localhost:1313/save-avd-image-with-sysprep-as-image-gallery-version/</link>
+      <pubDate>Tue, 06 Oct 2020 19:57:10 +0200</pubDate>
+      <guid>//localhost:1313/save-avd-image-with-sysprep-as-image-gallery-version/</guid>
+      <description>&lt;p&gt;This is part two of a serie posts about AVD disk management. In this blogpost I will explain how to finish a disk with sysprep and deploy it as a version into the Azure Shared Image Gallery automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Image Management Automated - Part 1 Create an AVD image version based on the existing config with PowerShell</title>
+      <link>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</link>
+      <pubDate>Mon, 28 Sep 2020 19:45:17 +0200</pubDate>
+      <guid>//localhost:1313/create-avd-image-version-based-on-existing-config-with-powershell/</guid>
+      <description>&lt;p&gt;This article is part one of a series of posts about AVD image management automated. In this first part, I will describe how to create and connect a new disk (based on a snapshot) to a new Azure VM based on the existing sessionhost configuration. This will save a lot of extra parameters like VM size, network settings, and type. After the VM is started you will get the information on how to connect to the VM by RDP (3389) with specific credentials specially created for this VM.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

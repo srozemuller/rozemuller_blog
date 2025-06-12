@@ -1,41 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microsoft Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/microsoft-intune/</link><description>Recent content in Microsoft Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 20 Jun 2024 17:08:11 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/microsoft-intune/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure AVD clipboard transfer direction automated</title><link>https://www.rozemuller.com/configure-avd-clipboard-transfer-direction-automated/</link><pubDate>Fri, 08 Mar 2024 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/configure-avd-clipboard-transfer-direction-automated/</guid><description>&lt;p>Using the clipboard between Azure Virtual Desktop and the users client is a great way to send data back and forth. But it is also could big leak into the system. So maybe you want to limit the use of the clipboard or get more control on how the clipboard could be used between the user and the Azure Virtual Desktop enviroment.&lt;/p></description></item><item><title>Configure AVD using settings catalog automated</title><link>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</link><pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</guid><description>&lt;p>Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p></description></item><item><title>Passwordless, Multi-layered Break Glass Alternative Automated</title><link>https://www.rozemuller.com/passwordless-multilayered-break-glass-alternative-automated/</link><pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate><guid>https://www.rozemuller.com/passwordless-multilayered-break-glass-alternative-automated/</guid><description>&lt;p>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts. In an earlier post, I explained &lt;a href="../configure-break-glass-accounts-infrastructure-automated/"
-
-
-
- 
-
-
->how to create an emergency account based on a user account with a password&lt;/a>
-. In this post, I will show you how to automate the creation of a passwordless, multi-layered emergency account using Graph API.&lt;/p></description></item><item><title>Route own Intune data to Log Analytics using custom logs</title><link>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</link><pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate><guid>https://www.rozemuller.com/route-own-intune-data-to-log-analytics-using-custom-logs/</guid><description>&lt;p>I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br>
-In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p></description></item><item><title>The Endpoint Security Train - Introduction</title><link>https://www.rozemuller.com/the-endpoint-security-train-introduction/</link><pubDate>Sun, 20 Nov 2022 07:38:46 +0200</pubDate><guid>https://www.rozemuller.com/the-endpoint-security-train-introduction/</guid><description>&lt;p>The IT landscape is changing. Private becomes public, local resources are moving to the public cloud. More and more workloads return to the local endpoint. Cloud endpoints (AVD, W365) are mostly used to run legacy software.
-With all those movements, it could be challenging to keep the herd in the pasture. Devices are everywhere and what about security?&lt;/p></description></item><item><title>Enroll Defender For Endpoint automated</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>&lt;a href="https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure"
-
-
-
-
- target="_blank"
- 
-
-
->https://learn.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection-configure&lt;/a>
-&lt;/p>
-&lt;h2 id="microsoft-intune-connection---on">Microsoft Intune Connection -&amp;gt; On&lt;/h2>
-&lt;p>Find the if there is a connector already. Otherwise, create one.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://graph.microsoft.com/beta/deviceManagement/mobileThreatDefenseConnectors/fc780465-2017-40d4-a0c5-307022471b92&amp;#34;&lt;/span> &lt;span style="color:#75715e">#/fc780465-2017-40d4-a0c5-307022471b92&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request = Invoke-RestMethod -Uri $url -Method Get -Headers $authHeader
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$request.value | ConvertTo-Json -Depth &lt;span style="color:#ae81ff">9&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$body = @{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> androidDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> iosDeviceBlockedOnMissingPartnerData = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnsupportedOsVersionBlocked = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> windowsEnabled = $false
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> partnerUnresponsivenessThresholdInDays = &lt;span style="color:#ae81ff">6&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} | ConvertTo-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest = Invoke-RestMethod -Uri $url -Method Patch -Headers $authHeader -Body $body
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$postRequest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img alt="available-dfe-connector.png" src="https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/available-dfe-connector.png">&lt;/p></description></item><item><title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title><link>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</link><pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate><guid>https://www.rozemuller.com/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid><description>&lt;p>Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.
-In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p></description></item><item><title>Enable Endpoint Analytics automated in Microsoft Intune</title><link>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link><pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate><guid>https://www.rozemuller.com/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p></description></item><item><title>Intune filters explained create automated and assignments</title><link>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</link><pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate><guid>https://www.rozemuller.com/intune-filters-explained-and-create-automated/</guid><description>&lt;p>Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Configure subscribe to AVD in RDP Client automated</title><link>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</link><pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate><guid>https://www.rozemuller.com/configure-subscribe-to-avd-in-rdp-client-automated/</guid><description>&lt;p>Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p></description></item><item><title>Deploy power settings automated in Microsoft Intune</title><link>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link><pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate><guid>https://www.rozemuller.com/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid><description>&lt;p>Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item><item><title>Install Winget applications using Microsoft Intune</title><link>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</link><pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate><guid>https://www.rozemuller.com/install-winget-applications-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p></description></item><item><title>Manage Windows Updates for AVD using Microsoft Intune</title><link>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link><pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate><guid>https://www.rozemuller.com/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p></description></item><item><title>Manage AVD automated with Microsoft Intune</title><link>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</link><pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate><guid>https://www.rozemuller.com/manage-avd-automated-with-microsoft-endpoint-manager/</guid><description>&lt;p>Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/microsoft-intune/</link>
+    <description>Recent content in Microsoft Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Mar 2024 01:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/microsoft-intune/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure AVD clipboard transfer direction automated</title>
+      <link>//localhost:1313/configure-avd-clipboard-transfer-direction-automated/</link>
+      <pubDate>Fri, 08 Mar 2024 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/configure-avd-clipboard-transfer-direction-automated/</guid>
+      <description>&lt;p&gt;Using the clipboard between Azure Virtual Desktop and the users client is a great way to send data back and forth. But it is also could big leak into the system. So maybe you want to limit the use of the clipboard or get more control on how the clipboard could be used between the user and the Azure Virtual Desktop enviroment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure AVD using settings catalog automated</title>
+      <link>//localhost:1313/configure-avd-using-settings-catalog-automated/</link>
+      <pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-avd-using-settings-catalog-automated/</guid>
+      <description>&lt;p&gt;Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
+      <link>//localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
+      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
+      <guid>//localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
+      <description>&lt;p&gt;Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts. In an earlier post, I explained &lt;a href=&#34;../configure-break-glass-accounts-infrastructure-automated/&#34;&#xA;&#xA;&#xA;&#xA; &#xA;&#xA;&#xA;&gt;how to create an emergency account based on a user account with a password&lt;/a&gt;. In this post, I will show you how to automate the creation of a passwordless, multi-layered emergency account using Graph API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Route own Intune data to Log Analytics using custom logs</title>
+      <link>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</link>
+      <pubDate>Wed, 30 Nov 2022 09:28:48 +0200</pubDate>
+      <guid>//localhost:1313/route-own-intune-data-to-log-analytics-using-custom-logs/</guid>
+      <description>&lt;p&gt;I often write blogs about getting data with the Graph API and using it for monitoring. A while ago I was thinking about how to get my own data into Log Analytics.&lt;br&gt;&#xA;In this blog post, I show how to ingest custom MEM data into a Log Analytics table. I also show how to configure all components in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Intune using Azure Functions, PowerShell, Graph API and MS Teams</title>
+      <link>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</link>
+      <pubDate>Wed, 28 Sep 2022 09:12:46 +0200</pubDate>
+      <guid>//localhost:1313/monitor-intune-using-azure-functions-powershell-and-graph-api/</guid>
+      <description>&lt;p&gt;Intune and the rest of Microsoft Intune are growing. To keep your environment nice, clean and secure it is a good idea to monitor your MEM environment.&#xA;In this blog, I explain how to monitor Intune based on Graph API and PowerShell with Azure Functions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Endpoint Analytics automated in Microsoft Intune</title>
+      <link>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Sun, 03 Jul 2022 10:23:17 +0200</pubDate>
+      <guid>//localhost:1313/enable-endpoint-analytics-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Happy users are key. But with all the changes in hardware, software distributions, security- and OS updates, it could take a lot of effort. Now remote working is embedded into our culture it costs even more effort to keep sight of what is happening. Endpoint analytics gives you insight into how the organization is working and the quality of experience which is delivered to users. I show how to enable endpoint analytics automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intune filters explained create automated and assignments</title>
+      <link>//localhost:1313/intune-filters-explained-and-create-automated/</link>
+      <pubDate>Tue, 21 Jun 2022 15:36:16 +0200</pubDate>
+      <guid>//localhost:1313/intune-filters-explained-and-create-automated/</guid>
+      <description>&lt;p&gt;Intune filters are a great way to assign MEM policies to devices. In fact, filters go over groups in several scenarios. Filters help you keep your environment reliable and fast. In this blog, I do some basic explanations about filters, how to use filters, and show how to create Intune filters in an automated way. At last, I show how to assign filters to policies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure subscribe to AVD in RDP Client automated</title>
+      <link>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</link>
+      <pubDate>Tue, 08 Mar 2022 11:45:40 +0100</pubDate>
+      <guid>//localhost:1313/configure-subscribe-to-avd-in-rdp-client-automated/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop (AVD) is a great addition to your IT environment. To connect to an AVD environment you need a browser or the Remote Desktop client. When using the browser you have to go to the ‘rdweb’-URL. When using the remote desktop client, you need to subscribe to a workplace. In this blog post, I show how to configure the subscribe URL for AVD automated. How to configure this setting in MEM automated. Also, I show a way to deploy the setting if you are not using MEM.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy power settings automated in Microsoft Intune</title>
+      <link>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 07 Mar 2022 16:23:52 +0100</pubDate>
+      <guid>//localhost:1313/deploy-power-settings-automated-in-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Climate changes are the talk of the day. Every little step to help the world is great. Power consumption is a big topic in those discussions. In this blog post, I show how to deploy power management settings automated in Microsoft Intune. This is to save battery on hardware devices. I also show how to assign the policy to the devices part with a filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install Winget applications using Microsoft Intune</title>
+      <link>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</link>
+      <pubDate>Mon, 22 Nov 2021 09:14:22 +0100</pubDate>
+      <guid>//localhost:1313/install-winget-applications-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this post, I will show how to install applications with Windows Package Manager (or Winget), within Microsft Endpoint Manager. This is all done by one single executable package which accepts the application name and version. Or providing a manifest location. Using one single file avoids creating single packages and intunewin-files every time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Windows Updates for AVD using Microsoft Intune</title>
+      <link>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 14 Oct 2021 22:44:52 +0200</pubDate>
+      <guid>//localhost:1313/manage-windows-updates-for-avd-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this article, I explain a way how to manage Windows Updates for Azure Virtual Desktop (AVD). To achieve this goal I use update rings in Microsoft Intune. These update rings will be assigned to a dynamic Azure AD group. I also show how to create and assign this configuration automated with the use of PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage AVD automated with Microsoft Intune</title>
+      <link>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</link>
+      <pubDate>Thu, 07 Oct 2021 14:11:01 +0200</pubDate>
+      <guid>//localhost:1313/manage-avd-automated-with-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Welcome to a brand new series called Operation North Star. In the upcoming series, I will show how to manage AVD environments with Microsoft Intune. I talk about how to manage AVD environments and how to deploy these settings automated. At last, I try to show how to configure a new way of management.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

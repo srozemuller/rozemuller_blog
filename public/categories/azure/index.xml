@@ -1,25 +1,187 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/azure/</link><description>Recent content in Azure on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:10:27 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/azure/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure AVD using settings catalog automated</title><link>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</link><pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</guid><description>&lt;p>Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p></description></item><item><title>Configure autoscaling for personal AVD host pools automated</title><link>https://www.rozemuller.com/configure-autoscaling-for-personal-avd-host-pools-automated/</link><pubDate>Sun, 06 Aug 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-autoscaling-for-personal-avd-host-pools-automated/</guid><description>&lt;p>Autoscaling for pooled AVD host pools is GA for a while now. Since 18 July 2023 a new autoscale mechanism became in Public Preview for AVD &lt;strong>personal&lt;/strong> host pools.
-Currently it is only supported to configure autoscale for personal host pools by using the portal. There are no API&amp;rsquo;s or PowerShell modules available (yet) to automate the creation or mutating personal scaling plans or schedules.&lt;/p></description></item><item><title>Schedule image update Azure Virtual Desktop host pool</title><link>https://www.rozemuller.com/blog/2022-12-01-schedule-image-update-avd-hostpool/</link><pubDate>Thu, 01 Dec 2022 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/blog/2022-12-01-schedule-image-update-avd-hostpool/</guid><description>&lt;p>Recently Microsoft announced a new feature called AVD hostpool image update. In this blog, I explain how to configure this new feature in an automated way.&lt;/p></description></item><item><title>Move from WordPress to Azure Static Web App with Hugo and GitHub</title><link>https://www.rozemuller.com/move-from-wordpress-to-azure-static-app-hugo/</link><pubDate>Fri, 26 Aug 2022 16:09:25 +0600</pubDate><guid>https://www.rozemuller.com/move-from-wordpress-to-azure-static-app-hugo/</guid><description>&lt;p>We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough. Now a few years later it became more a frustration than a pleasure to keep my website up and running. In this blog, I explain why and how I changed my website into a static webpage.&lt;/p></description></item><item><title>Fix personal AVD host as a user with MS Teams</title><link>https://www.rozemuller.com/fix-personal-avd-host-as-a-user-with-ms-teams/</link><pubDate>Mon, 11 Jul 2022 21:01:14 +0200</pubDate><guid>https://www.rozemuller.com/fix-personal-avd-host-as-a-user-with-ms-teams/</guid><description>&lt;p>In this post, I show how to make it possible to fix a personal AVD host as a user. There could be a situation where your AVD session host becomes unresponsive. In that case, you want to try to restart the host but are not able to log in to the host. Also, you can&amp;rsquo;t restart the host in the web portal / RD client.&lt;/p></description></item><item><title>The DevOps Project Clone a pipeline from a source project automated</title><link>https://www.rozemuller.com/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</link><pubDate>Mon, 16 May 2022 20:41:00 +0200</pubDate><guid>https://www.rozemuller.com/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</guid><description>&lt;p>In this 4th slice of Prepare Azure DevOps for AVD deployment series, I will show how to copy or clone an existing YAML pipeline automated from a source project into a new AVD project. This will help you keep one main pipeline as a source and will allow you to create a “linked” pipeline into a new project directly from the source.&lt;/p></description></item><item><title>Monitor and get alerts from Microsoft Intune</title><link>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link><pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid><description>&lt;p>Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p></description></item><item><title>Azure file share usage monitoring with Logic Apps</title><link>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</link><pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate><guid>https://www.rozemuller.com/azure-file-share-usage-monitoring-with-logic-apps/</guid><description>&lt;p>Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p></description></item><item><title>Monitor FSLogix file share usage on Azure Files</title><link>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</link><pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate><guid>https://www.rozemuller.com/monitor-fslogix-file-share-usage-on-azure-files/</guid><description>&lt;p>In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p></description></item><item><title>Secure and optimize AVD and CloudPC using Microsoft Intune</title><link>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link><pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate><guid>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p></description></item><item><title>AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd</title><link>https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</link><pubDate>Thu, 16 Dec 2021 10:16:18 +0100</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.Avd PowerShell module.&lt;/p></description></item><item><title>Configure FSLogix profile for Azure AD joined AVD session host automated</title><link>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link><pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate><guid>https://www.rozemuller.com/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid><description>&lt;p>In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p></description></item><item><title>Distribute OneDrive with Winget and OneDrive best practices automated</title><link>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link><pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate><guid>https://www.rozemuller.com/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid><description>&lt;p>In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p></description></item><item><title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link><pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid><description>&lt;p>Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href="https://www.rozemuller.com/avd-automation-cocktail-the-menu"
-
-
-
-
- target="_blank"
- 
-
-
->cocktail series&lt;/a>
-, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p></description></item><item><title>How to enable AVD scaling plans automated</title><link>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</link><pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate><guid>https://www.rozemuller.com/how-to-enable-avd-scaling-plans-automated/</guid><description>&lt;p>In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p></description></item><item><title>Using VM templates for AVD sessionhost automation</title><link>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</link><pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate><guid>https://www.rozemuller.com/using-vm-templates-for-avd-sessionhost-automation/</guid><description>&lt;p>In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p></description></item><item><title>How to deal with AVD session hosts version management</title><link>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</link><pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deal-with-avd-session-hosts-version-management/</guid><description>&lt;p>A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br>
-In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p></description></item><item><title>Move AVD session hosts to a new host pool with REST API</title><link>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link><pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate><guid>https://www.rozemuller.com/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid><description>&lt;p>Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p></description></item><item><title>How to deploy Windows 11 in an AVD environment</title><link>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</link><pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate><guid>https://www.rozemuller.com/how-to-deploy-windows-11-in-an-avd-environment/</guid><description>&lt;p>After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p></description></item><item><title>AVD Automation Cocktail – AVD automated with Azure CLI</title><link>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-azure-cli/</link><pubDate>Tue, 20 Jul 2021 14:59:39 +0200</pubDate><guid>https://www.rozemuller.com/avd-automation-cocktail-avd-automated-with-azure-cli/</guid><description>&lt;p>Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI. Great new feature in this cocktail is the Azure AAD Join feature.&lt;/p></description></item><item><title>Launching the first version of Az.Avd WVD PowerShell module</title><link>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</link><pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate><guid>https://www.rozemuller.com/launching-the-first-version-of-az-avd-powershell-module/</guid><description>&lt;p>During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p></description></item><item><title>Session available Dutch Azure Virtual Desktop User Group</title><link>https://www.rozemuller.com/session-available-dutch-windows-virtual-desktop-user-group/</link><pubDate>Sun, 17 Jan 2021 13:03:05 +0100</pubDate><guid>https://www.rozemuller.com/session-available-dutch-windows-virtual-desktop-user-group/</guid><description>&lt;p>Past week (at Monday 11 January) I spoke at he Dutch Azure Virtual Desktop User Group. The subject was automation in a Azure Virtual Desktop combined with the Azure Shared Image Gallery. The session is now available at YouTube.&lt;/p></description></item><item><title>Automatically backup Azure resources to an Azure Storage Account in JSON</title><link>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link><pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate><guid>https://www.rozemuller.com/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid><description>&lt;p>In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p></description></item><item><title>Enable RDP ShortPath for AVD on an image version automated</title><link>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link><pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate><guid>https://www.rozemuller.com/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid><description>&lt;p>Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br>
-Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p></description></item><item><title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title><link>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link><pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate><guid>https://www.rozemuller.com/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid><description>&lt;p>By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br>
-But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p></description></item><item><title>How to use Key Vault ARM templates and deal with sensitive parameters</title><link>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link><pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid><description>&lt;p>At October 14, 2020 Mircosoft &lt;a href="https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI"
-
-
-
-
- target="_blank"
- 
-
-
->announced&lt;/a>
- the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/azure/</link>
+    <description>Recent content in Azure on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Oct 2023 20:14:59 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure AVD using settings catalog automated</title>
+      <link>//localhost:1313/configure-avd-using-settings-catalog-automated/</link>
+      <pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-avd-using-settings-catalog-automated/</guid>
+      <description>&lt;p&gt;Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure autoscaling for personal AVD host pools automated</title>
+      <link>//localhost:1313/configure-autoscaling-for-personal-avd-host-pools-automated/</link>
+      <pubDate>Sun, 06 Aug 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-autoscaling-for-personal-avd-host-pools-automated/</guid>
+      <description>&lt;p&gt;Autoscaling for pooled AVD host pools is GA for a while now. Since 18 July 2023 a new autoscale mechanism became in Public Preview for AVD &lt;strong&gt;personal&lt;/strong&gt; host pools.&#xA;Currently it is only supported to configure autoscale for personal host pools by using the portal. There are no API&amp;rsquo;s or PowerShell modules available (yet) to automate the creation or mutating personal scaling plans or schedules.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Move from WordPress to Azure Static Web App with Hugo and GitHub</title>
+      <link>//localhost:1313/move-from-wordpress-to-azure-static-app-hugo/</link>
+      <pubDate>Fri, 26 Aug 2022 16:09:25 +0600</pubDate>
+      <guid>//localhost:1313/move-from-wordpress-to-azure-static-app-hugo/</guid>
+      <description>&lt;p&gt;We all know WordPress. It is a good platform for running websites with almost every purpose. Since the start of this blog, I also used WordPress. It has a lot of templates and plug-ins available. For me running this blog on WordPress was good enough. Now a few years later it became more a frustration than a pleasure to keep my website up and running. In this blog, I explain why and how I changed my website into a static webpage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fix personal AVD host as a user with MS Teams</title>
+      <link>//localhost:1313/fix-personal-avd-host-as-a-user-with-ms-teams/</link>
+      <pubDate>Mon, 11 Jul 2022 21:01:14 +0200</pubDate>
+      <guid>//localhost:1313/fix-personal-avd-host-as-a-user-with-ms-teams/</guid>
+      <description>&lt;p&gt;In this post, I show how to make it possible to fix a personal AVD host as a user. There could be a situation where your  AVD session host becomes unresponsive. In that case, you want to try to restart the host but are not able to log in to the host. Also, you can&amp;rsquo;t restart the host in the web portal / RD client.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The DevOps Project Clone a pipeline from a source project automated</title>
+      <link>//localhost:1313/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</link>
+      <pubDate>Mon, 16 May 2022 20:41:00 +0200</pubDate>
+      <guid>//localhost:1313/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</guid>
+      <description>&lt;p&gt;In this 4th slice of Prepare Azure DevOps for AVD deployment series, I will show how to copy or clone an existing YAML pipeline automated from a source project into a new AVD project. This will help you keep one main pipeline as a source and will allow you to create a “linked” pipeline into a new project directly from the source.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor and get alerts from Microsoft Intune</title>
+      <link>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</link>
+      <pubDate>Tue, 19 Apr 2022 11:14:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-and-get-alerts-from-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;Out of the box, Microsoft Intune has a reporting platform where lots of information is stored. Think about device management or endpoint analytics. For troubleshooting, reports can help. However, if you need to troubleshoot you are too late in the first place. It would be nice to get alerts out of Microsoft Intune. Luckily, there are options to achieve that goal. In this post, I show a way to monitor and get alerts from Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure file share usage monitoring with Logic Apps</title>
+      <link>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</link>
+      <pubDate>Tue, 08 Feb 2022 21:14:53 +0100</pubDate>
+      <guid>//localhost:1313/azure-file-share-usage-monitoring-with-logic-apps/</guid>
+      <description>&lt;p&gt;Earlier I explained how to use the REST API to get more information about Azure file shares. This is because we like to monitor file share usage based on absolute values. In this blog post, I explain the follow-up for Azure file share usage monitoring with Logic Apps. First I explain how the Logic App works and how I did the maths. Second I explain how to deploy this Logic App automated. In the end, we have a deployment of Azure file share usage monitoring in an automated way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor FSLogix file share usage on Azure Files</title>
+      <link>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</link>
+      <pubDate>Sat, 22 Jan 2022 07:44:28 +0100</pubDate>
+      <guid>//localhost:1313/monitor-fslogix-file-share-usage-on-azure-files/</guid>
+      <description>&lt;p&gt;In the new world of (Azure) Virtual Desktops and CloudPC, FSLogix is often used for handling user profiles. Now FSLogix is supported with the back of AzureAD only, FSLogix is almost a required component in an AVD or CloudPC environment. With that in mind is it extremely important to know if the FSLogix file share has enough space. In this post, I explain how to monitor the FSLogix file share usage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure and optimize AVD and CloudPC using Microsoft Intune</title>
+      <link>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link>
+      <pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate>
+      <guid>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD AzureAD with DevOps and Az.Avd</title>
+      <link>//localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</link>
+      <pubDate>Thu, 16 Dec 2021 10:16:18 +0100</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-deploy-avd-azuread-with-devops-and-az-avd/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series, I will show different AVD deployment strategies and languages. In this cocktail, Santa’s Tree Ride, I will show you how to deploy an AzureAD joined only AVD environment automated with DevOps and the Az.Avd PowerShell module.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure FSLogix profile for Azure AD joined AVD session host automated</title>
+      <link>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</link>
+      <pubDate>Tue, 14 Dec 2021 14:34:21 +0100</pubDate>
+      <guid>//localhost:1313/configure-fslogix-profile-for-azure-ad-joined-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to configure FSLogix for Azure AD-joined machines automated. Also, I explain how to test the configuration and I rearranged the installation procedure in a more efficient way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distribute OneDrive with Winget and OneDrive best practices automated</title>
+      <link>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</link>
+      <pubDate>Fri, 03 Dec 2021 14:13:27 +0100</pubDate>
+      <guid>//localhost:1313/distribute-onedrive-with-winget-and-onedrive-best-practices-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to distribute OneDrive with Microsoft Endpoint Managed based on Winget. After deploying OneDrive I configure a settings catalog configuration policy. This policy has all the OneDrive best practices. At last, a sync device is triggered.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – Deploy AVD with Terraform Cloud</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</link>
+      <pubDate>Wed, 27 Oct 2021 10:41:34 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-terraform-cloud/</guid>
+      <description>&lt;p&gt;Welcome (back) to the AVD Automation Cocktail. In the past &lt;a href=&#34;https://www.rozemuller.com/avd-automation-cocktail-the-menu&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;cocktail series&lt;/a&gt;, I showed different AVD deployment strategies and languages. During the time I got some requests about automation with Terraform. In this cocktail, The Dutch Bloody Harry, I’ll show you how to deploy an AVD environment automated with Terraform Cloud and Github. I’m using the Terraform cloud combined with my GitHub repository.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to enable AVD scaling plans automated</title>
+      <link>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</link>
+      <pubDate>Wed, 20 Oct 2021 17:58:45 +0200</pubDate>
+      <guid>//localhost:1313/how-to-enable-avd-scaling-plans-automated/</guid>
+      <description>&lt;p&gt;In this article, I explain how to configure AVD scaling plans automated with the Az.Avd module. This is one of the options to save costs on AVD. A plan which helps you start VM’s when needed. And stopping VM’s when not needed. Microsoft announced the public preview of AVD auto-scaling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using VM templates for AVD sessionhost automation</title>
+      <link>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</link>
+      <pubDate>Tue, 21 Sep 2021 12:01:00 +0200</pubDate>
+      <guid>//localhost:1313/using-vm-templates-for-avd-sessionhost-automation/</guid>
+      <description>&lt;p&gt;In automation using templates is key! Using templates makes life easier. No new information I guess. If you run tasks in DevOps, Terraform, or other engines you want to reuse code blocks. When deploying resources in Azure we use ARM or Bicep templates. Good to know there is also is a sort of ‘in place’-template available for AVD. This is the VM template and stored under the host pool information. In this blog post, I explain how to set and use VM templates. This will help you with the AVD sessionhost automation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deal with AVD session hosts version management</title>
+      <link>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</link>
+      <pubDate>Fri, 10 Sep 2021 12:20:00 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deal-with-avd-session-hosts-version-management/</guid>
+      <description>&lt;p&gt;A Shared Image Gallery is a great way to distribute images over multiple environments. This great feature is also its disadvantage. When using a Shared Image Gallery in combination with several environments with even more host pools you will lose sight fast. At this moment there is no good overview of which host in which environment is using which version.&lt;br&gt;&#xA;In this article, I will explain how to deal with AVD session hosts and version management. This will help to keep your environment clean and save costs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Move AVD session hosts to a new host pool with REST API</title>
+      <link>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</link>
+      <pubDate>Mon, 30 Aug 2021 08:35:00 +0200</pubDate>
+      <guid>//localhost:1313/move-avd-session-hosts-to-a-new-host-pool-with-rest-api/</guid>
+      <description>&lt;p&gt;Azure Virtual Desktop is growing and becomes available at new (metadata) locations more and more. In this article, I will explain how to move AVD session hosts to a new AVD host pool. metadata location with REST API and PowerShell.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deploy Windows 11 in an AVD environment</title>
+      <link>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</link>
+      <pubDate>Mon, 23 Aug 2021 12:36:21 +0200</pubDate>
+      <guid>//localhost:1313/how-to-deploy-windows-11-in-an-avd-environment/</guid>
+      <description>&lt;p&gt;After the Windows 11 launch everyone was waiting till Windows 11 came available in Azure. Since the 19th of August Windows 11 became in preview. I decided to test it in a AVD environment. Because it is not a next-next-finish installation I will explain how to deploy Windows 11 in an AVD environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AVD Automation Cocktail – AVD automated with Azure CLI</title>
+      <link>//localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</link>
+      <pubDate>Tue, 20 Jul 2021 14:59:39 +0200</pubDate>
+      <guid>//localhost:1313/avd-automation-cocktail-avd-automated-with-azure-cli/</guid>
+      <description>&lt;p&gt;Welcome to the AVD Automation Cocktail. In this cocktail series I will show different AVD deployment strategies and languages. In this cocktail, the Sweet Orange Sunset, I will show you how to deploy an AVD environment automated with Azure CLI. Great new feature in this cocktail is the Azure AAD Join feature.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Launching the first version of Az.Avd WVD PowerShell module</title>
+      <link>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</link>
+      <pubDate>Thu, 29 Apr 2021 13:21:30 +0200</pubDate>
+      <guid>//localhost:1313/launching-the-first-version-of-az-avd-powershell-module/</guid>
+      <description>&lt;p&gt;During my travel the past year in the world of AVD I noticed I’m using the common Az.DesktopVirtualization PowerShell module very often, but there are some limits. In basics they do their job but if you like more intelligence or add more resource types you will need to combine PowerShell commands to get useful information. That’s the point where I started writing a AVD PowerShell module and now it is time to share my functions as a fresh new module called Az.Avd.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Session available Dutch Azure Virtual Desktop User Group</title>
+      <link>//localhost:1313/session-available-dutch-windows-virtual-desktop-user-group/</link>
+      <pubDate>Sun, 17 Jan 2021 13:03:05 +0100</pubDate>
+      <guid>//localhost:1313/session-available-dutch-windows-virtual-desktop-user-group/</guid>
+      <description>&lt;p&gt;Past week (at Monday 11 January) I spoke at he Dutch Azure Virtual Desktop User Group. The subject was automation in a Azure Virtual Desktop combined with the Azure Shared Image Gallery. The session is now available at YouTube.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automatically backup Azure resources to an Azure Storage Account in JSON</title>
+      <link>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</link>
+      <pubDate>Mon, 21 Dec 2020 08:04:04 +0100</pubDate>
+      <guid>//localhost:1313/automatically-backup-azure-resources-to-an-azure-storage-account-in-json/</guid>
+      <description>&lt;p&gt;In this quick blog post I will explain a way how to backup Azure resources and how to restore them with PowerShell, in JSON format, to an Azure Storage Account which is “deployment ready”.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable RDP ShortPath for AVD on an image version automated</title>
+      <link>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</link>
+      <pubDate>Sun, 22 Nov 2020 12:15:01 +0100</pubDate>
+      <guid>//localhost:1313/enable-rdp-shortpath-for-azure-virtual-desktop-on-an-image-version-automated/</guid>
+      <description>&lt;p&gt;Since Azure Virtual Desktop is generally available a lot of improvements has been done. Think about ARM template deployment, MSIX app attach through the Azure portal and performance improvements in the AVD client and latency improvements at the most of the regions.&lt;br&gt;&#xA;Since 16 November 2020 a nice improvement has been added to the list, Azure Virtual Desktop RDP Short path. In this blogpost I will show you how to enable RDP Shortpath in AVD with some automation tasks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disaster recovery plan for Azure Key Vault using tags, PowerShell and Azure Function</title>
+      <link>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</link>
+      <pubDate>Tue, 17 Nov 2020 05:37:00 +0100</pubDate>
+      <guid>//localhost:1313/disaster-recovery-plan-for-azure-key-vault-using-tags-powershell-and-azure-function/</guid>
+      <description>&lt;p&gt;By default the Azure Key Vault has softdelete enabled with a 90 day retention. This option will protect Key Vault items when deleted by accident. When deleted you are able to restore that item through the portal or PowerShell.&lt;br&gt;&#xA;But what if someone has deleted the Key Vault itself with all the items and softdeleted items included. There is no option to restore a Key Vault. In this article I will describe a way how to backup and restore a Key Vault when deleted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use Key Vault ARM templates and deal with sensitive parameters</title>
+      <link>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link>
+      <pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid>
+      <description>&lt;p&gt;At October 14, 2020 Mircosoft &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;announced&lt;/a&gt; the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

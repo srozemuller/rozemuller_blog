@@ -1,15 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Entra ID on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/entra-id/</link><description>Recent content in Entra ID on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Jul 2024 13:07:19 +0200</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/entra-id/index.xml" rel="self" type="application/rss+xml"/><item><title>Automated Device Group Management for Microsoft Intune Update Rings Using PowerShell</title><link>https://www.rozemuller.com/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</link><pubDate>Wed, 10 Jul 2024 09:28:14 +0200</pubDate><guid>https://www.rozemuller.com/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</guid><description>&lt;p>Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Deployment Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group).
-In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on
-a user group. Let&amp;rsquo;s call it dynamic device group management.&lt;/p></description></item><item><title>Zero Trust Common Identity and Device Access Protection</title><link>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</link><pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate><guid>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</guid><description>&lt;p>This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p></description></item><item><title>Protect Privileged Accounts the Zero Trust Way Automated</title><link>https://www.rozemuller.com/protect-privileged-accounts-the-zero-trust-way-automated/</link><pubDate>Sun, 05 Mar 2023 09:17:14 +0100</pubDate><guid>https://www.rozemuller.com/protect-privileged-accounts-the-zero-trust-way-automated/</guid><description>&lt;p>Identities are the key to environments and must be configured as securely as possible. To achieve this goal, conditional access policies are indispensable. In this blog post, I show how to secure privileged accounts that need more attention than MFA only. This post shows how to configure Zero Trust conditional access policies in an automated way.&lt;br>
-This is the next step in our Zero to Zero Trust journey.&lt;/p></description></item><item><title>Configure Break Glass Accounts Infrastructure Automated</title><link>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</link><pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate><guid>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</guid><description>&lt;p>Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p></description></item><item><title>Automate user sign-in experience with company branding</title><link>https://www.rozemuller.com/automated-user-sign-in-experience-with-company-branding/</link><pubDate>Tue, 10 Jan 2023 01:28:14 +0200</pubDate><guid>https://www.rozemuller.com/automated-user-sign-in-experience-with-company-branding/</guid><description>&lt;p>Recently Microsoft redesigned the company branding functionality. That means you have more flexibility in the main layout, full-screen background image for example. But also the ability to change the header, footer and even link relating to self-service password reset, privacy &amp;amp; cookies or Terms of Use.
-Also, there is an option to upload a CSS style sheet to change colors, buttons, and more.&lt;/p></description></item><item><title>Disable user tenant creation</title><link>https://www.rozemuller.com/disable-user-tenant-creation/</link><pubDate>Thu, 17 Nov 2022 20:38:46 +0200</pubDate><guid>https://www.rozemuller.com/disable-user-tenant-creation/</guid><description>&lt;p>It looks like Microsoft has added a new option that allows users to create tenants. Some people have seen the Tenant Creation option in the regular Azure portal but was removed fast. For now, the option is still available in the Preview Azure Portal (&lt;a href="https://preview.portal.azure.com/"
-
-
-
-
- target="_blank"
- 
-
-
->https://preview.portal.azure.com/&lt;/a>
-)&lt;/p></description></item><item><title>Monitor Identity Secure Score security improvement action status</title><link>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</link><pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</guid><description>&lt;p>An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p></description></item><item><title>How to join Azure AD automated</title><link>https://www.rozemuller.com/how-to-join-azure-ad-automated/</link><pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate><guid>https://www.rozemuller.com/how-to-join-azure-ad-automated/</guid><description>&lt;p>In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p></description></item><item><title>Delete assigned user from a personal AVD session host automated</title><link>https://www.rozemuller.com/delete-assigned-user-from-a-personal-avd-session-host-automated/</link><pubDate>Mon, 19 Apr 2021 13:18:21 +0200</pubDate><guid>https://www.rozemuller.com/delete-assigned-user-from-a-personal-avd-session-host-automated/</guid><description>&lt;p>An Azure Virtual Desktop environment has two types of host pools, a pooled and a personal type. The main difference between them is the user assignment. In this article I will show how to deal with personal assigned session hosts and how to delete the assigned user and will save work.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Entra ID on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/entra-id/</link>
+    <description>Recent content in Entra ID on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jul 2024 09:28:14 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/entra-id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automated Device Group Management for Microsoft Intune Update Rings Using PowerShell</title>
+      <link>//localhost:1313/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</link>
+      <pubDate>Wed, 10 Jul 2024 09:28:14 +0200</pubDate>
+      <guid>//localhost:1313/automated-device-group-management-for-microsoft-intune-update-rings-using-powerShell/</guid>
+      <description>&lt;p&gt;Testing settings and updates in Microsoft Intune is a good idea. Many Intune administrators use a test group and Deployment Rings for this. In the case of Windows Updates, administrators configure an update ring and assign a group to it. The group is filled with devices (I call it a device group).&#xA;In this blog post, I will show you how to dynamically manage a device group in an automated way for your Intune update rings based on&#xA;a user group. Let&amp;rsquo;s call it dynamic device group management.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero Trust Common Identity and Device Access Protection</title>
+      <link>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</link>
+      <pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate>
+      <guid>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</guid>
+      <description>&lt;p&gt;This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Protect Privileged Accounts the Zero Trust Way Automated</title>
+      <link>//localhost:1313/protect-privileged-accounts-the-zero-trust-way-automated/</link>
+      <pubDate>Sun, 05 Mar 2023 09:17:14 +0100</pubDate>
+      <guid>//localhost:1313/protect-privileged-accounts-the-zero-trust-way-automated/</guid>
+      <description>&lt;p&gt;Identities are the key to environments and must be configured as securely as possible. To achieve this goal, conditional access policies are indispensable. In this blog post, I show how to secure privileged accounts that need more attention than MFA only. This post shows how to configure Zero Trust conditional access policies in an automated way.&lt;br&gt;&#xA;This is the next step in our Zero to Zero Trust journey.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Break Glass Accounts Infrastructure Automated</title>
+      <link>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</link>
+      <pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate>
+      <guid>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</guid>
+      <description>&lt;p&gt;Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automate user sign-in experience with company branding</title>
+      <link>//localhost:1313/automated-user-sign-in-experience-with-company-branding/</link>
+      <pubDate>Tue, 10 Jan 2023 01:28:14 +0200</pubDate>
+      <guid>//localhost:1313/automated-user-sign-in-experience-with-company-branding/</guid>
+      <description>&lt;p&gt;Recently Microsoft redesigned the company branding functionality. That means you have more flexibility in the main layout, full-screen background image for example. But also the ability to change the header, footer and even link relating to self-service password reset, privacy &amp;amp; cookies or Terms of Use.&#xA;Also, there is an option to upload a CSS style sheet to change colors, buttons, and more.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disable user tenant creation</title>
+      <link>//localhost:1313/disable-user-tenant-creation/</link>
+      <pubDate>Thu, 17 Nov 2022 20:38:46 +0200</pubDate>
+      <guid>//localhost:1313/disable-user-tenant-creation/</guid>
+      <description>&lt;p&gt;It looks like Microsoft has added a new option that allows users to create tenants. Some people have seen the Tenant Creation option in the regular Azure portal but was removed fast. For now, the option is still available in the Preview Azure Portal (&lt;a href=&#34;https://preview.portal.azure.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;https://preview.portal.azure.com/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Identity Secure Score security improvement action status</title>
+      <link>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</link>
+      <pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</guid>
+      <description>&lt;p&gt;An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to join Azure AD  automated</title>
+      <link>//localhost:1313/how-to-join-azure-ad-automated/</link>
+      <pubDate>Mon, 26 Jul 2021 16:55:50 +0200</pubDate>
+      <guid>//localhost:1313/how-to-join-azure-ad-automated/</guid>
+      <description>&lt;p&gt;In this article, I show how to deploy and join an Azure VM to Azure AD join automated. In the deployment, I use two different ways of deployment. I use PowerShell and Azure CLI. Additionally, I show how to install the AVD extension with the Azure AD join.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Delete assigned user from a personal AVD session host automated</title>
+      <link>//localhost:1313/delete-assigned-user-from-a-personal-avd-session-host-automated/</link>
+      <pubDate>Mon, 19 Apr 2021 13:18:21 +0200</pubDate>
+      <guid>//localhost:1313/delete-assigned-user-from-a-personal-avd-session-host-automated/</guid>
+      <description>&lt;p&gt;An Azure Virtual Desktop environment has two types of host pools, a pooled and a personal type. The main difference between them is the user assignment. In this article I will show how to deal with personal assigned session hosts and how to delete the assigned user and will save work.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

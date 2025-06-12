@@ -1,11 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certificates on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/certificates/</link><description>Recent content in Certificates on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/certificates/index.xml" rel="self" type="application/rss+xml"/><item><title>Import Reuseable EPM Certificates in Intune automated</title><link>https://www.rozemuller.com/import-reusable-epm-certificates-in-intune-automated/</link><pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate><guid>https://www.rozemuller.com/import-reusable-epm-certificates-in-intune-automated/</guid><description>&lt;p>As you may know there is a &lt;a href="https://discord.com/invite/msems"
-
-
-
-
- target="_blank"
- 
-
-
->Microsoft EMS Community&lt;/a>
- Discord channel where we help out eachother. Recently there was a question about how to import certificate file as reusable setting in Endpoint Privilege Management using the Graph API. Together with Steven van Beek we answered that question on how to bulk import certificates using the Graph API. To also help others I like to share the solution.&lt;/p></description></item><item><title>Using KeyVault certificates in Azure DevOps</title><link>https://www.rozemuller.com/using-keyvault-certificates-in-azure-devops/</link><pubDate>Tue, 13 Oct 2020 10:07:16 +0200</pubDate><guid>https://www.rozemuller.com/using-keyvault-certificates-in-azure-devops/</guid><description>&lt;p>Azure KeyVault is the security key management system in Azure where you can store keys, secrets and certificates. From that place you can use the items everywhere you like.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certificates on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/certificates/</link>
+    <description>Recent content in Certificates on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jul 2023 16:39:01 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/certificates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Import Reuseable EPM Certificates in Intune automated </title>
+      <link>//localhost:1313/import-reusable-epm-certificates-in-intune-automated/</link>
+      <pubDate>Fri, 14 Jul 2023 16:39:01 +0200</pubDate>
+      <guid>//localhost:1313/import-reusable-epm-certificates-in-intune-automated/</guid>
+      <description>&lt;p&gt;As you may know there is a &lt;a href=&#34;https://discord.com/invite/msems&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Microsoft EMS Community&lt;/a&gt; Discord channel where we help out eachother. Recently there was a question about how to import certificate file as reusable setting in Endpoint Privilege Management using the Graph API. Together with Steven van Beek we answered that question on how to bulk import certificates using the Graph API. To also help others I like to share the solution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using KeyVault certificates in Azure DevOps</title>
+      <link>//localhost:1313/using-keyvault-certificates-in-azure-devops/</link>
+      <pubDate>Tue, 13 Oct 2020 10:07:16 +0200</pubDate>
+      <guid>//localhost:1313/using-keyvault-certificates-in-azure-devops/</guid>
+      <description>&lt;p&gt;Azure KeyVault is the security key management system in Azure where you can store keys, secrets and certificates. From that place you can use the items everywhere you like.&lt;/p&gt;&#xA;&lt;details class=&#34;table-of-content&#34;&gt;&#xA;  &lt;summary&gt;Table Of Contents&lt;/summary&gt;&#xA;  &lt;nav id=&#34;TableOfContents&#34;&gt;&#xA;  &lt;ul&gt;&#xA;    &lt;li&gt;&#xA;      &lt;ul&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#the-main-idea&#34;&gt;The main idea&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#why-using-certificates&#34;&gt;Why using certificates?&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#download-certificates-from-keyvault&#34;&gt;Download certificates from KeyVault&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#the-foreach-loop&#34;&gt;The foreach loop&lt;/a&gt;&lt;/li&gt;&#xA;        &lt;li&gt;&lt;a href=&#34;#devops&#34;&gt;DevOps&lt;/a&gt;&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/li&gt;&#xA;  &lt;/ul&gt;&#xA;&lt;/nav&gt;&#xA;&lt;/details&gt;&#xA;&#xA;&lt;h3 id=&#34;the-main-idea&#34;&gt;The main idea&lt;/h3&gt;&#xA;&lt;p&gt;We using the certificates thumbprint for connecting to an Azure AD. While logged in we like to change application permissions based on a JSON file input. After changing that file the continuous integration (CI) proces in DevOps will take care about the application permission change at all of our customers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

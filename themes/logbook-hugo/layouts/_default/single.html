@@ -2,7 +2,7 @@
 {{ $sidebar:= site.Params.sidebar }}
 {{ $hasbar:= or (eq $sidebar `left`) (eq $sidebar `right`)}}
 {{ $widget:= site.Params.widgets.sidebar }}
-{{ $permalink := .Permalink }}
+
 <!-- checking blog -->
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq
 .Section "categories") (eq .Section "tags") }}
@@ -31,14 +31,14 @@
             <li class="list-inline-item">{{ i18n "date"}} : {{ .PublishDate.Format "January 2, 2006" }}</li>
             <li class="list-inline-item">{{ i18n "categories" }} :
               {{ range $i,$p:= .Params.Categories }}{{if ne $i 0}},{{end}}<a
-                href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="ms-1">{{ . | humanize }} </a>
+                href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/" class="ms-1">{{ . }} </a>
               {{end}}</li>
             <li class="list-inline-item">{{i18n "tags"}} : {{ range $i,$p:= .Params.Tags }}{{if ne $i 0}},{{end}}<a
-                href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/" class="ms-1">{{ . | humanize }} </a> {{end}}
+                href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/" class="ms-1">{{ . }} </a> {{end}}
             </li>
           </ul>
         </div>
-        {{ with .Params.images }}
+        {{with .Params.images}}
         <div class="{{if not (or (eq $sidebar `left`) (eq $sidebar `right`))}}col-12{{end}} mb-3">
           {{if gt (len .) 1 }}
           <div class="swiper post-slider">
@@ -56,10 +56,8 @@
           </div>
           {{ else }}
           <div class="post-slider">
-            {{ with index . 0 }}
-            {{ $imageUrl := relLangURL . }}
-            {{ $imagePath := printf "%s%s" $permalink $imageUrl }}
-            {{ partial "image.html" (dict "Src" $imagePath "Alt" "post-thumb" "Class" `w-100`) }}
+            {{ range .}}
+            {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `w-100`) }}
             {{ end }}
           </div>
           {{ end }}
@@ -69,8 +67,7 @@
           <div class="content">{{.Content}}</div>
         </div>
         {{if or (eq $sidebar `left`) (eq $sidebar `right`)}}
-      </div>
-      {{end}}
+      </div>{{end}}
 
       <!-- right sidebar -->
       {{ if eq $sidebar `right` }}
@@ -92,6 +89,10 @@
       </div>
     </div>
     {{ end }}
+
+    {{ partial "valine-comment.html" . }}
+    <!-- /comments -->
+
   </div>
 </section>
 
@@ -105,7 +106,7 @@
     },
     "headline": "{{.Title}}",
     "description": "{{.Params.description}}",
-    "image": "{{ with index .Params.images 0 }}{{ . | relURL }}{{ end }}",
+    "image": "{{with .Params.images}}{{range first 1 . }}{{. | relURL}}{{end}}{{end}}",
     "author": {
       "@type": "Person",
       "name": "{{.Params.author}}"

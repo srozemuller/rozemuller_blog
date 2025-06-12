@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homepages on LogBook | Hugo Personal Blog Template</title>
+    <link>//localhost:1313/homepage/</link>
+    <description>Recent content in homepages on LogBook | Hugo Personal Blog Template</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1313/homepage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homepage Full</title>
+      <link>//localhost:1313/homepage/full/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/full/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Full Left</title>
+      <link>//localhost:1313/homepage/full-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/full-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Full Right</title>
+      <link>//localhost:1313/homepage/full-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/full-right/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid</title>
+      <link>//localhost:1313/homepage/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/grid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid Left</title>
+      <link>//localhost:1313/homepage/grid-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/grid-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage Grid Right</title>
+      <link>//localhost:1313/homepage/grid-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/grid-right/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List</title>
+      <link>//localhost:1313/homepage/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List Left</title>
+      <link>//localhost:1313/homepage/list-left/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/list-left/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homepage List Right</title>
+      <link>//localhost:1313/homepage/list-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/homepage/list-right/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

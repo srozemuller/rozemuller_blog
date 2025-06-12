@@ -1,13 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-author: Sander Rozemuller
 date: {{ .Date }}
-image: 
-draft: true
-url: "{{.Name}}"
-categories:
-tags:
+# meta keywords
+keywords: []
+# meta description
+description: "This is meta description"
+# save as draft
+draft: false
 ---
-
-
-{{< bye >}}

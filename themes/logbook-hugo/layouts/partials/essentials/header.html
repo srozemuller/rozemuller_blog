@@ -122,21 +122,17 @@
                 {{ end }}
               </div>
             {{ end }}
-            <ul class="list-unstyled search d-none d-lg-block">
-              <li class="list-inline-item">
-                {{ partial "toggle.html" . }}
-              </li>
-            </ul>
           </div>
         </nav>
 
         <div class="header-search-panel">
-          <form action="{{ `search`| relLangURL }}">
+          <form action="{{ `search`| relLangURL }}" method="GET">
             <input
               class="search-query"
               name="s"
               type="search"
-              placeholder="{{ i18n `search_placeholder` }}" />
+              placeholder="{{ i18n `search_placeholder` }}"
+              value="{{ .Site.Params.search.query | default }}" />
           </form>
           <button
             class="search-btn search-btn-close"

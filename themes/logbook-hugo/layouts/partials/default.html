@@ -4,6 +4,7 @@
 {{ $widget:= site.Params.widgets.sidebar }}
 {{ $paginator := .Paginate (where (.Scratch.Get "where") "Section" "in" site.Params.mainSections) }}
 
+
 <section class="section">
   <div class="container">
     <div class="row">
@@ -29,7 +30,7 @@
           <!-- list article -->
           {{ range $paginator.Pages }}
             <article class="row mb-5">
-              {{ $permalink := .Permalink }}
+              {{ $permalink := .RelPermalink }}
               {{ with .Params.images }}
                 <div class="col-md-4 mb-4 mb-md-0">
                   {{ if gt (len .) 1 }}
@@ -53,12 +54,10 @@
                       </div>
                     </div>
                   {{ else }}
-                  {{ with index . 0 }}
-                  {{ $imageUrl := relLangURL . }}
-                  {{ $imagePath := printf "%s%s" $permalink $imageUrl }}
+                    {{ range . }}
                       <div class="post-slider">
                         <a href="{{ $permalink }}">
-                          {{ partial "image.html" (dict "Src" $imagePath "Alt" "post-thumb" "Class" `w-100`) }}
+                          {{ partial "image.html" (dict "Src" . "Alt" "post-thumb" "Class" `w-100`) }}
                         </a>
                       </div>
                     {{ end }}
@@ -96,7 +95,7 @@
                       {{ if ne $i 0 }},{{ end }}<a
                         href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
                         class="ms-1"
-                        >{{ . | humanize }}
+                        >{{ . }}
                       </a>
                     {{ end }}
                   </li>
@@ -106,7 +105,7 @@
                       {{ if ne $i 0 }},{{ end }}<a
                         href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}/"
                         class="ms-1"
-                        >{{ . | humanize }}
+                        >{{ . }}
                       </a>
                     {{ end }}
                   </li>

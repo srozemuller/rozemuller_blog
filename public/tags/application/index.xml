@@ -1,13 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Application on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/application/</link><description>Recent content in Application on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/application/index.xml" rel="self" type="application/rss+xml"/><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title><link>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link><pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br>
-In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p></description></item><item><title>How to use REST API with Powershell</title><link>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</link><pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-rest-api-with-powershell/</guid><description>&lt;p>The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br>
-As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href="https://www.postman.com/"
-
-
-
-
- target="_blank"
- 
-
-
->Postman&lt;/a>
-.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/application/</link>
+    <description>Recent content in Application on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 10:40:04 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title>
+      <link>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link>
+      <pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br&gt;&#xA;In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use REST API with Powershell</title>
+      <link>//localhost:1313/how-to-use-rest-api-with-powershell/</link>
+      <pubDate>Tue, 15 Sep 2020 11:57:34 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-rest-api-with-powershell/</guid>
+      <description>&lt;p&gt;The past few years REST API became important more and more. REST API is a common way for communicating against and between applications. Azure and Microsoft 365 also using REST API’s.&lt;br&gt;&#xA;As the world of API is growing so the tooling for querying API’s is growing with the most well known tool is &lt;a href=&#34;https://www.postman.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;Postman&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

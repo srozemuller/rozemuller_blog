@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pipeline on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/pipeline/</link><description>Recent content in Pipeline on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/pipeline/index.xml" rel="self" type="application/rss+xml"/><item><title>The DevOps Project Clone a pipeline from a source project automated</title><link>https://www.rozemuller.com/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</link><pubDate>Mon, 16 May 2022 20:41:00 +0200</pubDate><guid>https://www.rozemuller.com/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</guid><description>&lt;p>In this 4th slice of Prepare Azure DevOps for AVD deployment series, I will show how to copy or clone an existing YAML pipeline automated from a source project into a new AVD project. This will help you keep one main pipeline as a source and will allow you to create a “linked” pipeline into a new project directly from the source.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pipeline on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/pipeline/</link>
+    <description>Recent content in Pipeline on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 May 2022 20:41:00 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The DevOps Project Clone a pipeline from a source project automated</title>
+      <link>//localhost:1313/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</link>
+      <pubDate>Mon, 16 May 2022 20:41:00 +0200</pubDate>
+      <guid>//localhost:1313/the-devops-project-clone-a-pipeline-from-a-source-project-automated/</guid>
+      <description>&lt;p&gt;In this 4th slice of Prepare Azure DevOps for AVD deployment series, I will show how to copy or clone an existing YAML pipeline automated from a source project into a new AVD project. This will help you keep one main pipeline as a source and will allow you to create a “linked” pipeline into a new project directly from the source.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

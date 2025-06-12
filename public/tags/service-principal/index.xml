@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Service Principal on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/tags/service-principal/</link><description>Recent content in Service Principal on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:09:51 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/tags/service-principal/index.xml" rel="self" type="application/rss+xml"/><item><title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title><link>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link><pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate><guid>https://www.rozemuller.com/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid><description>&lt;p>Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br>
-In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Service Principal on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/service-principal/</link>
+    <description>Recent content in Service Principal on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 10:40:04 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/service-principal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prepare Azure DevOps for Azure Virtual Desktop deployment - App registration</title>
+      <link>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</link>
+      <pubDate>Sun, 03 Jan 2021 10:40:04 +0100</pubDate>
+      <guid>//localhost:1313/prepare-azure-devops-for-windows-virtual-desktop-deployment-app-registration/</guid>
+      <description>&lt;p&gt;Using Azure DevOps is a really nice way to deploy resources in Azure, so also for Azure Virtual Desktop. Before you are able to deploy resources into Azure with pipelines you will need to setup a project and a service connection first. While configuring a service connection you will be asked for some specific tenant details.&lt;br&gt;&#xA;In this short series I will explain every step you need to prepare DevOps for AVD deployment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,35 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title><link>https://www.rozemuller.com/categories/security/</link><description>Recent content in Security on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 06 Jan 2024 15:10:27 +0100</lastBuildDate><atom:link href="https://www.rozemuller.com/categories/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure AVD using settings catalog automated</title><link>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</link><pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate><guid>https://www.rozemuller.com/configure-avd-using-settings-catalog-automated/</guid><description>&lt;p>Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p></description></item><item><title>Check Conditional Access Policy Effect Automated</title><link>https://www.rozemuller.com/check-conditional-access-policy-effect-automated/</link><pubDate>Mon, 08 May 2023 20:40:49 +0200</pubDate><guid>https://www.rozemuller.com/check-conditional-access-policy-effect-automated/</guid><description>&lt;p>In earlier posts I created several conditional access policies in an automated way. During the time policies may change, users will be added to a specific Azure role, groups are added and so many more.&lt;br>
-All those changes effect on how conditional access policies act. Because of that, it is recommended to check your conditional access policies environment so now and then.&lt;/p></description></item><item><title>Passwordless, Multi-layered Break Glass Alternative Automated</title><link>https://www.rozemuller.com/passwordless-multilayered-break-glass-alternative-automated/</link><pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate><guid>https://www.rozemuller.com/passwordless-multilayered-break-glass-alternative-automated/</guid><description>&lt;p>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts. In an earlier post, I explained &lt;a href="../configure-break-glass-accounts-infrastructure-automated/"
-
-
-
- 
-
-
->how to create an emergency account based on a user account with a password&lt;/a>
-. In this post, I will show you how to automate the creation of a passwordless, multi-layered emergency account using Graph API.&lt;/p></description></item><item><title>Zero Trust Data Protection Using App Protection Policies Automated</title><link>https://www.rozemuller.com/zero-trust-data-protection-using-app-protection-policies-automated/</link><pubDate>Thu, 30 Mar 2023 20:40:49 +0200</pubDate><guid>https://www.rozemuller.com/zero-trust-data-protection-using-app-protection-policies-automated/</guid><description>&lt;p>In earlier steps, I explained how to control identity and devices to connect to your environment. Now people are connected to your environment safely, the next step is to make sure your data won&amp;rsquo;t walk out.&lt;br>
-In this step of the Zero to Zero Trust journey we will look at the first step of how to keep your data safe. In this blog, I show how to automate the creation of App Protection Policies. Intune App Protection policies help protect corporate data even if a device itself is not managed.&lt;/p></description></item><item><title>Zero Trust Common Identity and Device Access Protection</title><link>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</link><pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate><guid>https://www.rozemuller.com/zero-trust-common-identity-and-device-access-protection/</guid><description>&lt;p>This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p></description></item><item><title>Protect Privileged Accounts the Zero Trust Way Automated</title><link>https://www.rozemuller.com/protect-privileged-accounts-the-zero-trust-way-automated/</link><pubDate>Sun, 05 Mar 2023 09:17:14 +0100</pubDate><guid>https://www.rozemuller.com/protect-privileged-accounts-the-zero-trust-way-automated/</guid><description>&lt;p>Identities are the key to environments and must be configured as securely as possible. To achieve this goal, conditional access policies are indispensable. In this blog post, I show how to secure privileged accounts that need more attention than MFA only. This post shows how to configure Zero Trust conditional access policies in an automated way.&lt;br>
-This is the next step in our Zero to Zero Trust journey.&lt;/p></description></item><item><title>Configure Break Glass Accounts Infrastructure Automated</title><link>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</link><pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate><guid>https://www.rozemuller.com/configure-break-glass-accounts-infrastructure-automated/</guid><description>&lt;p>Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p></description></item><item><title>Zero to Zero Trust Automation Index</title><link>https://www.rozemuller.com/zero-to-zero-trust-automation-index/</link><pubDate>Sat, 11 Feb 2023 12:43:32 +0100</pubDate><guid>https://www.rozemuller.com/zero-to-zero-trust-automation-index/</guid><description>&lt;p>Welcome to the Zero to Zero Trust series automated and to this automation index. In this series, I will show the process from a zero security configuration to Zero Trust in the Microsoft public cloud. The series passes all the important items and show how to configure the components automated if applicable.&lt;/p></description></item><item><title>Get Intune Device Management Scripts Content using Graph</title><link>https://www.rozemuller.com/get-intune-device-management-scripts-content-using-graph/</link><pubDate>Thu, 09 Feb 2023 14:55:00 +0100</pubDate><guid>https://www.rozemuller.com/get-intune-device-management-scripts-content-using-graph/</guid><description>&lt;p>Device management scripts in Intune are custom scripts that can run on Windows 10 and higher clients and MacOS. The ability to run scripts on local devices gives you an alternative to configuring devices with settings that are not available under the configuration policies or in the apps part of Intune.&lt;/p></description></item><item><title>The Endpoint Security Train - Introduction</title><link>https://www.rozemuller.com/the-endpoint-security-train-introduction/</link><pubDate>Sun, 20 Nov 2022 07:38:46 +0200</pubDate><guid>https://www.rozemuller.com/the-endpoint-security-train-introduction/</guid><description>&lt;p>The IT landscape is changing. Private becomes public, local resources are moving to the public cloud. More and more workloads return to the local endpoint. Cloud endpoints (AVD, W365) are mostly used to run legacy software.
-With all those movements, it could be challenging to keep the herd in the pasture. Devices are everywhere and what about security?&lt;/p></description></item><item><title>Disable user tenant creation</title><link>https://www.rozemuller.com/disable-user-tenant-creation/</link><pubDate>Thu, 17 Nov 2022 20:38:46 +0200</pubDate><guid>https://www.rozemuller.com/disable-user-tenant-creation/</guid><description>&lt;p>It looks like Microsoft has added a new option that allows users to create tenants. Some people have seen the Tenant Creation option in the regular Azure portal but was removed fast. For now, the option is still available in the Preview Azure Portal (&lt;a href="https://preview.portal.azure.com/"
-
-
-
-
- target="_blank"
- 
-
-
->https://preview.portal.azure.com/&lt;/a>
-)&lt;/p></description></item><item><title>Deploy Azure Bastion host in AVD environment automated</title><link>https://www.rozemuller.com/deploy-azure-bastion-host-in-AVD-environment-automated/</link><pubDate>Fri, 11 Nov 2022 06:02:46 +0200</pubDate><guid>https://www.rozemuller.com/deploy-azure-bastion-host-in-AVD-environment-automated/</guid><description>&lt;p>The IT landscape is changing. Hardware takes place for serverless and resources are moving to public cloud platforms. With that, also the IT processes are changing. In this blog post, I show how to make one of the most common processes more secure in the public cloud. Manage a client endpoint with remote control.&lt;/p></description></item><item><title>Deploy and monitor conditional access authentication strength automated</title><link>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</link><pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</guid><description>&lt;p>Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.
-In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p></description></item><item><title>Deploy and monitor conditional access authentication strength automated</title><link>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</link><pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate><guid>https://www.rozemuller.com/deploy-monitor-conditional-access-require-authentication-strength/</guid><description>&lt;p>Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.
-In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p></description></item><item><title>Enroll AVD session host with Trusted Launch automated</title><link>https://www.rozemuller.com/enroll-avd-session-host-with-trusted-launch-automated/</link><pubDate>Tue, 26 Jul 2022 18:19:25 +0600</pubDate><guid>https://www.rozemuller.com/enroll-avd-session-host-with-trusted-launch-automated/</guid><description>&lt;p>In this blog post I show how to deploy an AVD session host with the Trusted Launch, secure boot and vTPM. This option is now Generally Available. I show how to deploy the AVD session host with the REST API and with the Az.Avd PowerShell module from a Compute Gallery image.&lt;/p></description></item><item><title>Monitor Identity Secure Score security improvement action status</title><link>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</link><pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate><guid>https://www.rozemuller.com/monitor-identity-secure-score-security-improvement-action-status/</guid><description>&lt;p>An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p></description></item><item><title>Monitor security baselines in Endpoint Security</title><link>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</link><pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate><guid>https://www.rozemuller.com/monitor-security-baselines-in-endpoint-security/</guid><description>&lt;p>A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p></description></item><item><title>Microsoft Intune security baselines explained</title><link>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</link><pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate><guid>https://www.rozemuller.com/microsoft-endpoint-manager-security-baselines-explained/</guid><description>&lt;p>During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p></description></item><item><title>Secure and optimize AVD and CloudPC using Microsoft Intune</title><link>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link><pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate><guid>https://www.rozemuller.com/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid><description>&lt;p>In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p></description></item><item><title>Configure Azure Firewall Premium features for AVD automated</title><link>https://www.rozemuller.com/configure-azure-firewall-premium-features-for-avd-automated/</link><pubDate>Fri, 26 Feb 2021 17:02:43 +0100</pubDate><guid>https://www.rozemuller.com/configure-azure-firewall-premium-features-for-avd-automated/</guid><description>&lt;p>Security became important more and more. It is recommend, now the days arrived where the most people work from home and IT is moving to the public cloud, to use a good firewall with less complexity as possible. In case of AVD within the current situation an IT environment can be complex. In this article I will explain how configure an Azure Firewall for AVD automated with premium options, which came in public preview at 16 February 2021. At the end I will show how to deploy an Azure Firewall specially for a AVD environment with all the needed steps automated.&lt;/p></description></item><item><title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title><link>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link><pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate><guid>https://www.rozemuller.com/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid><description>&lt;p>Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p></description></item><item><title>How to use Key Vault ARM templates and deal with sensitive parameters</title><link>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link><pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate><guid>https://www.rozemuller.com/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid><description>&lt;p>At October 14, 2020 Mircosoft &lt;a href="https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI"
-
-
-
-
- target="_blank"
- 
-
-
->announced&lt;/a>
- the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/categories/security/</link>
+    <description>Recent content in Security on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Oct 2023 20:14:59 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure AVD using settings catalog automated</title>
+      <link>//localhost:1313/configure-avd-using-settings-catalog-automated/</link>
+      <pubDate>Mon, 02 Oct 2023 20:14:59 +0100</pubDate>
+      <guid>//localhost:1313/configure-avd-using-settings-catalog-automated/</guid>
+      <description>&lt;p&gt;Welcome to this blog about configuring Azure Virtual Desktop session host with Microsoft Intune. The Intune settings catalog is growing very fast and now also AVD settings making it to the settings catalog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Check Conditional Access Policy Effect Automated</title>
+      <link>//localhost:1313/check-conditional-access-policy-effect-automated/</link>
+      <pubDate>Mon, 08 May 2023 20:40:49 +0200</pubDate>
+      <guid>//localhost:1313/check-conditional-access-policy-effect-automated/</guid>
+      <description>&lt;p&gt;In earlier posts I created several conditional access policies in an automated way. During the time policies may change, users will be added to a specific Azure role, groups are added and so many more.&lt;br&gt;&#xA;All those changes effect on how conditional access policies act. Because of that, it is recommended to check your conditional access policies environment so now and then.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
+      <link>//localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
+      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
+      <guid>//localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
+      <description>&lt;p&gt;Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts. In an earlier post, I explained &lt;a href=&#34;../configure-break-glass-accounts-infrastructure-automated/&#34;&#xA;&#xA;&#xA;&#xA; &#xA;&#xA;&#xA;&gt;how to create an emergency account based on a user account with a password&lt;/a&gt;. In this post, I will show you how to automate the creation of a passwordless, multi-layered emergency account using Graph API.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero Trust Data Protection Using App Protection Policies Automated</title>
+      <link>//localhost:1313/zero-trust-data-protection-using-app-protection-policies-automated/</link>
+      <pubDate>Thu, 30 Mar 2023 20:40:49 +0200</pubDate>
+      <guid>//localhost:1313/zero-trust-data-protection-using-app-protection-policies-automated/</guid>
+      <description>&lt;p&gt;In earlier steps, I explained how to control identity and devices to connect to your environment. Now people are connected to your environment safely, the next step is to make sure your data won&amp;rsquo;t walk out.&lt;br&gt;&#xA;In this step of the Zero to Zero Trust journey we will look at the first step of how to keep your data safe. In this blog, I show how to automate the creation of App Protection Policies. Intune App Protection policies help protect corporate data even if a device itself is not managed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero Trust Common Identity and Device Access Protection</title>
+      <link>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</link>
+      <pubDate>Tue, 14 Mar 2023 13:53:14 +0100</pubDate>
+      <guid>//localhost:1313/zero-trust-common-identity-and-device-access-protection/</guid>
+      <description>&lt;p&gt;This is the 3rd step in the series Zero to Zero Trust in an automated way. In the previous steps, we configured an emergency account and protected the account with conditional access policies. The conditional access policies control the log-in process. In this step, we configure access policies for other users and devices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Protect Privileged Accounts the Zero Trust Way Automated</title>
+      <link>//localhost:1313/protect-privileged-accounts-the-zero-trust-way-automated/</link>
+      <pubDate>Sun, 05 Mar 2023 09:17:14 +0100</pubDate>
+      <guid>//localhost:1313/protect-privileged-accounts-the-zero-trust-way-automated/</guid>
+      <description>&lt;p&gt;Identities are the key to environments and must be configured as securely as possible. To achieve this goal, conditional access policies are indispensable. In this blog post, I show how to secure privileged accounts that need more attention than MFA only. This post shows how to configure Zero Trust conditional access policies in an automated way.&lt;br&gt;&#xA;This is the next step in our Zero to Zero Trust journey.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Break Glass Accounts Infrastructure Automated</title>
+      <link>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</link>
+      <pubDate>Mon, 13 Feb 2023 08:30:15 +0100</pubDate>
+      <guid>//localhost:1313/configure-break-glass-accounts-infrastructure-automated/</guid>
+      <description>&lt;p&gt;Nowadays a good cloud environment has strict security policies. Well-known policies are conditional access policies. Policies that require a compliant device before login for example or forcing MFA. Configuring conditional access is good but there is always a risk of lockout yourself. To not lock yourself out, you must create an emergency account.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zero to Zero Trust Automation Index</title>
+      <link>//localhost:1313/zero-to-zero-trust-automation-index/</link>
+      <pubDate>Sat, 11 Feb 2023 12:43:32 +0100</pubDate>
+      <guid>//localhost:1313/zero-to-zero-trust-automation-index/</guid>
+      <description>&lt;p&gt;Welcome to the Zero to Zero Trust series automated and to this automation index. In this series, I will show the process from a zero security configuration to Zero Trust in the Microsoft public cloud. The series passes all the important items and show how to configure the components automated if applicable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Get Intune Device Management Scripts Content using Graph</title>
+      <link>//localhost:1313/get-intune-device-management-scripts-content-using-graph/</link>
+      <pubDate>Thu, 09 Feb 2023 14:55:00 +0100</pubDate>
+      <guid>//localhost:1313/get-intune-device-management-scripts-content-using-graph/</guid>
+      <description>&lt;p&gt;Device management scripts in Intune are custom scripts that can run on Windows 10 and higher clients and  MacOS. The ability to run scripts on local devices gives you an alternative to configuring devices with settings that are not available under the configuration policies or in the apps part of Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disable user tenant creation</title>
+      <link>//localhost:1313/disable-user-tenant-creation/</link>
+      <pubDate>Thu, 17 Nov 2022 20:38:46 +0200</pubDate>
+      <guid>//localhost:1313/disable-user-tenant-creation/</guid>
+      <description>&lt;p&gt;It looks like Microsoft has added a new option that allows users to create tenants. Some people have seen the Tenant Creation option in the regular Azure portal but was removed fast. For now, the option is still available in the Preview Azure Portal (&lt;a href=&#34;https://preview.portal.azure.com/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;https://preview.portal.azure.com/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploy and monitor conditional access authentication strength automated</title>
+      <link>//localhost:1313/deploy-monitor-conditional-access-require-authentication-strength/</link>
+      <pubDate>Thu, 06 Oct 2022 11:46:12 +0200</pubDate>
+      <guid>//localhost:1313/deploy-monitor-conditional-access-require-authentication-strength/</guid>
+      <description>&lt;p&gt;Conditional access is an indispensable configuration setting in Azure AD. Conditional Access policies are in basic if-then statements, if a user wants to access a resource, then they must complete an action. Example: A payroll manager wants to access the payroll application and is required to do multi-factor authentication to access it. Or, it requires everyone to use multifactor authentication. Multifactor authentication can be a password in combination with an SMS or the use of the Microsoft Authenticator app for example.&#xA;In the past, a user can choose to use SMS or the authenticator or what the admins provide you to use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enroll AVD session host with Trusted Launch automated</title>
+      <link>//localhost:1313/enroll-avd-session-host-with-trusted-launch-automated/</link>
+      <pubDate>Tue, 26 Jul 2022 18:19:25 +0600</pubDate>
+      <guid>//localhost:1313/enroll-avd-session-host-with-trusted-launch-automated/</guid>
+      <description>&lt;p&gt;In this blog post I show how to deploy an AVD session host with the Trusted Launch, secure boot and vTPM. This option is now Generally Available. I show how to deploy the AVD session host with the REST API and with the Az.Avd PowerShell module from a Compute Gallery image.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Identity Secure Score security improvement action status</title>
+      <link>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</link>
+      <pubDate>Sun, 29 May 2022 10:23:54 +0200</pubDate>
+      <guid>//localhost:1313/monitor-identity-secure-score-security-improvement-action-status/</guid>
+      <description>&lt;p&gt;An Azure tenant is the Microsoft public cloud base. It is very important to keep your bases as secure as possible. To keep your tenant secure, Microsoft provides actions that give you insights into your tenant’s security and how to improve it. In this blog, I show how to monitor the secure score security improvement action status.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor security baselines in Endpoint Security</title>
+      <link>//localhost:1313/monitor-security-baselines-in-endpoint-security/</link>
+      <pubDate>Tue, 05 Apr 2022 08:58:35 +0200</pubDate>
+      <guid>//localhost:1313/monitor-security-baselines-in-endpoint-security/</guid>
+      <description>&lt;p&gt;A security baseline has some values which are interesting to know. It has a status that tells us the current deployment status if a profile is assigned or is deprecated. In this post, I show how to monitor security baselines. The current status, versions, and if a profile is assigned. I will explain which data is important, how to get the data and show different ways to send alerts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Intune security baselines explained</title>
+      <link>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</link>
+      <pubDate>Wed, 23 Feb 2022 16:09:00 +0100</pubDate>
+      <guid>//localhost:1313/microsoft-endpoint-manager-security-baselines-explained/</guid>
+      <description>&lt;p&gt;During writing automation blog posts about deploying security baselines automated, I felt the need to write a new blog about how these security baselines actually work. Not in the way how security baselines are deployed but how security baselines are built. Which components does a baseline have and how do settings fit together. In this blog post, I peel off a security baseline and explain how to grab the correct settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure and optimize AVD and CloudPC using Microsoft Intune</title>
+      <link>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</link>
+      <pubDate>Wed, 12 Jan 2022 12:39:42 +0100</pubDate>
+      <guid>//localhost:1313/secure-and-optimize-avd-and-cloudpc-using-microsoft-endpoint-manager/</guid>
+      <description>&lt;p&gt;In this blog post, I explain how to secure and optimize AVD and CloudPC environment using Microsoft Intune automated. The configuration is all deployed automated based on PowerShell, JSON templates, and Graph API. I explain how to create a security baseline and how to deploy a configuration profile with settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Azure Firewall Premium features for AVD automated</title>
+      <link>//localhost:1313/configure-azure-firewall-premium-features-for-avd-automated/</link>
+      <pubDate>Fri, 26 Feb 2021 17:02:43 +0100</pubDate>
+      <guid>//localhost:1313/configure-azure-firewall-premium-features-for-avd-automated/</guid>
+      <description>&lt;p&gt;Security became important more and more. It is recommend, now the days arrived where the most people work from home and IT is moving to the public cloud, to use a good firewall with less complexity as possible. In case of AVD within the current situation an IT environment can be complex. In this article I will explain how configure an Azure Firewall for AVD automated with premium options, which came in public preview at 16 February 2021. At the end I will show how to deploy an Azure Firewall specially for a AVD environment with all the needed steps automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enable Screen Capture Protection for Azure Virtual Desktop Automated</title>
+      <link>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</link>
+      <pubDate>Wed, 16 Dec 2020 13:02:03 +0100</pubDate>
+      <guid>//localhost:1313/enable-screen-capture-protection-for-azure-virtual-desktop-automated/</guid>
+      <description>&lt;p&gt;Working remotely has a lot of advantages like less travel time, more focus to work (when the house is not full of kids :)), which contributes to working efficiently. But there are some concerns about security, and rightly so I think. Especially when you are used to ‘see’ what happens on the screen in real life which help at least you think you are in control of your data. In this article I will show how to enable AVD screen protection automated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to use Key Vault ARM templates and deal with sensitive parameters</title>
+      <link>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</link>
+      <pubDate>Sun, 18 Oct 2020 18:19:13 +0200</pubDate>
+      <guid>//localhost:1313/how-to-use-keyvault-arm-templates-and-deal-with-sensitive-parameters/</guid>
+      <description>&lt;p&gt;At October 14, 2020 Mircosoft &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-template?tabs=CLI&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;announced&lt;/a&gt; the public preview of ARM templates for adding secrets to Azure Key Vault. In this article I will explain a way how to use these templates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

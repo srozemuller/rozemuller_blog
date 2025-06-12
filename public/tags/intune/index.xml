@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</title>
-    <link>http://localhost:1313/tags/intune/</link>
-    <description>Recent content in Intune on Sander Rozemuller | All about Identity, AVD, Automation, DevOps, Monitoring, Intune and Security</description>
+    <title>Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</title>
+    <link>//localhost:1313/tags/intune/</link>
+    <description>Recent content in Intune on Sander Rozemuller | All about Automation, Monitoring for Identity, AVD and Intune</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Oct 2024 21:40:49 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/intune/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Mar 2025 11:30:49 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/intune/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Governing OS Versions in Microsoft Intune automated</title>
+      <link>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</link>
+      <pubDate>Fri, 14 Mar 2025 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/governing-os-versions-in-microsoft-intune-automated/</guid>
+      <description>&lt;p&gt;This article is based on a &lt;a href=&#34;https://www.vansurksum.com/2025/01/07/governing-os-versions-in-microsoft-intune-best-practices-and-configuration/&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;post of my good friend Kenneth van Surksum&lt;/a&gt;. He has written as good blog post about how to govern OS versions in your environment with the use of Microsoft Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manage Intune Scripts With GitHub Actions</title>
+      <link>//localhost:1313/manage-intune-scripts-with-github-actions/</link>
+      <pubDate>Wed, 12 Feb 2025 15:45:49 +0200</pubDate>
+      <guid>//localhost:1313/manage-intune-scripts-with-github-actions/</guid>
+      <description>&lt;p&gt;Microsoft Intune allows the use of scripts for various purposes, with the most common being detection and remediation scripts. These scripts can be found under the Scripts and Remediations blade in Intune.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Get Microsoft Intune assignments overview and more</title>
+      <link>//localhost:1313/get-intune-assignments-overview-and-more/</link>
+      <pubDate>Tue, 10 Dec 2024 11:30:49 +0200</pubDate>
+      <guid>//localhost:1313/get-intune-assignments-overview-and-more/</guid>
+      <description>&lt;p&gt;Microsoft Intune becomes more and more important in the modern workplace. It is used to manage devices, applications, and users. More and more resources are available in Intune. To make resources work, you need to assign them. Finding assignments in Intune is a hard job. Another thing is that resources consist of settings, think about configuration profiles, compliance policies, and more.&#xA;To get more insights into Microsoft Intune assignments, the configured settings and more, I created a tool to help you with this. The tool is called Intune Assistant.&#xA;In this blog post, I will show you what Intune Assistant is and how it can help you with your daily work.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Create Intune Configuration for Universal Print Automated</title>
-      <link>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
+      <link>//localhost:1313/create-intune-configuration-for-universal-print-automated/</link>
       <pubDate>Sat, 19 Oct 2024 21:40:49 +0200</pubDate>
-      <guid>http://localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
-      <description>Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.</description>
-    </item>
-    <item>
-      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
-      <link>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
-      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
-      <guid>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
-      <description>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts.</description>
-    </item>
-    <item>
-      <title>Passwordless, Multi-layered Break Glass Alternative Automated</title>
-      <link>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</link>
-      <pubDate>Fri, 14 Apr 2023 09:15:27 +0200</pubDate>
-      <guid>http://localhost:1313/passwordless-multilayered-break-glass-alternative-automated/</guid>
-      <description>Emergency accounts are a fundamental part of any security strategy. They are used to access systems when the primary account is unavailable or locked out. In the past, emergency accounts were often called “break glass” accounts.</description>
-    </item>
-    <item>
-      <title>Zero Trust Endpoint Privileged Management</title>
-      <link>http://localhost:1313/zero-trust-endpoint-privileged-management/</link>
-      <pubDate>Sun, 26 Mar 2023 09:28:51 +0200</pubDate>
-      <guid>http://localhost:1313/zero-trust-endpoint-privileged-management/</guid>
-      <description>In this blog post, I explain the Endpoint Privileged Management (EPM) feature. I will explain how to implement this feature with Microsoft Intune and Graph API.</description>
+      <guid>//localhost:1313/create-intune-configuration-for-universal-print-automated/</guid>
+      <description>&lt;p&gt;Universal Print is a cloud-based print solution that organizations can use to manage their print infrastructure through the Microsoft 365 cloud. Universal Print can also be managed through Intune.&lt;/p&gt;&#xA;&lt;p&gt;In this blog post, I show how to create Intune configuration policies based on Universal Print in an automated way.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
