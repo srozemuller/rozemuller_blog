@@ -3,7 +3,7 @@ title: "Automate Intune Security Baseline Comparisons with PowerShell"
 author: Sander Rozemuller
 date: 2025-07-08T10:00:00+02:00
 images:
-  - "images/post/compare-intune-security-baselines/image.png"
+  - "images/post/automated-intune-security-baseline-comparisons-with-powershell/image.png"
 url: "automated-intune-security-baseline-comparisons-with-powershell"
 categories:
 - Intune
@@ -46,7 +46,7 @@ To simplify this process, I created a PowerShell script that:
 
 ## How the Script Works
 
-### 1. Fetching Baseline Data
+### Fetching Baseline Data
 
 The script uses the Microsoft Graph API to fetch baseline data. It retrieves all settings, including their descriptions, default values, and selected options.
 
@@ -80,9 +80,10 @@ function Get-PolicyAndConvertToJson {
     $fullResponse = Invoke-MgGraphRequest -Method GET -Uri $fullUri
     return $fullResponse
 }
+```
 This function retrieves the full details of a baseline, including its settings and metadata.
 
-## Comparing Settings
+### Comparing Settings
 The script compares the settings from both baselines and categorizes them into three groups:
 
 Same: Settings that are identical in both baselines.
@@ -187,9 +188,11 @@ View the Report: Open the generated HTML file to view the comparison.
 .\Compare-Baselines.ps1  -OutputType HTML -PolicyName1 "Baseline 1" -ComparePolicy "Baseline2"
 ```
 
+![baseline-compare-report](baseline-compare-report.png)
+
 ## Conclusion
 This script saves time and reduces errors when comparing Intune security baselines. By automating the process and providing a clear HTML report, it helps you make informed decisions about adopting new baselines while preserving your customizations.
 
-You can find the full script in my [GitHub repository]().
+You can find the full script in my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/SecurityBaselineComparator).
 
-{{< bye >}} ```
+{{< bye >}}
