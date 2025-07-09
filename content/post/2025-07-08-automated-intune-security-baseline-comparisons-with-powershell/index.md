@@ -88,7 +88,7 @@ The script compares the settings from both baselines and categorizes them into t
 
 Same: Settings that are identical in both baselines.
 Different: Settings that exist in both baselines but have different values.
-Only in File1/File2: Settings that exist in one baseline but not the other.
+Only in Baseline 1/Baseline 2: Settings that exist in one baseline but not the other.
 
 ```powershell
 function Compare-Baselines($baseline1, $baseline2) {
@@ -190,6 +190,9 @@ View the Report: Open the generated HTML file to view the comparison.
 
 ![baseline-compare-report](baseline-compare-report.png)
 
+When clicking on the setting display name you can navigate to more information about the setting.
+
+![baseline-setting-info](baseline-setting-info.png)
 ## Conclusion
 This script saves time and reduces errors when comparing Intune security baselines. By automating the process and providing a clear HTML report, it helps you make informed decisions about adopting new baselines while preserving your customizations.
 
