@@ -423,6 +423,8 @@ Save all the functions and the main script in a `.ps1` file and execute it. The 
 4. Calculate storage metrics and status.
 5. Generate an HTML report and automatically open it in your default browser.
 
+![report.png](report.png)
+
 ### Optimizing for Large Environments
 
 If you manage thousands of devices, consider adding parallel processing to speed up data collection:
@@ -430,9 +432,6 @@ If you manage thousands of devices, consider adding parallel processing to speed
 ```powershell
 $storageData = $devices | ForEach-Object -ThrottleLimit 10 -Parallel {
     $deviceDetails = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceManagement/managedDevices('$($_.id)')?`$select=id,deviceName,managedDeviceName,operatingSystem,osVersion,lastSyncDateTime,hardwareInformation,ethernetMacAddress,processorArchitecture,physicalMemoryInBytes"
-    
-    # Process storage metrics inline
-    # (include the Get-StorageMetrics logic here)
 }
 ```
 
@@ -442,7 +441,7 @@ This PowerShell solution provides a simple yet powerful way to monitor disk spac
 
 The script is easily customizable - you can adjust the warning thresholds, add additional device properties, or modify the report styling to match your organization's standards.
 
-You can find the complete script in my GitHub repository.
+You can find the complete script in my [GitHub repository](https://github.com/srozemuller/IntuneAutomation/tree/main/GetManagedDeviceDiskSpace).
 
 Thank you for reading my blog on monitoring Intune managed device disk space with PowerShell.
 
