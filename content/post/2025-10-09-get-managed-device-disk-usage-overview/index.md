@@ -3,7 +3,7 @@ title: "Monitor Intune Managed Device Disk Space with PowerShell"
 author: Sander Rozemuller
 date: 2025-10-09T14:00:00+02:00
 images:
-  - "images/post/monitor-intune-managed-device-disk-space-with-powershell/image.png"
+  - "images/post/monitor-intune-managed-device-disk-space-with-powershell/image.jpeg"
 url: "monitor-intune-managed-device-disk-space-with-powershell"
 categories:
 - Intune
@@ -13,8 +13,6 @@ tags:
 - PowerShell
 - Graph API
 ---
-
-# Monitor Intune Managed Device Disk Space with PowerShell
 
 Storage management is a critical aspect of device administration that often gets overlooked until it's too late. Low disk space can cause application failures, prevent updates from installing, and impact user productivity. For IT administrators managing hundreds or thousands of devices through Microsoft Intune, manually checking disk space on each device is simply not feasible.
 
