@@ -1,20 +1,19 @@
 ---
 title: "Dynamically Restricting Local Logon to the Primary User on Intune-Managed Windows Devices"
 author: Sander Rozemuller
-date: 2025-10-09T14:00:00+02:00
+date: 2025-11-20T12:00:00+02:00
 images:
   - "images/post/monitor-intune-managed-device-disk-space-with-powershell/image.jpg"
 url: "dynamically-restricting-local-logon-to-the-primary-user-on-intune-managed-windows-devices"
 categories:
 - Intune
-- Monitoring
+- Windows
 tags:
 - Automation
 - PowerShell
-- Graph API
 ---
 
-# Dynamically Restrict Local Logon to the Primary User on Intune-Managed Windows Devices
+## Dynamically Restrict Local Logon to the Primary User on Intune-Managed Windows Devices
 
 In many organisations, Windows devices move between users during onboarding and offboarding processes. Autopilot assigns a **Primary User**, but Windows itself does not prevent other Azure AD users from signing in to that same device. The result is a common and recurring problem:  
 a device ends up being used by someone it was not intended for.
@@ -28,7 +27,29 @@ Before getting there, we need to understand how Windows decides who can log in a
 
 {{< toc >}}
 
-# How Windows Manages Users and Logon Rights
+## In short
+Intune provides a setting called Allow local log on, but it is static.
+It cannot dynamically enforce that only the Autopilot Primary User (and administrators such as LAPS) may sign in.
+
+Why not?
+
+- Azure AD users do not have a SID on the device until after their first login.
+- Logon rights in Windows require SIDs, not UPNs.
+- The first Autopilot OOBE login bypasses logon rights entirely.
+- Intune cannot insert the correct user SID per device dynamically.
+- Deny policies are dangerous and can easily lock out all users.
+
+This blog explains how Windows handles identity, SIDs, logon rights, and the Autopilot login sequence.
+From there, we build a safe, dynamic solution:
+
+- Intune deploys a baseline policy allowing only administrators to log in.
+- After OOBE, the device learns who the Primary User is and generates their SID.
+- A Proactive Remediation script detects the Primary User locally.
+- The script uses secedit to update Allow log on locally with the Primary User SID.
+- From the second login onward, Windows enforces that only the Primary User and administrators may sign in.
+
+This approach prevents unwanted users from logging in to devices they should not use,
+while keeping Autopilot, LAPS, and administrator access fully functional.
 
 To understand why restricting local logon for Azure AD users is challenging, we must first look at how Windows internally handles identities and logon rights.
 
@@ -75,10 +96,7 @@ When an Azure AD user signs in to a device for the first time:
 5. A local profile is created.
 
 This means Windows only learns the SID of an Azure AD user **after** the first successful sign-in.
-
 This point becomes crucial later when we talk about enforcement.
-
----
 
 # Why This is a Problem for Restricting Logon
 
