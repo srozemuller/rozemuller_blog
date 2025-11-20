@@ -14,192 +14,334 @@ tags:
 - Graph API
 ---
 
+# Dynamically Restrict Local Logon to the Primary User on Intune-Managed Windows Devices
 
+In many organisations, Windows devices move between users during onboarding and offboarding processes. Autopilot assigns a **Primary User**, but Windows itself does not prevent other Azure AD users from signing in to that same device. The result is a common and recurring problem:  
+a device ends up being used by someone it was not intended for.
 
-When you assign Windows devices through Microsoft Intune, one of the common challenges is controlling who is allowed to sign in locally. This becomes especially relevant when devices are re-used across the organisation, for example during onboarding and offboarding cycles.
+At first glance, Intune seems to offer a solution. The *Allow log on locally* user right can be configured through an Account Protection policy. However, this setting is static. It cannot adapt per device and does not understand the concept of “Primary User”. That means that you have to create a policy for every device and configure the primary user in that policy. 
+Not that scalable :).
 
-Intune provides User Rights Assignments such as Allow log on locally, but these policies are static. They require a fixed list of users or groups, and cannot dynamically adapt based on each device’s Autopilot Primary User. In practice this means you would need a separate policy per device per user, which is unmanageable at scale.
+This led me into a deep dive into Windows logon rights, how Azure AD identities are represented on the device, and what actually happens during Autopilot and OOBE sign-ins. Eventually, this research resulted in a dynamic and safe solution: allow the Autopilot Primary User and administrators, and block everyone else.
 
-In this blog I walk through the internals of how Windows evaluates local logon rights for Azure AD users, how Azure AD SIDs are created, and how you can safely enforce “Only Primary User + LAPS Administrator can log in” without creating dozens of individual policies.
+Before getting there, we need to understand how Windows decides who can log in at all.
 
-This includes the full flow, the scripts, and the reasoning behind each step.
+{{< toc >}}
 
-The goal
+# How Windows Manages Users and Logon Rights
 
-My requirement was simple:
+To understand why restricting local logon for Azure AD users is challenging, we must first look at how Windows internally handles identities and logon rights.
 
-Allow the Autopilot Primary User to sign in.
+## Security Identifiers (SIDs)
 
-Allow local administrators, including the LAPS account.
+Every identity in Windows—local users, groups, service accounts, domain users—has a **Security Identifier (SID)**. The SID is the actual identifier Windows uses everywhere: for ACLs, privileges, and logon rights.
 
-Block every other Azure AD user from signing in.
+Even if you configure a setting using a username, Windows always converts it to a SID before storing it internally.
 
-Do this without static Intune assignments per-device.
+Azure AD identities work differently:
 
-Ensure no risk of device lockout.
+- A local account has a SID immediately.
+- A domain account has a SID retrieved from a domain controller.
+- An Azure AD user has **no SID** on the device until after their first successful login.
 
-I wanted a fully dynamic, device-side solution that evaluates the Primary User and configures Windows accordingly.
+This is because Azure AD is not a domain. The SID is not stored anywhere locally and cannot be retrieved without a login.
 
-Why not use deny policies?
+## How Windows stores logon rights
 
-The first idea is usually to work with SeDenyInteractiveLogonRight. This quickly leads to problems. Windows evaluates deny rights before allow rights. On Azure AD joined devices, these deny entries are dangerous: if you deny a broad group such as Authenticated Users or AzureAD Users, Windows can easily block all cloud users during sign-in, because their SIDs aren’t available early in the logon process.
+Logon rights such as:
 
-In short: deny rights are unpredictable and can cause a full lockout.
+- Allow log on locally  
+- Deny log on locally  
+- Allow log on through Remote Desktop Services  
 
-Understanding Azure AD users and SIDs
+are stored in the **Local Security Authority (LSA)** policy store, part of the SECURITY hive:
 
-A key part of this journey was understanding how Windows actually handles Azure AD accounts internally.
+```
+HKLM\SECURITY\Policy
+```
 
-Azure AD users do not have a SID until first logon
+Entries are stored as SIDs.  
+Unknown identities (identities without a SID yet) cannot be evaluated.
 
-Unlike on-prem Active Directory, Azure AD users do not have a pre-defined SID stored inside the device. Their SID is generated locally on the device, the first time that user successfully signs in.
+## What happens during the first Azure AD login
 
-During the first successful logon:
+When an Azure AD user signs in to a device for the first time:
 
-CloudAP (the Azure AD authentication provider) authenticates the user.
+1. The user authenticates via CloudAP.
+2. Azure AD returns the user’s Object ID (GUID).
+3. The device generates an Azure AD SID:  
+   `S-1-12-1-<hashed-object-id>`
+4. LSA stores the SID.
+5. A local profile is created.
 
-Azure AD returns the Object ID of the user.
+This means Windows only learns the SID of an Azure AD user **after** the first successful sign-in.
 
-Windows generates an Azure AD SID based on this Object ID.
+This point becomes crucial later when we talk about enforcement.
 
-This SID becomes the authoritative identifier for the user.
+---
 
-The SID looks like:
+# Why This is a Problem for Restricting Logon
 
-S-1-12-1-<hash-of-object-id>
+Given that Windows requires SIDs for evaluating logon rights, and Azure AD users have no SID until after logging in, several issues arise.
 
+## Intune’s User Rights CSP expects SIDs
 
-This explains an important behaviour: when you configure Allow log on locally using AzureAD\user@domain.com, Windows cannot convert this into a SID until that user actually signs in.
+The Account Protection profile in Intune allows you to configure *Allow log on locally*.  
+Intune writes these values into LGPO and the LSA policy store.
 
-Until then, Windows stores the plain username as a placeholder.
+However:
 
-Why Windows accepts plain usernames in User Rights
+- It cannot dynamically insert each device’s Primary User.
+- It cannot convert a UPN to a SID on its own.
+- It cannot adapt policies per device.
 
-Although Windows stores user rights as SIDs internally, it allows raw usernames to be stored temporarily. This is required to pre-authorise users who have never signed in before.
+Intune’s system is **static**, while the requirement is **dynamic**.
 
-When you configure:
+## Deny rights are dangerous
 
-AzureAD\new.user@domain.com
+Some administrators (like me) try to block unwanted users using Deny rights such as:
 
+```
+SeDenyInteractiveLogonRight
+```
 
-for SeInteractiveLogonRight, Windows writes the string to the security policy even though no SID exists yet. When the user first signs in, CloudAP resolves the identity, the SID is generated, and Windows updates the internal policy automatically.
+This backfires on Azure AD Joined devices because:
 
-This behaviour allows us to pre-authorise the Primary User without locking the device.
+- Deny rights are evaluated first.
+- Azure AD user SIDs often do not exist early in logon.
+- Deny rules can accidentally match broad groups.
+- This can lock out *all* Azure AD users, including the Primary User.
 
-The actual solution: only configure SeInteractiveLogonRight
+During testing, deny rules caused complete device lockouts multiple times.
 
-Through testing, the simplest and most reliable solution turned out to be:
+That could be a very good reason why this is also not an option in the settings catalog.
 
-Only set SeInteractiveLogonRight with the Primary User and Administrators.
+![no-deny](./no_deny.jpg)
 
-Do not configure any deny rights.
+## OOBE Login is special
 
-Let Windows fall back to the default deny behaviour for all other users.
+Even if the device already has a restrictive policy applied, the first user login during OOBE **always bypasses local user rights**.
 
-This is both safe and predictable.
+This is by design:
 
-Windows interprets Allow log on locally as a whitelist when configured. Any user not listed is denied implicitly.
+- The SID does not exist yet.
+- The profile does not exist yet.
+- CloudAP must create the identity.
+- LSA cannot evaluate rights for unknown users.
 
-Example:
+If Windows enforced local logon rights during OOBE, Autopilot would be impossible.
 
-SeInteractiveLogonRight = <PrimaryUserSID>,*S-1-5-32-544
+So even with:
 
+```
+Allow log on locally = Administrators only
+```
 
-Where:
+the OOBE login for the Primary User will still succeed.
 
-<PrimaryUserSID> is the Azure AD SID of the primary user
+This is expected and required behaviour.
 
-S-1-5-32-544 is the local Administrators group
+---
+
+# What Intune Does (and Does Not) Control
+
+Intune participates in this process, but it does **not** control user sign-in during OOBE.
+
+### During Device ESP  
+Intune delivers device-targeted policies, including User Rights.
+
+### During User OOBE  
+Windows ignores User Rights Policies.
+
+### After first login  
+Windows enables LSA privilege checks, and Intune-configured logon rights become active.
+
+Because Intune cannot dynamically insert the Primary User into the logon rights and because OOBE ignores the policy anyway, Intune alone cannot enforce “Primary User only”.
+
+This is where automation comes in.
+
+---
+
+# The Desired Behaviour
+
+With the fundamentals and constraints understood, the goal becomes clear:
+
+- Allow the Autopilot Primary User to sign in.  
+- Allow administrators, including the LAPS local admin.  
+- Deny all other Azure AD users.  
+- Avoid deny-right lockouts.  
+- Apply the restriction dynamically after OOBE.  
+- No per-device policies.
+
+Now we can build a solution that respects Windows identity behaviour and Intune’s limitations.
+
+---
+
+# Solution Architecture
+
+The final solution consists of three layers.
+
+## 1. Intune Baseline Policy
+
+Configure a device-targeted Account Protection policy:
+
+```
+SeInteractiveLogonRight = *S-1-5-32-544
+```
 
 This ensures:
 
-Primary User: allowed
+- Local administrators can always sign in.
+- LAPS can always sign in.
+- The device will not lock itself out.
 
-Local Administrators (including LAPS): allowed
+This policy arrives during Device ESP but is not enforced during OOBE.
 
-Every other Azure AD user: denied automatically
+![allow-logon](./allow-logon.png)
 
-No deny configurations are required.
+## 2. Dynamic Local Enforcement with Proactive Remediation
 
-Dynamically resolving the Primary User
+After the Primary User completes OOBE and logs in for the first time:
 
-The Primary User can be retrieved from the Autopilot provisioning registry:
+- Their SID is generated.
+- The device can evaluate user rights properly.
+- Now we enforce the restriction dynamically.
 
-HKLM:\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot\CloudAssignedUserUpn
+The Proactive Remediation:
 
+- Reads the Autopilot Primary User UPN.
+- Resolves the SID if available.
+- Falls back to the UPN if SID does not yet exist.
+- Generates a minimal security template.
+- Applies it using secedit.
 
-Using PowerShell, you can convert this UPN to a SID using the built-in .NET APIs:
+This updates:
 
-$upn = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot').CloudAssignedUserUpn
-$nt  = New-Object System.Security.Principal.NTAccount("AzureAD", $upn)
-$sid = $nt.Translate([System.Security.Principal.SecurityIdentifier]).Value
+```
+SeInteractiveLogonRight = <PrimaryUser SID or UPN>, *S-1-5-32-544
+```
 
+From this point onward, only the Primary User and administrators can sign in.
 
-Windows will only resolve the SID if the user has logged in before. If not, you simply write the UPN as a placeholder and Windows will replace it after the first login.
+## 3. Enforcement begins after OOBE
 
-Applying the user right using secedit
+On the second login:
 
-A minimal INF template to configure Allow log on locally:
+- SID exists
+- LSA evaluates rights
+- Other users are denied
+- Administrators and LAPS are still allowed
 
-[Unicode]
-Unicode=yes
+This creates the exact behaviour we want.
 
-[Version]
-signature="$CHICAGO$"
-Revision=1
+---
 
+# Deep Dive: How Secedit Applies Local Security Policy
+
+Secedit operates using three building blocks.
+
+## Security Template (INF)
+
+Defines the intended state:
+
+```ini
 [Privilege Rights]
 SeInteractiveLogonRight = AzureAD\user@domain.com,*S-1-5-32-544
+```
 
+## Security Database (SDB)
 
-Apply it using:
+Created using:
 
+```
+secedit /import /db rights.sdb /cfg rights.inf
+```
+
+This merges the template with existing policy and Windows defaults.
+
+## LSA Policy Application
+
+Applied using:
+
+```
+secedit /configure /db rights.sdb /areas USER_RIGHTS
+```
+
+Secedit will:
+
+- Try to resolve UPN → SID  
+- Write the resolved SID into LSA  
+- If SID does not exist yet, store the UPN as a placeholder  
+- Let CloudAP update the entry after first login
+
+This behaviour is key to making the solution safe and predictable.
+
+---
+
+# Implementation
+Now we know what must be done to make sure only the primary user can login, and administrators, it is time to do some PowerShell on the managed device.
+
+## Step 1: Detect the Primary User
+
+```powershell
+$upn = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Provisioning\Diagnostics\AutoPilot').CloudAssignedUserUpn
+```
+
+## Step 2: Resolve the SID if possible
+
+```powershell
+$nt = New-Object System.Security.Principal.NTAccount("AzureAD", $upn)
+
+try {
+    $sid = $nt.Translate([System.Security.Principal.SecurityIdentifier]).Value
+} catch {
+    $sid = $null
+}
+```
+
+## Step 3: Build the INF
+
+If `$sid` exists:
+
+```
+SeInteractiveLogonRight = *S-1-5-32-544,<sid>
+```
+
+Otherwise:
+
+```
+SeInteractiveLogonRight = *S-1-5-32-544,AzureAD\user@domain.com
+```
+
+## Step 4: Apply via Secedit
+
+```powershell
 secedit /import /db C:\Windows\Temp\rights.sdb /cfg C:\Windows\Temp\rights.inf
 secedit /configure /db C:\Windows\Temp\rights.sdb /areas USER_RIGHTS /quiet
+```
 
+## Step 5: Verify
 
-Use secedit again to verify:
-
+```powershell
 secedit /export /cfg C:\Windows\Temp\rights_after.inf
+```
 
+# How to manage this using Intune
+The key is detection and remediation. 
 
-After the first logon of that user, you will see the UPN replaced with the actual SID.
+# Conclusion
 
-Cached logons and why tests can mislead you
+What started as a simple goal—only allow the Primary User and administrators to sign in—turned into a deeper journey through Windows identity architecture, Azure AD SID generation, and how Intune interacts with LSA policy.
 
-During development I noticed that some users could still log in even when not allowed. This was caused by the Windows feature CachedLogonsCount.
+The key takeaways:
 
-By default, Windows caches up to 10 previous logons. A cached token allows a user to log in even after being removed from the allowed rights. To test user rights reliably, set:
+- Azure AD users do not have SIDs until after first login.
+- OOBE sign-in bypasses local logon rights entirely.
+- Intune cannot dynamically target device-specific Primary Users.
+- Deny rights on Azure AD Joined devices are risky.
+- Secedit supports UPN placeholders and safely updates them later.
+- A dynamic remediation provides the missing link.
 
-CachedLogonsCount = 0
+The result is a robust, scalable, and safe way to ensure that each device is only used by the person it is assigned to, without locking out administrators or breaking Autopilot.
 
-
-and reboot.
-
-Why this approach works reliably
-
-The final setup works because:
-
-SeInteractiveLogonRight acts as a whitelist.
-
-Azure AD users without SID are stored as UPN placeholders.
-
-Windows replaces the UPN with the SID after first login.
-
-Administrators remain allowed at all times.
-
-No deny rules are required, removing the lockout risk.
-
-No device-specific Intune policy assignments are needed.
-
-The device remains usable, safe, and predictable.
-
-Conclusion
-
-Windows supports dynamic local logon control for Azure AD users, but only when you understand how Azure AD identities and SIDs actually work inside the LSA. The key is to avoid deny rights and rely solely on SeInteractiveLogonRight with the Primary User and Administrators.
-
-With a small amount of automation through Proactive Remediations, each device can configure itself based on its assigned user during Autopilot enrollment without maintaining per-device Intune assignments.
-
-This allows you to ensure that a device truly belongs to the Primary User and prevents unintended re-use without heavy administrative overhead.
-
-If you want to extend this further, you can automate the SID resolution, create dynamic LGPO policies, or integrate it into a broader compliance flow. The behaviour remains consistent as long as you rely on the SID-based allow list.
+If you want a ready-to-import Proactive Remediation package or downloadable scripts, feel free to ask.
