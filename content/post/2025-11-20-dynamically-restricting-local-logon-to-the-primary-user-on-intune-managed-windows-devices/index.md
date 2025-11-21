@@ -13,10 +13,14 @@ tags:
 - PowerShell
 ---
 
-In many organisations, Windows devices move between users during onboarding and offboarding processes. Autopilot assigns a **Primary User**, but Windows itself does not prevent other Azure AD users from signing in to that same device. The result is a common and recurring problem:  
+In many organisations, Windows devices move between users during onboarding and offboarding processes. Autopilot assigns a **Primary User**, but Windows itself does not prevent other Azure AD users from signing in to that same device. The result is a common and recurring problem:   
+
 a device ends up being used by someone it was not intended for.
 
-At first glance, Intune seems to offer a solution. The *Allow log on locally* user right can be configured through an Account Protection policy. However, this setting is static. It cannot adapt per device and does not understand the concept of “Primary User”. That means that you have to create a policy for every device and configure the primary user in that policy. 
+At first glance, Intune seems to offer a solution. The `Allow log on locally` user right can be configured through an configuration policy.  
+However, this setting is static. It cannot adapt per device and does not understand the concept of “Primary User”.  
+
+That means that you have to create a policy for every device and configure the primary user in that policy. 
 Not that scalable :).
 
 This led me into a deep dive into Windows logon rights, how Azure AD identities are represented on the device, and what actually happens during Autopilot and OOBE sign-ins. Eventually, this research resulted in a dynamic and safe solution: allow the Autopilot Primary User and administrators, and block everyone else.
@@ -52,17 +56,57 @@ while keeping Autopilot, LAPS, and administrator access fully functional.
 To understand why restricting local logon for Azure AD users is challenging, we must first look at how Windows internally handles identities and logon rights.
 
 ## Security Identifiers (SIDs)
-Every identity in Windows—local users, groups, service accounts, domain users—has a **Security Identifier (SID)**. The SID is the actual identifier Windows uses everywhere: for ACLs, privileges, and logon rights.
 
-Even if you configure a setting using a username, Windows always converts it to a SID before storing it internally.
+Every identity in Windows—local users, groups, service accounts, domain users—has a **Security Identifier (SID)**.  
+The SID is the real identifier Windows uses everywhere: for ACLs, privileges, and logon rights.
 
-Azure AD identities work differently:
+Even if you configure a setting using a **name**, Windows always converts it to a **SID** before storing or evaluating it.
 
-- A local account has a SID immediately.
-- A domain account has a SID retrieved from a domain controller.
-- An Azure AD user has **no SID** on the device until after their first successful login.
+A SID looks like this:
 
-This is because Azure AD is not a domain. The SID is not stored anywhere locally and cannot be retrieved without a login.
+```text
+S-1-5-21-1951234567-3141592653-2718281828-1001
+```
+Roughly:
+
+S-1 → “SID revision 1”
+5 → NT authority
+21-… → unique machine or domain identifier
+last part → relative ID (RID) for the specific user or group
+
+Examples of common SID types
+To make the difference visible, here are some typical SID shapes you’ll see on an Intune / Azure AD joined device:
+
+Local user account (created on the device)
+
+```text
+S-1-5-21-1951234567-3141592653-2718281828-1001
+```
+Same machine “root” SID (S-1-5-21-…), different RID at the end.
+
+Domain user account (classic AD domain)
+```text
+S-1-5-21-1234567890-2222222222-3333333333-1104
+```
+Structure is the same, but the “root” SID represents the AD domain instead of the local computer.
+
+Built-in local Administrators group
+```text
+S-1-5-32-544
+```
+This one is important for this blog. S-1-5-32-544 is “BUILTIN\Administrators”.
+When you see it in an INF file, it often has a * prefix:
+```text
+*S-1-5-32-544
+```
+The * tells secedit “this is a SID literal”, not a text name.
+
+Azure AD user account (on an AAD joined device)
+```text
+S-1-12-1-2351464355-1292594506-502257826-2906061278
+```
+This is the format you’ve probably seen in your exported secpol files.
+It always starts with S-1-12-1- and then four 32-bit chunks that are derived from the Azure AD object ID.
 
 ## How Windows stores logon rights
 Logon rights such as:
