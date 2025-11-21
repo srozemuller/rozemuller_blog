@@ -3,7 +3,7 @@ title: "Dynamically Restricting Local Logon to the Primary User on Intune-Manage
 author: Sander Rozemuller
 date: 2025-11-20T12:00:00+02:00
 images:
-  - "images/post/dynamically-restricting-local-logon/image.jpg"
+  - "images/post/dynamically-restricting-local-logon/image.jpeg"
 url: "dynamically-restricting-local-logon-to-the-primary-user-on-intune-managed-windows-devices"
 categories:
 - Intune
