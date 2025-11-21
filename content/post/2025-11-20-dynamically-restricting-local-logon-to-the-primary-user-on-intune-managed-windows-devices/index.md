@@ -386,6 +386,10 @@ $cfgRaw      = ExportPolicy -Path $verifyCfg
     }
 ```
 
+If everything went OK, then other users should see a screen like below.
+
+![not-allowed](./not-allowed.png)
+
 # Conclusion
 
 What started as a simple goal—only allow the Primary User and administrators to sign in—turned into a deeper journey through Windows identity architecture, Azure AD SID generation, and how Intune interacts with LSA policy.
@@ -401,4 +405,6 @@ The key takeaways:
 
 The result is a robust, scalable, and safe way to ensure that each device is only used by the person it is assigned to, without locking out administrators or breaking Autopilot.
 
-If you want a ready-to-import Proactive Remediation package or downloadable scripts, feel free to ask.
+You can find the scripts at my [GitHub page](https://github.com/srozemuller/IntuneAutomation/tree/main/RemediationScripts/DynamicLocalLogon)
+
+{{< bye >}}
