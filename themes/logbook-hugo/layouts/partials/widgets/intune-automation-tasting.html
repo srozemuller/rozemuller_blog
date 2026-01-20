@@ -1,0 +1,10 @@
+<!-- author -->
+{{ $bgImage:= resources.Get "images/intune-automation-series.jpg" }}
+{{ $bgImage:= $bgImage.Fill "751x403 webp" }}
+<div class="widget">
+  <h5 class="widget-title"><span>{{ i18n "awards" }}</span></h5>
+    <a href="/series/the-intune-automation-tasting" class="widget-link">
+        <img class="img-fluid w-100 rounded-4" loading="lazy" decoding="async" src="{{ $bgImage.RelPermalink }}"
+            alt="Intune Automation Tasting" target="_blank" rel="noopener noreferrer">
+    </a>
+</div>
