@@ -4,6 +4,7 @@ author: "Sander Rozemuller"
 date: 2026-01-17T05:00:00+02:00
 description: "Understanding how the Intune portal, Microsoft Graph, and automation fit together — starting from what you already know."
 url: "/series/intune-automation-tasting-see-try-fly/"
+draft: true
 images:
   - "images/post/series/intune-automation-tasting/image_color.jpg"
 categories:
@@ -15,7 +16,7 @@ tags:
   - Microsoft Graph
 series:
   - The Intune Automation Tasting
-series_order: 3
+series_order: 2
 series_title: "The Intune Automation Tasting"
 series_description: "A unique #MEMBEER tasting experience in world of Intune Automation — from light, safe foundations to full-bodied automation."
 ---

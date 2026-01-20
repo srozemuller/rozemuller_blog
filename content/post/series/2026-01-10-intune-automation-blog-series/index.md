@@ -13,14 +13,15 @@ tags:
   - Microsoft Intune
   - Automation
   - Microsoft Graph
+  - Intune Automation Tasting
 series:
   - The Intune Automation Tasting
-series_order: 2
+series_order: 1
 series_title: "The Intune Automation Tasting"
 series_description: "A unique #MEMBEER tasting experience in world of Intune Automation — from light, safe foundations to full-bodied automation."
 ---
 
-When I started working more seriously with Intune (just a few years ago from now), one thing became clear fairly quickly.
+When I started working more seriously with Intune, one thing became clear fairly quickly.
 
 Intune is a solid product. It’s powerful, flexible, and allows you to manage a wide range of settings from a single place.
 
@@ -64,6 +65,20 @@ The goal is much simpler.
 I want you to have a clear mental picture of how the Intune portal works behind the scenes, and how Microsoft Graph fits into that picture.
 
 Once that clicks, everything else in this series becomes much easier to place.
+
+
+## Why this series starts here
+
+Many automation guides jump straight into scripts, permissions, and authentication.
+
+This series deliberately starts earlier, with one simple question:
+
+**What is Microsoft Graph, and how does it relate to Intune?**
+
+Once that clicks:
+- permissions start to make sense
+- authentication becomes logical
+- automation stops feeling intimidating
 
 
 ## Starting from what you already know: the Intune portal
@@ -118,6 +133,25 @@ To make this easier to reason about, it helps to simplify Intune a bit.
 
 At a high level, almost everything (from my opinion) in Intune revolves around the following core building blocks that all routes to the same destination, `managed devices`.
 
+### Why this matters for automation
+
+When people first hear “automate Intune with Microsoft Graph”, it’s easy to think in very broad terms: *“Just call Graph.”*
+
+In practice, automation is much more deliberate than that.
+
+Every automation task starts with a simple question:
+*Which part of Intune am I working with?*
+
+From there, you determine:
+- which resource type you need
+- which Graph path exposes that resource
+- which operations are supported
+
+Automation isn’t about knowing every endpoint by heart.  
+It’s about understanding **how Intune is structured inside Microsoft Graph**, so you can find the right place to look.
+
+That mental model is what allows automation to stay predictable and maintainable — and it’s something we’ll keep building on throughout this series.
+
 ### Devices (Intune, 1)
 Devices are the targets. Managed devices, compliance state, configuration state, inventory — these are all represented as device objects in Graph.
 When you check device status or troubleshoot a device in the portal, you’re viewing data that comes straight from Microsoft Graph.
@@ -130,7 +164,7 @@ Whenever you work with apps in the portal, you’re interacting with application
 These are the global settings that affect how Intune behaves across the entire tenant. They include configurations like enrollment restrictions, enrollment profiles and assignment filters for example.
 
 ### Identity (Entra ID, 4)
-For completion, I also added Identity, that ties everything together (from Intune to managed device). A device without identity is just a device.
+For completion, I also added Identity, that ties everything together (from Intune (managed device) to a device and the user that logs in on that device).
 Users, groups, assignments, and permissions determine who receives what, and who is allowed to manage what. Identity is also what determines whether an action is allowed in the first place.
 Without identity, nothing in Intune can be assigned or controlled.
 
@@ -145,21 +179,39 @@ I know it’s a simplification an not every single component is in the schema. B
 
 ![Intune-Core-Parts](intune-components.png)
 
-## Microsoft Graph is not one API
-
+## Microsoft Graph is not one API, or better, its not just one environment
+As we splitted the Intune portal into core parts, it helps to do the same for Microsoft Graph.
 Despite the name, Microsoft Graph is not a single, monolithic API.
 Microsoft Graph is best thought of as a **gateway** with the main entrypoint `https://graph.microsoft.com`.   
-A single entry point that gives access to many different Microsoft services, each with their own data and behavior.
+A single main entry point that gives access to many different Microsoft services, each with their own data and behavior.
 
 Intune is one of those services.
 
 When you send a request to Microsoft Graph, you are not “talking to Graph” in a generic sense. You are asking Graph to route your request to the correct service and resource behind it.
 That’s an important distinction, especially when you’re new to automation.
 
+### To Beta or not to Beta
+As mentioned above, Graph is a gateway to many services. But there is more to it. Microsoft Graph has two main API versions:
+- `v1.0` (Generally Available)
+- `beta` (Preview)
+
+The `v1.0` version is the stable, production-ready version of Microsoft Graph. It contains features and endpoints that are fully supported for use in production environments.
+The `beta` version, on the other hand, is where new features and endpoints are introduced for testing and evaluation. These features are not yet fully supported and may change or be removed in future releases.
+
+However you would expect v1.0 to be the default version to use, but for Intune, many features and endpoints are only available in the `beta` version of Microsoft Graph. 
+For example, just some managed device information. Since the `beta` is used by the portal, I used for this example `Postman` to show the difference between `v1.0` and `beta` for managed devices. (Getting data from Graph will be discussed in the next parts of this series).
+
+`v1.0` request:
+![v1.0-managed-devices](v1_request.png)
+
+`beta` request
+![beta-managed-devices](beta_request.png)
+As you can see, the `v1.0` request has way less information than the `beta` request.
+
 ### One platform, many resource types
 
 Within Microsoft Graph, everything is exposed as a **resource**.  
-Users are resources. Devices are resources. Applications are resources. Intune policies are resources.
+Users are resources. Devices are resources. Applications are resources. Intune policies are resources, even the assignments you create are resources at itself that are connected to a policy.
 
 Each type of resource has:
 - its own structure
@@ -199,32 +251,13 @@ Users and groups are not Intune-specific resources. They belong to `Entra ID` (o
 
 - `/users/`
 - `/groups/`
+- `/devices/`
 
 Intune relies heavily on these identity resources for assignments, targeting, and access control, but it doesn’t own them.
 
 That’s why automation often involves **multiple areas of Graph at the same time**:
 - Intune endpoints for configuration
 - Identity endpoints for correct identity information to target and scope correctly
-
-
-### Why this matters for automation
-
-When people first hear “automate Intune with Microsoft Graph”, it’s easy to think in very broad terms: *“Just call Graph.”*
-
-In practice, automation is much more deliberate than that.
-
-Every automation task starts with a simple question:
-*Which part of Intune am I working with?*
-
-From there, you determine:
-- which resource type you need
-- which Graph path exposes that resource
-- which operations are supported
-
-Automation isn’t about knowing every endpoint by heart.  
-It’s about understanding **how Intune is structured inside Microsoft Graph**, so you can find the right place to look.
-
-That mental model is what allows automation to stay predictable and maintainable — and it’s something we’ll keep building on throughout this series.
 
 
 ## How the portal and Graph API are tied together
@@ -242,29 +275,14 @@ That also means that anything capable of sending authenticated HTTP requests can
 
 In fact, you’re not learning a new system. You’re learning how to interact with the one you already use — just without clicking through the UI.
 
-## Why this series starts here
-
-Many automation guides jump straight into scripts, permissions, and authentication.
-
-This series deliberately starts earlier, with one simple question:
-
-**What is Microsoft Graph, and how does it relate to Intune?**
-
-Once that clicks:
-- permissions start to make sense
-- authentication becomes logical
-- automation stops feeling intimidating
-
-
 ## What to take away from this first sip
 
 You don’t need to remember endpoints or API versions yet.
 
 Just remember this:
 
-Intune runs on Microsoft Graph.  
-The portal is one way to interact with it.  
-Automation is another.
+- Intune runs on Microsoft Graph.  
+- The portal is one way to interact with it. Automation is another.
 
 That’s enough for now.
 
