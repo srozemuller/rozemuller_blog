@@ -56,9 +56,36 @@ UTCM uses a service principal that Microsoft provisions in your tenant to run ev
 You need to create (could be changed later after preview period) and grant that identity specific permissions to read configurations in your tenant.
 Meaning, you have to create a service principal with this ID `03b07b79-c5bc-4b5e-9bfa-13acf4a99998`. A new principal is created with the name `Unified Tenant Configuration Management`.  
 
-[Creating the service principal and assigning permissions can be done through Azure AD portal or Graph API.](https://learn.microsoft.com/en-us/graph/utcm-authentication-setup#authentication)
+Check the Microsoft documentation for more information about [Creating the service principal and assigning permissions can be done through Azure AD portal or Graph API.](https://learn.microsoft.com/en-us/graph/utcm-authentication-setup#authentication)
+
+You can also perform the setup directly in Microsoft Graph Explorer. Send the following request to create UTCM's managed service principal:
+
+POST https://graph.microsoft.com/v1.0/servicePrincipals  
+Content-Type: application/json  
+
+{
+  "appId": "03b07b79-c5bc-4b5e-9bfa-13acf4a99998"
+}
+
+The response contains the new object, so note the returned `id`—that value is the objectId of the UTCM principal and is what you will use when granting permissions.
+
+Then retrieve the Microsoft Graph service principal itself by querying `/servicePrincipals?$filter=appId eq '00000003-0000-0000-c000-000000000000'`. Note the `id` from that result and call `/servicePrincipals/{graph-id}` (substituting the noted id) to inspect its `appRoles`. Look for entries such as `DeviceManagementConfiguration.Read.All` where `type` is `Admin` and jot down the corresponding `id` for each permission you need.
+
+With those ids in hand, assign the permissions to UTCM by posting to `/servicePrincipals/{utcm-objectid}/appRoleAssignments`:
+
+POST https://graph.microsoft.com/v1.0/servicePrincipals/{utcm-objectid}/appRoleAssignments  
+Content-Type: application/json  
+
+{
+  "principalId": "<your-utcm-objectid>",
+  "resourceId": "<graph-service-principal-id>",
+  "appRoleId": "<app-role-id-for-the-permission>"
+}
+
+Repeat that appRole assignment for each permission the monitor requires (for example, `Group.Read.All`). Once the requests succeed, UTCM can read the resources that fuel your baselines.
 
 After creation, add the needed API permissions to that principal. For Intune policies, you need at least `DeviceManagementConfiguration.Read.All` and `Group.Read.All` permission.
+
 
 **Why both permissions?**
 
