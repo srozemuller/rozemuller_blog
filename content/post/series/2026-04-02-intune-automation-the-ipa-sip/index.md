@@ -1,6 +1,6 @@
 ---
 title: "The Intune Automation Tasting - The IPA Sip"
-date: 2026-01-10T05:00:00+02:00
+date: 2026-04-02T05:00:00+02:00
 author: Sander Rozemuller
 description: "GET, POST, and permissions: reading and writing Intune data through Microsoft Graph using Graph Explorer and Postman."
 url: "/series/intune-automation-tasting-ipa-sip/"
@@ -26,8 +26,9 @@ In the first sip we landed on the most important mental model for Intune automat
 This part is about how the communication. How the portal interacts with the API backend. In good communication you have a sender and a reponder. Someome sends, reciever answers. The interaction between the Intune portal and the Graph API backend isn't different in these. 
 Someone clicks in the portal and sends a request, API answers. 
 
-In this part we zoom in into that process, no PowerShell yet. Not SDKs yet. Just the protocol you are always using, even when you are “just clicking”.
-Maybe it sounds a bit boring, but understanding this process is super important for creating automation in later steps. For me, it is also the first step towards automation. Understanding the process and know every single detail around it. 
+In this part we zoom in into that process, no PowerShell yet. Not SDKs yet. Just the protocol you are always using, even when you are “just clicking”. 
+Maybe it sounds a bit boring, but understanding this process is super important for creating automation in later steps. 
+For me, it is also the first step towards automation. Understanding the process and know every single detail around it. 
 
 ## REST Methods (Sender)
 Microsoft Graph is a REST API. That mostly means you interact with resources, using standard HTTP methods, by sending and receiving JSON.
@@ -83,7 +84,7 @@ Then go to the compliance policies and see what happens. A long list with reques
 
 You see the raw HTTP request, what looks like this:
 
-```http
+```
 GET https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies
 ```
 And the response is JSON, typically with a value array. See the screenshot below. I picked the request, and opened the response tab. There you see an array with the policies where I opened one of them. 
@@ -96,7 +97,7 @@ A POST request sends most of the time the root endpoint like `https://graph.micr
 A body often contains, a displayname and settings. 
 
 The POST request basicly looks like below.
-```http
+```
 POST https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies
 
 Authorization: Bearer <access_token>
@@ -153,7 +154,7 @@ You do not resend the entire policy. You send only what you want to change.
 In difference with `GET` or `POST`, the `PATCH` request type needs always a specific endpoint. Meaning, you have to send an ID as well. 
 
 In the example below, a compliance policy display name is changed. 
-```http
+```
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies/<policyId>
 Authorization: Bearer <access_token>
 Content-Type: application/json
@@ -196,7 +197,7 @@ The response body often contains the returned object, a list of objects, or an e
 
 For example, when you do a `GET` request for compliance policies, the API often responds with a `200 OK` and a JSON body that contains the result.
 
-```http
+```
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -226,7 +227,7 @@ You will mostly see this on `GET` requests, but also on successful updates or ot
 
 Think: the API understood the request, processed it, and returned a valid response.
 
-![](./delete-request.png)
+![delete-request](./delete-request.png)
 
 ### 201 Created
 This means a new resource was created successfully.
@@ -327,7 +328,7 @@ A `429` means you need retry logic.
 That is why reading responses is just as important as reading requests.
 
 ## What’s next
-We now know what the Graph API and how the Intune portal interacts with it. 
+We now know what the Graph API is and how the Intune portal interacts with it. 
 In the next post, we’ll take the next small step. Zooming in into Graph endpoints in more detail, learn how to find the correct endpoints and exploring how to read data using tools like Graph Explorer.
 
 For now, enjoy this sip. Every good automation journey starts slow 🍺  
