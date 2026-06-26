@@ -419,7 +419,7 @@ If you are using Intune Assistant, you can also check the Intune audit logs page
 
 
 You can download the script from my GitHub repository: [Check-AppsForMAA.ps1](https://github.com/srozemuller/IntuneAutomation/tree/main/Check-AppsForMAA)
-Go to Intune Assistant [https://community.intuneassistant.com](https://community.intuneassistant.com) 
+Go to Intune Assistant [https://community.intuneassistant.cloud](https://community.intuneassistant.cloud) 
 
 For more information about Multi Admin Approval, see the Microsoft documentation: [Multi Admin Approval for Graph API](https://learn.microsoft.com/en-us/intune/fundamentals/role-based-access-control/multi-admin-approval-graph-api)
 
