@@ -44,7 +44,11 @@ But the setting and its effect, only tells me that there is a problem.
 It doesn't tell me **why this particular device has no compliance policy assigned**.
 
 And that scenario turned out to be a surprisingly difficult question to answer from the Intune portal.
-The first place, because this tenant was quite new for me, so I to dig. On the other hand, the portal doesn't give me a clear answer. It only tells me that the device is not compliant because it has no compliance policy assigned. But it doesn't tell me why.
+
+The first reason for that was because this tenant was quite new for me, so I to needed dig. 
+The second reason, the portal doesn't give me a clear answer. It only tells me that the device is not compliant because it has no compliance policy assigned. But it doesn't tell me why.
+
+
 
 ## What does the tenant compliance setting actually do?
 Before troubleshooting the device, it helps to understand what this tenant wide setting does.
