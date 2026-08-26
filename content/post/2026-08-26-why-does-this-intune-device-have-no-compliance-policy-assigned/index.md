@@ -39,26 +39,17 @@ The tenant was configured with a default compliance policy with the setting:
 
 This is exactly how I want it configured. If Intune has never evaluated a device against one of the compliance policies, I don't want that device to become compliant by default. 
 
-But the setting and its effect, only tells me that there is a problem.
-
-It doesn't tell me **why this particular device has no compliance policy assigned**.
+But the setting and its effect, only tells me that there is a problem. It doesn't tell me **why this particular device has no compliance policy assigned**.
 
 And that scenario turned out to be a surprisingly difficult question to answer from the Intune portal.
-
 The first reason for that was because this tenant was quite new for me, so I to needed dig. 
 The second reason, the portal doesn't give me a clear answer. It only tells me that the device is not compliant because it has no compliance policy assigned. But it doesn't tell me why.
-
-
 
 ## What does the tenant compliance setting actually do?
 Before troubleshooting the device, it helps to understand what this tenant wide setting does.
 
-You can find it in the Intune admin center under:
-
-**Endpoint security > Device compliance > Compliance policy settings**
-
-There you will find:
-**Mark devices with no compliance policy assigned as**
+You can find it in the Intune admin center under: **Endpoint security > Device compliance > Compliance policy settings**
+There you will find: **Mark devices with no compliance policy assigned as**
 
 The default value is `Compliant`.
 
@@ -68,7 +59,6 @@ That behavior has always felt a little strange to me.
 If a device hasn't received one of the compliance policies, Intune hasn't evaluated the device against the security requirements I configured in those policies.
 
 Changing the setting to `Not compliant` changes that behavior.
-
 A device without an assigned compliance policy is now considered noncompliant.
 
 ![set-default-compliance-setting](./set-default-compliance-setting.png)
@@ -78,9 +68,7 @@ Microsoft also recommends this configuration when compliance is used with Condit
 
 And that is exactly what happened in my case. The device didn't fail BitLocker. It didn't fail Defender.  It didn't fail because of its Windows version.
 
-It failed before any of those settings even became relevant.
-
-**No compliance policy reached the device.**
+It failed before any of those settings even became relevant. **No compliance policy reached the device.**
 
 That is an important difference.
 
@@ -98,9 +86,7 @@ The problem is not inside one of the configured compliance policies. The problem
 But this is also where the information stops.
 
 Intune tells me that the device doesn't have a compliance policy. It doesn't tell me why.
-I know there are Windows compliance policies in the tenant. So the next question becomes:
-
-**Why doesn't one of those policies reach this device?**
+I know there are Windows compliance policies in the tenant. So the next question becomes: **Why doesn't one of those policies reach this device?**
 
 That is where the troubleshooting starts.
 
@@ -128,14 +114,9 @@ Imagine a compliance policy with this assignment:
 At first sight, I would expect that policy to reach every device. But `All Devices` is only part of the assignment.
 The filter also needs to match. 
 
-Imagine the filter contains a rule that only includes corporate devices:
-
-`device.deviceOwnership = Corporate`
-
+Imagine the filter contains a rule that only includes corporate devices: `device.deviceOwnership = Corporate`
 If the affected device is registered as `Personal`, the result changes completely.
-
 The policy targets `All Devices`, but the assignment filter removes this particular device from the effective assignment.
-
 The policy exists. The assignment exists. The device is still not covered.
 
 Without checking the complete assignment, that can be easy to miss.
@@ -147,33 +128,27 @@ Now imagine the compliance policy is assigned to:
 
 To determine whether that policy should apply, I first need to know which user is associated with the device.
 Then I need to check whether that user is a member of the group.
-
 Maybe the user was never added. Maybe a dynamic group rule changed. Maybe the user was removed.
 Or maybe this is a shared device without a primary user.
 
 In that situation, a user based assignment might not provide the coverage you expected.
-
 The same applies to device groups.
 
 I need to find the correct Entra device object, check the group membership and determine whether the device is actually included in the group used by the compliance policy.
 None of those checks are particularly difficult.
-
 The problem is that I need to collect the information from several places and connect it myself. Imagine you have a lots of compliance policies and a large number of devices. The process becomes time consuming and error prone.
 
 ## Exclusions make the assignment even more interesting
 Then there are exclusions.
 
-Imagine this assignment:
-`Included: All Devices - Excluded: Intune Compliance Exceptions Group`
+Imagine this assignment: `Included: All Devices - Excluded: Intune Compliance Exceptions Group`
 
 At first sight, the device should be covered because the policy targets `All Devices`.
 But if the device is also a member of the exclusion group, the policy doesn't apply.
 
 Maybe that is intentional. Maybe the device was temporarily added to an exception group during troubleshooting and nobody removed it afterwards.
 
-For the result it doesn't matter.
-The device is outside the compliance policy.
-
+For the result it doesn't matter. The device is outside the compliance policy.
 So when investigating one device manually, I need to check the policy assignment, group membership, exclusions and assignment filters before I can explain why the policy doesn't apply.
 
 And then I need to repeat that process for every Windows compliance policy, for every device. 
@@ -191,8 +166,7 @@ What I really want is Intune to tell me:
 That is exactly the kind of problem where automation becomes useful.
 
 ## Automating the investigation
-So I created a PowerShell based analyzer.
-
+So I created a PowerShell based analyzer. 
 The goal isn't to replace Intune compliance and it isn't another compliance scanner.
 I am not trying to determine whether BitLocker is enabled or whether Defender is healthy.
 
@@ -202,8 +176,7 @@ The analyzer starts with one very specific question:
 
 This is where the Microsoft Graph API backend comes in. Graph is used to collect the information needed to answer that question.
 
-At a high level, the process looks like this:
-`Device without compliance policy -> Determine platform -> Get compliance policies -> Evaluate assignments -> Check exclusions -> Evaluate assignment filter -> Explain result`
+At a high level, the process looks like this: `Device without compliance policy -> Determine platform -> Get compliance policies -> Evaluate assignments -> Check exclusions -> Evaluate assignment filter -> Explain result`
 
 The current version focuses on Windows devices.
 For each Windows compliance policy, the analyzer determines whether the assignment targets the device or its associated user. It then checks whether an exclusion applies and whether an assignment filter changes the effective targeting.
