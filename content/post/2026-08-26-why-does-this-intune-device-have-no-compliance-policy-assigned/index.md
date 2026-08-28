@@ -240,11 +240,7 @@ Not the guessing.
 ## Troubleshooting a single device
 
 When I am investigating one device, I can run the analyzer directly against that managed device. What I do is going to devices page in Intune Assistant, fetch the devices and then run the analyzer against the selected device.
-
-
 For example:
-
-![analyzer-single-device](./device-overview.png)
 
 ![analyzer-single-device-results](./from-device-perspective.png)
 
