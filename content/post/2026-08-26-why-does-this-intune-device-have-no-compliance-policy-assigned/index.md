@@ -166,8 +166,8 @@ What I really want is Intune to tell me:
 That is exactly the kind of problem where automation becomes useful.
 
 ## Automating the investigation
-So I created a PowerShell based analyzer. 
-The goal isn't to replace Intune compliance and it isn't another compliance scanner.
+So I have added a compliance policy analyzer to Intune Assistant. 
+The goal isn't to replace Intune compliance, and it isn't another compliance scanner.
 I am not trying to determine whether BitLocker is enabled or whether Defender is healthy.
 
 The analyzer starts with one very specific question:
@@ -190,7 +190,7 @@ It explains **why** a policy does or doesn't apply.
 Imagine the device isn't included by any assignment. Instead of only telling me that the policy doesn't apply, the analyzer can return something like:
 `Policy: Windows User Compliance - Result: NotTargeted - Reason: Neither the device nor the associated user is a member of the assigned group`
 
-![not-target](./not-target.png)
+![not-target](./report-results.png)
 
 That immediately tells me where to look.
 Now I don't need to open every policy, inspect every assignment and manually check all the related Entra groups.
@@ -232,84 +232,39 @@ Automation becomes dangerous when a script gives a confident answer while the un
 For example, the analyzer might not be able to uniquely resolve the correct Entra device object. There could be multiple objects related to the same device identity, or part of the assignment might not be evaluated reliably.
 In that situation I don't want the analyzer to return: `NotTargeted` because that would suggest we know something we don't actually know.
 
-Instead it returns: `Unknown` together with the reason.
+Instead, it returns: `Unknown` together with the reason.
 The goal is to automate the investigation.
 
 Not the guessing.
 
 ## Troubleshooting a single device
 
-When I am investigating one device, I can run the analyzer directly against that managed device.
+When I am investigating one device, I can run the analyzer directly against that managed device. What I do is going to devices page in Intune Assistant, fetch the devices and then run the analyzer against the selected device.
+
 
 For example:
 
-```powershell
-.\Test-IntuneCompliancePolicyCoverage.ps1 -DeviceName "WIN11-001"
-```
+![analyzer-single-device](./device-overview.png)
 
-The script retrieves the device, determines the platform and evaluates the Windows compliance policies against that device.
+![analyzer-single-device-results](./from-device-perspective.png)
+
+Then I click on a device and run the analyzer. The result shows me the evaluation for every Windows compliance policy in the tenant.
+![why-not-compliant.png](why-not-compliant.png)
+
+
 For every policy, I get the result together with the explanation. That already removes a lot of portal clicking.
+
+![device-specific-result.png](device-specific-result.png)
 But while building the analyzer, I realized something else. Troubleshooting one device is only half of the story.
 
 Intune already knows which devices have this problem.
 
-## Intune already has the population we need
-There is an organizational report called **Devices without compliance policy**.
-
-You can find it under:
-**Reports > Device compliance > Reports > Devices without compliance policy**
-
-This report gives exactly the population I am interested in. Instead of giving the analyzer one device, I can therefore also let it retrieve all devices from that report.
-The command below schedules the report, waits till it is ready, downloads the result and evaluates every Windows device in that report.
-```powershell
-.\Test-IntuneCompliancePolicyCoverage.ps1 -AllDevicesWithoutCompliancePolicy
-```
-
-Now the use case changes. I am no longer troubleshooting one incident. I am analyzing compliance policy coverage across the environment.
-
-For every Windows device returned by the Intune report, the same assignment analysis is performed.
-That means I can move from a result like: `73 devices don't have a compliance policy` to something much more useful:
-
-```basic
-17 devices are not targeted
-3 devices should receive a compliance policy but don't
-Several devices require further investigation
-```
-
-The Intune report tells me **which devices have no compliance policy**.
-The analyzer adds the missing part:
-
-**Why?**
-
-## Creating a report I can actually work with
-Console output is fine when I am checking one or two devices. It becomes less useful when I want to review an entire environment.
-That is why the analyzer can also generate an HTML report.
-
-```powershell
-.\Test-IntuneCompliancePolicyCoverage.ps1 -AllDevicesWithoutCompliancePolicy -ExportHtml
-```
-
-The HTML report gives an overview of the affected devices and lets me drill into the policy evaluation for each device.
-I can see the device name, associated user, manufacturer, model, operating system version, ownership, enrollment information and last check in.
-
-More importantly, I can see the result for every evaluated Windows compliance policy and the reason behind that result.
-If a policy returns `NotTargeted`, I can see why.
-If it returns `Excluded`, I can see which part of the assignment caused it.
-If an assignment filter removes the device, that becomes visible.
-And if the configuration says the policy should apply but Intune still reports no compliance policy, `ShouldApplyButMissing` immediately stands out.
-
-That is the information I want when troubleshooting. Not another page with a red status.
-
-I want to know why it is red.
-
 ## From troubleshooting to monitoring
 This is also where the tenant wide setting becomes much more interesting.
 
-I originally configured:
-**Mark devices with no compliance policy assigned as = Not compliant**
-because I don't want a device with an unknown compliance state to become compliant by default.
+I originally configured: **Mark devices with no compliance policy assigned as = Not compliant** because I don't want a device with an unknown compliance state to become compliant by default.
+But that setting also creates a useful monitoring signal. And the good part is, Microsoft is doing 99% of the dirty work for me. Intune already tells me which devices have no compliance policy assigned.
 
-But that setting also creates a useful monitoring signal.
 If something breaks in the compliance targeting architecture, the device becomes visible.
 
 Maybe a user falls out of a group. Maybe a device group changes. Maybe somebody adds an exclusion. Maybe an assignment filter stops matching. Maybe a shared device depends entirely on user based targeting.
@@ -319,37 +274,10 @@ All of those situations can eventually result in a device appearing in the **Dev
 That means I don't have to wait until somebody happens to notice a noncompliant device in the portal.
 I can actively watch for changes in compliance coverage.
 
-## Monitoring compliance coverage automatically
-The analyzer supports running with an access token instead of requiring an interactive sign in.
-That makes it possible to run the same analysis from an automation platform.
-For example, the script could run daily from Azure Automation, an Azure Function, a scheduled PowerShell job or another automation platform.
-
-The process is straightforward.
-- Retrieve the **Devices without compliance policy** report.
-- Analyze the devices.
-- Store the result.
-- Then compare it with the previous run.
-
-Imagine yesterday's result looked like this: `Devices without compliance policy: 0`
-
-And today's result suddenly looks like this: `Devices without compliance policy: 4 - 3 NotTargeted - 1 ShouldApplyButMissing`
-Now I have something actionable.
-
-I know the compliance coverage changed.
-I know which devices are affected.
-And I already have an indication of where the problem is.
-
-Because the output can also be exported as HTML, JSON or CSV, the result can be stored, compared or processed by another system.
-At that point, compliance coverage is no longer something I occasionally inspect in the portal.
-
-It becomes something I can monitor.
-
 ## Compliance starts before the settings are evaluated
 Most conversations about device compliance focus on the settings inside the compliance policy.
 
-Is BitLocker enabled?
-Is Microsoft Defender active?
-Does the device meet the minimum Windows version?
+Is BitLocker enabled? Is Microsoft Defender active? Does the device meet the minimum Windows version?
 
 Those settings are important.
 But none of them matter if the device never receives the compliance policy.
@@ -362,10 +290,8 @@ If something in your targeting architecture breaks, the device doesn't silently 
 
 It becomes visible.
 
-Intune already tells me **which** devices have no compliance policy.
-With PowerShell and Microsoft Graph, I can also find out **why**.
+Intune already tells me **which** devices have no compliance policy. With Intune Assistant, I can also find out **why**. 
 
-And once that answer can be automated, moving from troubleshooting to continuous monitoring is only a small step.
 
-You can find the analyzer script on GitHub: [Intune Compliance Policy Coverage Analyzer](https://github.com/srozemuller/IntuneAutomation/tree/main/IntuneCompliancePolicyCoverageAnalyzer)
+You can find the Intune Assistant here: https://community.intuneassistant.cloud
 {{< bye >}}
