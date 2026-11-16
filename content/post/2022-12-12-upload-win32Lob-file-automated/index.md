@@ -22,7 +22,7 @@ That decided me to look into the file upload process and write this blog.
 
 Check the question and responses below :point_down:
 
-{{< tweet user=svrooij id=1600824751811100672 >}}
+{{< x user=svrooij id=1600824751811100672 >}}
 
 ## Create Win32LOB App portal process
 The reason why there is no file placeholder available in the Graph API is because of the application creation process has multiple phases.  

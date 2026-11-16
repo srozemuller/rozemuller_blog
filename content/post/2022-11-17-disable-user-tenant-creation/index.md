@@ -71,6 +71,6 @@ The command does not return any content.
 
 Check the discussion below.
 
-{{< tweet user=JefTek id=1593291041305665539 >}}
+{{< x user=JefTek id=1593291041305665539 >}}
 
 {{< bye >}}

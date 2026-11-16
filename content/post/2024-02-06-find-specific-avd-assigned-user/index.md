@@ -33,7 +33,7 @@ https://management.azure.com/subscriptions/{{subscription}}/resourceGroups/{{res
 
 Unfortunately, the filter is not working for some reason. Also the `$select` function did not work. This was the point where I found the question at X.
 
-{{< tweet user="Logitblog" id="1754432790676791730" >}}
+{{< x user="Logitblog" id="1754432790676791730" >}}
 
 ### Solution, using the Microsoft.Resources API
 Luckily, there are more ways to Rome ;), and there are more Azure Management API endpoints available to achieve that goal. An endpoint that I use often is the `Microsoft.Resources/resources` endpoint.
