@@ -5,7 +5,6 @@ date: 2022-11-30T06:02:46+02:00
 author: 'Sander Rozemuller'
 images:
 - images/post/avd-scheduled-agent-updates-with-deallocated-vm/schedule.png
-images: ['schedule.png']
 categories:
 - "AVD"
 tags:
